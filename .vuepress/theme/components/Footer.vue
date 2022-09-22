@@ -1,7 +1,7 @@
 <template>
   <div class="footer-container">
     <div class="company">
-      <div class="copyright">Osmosis Labs</div>
+      <div class="copyright">Terp Network</div>
       <!-- <div class="subscribe">
         <div class="subscribe-title">Subscribe to get updates</div>
         <form
@@ -40,55 +40,55 @@
           <a href="https://docsend.com/view/9mvr5qq" target="_blank">Decks</a>
         </li> -->
         <li>
-          <a href="https://medium.com/@Osmosis" target="_blank">Medium</a>
+          <a href="https://medium.com/@TerpNetworkCommunity" target="_blank">Medium</a>
         </li>
         <li>
-          <a href="https://commonwealth.im/osmosis/" target="_blank">Commonwealth</a>
+          <a href="https://commonwealth.im/terpnetwork/" target="_blank">Commonwealth</a>
         </li>
       </ul>
       <ul class="developers">
         <li>Tools</li>
         <li>
-          <a href="https://app.osmosis.zone" target="_blank">Osmosis App</a>
+          <a href="https://app.terp.network" target="_blank">Terp App</a>
         </li>
         <li>
-          <a href="https://www.mintscan.io/osmosis" target="_blank">Osmosis Explorer</a>
+          <a href="https://www.mintscan.io/terpnet" target="_blank">TerpNET Explorer</a>
         </li>
         <li>
-          <a href="https://info.osmosis.zone/" target="_blank">Stats</a>
+          <a href="https://info.terp.network/" target="_blank">Stats</a>
         </li>
       </ul>
       <ul class="developers">
         <li>Osmo</li>
         <li>
-          <a href="https://docs.osmosis.zone/overview/osmo.html#purpose" target="_blank">What is Osmo?</a>
+          <a href="https://docs.terp.network/overview/terp.html#purpose" target="_blank">What is Terp?</a>
         </li>
         <li>
-          <a href="https://docs.osmosis.zone/overview/osmosis-app/#bonding-lp-tokens" target="_blank">Pools</a>
+          <a href="https://docs.terp.network/overview/terp-app/#bonding-lp-tokens" target="_blank">Pools</a>
         </li>
         <li>
-          <a href="https://docs.osmosis.zone/overview/wallets/keplr/" target="_blank">Wallets</a>
+          <a href="https://docs.terp.network/overview/wallets/keplr/" target="_blank">Wallets</a>
         </li>
       </ul>
       <ul class="developers">
         <li>Foundation</li>
         <li>
-          <a href="https://angel.co/company/osmosis-labs/jobs" target="_blank">Careers</a>
+          <a href="https://angel.co/company/terpnetwork/jobs" target="_blank">Careers</a>
         </li>
       </ul>
       <ul class="developers">
         <li>Developers</li>
         <li>
-          <a href="https://github.com/osmosis-labs" target="_blank">Github</a>
+          <a href="https://github.com/terpnetwork" target="_blank">Github</a>
         </li>
         <!-- <li>
-          <a href="https://docs.osmosis.zone/" target="_blank">Documentation</a>
+          <a href="https://docs.terp.network/" target="_blank">Documentation</a>
         </li> -->
       </ul>
       <ul class="developers">
         <li>Validators</li>
         <li>
-          <a href="https://docs.osmosis.zone/validators/" target="_blank">Validator Guide</a>
+          <a href="https://docs.terp.network/validators/" target="_blank">Validator Guide</a>
         </li>
         <!-- <li>
           <a href="" target="_blank">Profiles</a>
@@ -100,38 +100,32 @@
     </div>
     <div class="sns-container">
       <div class="logos">
-        <a href="https://discord.gg/3gSAbqV3Qp" rel="noopener" target="_blank">
-          <img
-            src="/img/discord.svg"
-            alt="link to Osmosis discord room"
-          />
-        </a>
-        <a href="https://medium.com/@Osmosis" rel="noopener" target="_blank">
-          <img
-            src="/img/medium.svg"
-            alt="link to Osmosis medium"
-          />
-        </a>
-        <a href="https://twitter.com/osmosiszone" rel="noopener" target="_blank">
-          <img
-            src="/img/twitter.svg"
-            alt="link to Osmosis twitter"
-          />
-        </a>
-        <a href="https://www.youtube.com/channel/UC3ScmmLC4WUJAkINyf_p2Rw" rel="noopener" target="_blank">
-          <img
-            src="/img/icon_youtube.png"
-            alt="link to Osmosis youtube"
-          />
-        </a>
         <a href="" rel="noopener" target="_blank">
           <img
-            src="/img/icon_telegram.png"
-            alt="link to Osmosis telegram room"
+            src="/img/discord.svg"
+            alt="link to Terp Network discord room"
+          />
+        </a>
+        <a href="https://medium.com/@terpnet" rel="noopener" target="_blank">
+          <img
+            src="/img/medium.svg"
+            alt="link to TerpNET medium"
+          />
+        </a>
+        <a href="https://twitter.com/terpculture" rel="noopener" target="_blank">
+          <img
+            src="/img/twitter.svg"
+            alt="link to TerpNET twitter"
+          />
+        </a>
+        <a href="https://www.youtube.com/" rel="noopener" target="_blank">
+          <img
+            src="/img/icon_youtube.png"
+            alt="link to TerpNET youtube"
           />
         </a>
       </div>
-      <a href="https://www.osmosis.zone" target="_blank" class="osmosiszone">osmosis.zone</a>
+      <a href="https://www.terp.network" target="_blank" class="terpnetwork">terp.network</a>
     </div>
   </div>
 </template>
@@ -280,7 +274,7 @@ export default {
     }
   }
 
-  .osmosiszone {
+  .terpnetwork {
     display: block;
     margin: 1rem 0;
     font-size: 0.938rem;

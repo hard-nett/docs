@@ -1,9 +1,9 @@
 # Javascript & Smart Contracts
-This guide describes interacting with Osmosis Smart contracts via JavaScript runtimes such as Node.js and the browser.
+This guide describes interacting with TerpNET Smart contracts via JavaScript runtimes such as Node.js and the browser.
 
 ## Prerequisites
 - npm and node.js
-- localosmosis - (Not needed when connecting to mainnet)
+- localterp-core - (Not needed when connecting to mainnet)
 - Keplr browser not used on the guide yet
 
 Start a new project
@@ -49,7 +49,7 @@ main();
 ```
 
 :: tip
-You can also connect to the mainnet by replacing rpcEndpoint to https://rpc.osmosis.zone/ [Learn more here.](https://docs.osmosis.zone/developing/network/public-endpoints.html#official-endpoints)
+You can also connect to the mainnet by replacing rpcEndpoint to https://rpc.terp.network/ [Learn more here.](https://docs.terp.network/developing/network/public-endpoints.html#official-endpoints)
 ::
 
 ## Run it
@@ -69,10 +69,10 @@ async function moreExamples() {
   const client = await CosmWasmClient.connect(rpcEndpoint);
   const chainId = await client.getChainId()
   const getHeight = await client.getHeight()
-  const getAccount = await client.getAccount("osmo1phaxpevm5wecex2jyaqty2a4v02qj7qmlmzk5a")
-  const getSequence = await client.getSequence("osmo1phaxpevm5wecex2jyaqty2a4v02qj7qmlmzk5a")
+  const getAccount = await client.getAccount("terp1phaxpevm5wecex2jyaqty2a4v02qj7qmlmzk5a")
+  const getSequence = await client.getSequence("terp1phaxpevm5wecex2jyaqty2a4v02qj7qmlmzk5a")
   const getBlock = await client.getBlock(1)
-  const getBalance = await client.getBalance("osmo1phaxpevm5wecex2jyaqty2a4v02qj7qmlmzk5a","uosmo")
+  const getBalance = await client.getBalance("terp1phaxpevm5wecex2jyaqty2a4v02qj7qmlmzk5a","uterp")
 
   console.log(chainId);
   console.log(client);
@@ -114,13 +114,13 @@ moreExamples();
 # Querying Smart Contracts
 
 ::: warning
-Before we query smart contracts in localOsmosis we must [deploy one by following this guide](https://docs.osmosis.zone/developing/dapps/get_started/cosmwasm-localosmosis.html). 
+Before we query smart contracts in LocalTerp-Core we must [deploy one by following this guide](https://docs.terp.network/developing/dapps/get_started/cosmwasm-localterp-core.html). 
 :::
 
 Once you have deployed the smart contract you can get the `<CONTRACT-ID>` by running:
 
 ```
-osmosisd query wasm list-code
+terpdery wasm list-code
 ```
 
 ![](../../../assets/contracts-list.png)
@@ -129,11 +129,11 @@ In this particular example there are 7 contracts available. The latest one is 7.
 You can now get the contract address by running
 
 ```
-osmosisd query wasm list-contract-by-code <CONTRACT-ID>
+terpd query wasm list-contract-by-code <CONTRACT-ID>
 
 ```
 ![](../../../assets/contract-details.png)
-That's the contract address `osmo1zlmaky7753d2fneyhduwz0rn3u9ns8rse3tudhze8rc2g54w9ysq725p3a` for code contract id 7.
+That's the contract address `terp1zlmaky7753d2fneyhduwz0rn3u9ns8rse3tudhze8rc2g54w9ysq725p3a` for code contract id 7.
 
 ## Get contract 
 ```javascript
@@ -145,7 +145,7 @@ const rpcEndpoint = "http://localhost:26657/";
 async function queryContract() {
   const client = await CosmWasmClient.connect(rpcEndpoint);
  
-    const getContract = await client.getContract("osmo1zlmaky7753d2fneyhduwz0rn3u9ns8rse3tudhze8rc2g54w9ysq725p3a")
+    const getContract = await client.getContract("terp1zlmaky7753d2fneyhduwz0rn3u9ns8rse3tudhze8rc2g54w9ysq725p3a")
     console.log(getContract);
 }
 
@@ -164,14 +164,14 @@ The output should look like this:
 The contract we are interacting with has a few simple functions. 'get_count', 'increment' and 'reset'. These two functions can be called via by using the `queryContractSmart` method. 
 
 ::: tip
-Please note there is a complete guide on how to upload the example contract on localOsmosis [here](cosmwasm-localosmosis.html).
+Please note there is a complete guide on how to upload the example contract on LocalTerp-Core [here](cosmwasm-localterp-core.html).
 :::
 
 ```javascript
 async function getCount() {
     const client = await CosmWasmClient.connect(rpcEndpoint);
 
-    const getCount = await client.queryContractSmart("osmo1zlmaky7753d2fneyhduwz0rn3u9ns8rse3tudhze8rc2g54w9ysq725p3a",{ "get_count": {}})
+    const getCount = await client.queryContractSmart("terp1zlmaky7753d2fneyhduwz0rn3u9ns8rse3tudhze8rc2g54w9ysq725p3a",{ "get_count": {}})
     console.log(getCount);
 }
 getCount();
@@ -184,7 +184,7 @@ getCount();
 async function increaseCounter() {
     const client = await CosmWasmClient.connect(rpcEndpoint);
 
-    const increaseCounter = await client.queryContractRaw("osmo1zlmaky7753d2fneyhduwz0rn3u9ns8rse3tudhze8rc2g54w9ysq725p3a","{\"increment\":{}}")
+    const increaseCounter = await client.queryContractRaw("terp1zlmaky7753d2fneyhduwz0rn3u9ns8rse3tudhze8rc2g54w9ysq725p3a","{\"increment\":{}}")
     console.log(increaseCounter);
 }
 

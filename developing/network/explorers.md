@@ -6,13 +6,13 @@ The explorers in the Cosmos ecosystem are rapidily growing. The following is a l
 ## Mainnet
 
 #### Block explorers
-- [Mintscan](https://www.mintscan.io/osmosis)
-- [Bigdipper](https://osmosis.bigdipper.live/)
+- [Mintscan](https://www.mintscan.io/terpnet)
+- [Bigdipper](https://terp.bigdipper.live/)
 
 
 ## Testnet
 #### Block Explorers
-- [Mintscan](https://testnet.mintscan.io/osmosis-testnet)
+- [Mintscan](https://testnet.mintscan.io/terp-testnet)
 
 #### Contract Explorers
-- [Code-explorer](https://osmosis-contracts.web.app/#/codes)
+- [Code-explorer](https://terp-contracts.web.app/#/codes)

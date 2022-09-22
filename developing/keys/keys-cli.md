@@ -12,10 +12,10 @@ You can create a new key with the name `Default` as in the following example:
 ::: details Example: Create a new address
 
 ```bash
-$ osmosisd keys add Default
+$ terpd keys add Default
 - name: Default
   type: local
-  address: osmo1quw5r22pxy8znjtdkgqc65atrm3x5hg6vycm5n
+  address: terp1quw5r22pxy8znjtdkgqc65atrm3x5hg6vycm5n
   pubkey: osmopub1addwnpepqdct05khsxvtaaj0stuvayrpw0j8t6styr7vu05k3y63d5540ftuz8x6tsq
   mnemonic: ""
   threshold: 0
@@ -45,7 +45,7 @@ You can restore an existing key with the mnemonic.
 ::: details Example: Restore an existing key
 
 ```bash
-$ osmosisd keys add Default_restore --recover
+$ terpd keys add Default_restore --recover
 > Enter your bip39 mnemonic
 ## Enter your 24-word mnemonic here ##
 ```
@@ -64,7 +64,7 @@ Multiple keys can be created when needed. You can list all keys saved under the 
 ::: details Example: List all of your keys
 
 ```bash
-$ osmosisd keys list
+$ terpd keys list
     - name: Default
     type: local
     address: ## Address of "Default" ##
@@ -94,10 +94,10 @@ You can retrieve key information by its name:
 ::: details Example: Retrieve key information - Account Address and its public key
 
 ```bash
-$ osmosisd keys show Default --bech acc
+$ terpd keys show Default --bech acc
 - name: Default
   type: local
-  address: osmo1quw5r22pxy8znjtdkgqc65atrm3x5hg6vycm5n
+  address: terp1quw5r22pxy8znjtdkgqc65atrm3x5hg6vycm5n
   pubkey: osmopub1addwnpepqdct05khsxvtaaj0stuvayrpw0j8t6styr7vu05k3y63d5540ftuz8x6tsq
   mnemonic: ""
   threshold: 0
@@ -109,7 +109,7 @@ $ osmosisd keys show Default --bech acc
 ::: details Example: Retrieve key information - Validator Address and its public key
 
 ```bash
-$ osmosisd keys show Default --bech val
+$ terpd keys show Default --bech val
 - name: Default
   type: local
   address: osmocncl1zdlttjrqh9jsgk2l8tgn6f0kxlfy98s3prz35z
@@ -124,7 +124,7 @@ $ osmosisd keys show Default --bech val
 ::: details Example: Retrieve key information - Consensus nodes Address and its public key
 
 ```bash
-$ osmosisd keys show Default --bech cons
+$ terpd keys show Default --bech cons
 - name: Default
   type: local
   address: osmocnclcons1zdlttjrqh9jsgk2l8tgn6f0kxlfy98s34pfmlc
@@ -152,7 +152,7 @@ Make sure you have backed up the key mnemonic before removing any of your keys, 
 ::: details Example: Remove a key
 
 ```bash
-$ osmosisd keys delete Default_restore1
+$ terpd keys delete Default_restore1
 Key reference will be deleted. Continue? [y/N]: y
 Key deleted forever (uh oh!)
 ```
@@ -171,7 +171,7 @@ You can export and backup your key by using the `export` subcommand:
 Exporting the key _Default_ :
 
 ```bash
-$ osmosisd keys export Default
+$ terpd keys export Default
 Enter passphrase to encrypt the exported key: ## Insert passphrase (must be at least 8 characters)##
 -----BEGIN TENDERMINT PRIVATE KEY-----
 kdf: bcrypt
@@ -187,7 +187,7 @@ type: secp256k1
 ## The keyring-backend option
 Interacting with a node requires a public-private key pair. Keyring is the place holding the keys. The keys can be stored in different locations with specified backend type. 
 ```
-$ osmosisd keys [subcommands] --keyring-backend [backend type]
+$ terpd keys [subcommands] --keyring-backend [backend type]
 ```
 ### os backend
 The default `os` backend stores the keys in operating system's credential sub-system, which are comfortable to most users, yet without compromising on security. 

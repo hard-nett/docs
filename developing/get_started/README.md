@@ -8,10 +8,10 @@ title: get started
   <a href="build.html" class="card">
     <img src="/img/ide.svg" class="filter-icon" />
     <div class="title">
-      Build and Test Osmosis Source Code
+      Build and Test Terp-Core Source Code
     </div>
     <div class="text">
-      Getting started with building and testing Osmosis codebase
+      Getting started with building and testing Terp-Core codebase
     </div>
   </a>
 
@@ -22,7 +22,7 @@ title: get started
       IDE Setup
     </div>
     <div class="text">
-      Recommended IDE setup for developing on Osmosis in Go
+      Recommended IDE setup for developing on Terp-Core in Go
     </div>
   </a>
 
@@ -32,7 +32,7 @@ title: get started
       Contributing
     </div>
     <div class="text">
-      A set of guidelines for contributing to the Osmosis chain dev repo.
+      A set of guidelines for contributing to the Terp-Core dev repo.
     </div>
   </a>
 

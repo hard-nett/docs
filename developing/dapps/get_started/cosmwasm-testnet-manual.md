@@ -1,15 +1,15 @@
 # CosmWasm with Testnet
-The following is a quick guide that shows the basics of deploying a contract to a Osmosis Testnet (`osmo-test-4`). It covers:
+The following is a quick guide that shows the basics of deploying a contract to a TerpNET Testnet (`athena-1`). It covers:
 
 - Initial Setup
     - Setup Rust
-    - Setup Osmosis Testnet via Osmosis Installer
+    - Setup Terp-Core Testnet via Terp-Core Installer
     - Setup Client
 - Deploy a Smart Contract
     - Clone cw-template
     - Compile the wasm contract with stable toolchain
     - Optimized Compilation
-    - Store to Osmosis Testnet chain
+    - Store to Terp-Core Testnet chain
     - Instantiate the contract
 - Execute the Contract
     - Get contract’s count
@@ -20,13 +20,13 @@ The following is a quick guide that shows the basics of deploying a contract to 
     - Execute the contract
 
 ::: tip
-Please note this a detailed guide on how to deploy via `osmosisd`, it also covers additional tooling and useful tips.  You can also deploy to testnet with [Beaker](cosmwasm-testnet-beaker.md) with a couple of commands. 
+Please note this a detailed guide on how to deploy via `terpd`, it also covers additional tooling and useful tips.  You can also deploy to testnet with [Beaker](cosmwasm-testnet-beaker.md) with a couple of commands. 
 :::
 
 
 ## Initial Setup
 
-This tutorial uses a Osmosis specific development tools to deploy contracts to Osmosis Testnet(`osmo-test-4`).
+This tutorial uses a Terp-Core specific development tools to deploy contracts to TerpNET Testnet(`athena-1`).
 
 ### Setup Rust
 
@@ -52,16 +52,16 @@ cargo install cargo-generate --features vendored-openssl
 cargo install cargo-run-script
 ```
 
-### Setup Osmosis Testnet
+### Setup TerpNET Testnet
 
-You can easily set up an Osmosis Testnet environment using the [Osmosis Installer](https://github.com/osmosis-labs/osmosis-installer). 
+You can easily set up an TerpNET Testnet environment using the [TerpNET Installer](https://github.com/terpnetwork/Terpnet-installer). 
 
 Run the following and choose option #2 (Client Node) and #2 (Testnet) in order.
 
 ```bash
-curl -sL https://get.osmosis.zone/install > i.py && python3 i.py
+curl -sL https://get.terp.network/install > i.py && python3 i.py
 ```
-Now you have successfully completed setting up an Osmosis client node in Testnet. In order to use `osmosisd` from the cli, either reload your terminal or refresh your profile with : `‘source ~/.profile’`
+Now you have successfully completed setting up an TerpNET client node in Testnet. In order to use `terpd` from the cli, either reload your terminal or refresh your profile with : `‘source ~/.profile’`
 
 ### Setup the Client
 
@@ -69,15 +69,15 @@ First, create a wallet with the command following:
 
 ```bash
 # add wallets for testing
-osmosisd keys add wallet
+terpd keys add wallet
 ```
 
-When you run the commands above, `osmosisd` will prompt you all the information related to that wallet in YAML (.yml) format.
+When you run the commands above, `terpd` will prompt you all the information related to that wallet in YAML (.yml) format.
 
 ```bash
 - name: wallet
   type: local
-  address: osmo1v9yrqx8aaddlna29zxngr4ye3jnxtpprrej532
+  address: terp1v9yrqx8aaddlna29zxngr4ye3jnxtpprrej532
   pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AmKFqbczx7j/sYlqO2irXUSsQMdEN9Ugg1W2AOm7knh3"}'
   mnemonic: ""
 
@@ -87,15 +87,15 @@ It is the only way to recover your account if you ever forget your password.
 divert cliff issue spirit penalty chief improve neck enjoy pipe sing loop inherit behind space next tourist acid axis easy never ball enemy moment
 ```
 
-You need some tokens named `OSMO`(`uosmo`) in your address to interact with the network.
+You need some tokens named `TERP`(`uterp`) in your address to interact with the network.
 
 ### faucet
 
 #### Official Faucet
-You can request tokens from the official faucet at [faucet.osmosis.zone](https://faucet.osmosis.zone) 
+You can request tokens from the official faucet at [faucet.terp.network](https://faucet.terp.network) 
 
 #### Discord Faucet
-Youcan also participate in the [Osmosis discord](https://discord.com/invite/osmosis) to request a faucet of the Osmosis Testnet. After gaining access to the testnet channel on the `#roles` channel of the discord, you can request a testnet token by sending the following message on the `#faucet` channel:
+Youcan also participate in the [TerpNET discord](https://discord.com/invite/TerpNET) to request a faucet of the TerpNET Testnet. After gaining access to the testnet channel on the `#roles` channel of the discord, you can request a testnet token by sending the following message on the `#faucet` channel:
 
 ```bash
 $request <address>
@@ -107,21 +107,21 @@ $request <address>
 Then, you can check that your faucet request has been successful by checking the balance of your wallet bank account by trying the command:
 
 ```bash
-osmosisd query bank balances $(osmosisd keys show -a wallet)
+terpd bank balances $(terpd keys show -a wallet)
 ```
 
-- `osmosisd query bank balances [address]` commands query the total balance of an account.
-- `osmosisd keys show -a wallet` commands returns the address of the wallet that you created.
+- `terpd bank balances [address]` commands query the total balance of an account.
+- `terpd keys show -a wallet` commands returns the address of the wallet that you created.
 
 
 
 ## Deploy a Smart Contract
 ### Clone cw-template
 
-For this example, we will use the [**cw-template**](https://github.com/osmosis-labs/cw-tpl-osmosis) repo with counter example.
+For this example, we will use the [**cw-template**](https://github.com/terpnetwork/cw-tpl-terpnet) repo with counter example.
 
 ```bash
-cargo generate --git https://github.com/osmosis-labs/cw-tpl-osmosis.git --name my-first-contract
+cargo generate --git https://github.com/terpnetwork/cw-tpl-terpnet.git --name my-first-contract
 cd my-first-contract
 ```
 
@@ -170,16 +170,16 @@ sudo docker run --rm -v "$(pwd)":/code \
 
 Binary file will be at `artifacts/my_first_contract.wasm` folder and its size will be about `130K`, which is more smaller than when only RUTFLAGS was used.
 
-### Store to Osmosis Testnet chain
+### Store to TerpNET Testnet chain
 
-We have the wasm binary executable ready. Now it is time to store the code to the Osmosis Testnet blockchain. 
+We have the wasm binary executable ready. Now it is time to store the code to the TerpNET Testnet blockchain. 
 
 ```bash
 # store the code on chain
-RES=$(osmosisd tx wasm store artifacts/my_first_contract.wasm --from wallet --gas-prices 0.1uosmo --gas auto --gas-adjustment 1.3 -y --output json -b block)
+RES=$(terpdre artifacts/my_first_contract.wasm --from wallet --gas-prices 0.1upersyx --gas auto --gas-adjustment 1.3 -y --output json -b block)
 ```
 
-- `osmosisd tx wasm store` : upload a wasm binary
+- `terpdstore` : upload a wasm binary
 - `--from` : name or address of private key with which to sign.
 - `--gas-prices` : gas prices in decimal format to determine the transaction fee.
 - `--gas` : gas limit to set per-transaction. set to "`auto`" to calculate sufficient gas automatically
@@ -223,23 +223,23 @@ We can now create an instance of this wasm contract. First, set the initial stat
 INIT='{"count":100}'
 
 # instantiate the contract
-osmosisd tx wasm instantiate $CODE_ID "$INIT" \
-    --from wallet --label "my first contract" --gas-prices 0.025uosmo --gas auto --gas-adjustment 1.3 -b block -y --no-admin
+terpd tx wasm instantiate $CODE_ID "$INIT" \
+    --from wallet --label "my first contract" --gas-prices 0.025upersyx --gas auto --gas-adjustment 1.3 -b block -y --no-admin
 ```
 
-- `osmosisd tx wasm instantiate` : instantiate a wasm contract using CODE_ID of the uploaded binary.
+- `terpd tx wasm instantiate` : instantiate a wasm contract using CODE_ID of the uploaded binary.
 - `--label` : human-readable name for this contract in lists.
 - `--no-admin` : you must set this explicitly if you don’t want an admin.
 
-If you have succeeded in instantiating the contract, you can search for output `txhash` in [Osmosis Explorer](https://testnet.ping.pub/osmosis) to verify your deployment.
+If you have succeeded in instantiating the contract, you can search for output `txhash` in [TerpNET Explorer](https://testnet.ping.pub/Terpnetwork) to verify your deployment.
 
 Get the contract address using the command following:
 
 ```bash
-CONTRACT_ADDR=$(osmosisd query wasm list-contract-by-code $CODE_ID --output json | jq -r '.contracts[0]')
+CONTRACT_ADDR=$(terpdt-contract-by-code $CODE_ID --output json | jq -r '.contracts[0]')
 ```
 
-- `osmosisd query wasm list-contract-by-code` : list wasm all bytecode on the chain for given code id
+- `terpdery wasm list-contract-by-code` : list wasm all bytecode on the chain for given code id
 
 ## Execute the Contract
 
@@ -251,10 +251,10 @@ Send a `get_count` query to check the count value. The previously set `INIT` sta
 
 ```bash
 QUERY='{"get_count":{}}'
-osmosisd query wasm contract-state smart $CONTRACT_ADDR "$QUERY" --output json
+terpdery wasm contract-state smart $CONTRACT_ADDR "$QUERY" --output json
 ```
 
-- `osmosisd query wasm contract-state smart` : calls contract with given address with query data and prints the returned result
+- `terpdery wasm contract-state smart` : calls contract with given address with query data and prints the returned result
 
 ![](https://user-images.githubusercontent.com/70956926/172295110-e3ae455c-9681-41a4-abf2-ac33288bb13c.png)
 
@@ -266,10 +266,10 @@ If you run the `get_count` query again after sending the `increment` transaction
 
 ```bash
 TRY_INCREMENT='{"increment": {}}'
-osmosisd tx wasm execute $CONTRACT_ADDR "$TRY_INCREMENT" --from wallet --gas-prices 0.025uosmo --gas auto --gas-adjustment 1.3 -y
+terpd tx wasm execute $CONTRACT_ADDR "$TRY_INCREMENT" --from wallet --gas-prices 0.025upersyx --gas auto --gas-adjustment 1.3 -y
 ```
 
-- `osmosisd tx wasm execute` : execute a command on a wasm contract
+- `terpd tx wasm execute` : execute a command on a wasm contract
 
 ![](https://user-images.githubusercontent.com/70956926/172295183-89016c41-7832-41c4-b4c7-a2cf9d441256.png)
 
@@ -279,14 +279,14 @@ Lastly, let’s send a `reset` transaction. Like increment, reset transaction al
 
 ```bash
 RESET='{"reset": {"count": 0}}'
-osmosisd tx wasm execute $CONTRACT_ADDR "$RESET" --from wallet --gas-prices 0.025uosmo --gas auto --gas-adjustment 1.3 -y
+terpd tx wasm execute $CONTRACT_ADDR "$RESET" --from wallet --gas-prices 0.025upersyx --gas auto --gas-adjustment 1.3 -y
 ```
 
 ![](https://user-images.githubusercontent.com/70956926/172295239-ddf95369-5b9a-4096-a84d-aecc1ef30484.png)
 
 ## Osmo Contract Explorer
 
-You can also instantiate the contract using intuitive GUI in [Osmo Contract Explorer](https://osmosis-contracts.web.app/#/codes).
+You can also instantiate the contract using intuitive GUI in [Osmo Contract Explorer](https://contracts.terp.network/#/codes).
 
 Let’s do it together
 
@@ -317,7 +317,7 @@ In the Read Contract section, type `get_count` messages and press the `Run query
 
 #### increment
 
-In the Write Contract section, type `increment` messages and the OSMO to pay and click the `Execute Contract` button to execute the transaction.
+In the Write Contract section, type `increment` messages and the PERSY to pay and click the `Execute Contract` button to execute the transaction.
 
 ![](https://user-images.githubusercontent.com/70956926/172300637-bb29452d-1d23-4c30-8cbb-d72f358b490e.png)
 
@@ -325,4 +325,4 @@ In the Write Contract section, type `increment` messages and the OSMO to pay and
 
 ![](https://user-images.githubusercontent.com/70956926/172300485-4d66b5a9-1082-48da-ba1c-b979206f277e.png)
 
-Congratulations! Now you deployed your wasm smart contract on Osmosis Testnet successfully.
+Congratulations! Now you deployed your wasm smart contract on TerpNET Testnet successfully.

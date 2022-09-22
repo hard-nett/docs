@@ -4,30 +4,30 @@ title: Integrate Home
 
 # Integrate
 
-The guides on this page will explain the process of integrating with Osmosis.
+The guides on this page will explain the process of integrating with TerpNet.
 
 
 <div class="cards twoColumn">
-  <a href="token-listings.html" class="card">
-    <img src="/img/coin.svg" class="filter-icon"/>
+  <a href="utilizing-smart-contracts.html" class="card">
+    <img src="/img/coin.svg" />
     <div class="title">
-     Token Listing Process Overview
+     Utilizing Smart Contracts
     </div>
     <div class="text">
-      Learn about adding your token to Osmosis
+   Basic Overview of Interacting with Cosmwasm Smart Contracts on TERPNET
     </div>
   </a>
   <a href="airdrops.html" class="card">
-    <img src="/img/parachute.svg" class="filter-icon"/>
+    <img src="/img/parachute.svg" />
     <div class="title">
      Airdrop Guide
     </div>
     <div class="text">
-      Export Osmosis addresses based on any criteria for your airdrop
+      Export TERPNET addresses based on any criteria for your airdrop
     </div>
   </a>
   <a href="registration.html" class="card">
-    <img src="/img/registration.svg" class="filter-icon"/>
+    <img src="/img/registration.svg" />
     <div class="title">
      Chain Registration Guide
     </div>
@@ -36,39 +36,39 @@ The guides on this page will explain the process of integrating with Osmosis.
     </div>
   </a>
   <a href="liquidity.html" class="card">
-    <img src="/img/pool.svg" class="filter-icon"/>
+    <img src="/img/pool.svg" />
     <div class="title">
      Liquidity Options
     </div>
     <div class="text">
-      Explore options for providing initial liquidity on Osmosis
+      Explore options for providing initial liquidity on TERPNET
     </div>
   </a>
-  <a href="incentives.html" class="card">
-    <img src="/img/gauge.svg" class="filter-icon"/>
+  <a href="interchain.html" class="card">
+    <img src="/img/gauge.svg" />
     <div class="title">
-     Liquidity Mining Incentives
+     All things Interchain. 
     </div>
-    <div class="text">
-      Discover possibilies for liquidity mining incentives on Osmosis
+    <div class="text">  
+      Discover possibilies with Inter-Chain Account's (ICA) & Interchain Security (ICS)
     </div>
   </a>
   <a href="frontend.html" class="card">
-    <img src="/img/frontend.svg" class="filter-icon"/>
+    <img src="/img/frontend.svg" />
     <div class="title">
      Front End Integration Guide 
     </div>
     <div class="text">
-      In-depth guide to adding assets to the Osmosis Zone front end
+      In-depth guide to adding assets to the TERPNET front end
     </div>
   </a>
   <a href="marketing.html" class="card">
-    <img src="/img/marketing.svg" class="filter-icon"/>
+    <img src="/img/marketing.svg" />
     <div class="title">
      Marketing Opportunities
     </div>
     <div class="text">
-      Collaboarate with the Osmosis Ministry of Marketing to spread awareness
+      Collaboarate with the TERPNET Ministry of Marketing to spread awareness
     </div>
   </a>
 

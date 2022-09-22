@@ -4,7 +4,7 @@ The following are the steps needed to verify any contract from the chain. In thi
 
 
 ### Create new contract
-Follow [this guide]( https://docs.osmosis.zone/developing/dapps/get_started/cosmwasm-testnet.html) to create a new contract with Beaker.
+Follow [this guide]( https://docs.terp.network/developing/dapps/get_started/cosmwasm-testnet.html) to create a new contract with Beaker.
 
 Output:
 
@@ -15,7 +15,7 @@ Once the contract is created query the contract information. Assuming you are co
 
 ### Contract info
 ```
-osmosisd query wasm contract osmo1mpf0guu0t363xrshhedandypq003ahzaxvsxzgu69n3ej03mh2zqx5gk8l
+terpd wasm contract terp1mpf0guu0t363xrshhedandypq003ahzaxvsxzgu69n3ej03mh2zqx5gk8l
 
 ```
 Output:
@@ -26,7 +26,7 @@ Output:
 ### Contract version
 Get the contract version by running the following command
 ```
-osmosisd query wasm contract-state raw osmo1mpf0guu0t363xrshhedandypq003ahzaxvsxzgu69n3ej03mh2zqx5gk8l 636F6E74726163745F696E666F --node https://rpc-test.osmosis.zone:443 --output json | jq  -r .data | base64 -d | jq
+terpd query wasm contract-state raw terp1mpf0guu0t363xrshhedandypq003ahzaxvsxzgu69n3ej03mh2zqx5gk8l 636F6E74726163745F696E666F --node https://rpc-test.terp.network:443 --output json | jq  -r .data | base64 -d | jq
 ```
 What in the world is `636F6E74726163745F696E666F`? 😕 
 
@@ -39,7 +39,7 @@ Output:
 ### Downloading the Contract from the network
 
 ```
-osmosisd query wasm code 205 205_code.wasm --node https://rpc-test.osmosis.zone:443
+terpd query wasm code 205 205_code.wasm --node https://rpc-test.terp.network:443
 ```
 Output:
 

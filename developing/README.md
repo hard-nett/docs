@@ -1,27 +1,27 @@
 ---
-title: Developing in Osmosis
+title: Developing in Terp-Core
 ---
-# Get started developing with Osmosis
+# Get started developing with TERPNET
 
 
-Osmosis offers a variaty of places for developers to contribute in the ecosystem. Get started building your own Cosmwasm dApps, contributing to the Osmosis core modules or creating utilities and dashboards. 
+Terp Network offers a variaty of places for developers to contribute in the ecosystem. Get started building your own Cosmwasm dApps, contributing to the Terp-Core modules or creating utilities and dashboards. 
 
 <div class="cards twoColumn" >
   <a href="/developing/dapps/get_started/" class="card">
     <img src="/img/ide.svg" class="filter-icon" />
     <div class="title">
-     Osmosis CosmWasm Development
+     TerpNet Cosmwasm Development
     </div>
     <div class="text">
-    Build contracts & dApps with Osmosis & Cosmwasm
+    Build contracts & dApps with Terp-Core & Cosmwasm
     </div>
   </a>
 
 
-  <a href="/developing/osmosis-core/" class="card">
+  <a href="/developing/terp-core/" class="card">
     <img src="/img/ide.svg" class="filter-icon" />
     <div class="title">
-     Osmosis Core Development
+     Terp-Core Development
     </div>
     <div class="text">
       Chain Developemnt, Modules and more.
@@ -31,7 +31,7 @@ Osmosis offers a variaty of places for developers to contribute in the ecosystem
   <a href="#wip" class="card">
     <img src="/img/ide.svg" class="filter-icon"/>
     <div class="title">
-     Osmosis Utilities
+     Terp-Core Utilities
     </div>
     <div class="text">
      Build Dashboards or Utilities
@@ -39,13 +39,13 @@ Osmosis offers a variaty of places for developers to contribute in the ecosystem
   </a>
  
 
-   <a href="/developing/web-dev-guide" class="card">
+   <a href="/developing/bounties" class="card">
     <img src="/img/ide.svg" class="filter-icon"/>
     <div class="title">
-     Osmosis Frontend
+     TERPNET Bounties
     </div>
     <div class="text">
-     Learn about the Osmosis frontend site.
+     Learn about the Bounties Available.
     </div>
   </a>
 

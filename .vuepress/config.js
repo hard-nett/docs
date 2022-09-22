@@ -1,5 +1,5 @@
 module.exports = {
-  title: "Osmosis Docs",
+  title: "TERPNET Docs",
   markdown: {
     lineNumbers: true,
     extendMarkdown: (md) => {
@@ -8,7 +8,7 @@ module.exports = {
   },
   base: "/",
   description:
-    "Osmosis - The Cosmos Interchain AMM",
+    "TERPNET - The Cosmos Hub for Terp AMM",
   plugins: [
     [
       "@vuepress/register-components",
@@ -96,7 +96,7 @@ module.exports = {
       "meta",
       {
         property:"og:image",
-        content:"/img/osmosis-tile.png",
+        content:"/img/terp-tile.png",
       },
     ],
   ],
@@ -107,10 +107,10 @@ module.exports = {
     // prefersTheme: 'dark',
     // overrideTheme: { light: [6, 18], dark: [18, 6] },
     // theme: 'default-prefers-color-scheme',
-    logo: "/img/osmosis-logo-dark.svg",
-    logoDark: "/img/osmosis-logo-light.svg",
+    logo: "/img/terp-logo-dark.svg",
+    logoDark: "/img/terp-logo-light.svg",
     lastUpdated: "Updated on",
-    repo: "osmosis-labs/docs",
+    repo: "terpnetwork/docs",
     editLinks: true,
     editLinkText: "Edit this page on GitHub",
     docsBranch: 'main',
@@ -131,7 +131,7 @@ module.exports = {
       // { text: 'Chat', link: 'https://v2.vuepress.vuejs.org/',},
       {
         text: "GitHub",
-        link: "https://github.com/osmosis-labs/docs",
+        link: "https://github.com/terpnetwork/docs",
         icon: "/img/github.svg",
       },
     ],
@@ -141,17 +141,21 @@ module.exports = {
           title: "About",
           children: [
             '/overview/',
-            '/overview/osmo',
+            '/overview/TERP-&-PERSY',
+            '/overview/Distribution',
+            '/overview/Fairdrop',
+            '/overview/Vesting',
+            '/overview/Fairdrop-Calculations',
             '/overview/terminology',
             '/overview/governance',
           ],
           collapsable: true,
         },
         {
-          title: "Osmosis AMM App",
+          title: "TERPNET Tenatitve Roadmap",
           children: [
-            '/overview/osmosis-app/',
-            '/overview/osmosis-app/learn-more',
+            '/overview/tenative-rio/',
+            '/overview/terp-app/learn-more',
           ],
           collapsable: true,
         },
@@ -171,7 +175,7 @@ module.exports = {
           title: 'Building dApps',
           children: [
             '/developing/dapps/get_started/',
-            '/developing/dapps/get_started/cosmwasm-localosmosis',
+            '/developing/dapps/get_started/cosmwasm-localterp-core',
             '/developing/dapps/get_started/cosmwasm-testnet',
             '/developing/dapps/get_started/cosmwasm-testnet-manual',
             '/developing/dapps/get_started/submit_wasm_proposal',
@@ -185,38 +189,30 @@ module.exports = {
           children: [
 
             '/developing/tools/beaker/',
-            '/developing/tools/localosmosis',
-            '/developing/tools/osmojs',
-            '/developing/tools/osmosisd',
+            '/developing/tools/local-terp-core',
+            '/developing/tools/terpjs',
+            '/developing/tools/terpd',
           ],
           collapsable: true,
         },
         {
-          title: 'Osmosis Core',
+          title: 'Terp-Core',
           children: [
-            '/developing/osmosis-core/',
-            '/developing/osmosis-core/build',
-            '/developing/osmosis-core/ide-guide',
-            '/developing/osmosis-core/performance',
-            '/developing/osmosis-core/contributing',
-            "/developing/osmosis-core/modules/",
-            "/developing/osmosis-core/modules/spec-epochs",
-            "/developing/osmosis-core/modules/spec-gamm",
-            "/developing/osmosis-core/modules/spec-gov",
-            "/developing/osmosis-core/modules/spec-lockup",
-            "/developing/osmosis-core/modules/spec-mint",
-            "/developing/osmosis-core/modules/spec-incentives",
-            "/developing/osmosis-core/modules/spec-pool-incentives",
-            "/developing/osmosis-core/modules/spec-superfluid"
+            '/developing/terp-core/',
+            '/developing/terp-core/build',
+            '/developing/terp-core/performance',
+            
+            "/developing/terp-core/modules/",
+          
           ],
           collapsable: true,
         },
 
         // {
-        //   title: "osmosisd",
+        //   title: "terpd",
         //   children: [
-        //     "/developing/osmosisd/commands",
-        //     "/developing/osmosisd/subcommands",
+        //     "/developing/terpd/commands",
+        //     "/developing/terpd/subcommands",
         //   ],
         //   collapsable: true,
         // },
@@ -225,7 +221,7 @@ module.exports = {
           children: [
             '/developing/network/explorers',
             '/developing/network/public-endpoints',
-            '/developing/tools/localosmosis',
+            '/developing/tools/local-terp-core',
             '/developing/network/join-testnet',
             '/developing/network/join-mainnet',
           ],
@@ -258,9 +254,9 @@ module.exports = {
         collapsable: true,
         },
         {
-          title: 'Osmosis Frontend',
+          title: 'Terp-Bounties',
           children: [
-            '/developing/web-dev-guide'
+            '/developing/bounties'
           ],
           collapsable: true,
         },

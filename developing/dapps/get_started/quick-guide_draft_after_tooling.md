@@ -3,23 +3,25 @@
 
 ## Quickstart guide
 
-Membrane is a Osmosis development environment for smart contracts.
+Membrane is a Terp-NET development environment for smart contracts.
 
-This guide will walk you through setting up your environment, installing Membrane, and using the testnet or [LocalOsmosis](/developing/tools/localosmosis.html) to interact with a network.
+We have deployed membrane to expose its benefit directly to Terp NET participants
+
+This guide will walk you through setting up your environment, installing Membrane, and using the testnet or [LocalTerp-Core](/developing/tools/localterp-core.html) to interact with a network.
 
 For more information on Membrane, visit [Membrane's docs](/developing/tools/membrane.html).
 
 
 # Initial setup
 
-This tutorial uses a Osmosis specific development suite called Membrane.
+This tutorial uses a Terp-Network specific development suite called Membrane.
 
 Membrane will help you:
 
 * Scaffold your dApp project
 * Develop and deploy smart contracts
 * Create custom tasks for blockchain and contract interaction
-* Access a console (or REPL) for interacting with the Osmosis blockchain
+* Access a console (or REPL) for interacting with the Tero blockchain
 * Create predefined functions used in tasks and in the console
 
 ## Prerequisites
@@ -57,25 +59,25 @@ cargo install cargo-run-script
 Use npm to install the Membrane command-line tool globally:
 
 ```sh
-npm install -g @osmosis-labs/membrane
+npm install -g @terpnetwork/membrane
 ```
 
  
-### LocalOsmosis vs Testnet
+### LocalTerp-Core vs Testnet
 
-Depending on your setup, you can either install LocalOsmosis or use the Osmosis testnet to power Membrane. 
+Depending on your setup, you can either install LocalTerp-Core or use the Terp-NET testnet to power Membrane. 
 
-LocalOsmosis is a development environment designed to make it easy for smart contract developers to test their contracts locally. Membrane can also interact with the Osmosis blockchain's live testing environment using the Osmosis testnet. 
+LocalTerp-Core is a development environment designed to make it easy for smart contract developers to test their contracts locally. Membrane can also interact with the Terp-NET blockchain's live testing environment using the Terp-NET testnet. 
 
 ::: warning
-LocalOsmosis may not work properly on machines with less than 16 GB of RAM. Please use the [Osmosis testnet](/developing/network/join-testnet.html) if your device does not meet this requirement.
+LocalTerp-Core may not work properly on machines with less than 16 GB of RAM. Please use the [Terp-NET testnet](/developing/network/join-testnet.html) if your device does not meet this requirement.
 :::
 
-## Membrane with LocalOsmosis
+## Membrane with LocalTerp-Core
 
-### Use Membrane with LocalOsmosis
+### Use Membrane with LocalTerp-Core
 
-LocalOsmosis is a complete Osmosis testnet and ecosystem containerized with Docker. Use LocalOsmosis to simulate transactions in a test environment.
+LocalTerp-Core is a complete Terp-NET testnet and ecosystem containerized with Docker. Use LocalTerp-Core to simulate transactions in a test environment.
 
 #### Prerequisites
 
@@ -110,63 +112,63 @@ nvm alias default <INSERT NODE VERSION HERE>
 ```
 :::
 
-### Install and run LocalOsmosis 
+### Install and run LocalTerp-Core 
 
-There are two ways to install localOsmosis. 
+There are two ways to install LocalTerp-Core. 
 
 #### Manual download 
- - Download LocalOsmosis, run the following commands:
+ - Download LocalTerp-Core, run the following commands:
 
    ```sh
    cd ~/
-   git clone --depth 1 https://github.com/osmosis-labs/localosmosis
+   git clone --depth 1 https://github.com/terpnetwork/localterp-core
    ```
    
-#### Or Automatic download with Osmosis daemon configuration.
- - Uses the installer to configure the `osmosisd` daemon and automatically download localOsmosis
+#### Or Automatic download with Terp-NET daemon configuration.
+ - Uses the installer to configure the `terpdaemon and automatically download LocalTerp-Core
 
    ```sh
-   curl -sL https://get.osmosis.zone/install > i.py && python3 i.py
+   curl -sL https://get.terp.network/install > i.py && python3 i.py
    ```
 - Select option (3) and follow the prompts. 
    ![](../../../assets/local-installer.png)
 
-#### Start LocalOsmosis by running the following:
+#### Start LocalTerp-Core by running the following:
 
    ```sh
-   cd ~/localOsmosis
+   cd ~/LocalTerp-Core
    docker-compose up
    ```
 
-You will start seeing LocalOsmosis block activity in your terminal. Keep LocalOsmosis running while you perform the next steps in a new terminal window.
-![](../../../assets/localOsmosis.png)
+You will start seeing LocalTerp-Core block activity in your terminal. Keep LocalTerp-Core running while you perform the next steps in a new terminal window.
+![](../../../assets/LocalTerp-Core.png)
 
 
 
 ::: tip 
-LocalOsmosis Accounts
-To view the LocalOsmosis wallet information, visit the [LocalOsmosis accounts page](developing/tools/localosmosis.html#accounts). 
-For more configuration options, visit the [LocalOsmosis configuration page](/developing/tools/localosmosis.html#what-is-localosmosisd). 
+LocalTerp-Core Accounts
+To view the LocalTerp-Core wallet information, visit the [LocalTerp-Core accounts page](developing/tools/localterp-core.html#accounts). 
+For more configuration options, visit the [LocalTerp-Core configuration page](/developing/tools/localterp-core.html#what-is-localterpd
 :::
 
-### Configure Keplr with localOsmosis
+### Configure Keplr with LocalTerp-Core
 
-We added a small utility inside of localOsmosis to add your local chain to Keplr.
+We added a small utility inside of LocalTerp-Core to add your local chain to Keplr.
 
-Inside your localOsmosis repo run the following:
+Inside your LocalTerp-Core repo run the following:
 
 ```
 cd localKeplr
 npm start
 ```
 
-Open your browser at [http://localhost:3000](http://localhost:3000) and allow it to add localOsmosis to your Keplr.
+Open your browser at [http://localhost:3000](http://localhost:3000) and allow it to add LocalTerp-Core to your Keplr.
 
 ![](../../../assets/localKeplr.png)
 
-### Load accounts from localOsmosis to Keplr
+### Load accounts from LocalTerp-Core to Keplr
 
-LocalOsmosis provides a series of accounts in the genesis by defaults. [The seeds are available here](/developing/tools/localosmosis.html#accounts).
+LocalTerp-Core provides a series of accounts in the genesis by defaults. [The seeds are available here](/developing/tools/localterp-core.html#accounts).
 
 Open your keplr wallet extension and import the account with one of the seeds provided. You should now see balance in your Keplr wallet. 
 
@@ -215,7 +217,7 @@ Membrane also scaffolds a very simple front-end:
 WIP, this integration with Keplr will need some work.
 ::::
 
-1. Open the [Osmosis Keplr extension](https://chrome.google.com/webstore/detail/keplr/dmkamcknogkgcdfhhbddcghachkejeap?hl=en), click the gear icon, and switch the network to LocalOsmosis. If you have not added localOsmosis to your keplr yet, follow the instrcutions [here](#configure-keplr-with-localosmosis)
+1. Open the [Terp-NET Keplr extension](https://chrome.google.com/webstore/detail/keplr/dmkamcknogkgcdfhhbddcghachkejeap?hl=en), click the gear icon, and switch the network to LocalTerp-Core. If you have not added LocalTerp-Core to your keplr yet, follow the instrcutions [here](#configure-keplr-with-localterp-core)
 
 2. To use the front end, run the following commands in order. The `membrane sync-refs` command copies your deployed contract addresses to the front-end part of the codebase.
 
@@ -226,13 +228,13 @@ WIP, this integration with Keplr will need some work.
    npm start
    ```
 
-3. Open the Keplr wallet extension and click **Add a wallet**. Click **Recover wallet** and input the following seed phrase to access the sole validator on the LocalOsmosis network and gain funds to get started with smart contracts:
+3. Open the Keplr wallet extension and click **Add a wallet**. Click **Recover wallet** and input the following seed phrase to access the sole validator on the LocalTerp-Core network and gain funds to get started with smart contracts:
 
    ```
    satisfy adjust timber high purchase tuition stool faith fine install that you unaware feed domain license impose boss human eager hat rent enjoy dawn
    ```
 
-4. With LocalOsmosis selected in Osmosis Station and the local seed phrase imported, you can now increment and reset the counter from the front end.
+4. With LocalTerp-Core selected in Terp-NET Station and the local seed phrase imported, you can now increment and reset the counter from the front end.
 
 #### Demo
 

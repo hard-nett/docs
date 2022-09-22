@@ -9,7 +9,7 @@
 
     <RouterLink to="/">
       <div class="button">
-        Back to Osmosis Docs
+        Back to TerpNET Docs
         <i class="material-icons">redo</i>
       </div>
     </RouterLink>

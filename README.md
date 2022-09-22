@@ -1,12 +1,12 @@
 <p align="center">
-  <a href="https://docs.osmosis.zone/" target="_blank">
-    <img width="180" src="https://docs.osmosis.zone/img/osmosis-logo-dark.svg" alt="logo">
+  <a href="https://docs.terp.network/" target="_blank">
+    <img width="180" src="https://docs.terp.network/img/terp-logo-dark.svg" alt="logo">
   </a>
 </p>
 
 ## Documentation
 
-Check out our docs at https://docs.osmosis.zone/.
+Check out our docs at https://docs.terp.network/.
 
 ## Development Setup
 
@@ -14,7 +14,7 @@ Check out our docs at https://docs.osmosis.zone/.
 # Install all dependencies.
 yarn
 
-# Serves Osmosis' own docs with itself.
+# Serves TERPNET's own docs with itself.
 yarn dev
 
 # Build VuePress' own docs with itself.
@@ -23,9 +23,9 @@ yarn build
 
 ## Contribution
 
-Want to contribute? Check our [Contributing Guide](.github/CONTRIBUTING.md), [Code of Conduct](.github/CODE_OF_CONDUCT.md) and [issues for beginners](https://github.com/osmosis-labs/docs/issues)!
+Want to contribute? Check our [Contributing Guide](.github/CONTRIBUTING.md), [Code of Conduct](.github/CODE_OF_CONDUCT.md) and [issues for beginners](https://github.com/terpnetwork/docs/issues)!
 
 
 ## License
 
-[MIT](https://github.com/osmosis-labs/docs/blob/master/LICENSE.md)
+[MIT](https://github.com/terpnetwork/docs/blob/master/LICENSE.md)

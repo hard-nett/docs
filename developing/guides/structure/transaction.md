@@ -1,6 +1,6 @@
 # Transaction Structure
 
-Each block on a blockchain, including Cosmos-based ones like Osmosis, are constructed of a series
+Each block on a blockchain, including Cosmos-based ones like Terp Network, are constructed of a series
 of transactions.
 
 Each transaction, in turn, has its own internal structure. This document describes the structure
@@ -12,19 +12,19 @@ You can retrieve a single block by any one of:
 
 * using the RPC API
 * using the REST API
-* running a full node (using `osmosisd`)
+* running a full node (using `terpd
 
-For our examples, we use `osmosisd` to retrieve a single block:
+For our examples, we use `terpd':
 
 ```sh
-osmosisd query block 2836990
+terpd query block 2836990
 ```
 
 The above retrieves the block `2836990`. The result generally is in json without any formatting,
 so we run it through `jq` to clean it up:
 
 ```sh
-osmosisd query block 2836990 | jq '.'
+terpd query block 2836990 | jq '.'
 ```
 
 The result is a large json file. To keep this document readable, we will not reproduce the whole thing here,
@@ -49,7 +49,7 @@ The main outline is as follows:
         "block": "11",
         "app": "1"
       },
-      "chain_id": "osmosis-1",
+      "chain_id": "morocco-2",
       "height": "2836990",
       "time": "2022-01-17T17:14:01.589129908Z",
       "last_block_id": {
@@ -143,7 +143,7 @@ of which is an individual transaction.
 The block we have chosen, 2836990, contains 64 transactions:
 
 ```sh
-$ osmosisd query block 2836990 | jq -r '.block.data.txs | length'
+$ terpd query block 2836990 | jq -r '.block.data.txs | length'
 64
 ```
 
@@ -159,26 +159,26 @@ platform, but generally are of the form `base64 -D`. We do **not** recommend sim
 to the terminal, as this is binary-encoded data, specifically [protobufs](https://developers.google.com/protocol-buffers).
 
 ```sh
-osmosisd query block 2836990 | jq '.block.data.txs[0]' | base64 -D > outfile
+terpd query block 2836990 | jq '.block.data.txs[0]' | base64 -D > outfile
 ```
 
 The `outfile` will contain raw protobuf data.
 Protobuf data does not contain its own structre with it. It requires the `.proto` file to understand
 and interpret the fields, including converting them to a readable json format.
 
-Fortunately, `osmosisd` provides some basic tools for querying individual transactions. It does not,
+Fortunately, `terpd` provides some basic tools for querying individual transactions. It does not,
 however, let you retrieve any arbitrary transaction, as you must pass it "events":
 
 ```sh
-osmosisd query txs --events '<type>.<key>=<value>' [--height <height>]
+terpd query txs --events '<type>.<key>=<value>' [--height <height>]
 ```
 
 If you already know the events, you can retrieve individual transactions.
-Fortunately, if you are dealing with an individual block, you can get the transactions - and have `osmosisd`
+Fortunately, if you are dealing with an individual block, you can get the transactions - and have `terpd`
 decode the protobufs for you - by making the event be the block height:
 
 ```sh
-osmosisd query txs --height 2836990 --events 'tx.height=2836990' -o json
+terpd query txs --height 2836990 --events 'tx.height=2836990' -o json
 ```
 
 The results should match the number of transactions we have in the block:
@@ -194,19 +194,19 @@ The results should match the number of transactions we have in the block:
       ...
 ```
 
-The `total_count` is 64, as we expected. `osmosisd query txs` is paginated, so it only returned the first 30 of 64,
+The `total_count` is 64, as we expected. `terpd query txs` is paginated, so it only returned the first 30 of 64,
 with this being page 1.
 
 By passing the total transactions to retrieve, we can avoid the pagination:
 
 ```sh
-osmosisd query txs --height 2836990 --events 'tx.height=2836990' -o json --limit 64
+terpd query txs --height 2836990 --events 'tx.height=2836990' -o json --limit 64
 ```
 
 For convenience, we also will pass it through `jq` for formatting, and save the results to a file:
 
 ```sh
-osmosisd query txs --height 2836990 --events 'tx.height=2836990' -o json --limit 64 | jq '.' > outfile.json
+terpd query txs --height 2836990 --events 'tx.height=2836990' -o json --limit 64 | jq '.' > outfile.json
 ```
 
 The entire block's transactions is available at [txs-block-2836990.json](./txs-block-2836990.md).
@@ -242,15 +242,15 @@ Below is part of the transaction at index 1 of the above block.
           "attributes": [
             {
               "key": "receiver",
-              "value": "osmo1thscstwxp87g0ygh7le3h92f9ff4sel9y9d2eysa25p43yf43rysk7jp93"
+              "value": "terp1thscstwxp87g0ygh7le3h92f9ff4sel9y9d2eysa25p43yf43rysk7jp93"
             },
             {
               "key": "amount",
-              "value": "15000000uosmo"
+              "value": "15000000upersyx"
             },
             {
               "key": "receiver",
-              "value": "osmo1l4u56l7cvx8n0n6c7w650k02vz67qudjlcut89"
+              "value": "terp1l4u56l7cvx8n0n6c7w650k02vz67qudjlcut89"
             },
             {
               "key": "amount",
@@ -264,15 +264,15 @@ Below is part of the transaction at index 1 of the above block.
           "attributes": [
             {
               "key": "spender",
-              "value": "osmo1l4u56l7cvx8n0n6c7w650k02vz67qudjlcut89"
+              "value": "terp1l4u56l7cvx8n0n6c7w650k02vz67qudjlcut89"
             },
             {
               "key": "amount",
-              "value": "15000000uosmo"
+              "value": "15000000upersyx"
             },
             {
               "key": "spender",
-              "value": "osmo1thscstwxp87g0ygh7le3h92f9ff4sel9y9d2eysa25p43yf43rysk7jp93"
+              "value": "terp1thscstwxp87g0ygh7le3h92f9ff4sel9y9d2eysa25p43yf43rysk7jp93"
             },
             {
               "key": "amount",
@@ -286,15 +286,15 @@ Below is part of the transaction at index 1 of the above block.
           "attributes": [
             {
               "key": "action",
-              "value": "/osmosis.gamm.v1beta1.MsgSwapExactAmountIn"
+              "value": "/terpnetwork.gamm.v1beta1.MsgSwapExactAmountIn"
             },
             {
               "key": "sender",
-              "value": "osmo1l4u56l7cvx8n0n6c7w650k02vz67qudjlcut89"
+              "value": "terp1l4u56l7cvx8n0n6c7w650k02vz67qudjlcut89"
             },
             {
               "key": "sender",
-              "value": "osmo1thscstwxp87g0ygh7le3h92f9ff4sel9y9d2eysa25p43yf43rysk7jp93"
+              "value": "terp1thscstwxp87g0ygh7le3h92f9ff4sel9y9d2eysa25p43yf43rysk7jp93"
             },
             ...
           ]
@@ -308,7 +308,7 @@ Below is part of the transaction at index 1 of the above block.
             },
             {
               "key": "sender",
-              "value": "osmo1l4u56l7cvx8n0n6c7w650k02vz67qudjlcut89"
+              "value": "terp1l4u56l7cvx8n0n6c7w650k02vz67qudjlcut89"
             },
             {
               "key": "pool_id",
@@ -316,7 +316,7 @@ Below is part of the transaction at index 1 of the above block.
             },
             {
               "key": "tokens_in",
-              "value": "15000000uosmo"
+              "value": "15000000upersyx"
             },
             {
               "key": "tokens_out",
@@ -328,7 +328,7 @@ Below is part of the transaction at index 1 of the above block.
             },
             {
               "key": "sender",
-              "value": "osmo1l4u56l7cvx8n0n6c7w650k02vz67qudjlcut89"
+              "value": "terp1l4u56l7cvx8n0n6c7w650k02vz67qudjlcut89"
             },
             {
               "key": "pool_id",
@@ -350,23 +350,23 @@ Below is part of the transaction at index 1 of the above block.
           "attributes": [
             {
               "key": "recipient",
-              "value": "osmo1thscstwxp87g0ygh7le3h92f9ff4sel9y9d2eysa25p43yf43rysk7jp93"
+              "value": "terp1thscstwxp87g0ygh7le3h92f9ff4sel9y9d2eysa25p43yf43rysk7jp93"
             },
             {
               "key": "sender",
-              "value": "osmo1l4u56l7cvx8n0n6c7w650k02vz67qudjlcut89"
+              "value": "terp1l4u56l7cvx8n0n6c7w650k02vz67qudjlcut89"
             },
             {
               "key": "amount",
-              "value": "15000000uosmo"
+              "value": "15000000upersyx"
             },
             {
               "key": "recipient",
-              "value": "osmo1l4u56l7cvx8n0n6c7w650k02vz67qudjlcut89"
+              "value": "terp1l4u56l7cvx8n0n6c7w650k02vz67qudjlcut89"
             },
             {
               "key": "sender",
-              "value": "osmo1thscstwxp87g0ygh7le3h92f9ff4sel9y9d2eysa25p43yf43rysk7jp93"
+              "value": "terp1thscstwxp87g0ygh7le3h92f9ff4sel9y9d2eysa25p43yf43rysk7jp93"
             },
             {
               "key": "amount",
@@ -386,8 +386,8 @@ Below is part of the transaction at index 1 of the above block.
     "body": {
       "messages": [
         {
-          "@type": "/osmosis.gamm.v1beta1.MsgSwapExactAmountIn",
-          "sender": "osmo1l4u56l7cvx8n0n6c7w650k02vz67qudjlcut89",
+          "@type": "/terpnetwork.gamm.v1beta1.MsgSwapExactAmountIn",
+          "sender": "terp1l4u56l7cvx8n0n6c7w650k02vz67qudjlcut89",
           "routes": [
             {
               "poolId": "604",
@@ -399,11 +399,11 @@ Below is part of the transaction at index 1 of the above block.
             },
             {
               "poolId": "1",
-              "tokenOutDenom": "uosmo"
+              "tokenOutDenom": "upersyx"
             }
           ],
           "tokenIn": {
-            "denom": "uosmo",
+            "denom": "upersyx",
             "amount": "15000000"
           },
           "tokenOutMinAmount": "15000000"
@@ -432,7 +432,7 @@ Below is part of the transaction at index 1 of the above block.
       "fee": {
         "amount": [
           {
-            "denom": "uosmo",
+            "denom": "upersyx",
             "amount": "0"
           }
         ],
@@ -482,8 +482,8 @@ Each transaction has an identical structure. The differences are in the details 
     "body": {
       "messages": [
         {
-          "@type": "/osmosis.gamm.v1beta1.MsgSwapExactAmountIn",
-          "sender": "osmo1l4u56l7cvx8n0n6c7w650k02vz67qudjlcut89",
+          "@type": "/terpnetwork.gamm.v1beta1.MsgSwapExactAmountIn",
+          "sender": "terp1l4u56l7cvx8n0n6c7w650k02vz67qudjlcut89",
           "routes": [
             {
               "poolId": "604",
@@ -495,11 +495,11 @@ Each transaction has an identical structure. The differences are in the details 
             },
             {
               "poolId": "1",
-              "tokenOutDenom": "uosmo"
+              "tokenOutDenom": "upersyx"
             }
           ],
           "tokenIn": {
-            "denom": "uosmo",
+            "denom": "upersyx",
             "amount": "15000000"
           },
           "tokenOutMinAmount": "15000000"
@@ -528,7 +528,7 @@ Each transaction has an identical structure. The differences are in the details 
       "fee": {
         "amount": [
           {
-            "denom": "uosmo",
+            "denom": "upersyx",
             "amount": "0"
           }
         ],
@@ -565,10 +565,10 @@ we will link to individual analyses of several transactions.
 The `tx` field contains the original transaction that was sent to the blockchain that triggered the
 rest of the messages.
 
-This `tx` could be something simple - transfer 10osmo from account A to account B - or something more
+This `tx` could be something simple - transfer 10terp from account A to account B - or something more
 complex, like swapping tokens via a liquidity pool or bonding.
 
-When you use the [Osmosis Web App](https://app.osmosis.zone/) or `osmosisd` to send a transaction, it
+When you use the [Terp Network Web App](https://app.terp.network/) or `terpd` to send a transaction, it
 composes and sends the single message in the `tx` field.
 
 ```json
@@ -605,7 +605,7 @@ composes and sends the single message in the `tx` field.
   "fee": {
     "amount": [
       {
-        "denom": "uosmo",
+        "denom": "upersyx",
         "amount": "0"
       }
     ],
@@ -637,7 +637,7 @@ for the transaction to succeed, i.e. a transaction. Most of the transactions are
 
 The fields of message always will contain at least two fields:
 
-* `@type`: the specific type of the message within the application, for example, `/osmosis.gamm.v1beta1.MsgSwapEactAmountIn`
+* `@type`: the specific type of the message within the application, for example, `/terpnetwork.wasm.v1.MsgInstantiateContract`
 * `sender`: the sender of the message
 
 The rest of the fields are specific to the `@type` of message. Once you know the type of message, you can look in the
@@ -646,7 +646,7 @@ source code for the protobuf definition of the message type.
 Each Cosmos SDK app implementation will have its own modules and therefore its own message types,
 in addition to basic ones inherited from the Cosmos SDK.
 
-When the Cosmos app, in this example osmosisd, and specifically the target module, in our example `gamm`, receives the message, it in turn
+When the Cosmos app, in this example terpd, and specifically the target module, in our example `gamm`, receives the message, it in turn
 does internal activities, including
 sending various messages that comprise the fulfillment of the requested transaction. These are recorded in the `logs`.
 
@@ -678,7 +678,7 @@ The `attributes` are an array of key-value structures, with just two keys: `key`
 ```json
 {
   "key": "receiver",
-  "value": "osmo1thscstwxp87g0ygh7le3h92f9ff4sel9y9d2eysa25p43yf43rysk7jp93"
+  "value": "terp1thscstwxp87g0ygh7le3h92f9ff4sel9y9d2eysa25p43yf43rysk7jp93"
 },
 ```
 

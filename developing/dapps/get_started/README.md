@@ -1,29 +1,29 @@
 ---
-title: Contracts & dApps on Osmosis
+title: Contracts & dApps on Terp-Core
 ---
-# Building dApps on Osmosis
+# Building dApps on Terp-Core
 
 
 ## Getting Started
 <div class="cards twoColumn" >
 
-  <a href="cosmwasm-localosmosis.html" class="card">
+  <a href="cosmwasm-localterp-core.html" class="card">
     <img src="/img/cosmwasm.svg" class="filter-icon" />
     <div class="title">
-     Cosmwasm with LocalOsmosis & osmosisd
+     Cosmwasm with LocalTerp-Core & Terpd
     </div>
     <div class="text">
-      Compile, upload and interact with a contract in the Osmosis blockchain.
+      Compile, upload and interact with a contract in the Terp-Core blockchain.
     </div>
   </a>
 
   <a href="cosmwasm-testnet-manual.html" class="card">
     <img src="/img/cosmwasm.svg" class="filter-icon" />
     <div class="title">
-    Deploy Cosmwasm Contracts to Testnet with osmosisd
+    Deploy Cosmwasm Contracts to Testnet with terpd
     </div>
     <div class="text">
-      Deploying contracts to testnet via osmosisd binary
+      Deploying contracts to testnet via terpd binary
     </div>
   </a>
   
@@ -69,13 +69,13 @@ title: Contracts & dApps on Osmosis
   </a> -->
   
   
-  <a href="https://github.com/osmosis-labs/contract-list" class="card" target="_blank">
+  <a href="https://github.com/terpnetwork/contract-list" class="card" target="_blank">
     <img src="/img/contract.svg" class="filter-icon" />
     <div class="title">
-    Osmosis Contract List
+    Terp Network Contract List
     </div>
     <div class="text">
-    Repository contains a list of all approved code IDs to Osmosis
+    Repository contains a list of all approved code IDs to Terp-Core
     </div>
   </a>  
   
@@ -111,7 +111,7 @@ title: Contracts & dApps on Osmosis
    <a href="#" class="card">
       <img src="/img/dapps.svg" class="filter-icon" />
       <div class="title">
-       Building Osmosis dApps
+       Building Terp Core dApps
       </div>
       <div class="text">
        Coming soon
@@ -133,33 +133,33 @@ title: Contracts & dApps on Osmosis
     </div>
   </a>
   
-  <a href="/developing/tools/localosmosis" class="card">
-    <img src="/img/localosmosis.svg" class="filter-icon"/>
+  <a href="/developing/tools/localterp-core" class="card">
+    <img src="/img/localterp-core.svg" class="filter-icon"/>
     <div class="title">
-     LocalOsmosis
+     LocalTerp-Core
     </div>
     <div class="text">
-      Run Osmosis locally
+      Run Terp-Core locally
     </div>
   </a>
 
-  <a href="https://www.npmjs.com/package/osmojs" class="card" target="_blank">
+  <a href="https://www.npmjs.com/package/terpjs" class="card" target="_blank">
     <img src="/img/osmojs.svg" class="filter-icon"/>
     <div class="title">
-     OsmoJS
+     TerpJS
     </div>
     <div class="text">
-      Osmosis Stargate Client
+      Terp Network Stargate Client
     </div>
   </a>
 
-  <a href="/developing/tools/osmosisd" class="card">
+  <a href="/developing/tools/terpd" class="card">
     <img src="/img/terminal-solid.svg" class="filter-icon"/>
     <div class="title">
-     Osmosis daemon
+     Terp-Core daemon
     </div>
     <div class="text">
-      Install osmosisd
+      Install terpd
     </div>
   </a>
  </div>
@@ -168,13 +168,13 @@ title: Contracts & dApps on Osmosis
 ## Networks
  <div class="cards twoColumn" >
 
-  <a href="/developing/tools/localosmosis.html" class="card">
+  <a href="/developing/tools/localterp-core.html" class="card">
     <img src="/img/ide.svg" class="filter-icon"/>
     <div class="title">
-     Local Osmosis
+     Local Terp-Core
     </div>
     <div class="text">
-     Osmosis development environment
+     Terp-Core development environment
     </div>
   </a>
   
@@ -184,7 +184,7 @@ title: Contracts & dApps on Osmosis
      Joining Testnet
     </div>
     <div class="text">
-     Set up a node on the Osmosis testnet
+     Set up a node on the Terp Network testnet
     </div>
   </a> 
 
@@ -194,7 +194,7 @@ title: Contracts & dApps on Osmosis
      Join Mainnet
     </div>
     <div class="text">
-      Set up a node on the Osmosis mainnet
+      Set up a node on the Terp Network mainnet
     </div>
   </a>
   

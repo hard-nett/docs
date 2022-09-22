@@ -1,11 +1,11 @@
 # Glossary 
 
 
-Use this glossary to learn about terms used in Osmosis and the Cosmos ecosystem.
+Use this glossary to learn about terms used in Terp Network and the Cosmos ecosystem.
 
 ## Active set
 
-The top 100 validators that participate in consensus and receive rewards.
+The top 68 validators that participate in consensus and receive rewards.
 
 ## Air drops
 
@@ -46,11 +46,11 @@ A special fund designated for funding community projects. Any community member c
 
 ## Consensus
 
-A system used by validators or miners to agree that each block of transactions in a blockchain is correct. The Osmosis blockchain uses Tendermint consensus engine. Validators earn rewards for participating in consensus. Visit the [Tendermint official documentation site](https://docs.tendermint.com/) for more information.
+A system used by validators or miners to agree that each block of transactions in a blockchain is correct. The Terp-Core blockchain uses Tendermint consensus engine. Validators earn rewards for participating in consensus. Visit the [Tendermint official documentation site](https://docs.tendermint.com/) for more information.
 
 ## Cosmos-SDK
 
-The open-source framework the Osmosis blockchain is built on. For more information, check out the [Cosmos SDK Documentation](https://docs.cosmos.network/).
+The open-source framework the Terp-Core blockchain is built on. For more information, check out the [Terp-Core SDK Documentation](https://docs.cosmos.network/).
 
 ## dApp
 
@@ -80,15 +80,15 @@ A user who delegates, bonds, or stakes OSMO to a validator to earn rewards.
 
 ## Full node
 
-A computer connected to the Osmosis mainnet able to validate transactions and interact with the Osmosis blockchain. All active validators run full nodes.
+A computer connected to the Terp Network mainnet able to validate transactions and interact with the Terp Network. All active validators run full nodes.
 
 ## Governance
 
-Governance is the democratic process that allows users and validators to make changes to the Osmosis protocol. Community members submit, vote, and implement proposals.
+Governance is the democratic process that allows users and validators to make changes to the Terp-Core protocol. Community members submit, vote, and implement proposals.
 
 ## Governance proposal
 
-A written submission for a change or addition to the Osmosis protocol. Topics of proposals can vary from community pool spending, software changes, parameter changes, or any idea pertaining to the Osmosis protocol.
+A written submission for a change or addition to the Terp-Core protocol. Topics of proposals can vary from community pool spending, software changes, parameter changes, or any idea pertaining to the Terp-Core protocol.
 
 ## Inactive set
 
@@ -97,7 +97,7 @@ Validators that are not in the [active set](/overview/terminology.html#active-se
 ## IBC
 
 The inter-blockchain communication protocol (IBC) creates communication between independent blockchains. IBC achieves this by specifying a set of structures that can be implemented by any distributed ledger that satisfies a small number of requirements.
-IBC facilitates cross-chain applications for token transfers, swaps, multi-chain contracts, and data sharding. At launch, Osmosis utilizes IBC for token transfers. Over time, Osmosis will add new features that are made possible through IBC.
+IBC facilitates cross-chain applications for token transfers, swaps, multi-chain contracts, and data sharding. At launch, Terp Core utilizes IBC for token transfers. Over time, chronic will add new features that are made possible through IBC.
 
 
 ## Impermanent Loss
@@ -110,7 +110,7 @@ Impermanent loss is mitigated in part by the transaction fees earned by LPs. Whe
 
 To further offset impermanent loss, particularly in the early stages of a protocol when volatility is high, AMMs utilize liquidity mining rewards. Liquidity rewards bootstrap the ecosystem as usage and fee revenues are still ramping up.
 
-Osmosis has many new features and innovations in development to decrease impermanent loss.
+
 
 
 ## Jailed
@@ -120,7 +120,7 @@ Validators who misbehave are jailed or excluded from the validator set for a per
 ## Liquidity Mining
 
 Liquidity mining (also called yield farming) is when users earn tokens for providing liquidity to a DeFi protocol. This mechanism is used to offset the impermanent loss experienced by LPs. Liquidity mining rewards create an additional incentive for LPs besides transaction fees. These rewards are particularly useful for nascent protocols. Liquidity mining helps to bootstrap initial liquidity, facilitating increased usage and more fees for LPs.
-Information on Osmosis' incentive mining program can be found in this 
+
 
 ## LP Tokens
 
@@ -129,19 +129,10 @@ For example, if Pool #1 is the OSMO<>ATOM pool, users can deposit OSMO and ATOM 
 When users remove their liquidity from the pool, they get back the percentage of liquidity that their LP tokens represent.
 Since buying and selling from the pool changes the quantities of assets within a pool, users are highly unlikely to withdraw the same amount of each token that they initially deposited. They usually receive more of one and less of another, based on the trades executed from the pool.
 
-## Long-Term Liquidity
-Liquidity mining rewards tend to attract short-term “mercenary farmers” who quickly deposit and withdraw their liquidity after harvesting the yield. These farmers are only interested in the speculative value of the governance tokens that they are earning. They usually bounce between protocols in search of the best yield.
-Mercenary farmers often create the mirage of protocol adoption, but when these farmers leave, it results in significant liquidity volatility. Users of the AMM have difficulty executing trades without encountering slippage. Therefore, long-term liquidity is crucial to the success of an AMM.
-Osmosis’ design includes two mechanisms to incentivize long-term liquidity: [exit fees](/overview/osmosis-app/learn-more.html#swap-fees) and [bonded liquidity gauges](/overview/osmosis-app/learn-more.html#bonded-liquidity-gauges).
-
-
-## Market swap
-
-A swap in Osmosis that uses the Osmosis protocol's market function. 
 
 ## Module
 
-A section of the Osmosis core that represents a particular function of the Osmosis protocol. 
+A section of the Terp-Core that represents a particular function of the Terp Network protocol. 
 
 ## Pools
 
@@ -158,7 +149,7 @@ Revenue generated from fees given to validators and delegators.
 
 ## Self-delegation
 
-The amount of Osmo a validator bonds to themselves. Also referred to as self-bond.
+The amount of Terp Tokens a validator bonds to themselves. Also referred to as self-bond.
 
 ## Slashing
 
@@ -170,28 +161,28 @@ The difference in a coin's price between the start and end of a transaction.
 
 ## Stake
 
-The amount of Osmo bonded to a validator.
+The amount of Terp Tokens bonded to a validator.
 
 ## Staking
 
-When a user or delegator delegates and bonds Osmo to an active validator in order to receive rewards. Bonded Osmo adds to a validator's stake. Validators provide their stakes as collateral to participate in the consensus process. Validators with larger stakes are chosen to participate more often. Validators receive staking rewards for their participation. A validator's stake can be slashed if the validator misbehaves. Validators never have ownership of a delegator's Osmo, even when staking.
+When a user or delegator delegates and bonds Terp to an active validator in order to receive rewards. Bonded Terp Tokens adds to a validator's stake. Validators provide their stakes as collateral to participate in the consensus process. Validators with larger stakes are chosen to participate more often. Validators receive staking rewards for their participation. A validator's stake can be slashed if the validator misbehaves. Validators never have ownership of a delegator's Terp Tokens, even when staking.
 
 ## Tendermint consensus
 
-The consensus procedure used by the Osmosis protocol. First, a validator proposes a new block. Other validators vote on the block in two rounds. If a block receives a two-thirds majority or greater of yes votes in both rounds, it gets added to the blockchain. Validators get rewarded with the block's transaction fees. Proposers get rewarded extra. Each validator is chosen to propose based on their weight. Checkout the [Tendermint official documentation](https://docs.tendermint.com/) for more information.
+The consensus procedure used by the Terp Network protocol. First, a validator proposes a new block. Other validators vote on the block in two rounds. If a block receives a two-thirds majority or greater of yes votes in both rounds, it gets added to the blockchain. Validators get rewarded with the block's transaction fees. Proposers get rewarded extra. Each validator is chosen to propose based on their weight. Checkout the [Tendermint official documentation](https://docs.tendermint.com/) for more information.
 
-## Osmosis 
+## Terp-Core 
 
-The official source code for the Osmosis protocol.
+The official source code for the Terp Network protocol.
 
-## Osmosis mainnet
+## Terp  mainnet
 
-The Osmosis protocol's blockchain network where all transactions take place.
+The Terp protocol's blockchain network where all transactions take place.
 
 
-## Osmosisd
+## terpd
 
-A command line interface for connecting to a Osmosis node.
+A command line interface for connecting to a chronic node.
 
 ## Superfluid Staking
 A process that yields additional APR based on the value of your share of the pool you have bonded liquidity for.
@@ -202,7 +193,7 @@ A version of the mainnet just for testing. The testnet does not use real coins. 
 
 ## Total stake
 
-The total amount of Osmo bonded to a delegator, including self-bonded Osmo.
+The total amount of Terp Tokens bonded to a delegator, including self-bonded Terp Tokens.
 
 ## Unbonded validator
 
@@ -212,21 +203,21 @@ A validator that is not in the active set and does not participate in consensus 
 
 A validator transitioning from the active set to the inactive set. An unbonding validator does not participate in consensus or earn rewards. The unbonding process takes 21 days.
 
-## Unbonded Osmo
+## Unbonded Terp Tokens
 
-Osmo that can be freely traded and is not staked to a validator.
+Terp Tokens that can be freely traded and is not staked to a validator.
 
 ## Unbonding
 
-When a delegator decides to undelegate their Osmo from a validator. This process takes 21 days. No rewards accrue during this period. This action cannot be stopped once executed.
+When a delegator decides to undelegate their Terp Tokens from a validator. This process takes 21 days. No rewards accrue during this period. This action cannot be stopped once executed.
 
-## Unbonding Osmo
+## Unbonding Terp Tokens
 
-Osmo that is transitioning from bonded to unbonded. Osmo that is unbonding cannot be traded freely. The unbonding process takes 21 days. No rewards accrue during this period. This action cannot be stopped once executed.
+Terp Tokens that is transitioning from bonded to unbonded. Terp Tokens that is unbonding cannot be traded freely. The unbonding process takes 21 days. No rewards accrue during this period. This action cannot be stopped once executed.
 
 ## Undelegate
 
-When a delegator no longer wishes to have their Osmo bonded to a validator. This process takes 21 days. No rewards accrue during this period. This action cannot be stopped once executed.
+When a delegator no longer wishes to have their Terp Tokens bonded to a validator. This process takes 21 days. No rewards accrue during this period. This action cannot be stopped once executed.
 
 ## Uptime
 
@@ -234,7 +225,7 @@ The amount of time a validator has been active in a given timeframe. Validators 
 
 ## Validator
 
-A Osmosis blockchain miner responsible for verifying transactions on the blockchain. Validators run programs called full nodes that allow them to participate in consensus, verify blocks, participate in governance, and receive rewards. The top 130 validators with the highest total stake can participate in consensus.
+A Terp Network blockchain miner responsible for verifying transactions on the blockchain. Validators run programs called full nodes that allow them to participate in consensus, verify blocks, participate in governance, and receive rewards. The top 130 validators with the highest total stake can participate in consensus.
 
 ## Weight
 

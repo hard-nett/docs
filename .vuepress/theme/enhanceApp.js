@@ -1,12 +1,12 @@
-// register Osmosis components
-import Reference from "./osmosis-components/Reference";
-import CodeSignature from "./osmosis-components/CodeSignature";
-import JsonTreeView from "./osmosis-components/JsonTreeView";
-import Param from "./osmosis-components/Param";
-import TypeDesc from "./osmosis-components/TypeDesc";
-import BoxField from "./osmosis-components/BoxField";
-import ParamsList from "./osmosis-components/ParamsList";
-import DarkModeSwitch from "./osmosis-components/DarkModeSwitch";
+// register Terpnet components
+import Reference from "./terpnetwork-components/Reference";
+import CodeSignature from "./terpnetwork-components/CodeSignature";
+import JsonTreeView from "./terpnetwork-components/JsonTreeView";
+import Param from "./terpnetwork-components/Param";
+import TypeDesc from "./terpnetwork-components/TypeDesc";
+import BoxField from "./terpnetwork-components/BoxField";
+import ParamsList from "./terpnetwork-components/ParamsList";
+import DarkModeSwitch from "./terpnetwork-components/DarkModeSwitch";
 
 export default ({ Vue }) => {
   Vue.component("Reference", Reference);

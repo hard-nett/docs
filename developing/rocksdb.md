@@ -42,16 +42,16 @@ echo "export LD_LIBRARY_PATH=/usr/local/lib" >> $HOME/.bashrc
 source $HOME/.bashrc
 ```
 
-# compile osmosis with rocksdb install tags
+# compile terp-core with rocksdb install tags
 ```
 cd
-git clone https://github.com/osmosis-labs/osmosis
-cd osmosis
+git clone https://github.com/terpnetwork/terp-core
+cd terp-core
 git checkout v6.1.0
 BUILD_TAGS=rocksdb make install
 ```
 
-# start osmosisd with rocksdb db_backend flag
+# start terpd with rocksdb db_backend flag
 ```
-osmosisd start --db_backend rocksdb
+terpd start --db_backend rocksdb
 ```

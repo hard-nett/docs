@@ -1,13 +1,13 @@
 {
-  "name": "osmosis-docs",
+  "name": "terpnet-docs",
   "version": "1.0.4",
-  "description": "Official Osmosis Documentation website",
+  "description": "Official TERPNET Documentation website",
   "main": "index.js",
   "authors": {
-    "name": "Osmosis Labs",
+    "name": "Glassflow Labs",
     "email": ""
   },
-  "repository": "/osmosis",
+  "repository": "/terp-core",
   "scripts": {
     "dev": "vuepress dev",
     "build": "vuepress build"

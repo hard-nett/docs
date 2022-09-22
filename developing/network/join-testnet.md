@@ -1,214 +1,159 @@
 # Joining Testnet
 
-## Install Osmosis Binary
+## Terp Network - athena-1 Testnet
 
-Make sure you have [installed the Osmosis Binary (CLI)](../cli/install#manual-installation) prior to following the below instructions.
+This testnet will start at the patched version of Terp-Core (`v0.1.0`). You will need to use the distributed binary from the Terp Network packages repository.
 
-You may also [use the Osmosis installer](../cli/install#quick-start) if you want everything to be done automatically.
+**Genesis File**
 
-## Faucet 
-In order to get testnet tokens use  [https://faucet.osmosis.zone/](https://faucet.osmosis.zone/)
-
-## Initialize Osmosis Node
-
-Use osmosisd to initialize your node (replace the ```NODE_NAME``` with a name of your choosing):
+[Genesis File](https://raw.githubusercontent.com/terpnetwork/test-net/master/athena-1/genesis.json):
 
 ```bash
-osmosisd init NODE_NAME --chain-id=osmo-test-4
+   curl -s  https://raw.githubusercontent.com/terpnetwork/test-net/master/athena-1/genesis.json > ~/.terp/config/genesis.json
 ```
 
-Open the config.toml to edit the seeds and persistent peers:
+**Genesis sha256**
 
 ```bash
-cd $HOME/.osmosisd/config
-nano config.toml
+sha256sum ~/.terp/config/genesis.json
+# 322951ef73713c550fcc70e312cb2d67c58b85d2870961f982ede7dd0447162d
 ```
 
-Use page down or arrow keys to get to the line that says seeds = "" and replace it with the following:
+**terpd version**
 
 ```bash
-seeds = "0f9a9c694c46bd28ad9ad6126e923993fc6c56b1@137.184.181.105:26656"
+$ terpd version --long
+name: Terp Core
+server_name: terpd
+version: v0.1.0
+commit: 9ef3e1eada1f06509aa223e64a2380b55aaa3bca
+build_tags: netgo muslc, # THIS BIT IS KEY
 ```
 
-Next, add persistent peers:
+**Seed nodes**
 
-```bash
-persistent_peers = "4ab030b7fd75ed895c48bcc899b99c17a396736b@137.184.190.127:26656,3dbffa30baab16cc8597df02945dcee0aa0a4581@143.198.139.33:26656"
+```
+9cf4fc01e035182688a893d6f6c4687cb59d603d@138.201.200.159:11503
 ```
 
-Then press ```Ctrl+O``` then enter to save, then ```Ctrl+X``` to exit
+**Persistent Peers**
 
-## Set Up Cosmovisor
-
-Set up cosmovisor to ensure future upgrades happen flawlessly. To install Cosmovisor:
-
-```bash
-go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v1.0.0
 ```
 
-Create the required directories:
-
-```bash
-mkdir -p ~/.osmosisd/cosmovisor
-mkdir -p ~/.osmosisd/cosmovisor/genesis
-mkdir -p ~/.osmosisd/cosmovisor/genesis/bin
-mkdir -p ~/.osmosisd/cosmovisor/upgrades
+7e5c0b9384a1b9636f1c670d5dc91ba4721ab1ca@23.88.53.28:36656
 ```
 
-Set the environment variables:
+## Setup
 
-```bash
-echo "# Setup Cosmovisor" >> ~/.profile
-echo "export DAEMON_NAME=osmosisd" >> ~/.profile
-echo "export DAEMON_HOME=$HOME/.osmosisd" >> ~/.profile
-echo "export DAEMON_ALLOW_DOWNLOAD_BINARIES=false" >> ~/.profile
-echo "export DAEMON_LOG_BUFFER_SIZE=512" >> ~/.profile
-echo "export DAEMON_RESTART_AFTER_UPGRADE=true" >> ~/.profile
-echo "export UNSAFE_SKIP_BACKUP=true" >> ~/.profile
-source ~/.profile
+**Prerequisites:** Make sure to have [Golang >=1.19](https://golang.org/).
+
+#### Go setup
+
+You need to ensure your gopath configuration is correct. If the following **'make'** step does not work then you might have to add these lines to your .profile or .zshrc in the users home folder:
+
+```sh
+nano ~/.profile
 ```
 
-You may leave out `UNSAFE_SKIP_BACKUP=true`, however the backup takes a decent amount of time and public snapshots of old states are available.
-
-Download and replace the genesis file:
-
-```bash
-cd $HOME/.osmosisd/config
-wget https://github.com/osmosis-labs/networks/raw/main/osmo-test-4/genesis.tar.bz2
-tar -xjf genesis.tar.bz2 && rm genesis.tar.bz2
+```
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export GO111MODULE=on
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 ```
 
-Copy the current osmosisd binary into the cosmovisor/genesis folder:
+Source update .profile
 
-```bash
-cp $GOPATH/bin/osmosisd ~/.osmosisd/cosmovisor/genesis/bin
+```sh
+source .profile
 ```
 
-To check your work, ensure the version of cosmovisor and osmosisd are the same:
+#### Download and verify:
 
-```bash
-cosmovisor version
-osmosisd version
+```sh
+# find out where terpd is - will likely be /home/<your-user>/go/bin/terpd
+which terpd
+
+# put new binary there i.e. in path/to/terpd
+wget https://github.com/terpnetwork/terp-core/releases/download/v0.1.0/terp-core -O /home/<your-user>/go/bin/terpd
+
+# if you run this, you should see build_tags: netgo muslc,
+# if there is a permissions problem use chmod/chown to make sure it is executable
+terpd version --long
+
+# confirm it is using the static lib - should return "not a dynamic executable"
+ldd $(which terpd)
+
+# if you really want to be sure
+# this should return:
+# ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, 
+# Go BuildID=4Ec3fj_EKdvh_u8K3RGJ/JIKOgYFXTJ9LzGROhs8n/uC9gpeaM9MaYurh9DJiN/YcvB8Jc2ivQM2zUSHMhg, stripped
+file $(which terpd)
 ```
 
-These two command should both output 7.0.3
+Check that you have the right Terp-Core version installed:
 
-Reset private validator file to genesis state:
-
-```bash
-osmosisd unsafe-reset-all
+```sh
+$ terpd version --long
+name: Terp-Core
+server_name: terpd
+version: v0.1.0
+commit: e6b8c212b178cf575035065b78309aed547b1335
+build_tags: netgo muslc, # THE MUSLC TAG IS KEY
 ```
 
-## Download Chain Data
 
-Download the latest chain data from a snapshot provider. In the following commands, I will use <a href="https://quicksync.io/networks/osmosis.html" target="_blank">https://quicksync.io/networks/osmosis.html</a> to download the chain data. You may choose the pruned or archive based on your needs.
+#### Running in production
 
-Download liblz4-tool to handle the compressed file:
+**Note, we'll be going through some upgrades for this testnet. Consider using [Cosmovisor](https://github.com/cosmos/cosmos-sdk/tree/master/cosmovisor) to make your life easier.** Setting up Cosmovisor is covered in the [Terp Network Documentation]().
 
-```bash
-sudo apt-get install wget liblz4-tool aria2 -y
+Download Genesis file when the time is right. Put it in your `/home/<user>/.terp` folder.
+
+If you have not installed cosmovisor, create a systemd file for your TerpNet service:
+
+```sh
+sudo nano /etc/systemd/system/terpd.service
 ```
 
-Download the chain data:
+Copy and paste the following and update `<YOUR_USERNAME>` and `<CHAIN_ID>`:
 
-- Select the tab to the desired node type (Pruned or Archive)
-
-
-<!-- #region -->
-::::::: tabs :options="{ useUrlFragment: false }"
-
-:::::: tab Pruned
-
-``` bash
-URL=`curl https://quicksync.io/osmosis.json|jq -r '.[] |select(.file=="osmotestnet-4-pruned")|select (.mirror=="Netherlands")|.url'`
-cd $HOME/.osmosisd/
-wget -O - $URL | lz4 -d | tar -xvf -
-```
-
-::::::
-
-:::::: tab Archive
-
-``` bash
-URL=`curl https://quicksync.io/osmosis.json|jq -r '.[] |select(.file=="osmotestnet-4-archive")|select (.mirror=="Netherlands")|.url'`
-cd $HOME/.osmosisd/
-wget -O - $URL | lz4 -d | tar -xvf -
-```
-
-::::::
-
-:::::::
-
-<!-- #endregion -->
-
-## Set Up Osmosis Service
-
-Set up a service to allow cosmovisor to run in the background as well as restart automatically if it runs into any problems:
-
-```bash
-echo "[Unit]
-Description=Cosmovisor daemon
+```sh
+Description=Terp-Core daemon
 After=network-online.target
+
 [Service]
-Environment="DAEMON_NAME=osmosisd"
-Environment="DAEMON_HOME=${HOME}/.osmosisd"
-Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
-Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
-Environment="DAEMON_LOG_BUFFER_SIZE=512"
-Environment="UNSAFE_SKIP_BACKUP=true"
-User=$USER
-ExecStart=${HOME}/go/bin/cosmovisor start
-Restart=always
+User=<YOUR_USER>
+ExecStart=/home/<YOUR_USERNAME>/go/bin/terpd start
+Restart=on-failure
 RestartSec=3
-LimitNOFILE=infinity
-LimitNPROC=infinity
+LimitNOFILE=4096
+
 [Install]
 WantedBy=multi-user.target
-" >cosmovisor.service
 ```
 
-Move this new file to the systemd directory:
+Enable and start the new service:
 
-```bash
-sudo mv cosmovisor.service /lib/systemd/system/cosmovisor.service
+```sh
+sudo systemctl enable terpd
+sudo systemctl start terpd
 ```
 
-## Start Osmosis Service
+Check status:
 
-Reload and start the service:
-
-```bash
-sudo systemctl daemon-reload
-systemctl restart systemd-journald
-sudo systemctl start cosmovisor
+```sh
+terpd status
 ```
 
-Check the status of the service:
+Check logs:
 
-```bash
-sudo systemctl status cosmovisor
+```sh
+journalctl -u terpd -f
 ```
 
-To see live logs of the service:
+### Learn more
 
-```bash
-journalctl -u cosmovisor -f
-```
+- [Cosmos Network](https://cosmos.network)
+- [Terp Network Documentation](https://docs.terp.network/)
 
-## Update Cosmovisor to V7
-
-If you want osmosisd to upgrade automatically from V6 to V7, do the following steps prior to the upgrade height (3215657):
-
-This step is only needed if syncing from genesis and haven't passed block 3215657 yet.
-
-```bash
-mkdir -p ~/.osmosisd/cosmovisor/upgrades/v7/bin
-cd $HOME/osmosis
-git pull
-git checkout v10.0.1
-make build
-systemctl stop cosmovisor.service
-cp build/osmosisd ~/.osmosisd/cosmovisor/upgrades/v7/bin
-systemctl start cosmovisor.service
-cd $HOME
-```
+#### Running in production

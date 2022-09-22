@@ -1,14 +1,19 @@
-# Staking
+# Delegate Tokens To A Validator
 
-## Staking OSMO
+In the view of TERPNET's **Delegated Proof-of-Stake (DPoS)** consensus protocol, the network will consist of numerous validators that require CHT tokens to run nodes, while other CHT token holders can be delegators by staking their tokens to validators and get shared rewards for each newly created block.
 
-OSMO holders can delegate their OSMO to validators, who add these tokens to their slashable bond. Delegators receive staking rewards, less the validator's commission.
-To stake OSMO, select a validator from the list.
+Over the course of using **TERPNETChain**, CHT token holders can start delegating CHT tokens to any qualified validators on the TERPNET.
 
-Input a quantity of OSMO to delegate to this validator. Staked OSMO takes 14 days to unbond. Tokens can be withdrawn two weeks after the unbonding process is initiated by the user.
+**Reminder:** Prior to the delegation, make sure that you’ve already got an TERPNET account in keplr as well as sufficient CHT tokens.
 
-![](../assets/validator-list.png)
+**Step 1:** Visit [**https://stake-terpnet.zenchainlabs.io/**](https://stake-terpnet.zenchainlabs.io/) and log into your account via **Connect Wallet**.
 
-Staked OSMO is used to help secure the network. In exchange for their contributions, owners of staked OSMO receive staking rewards and transaction fees.
+**Step 2:** Navigate to the **Stake** section, in which you can see a list of validators assigned by TerpNetwork.
 
-![](../assets/delegate.png)
+
+**Step 3:** Enter a certain number of Test CHT tokens and confirm your delegation.
+
+
+**Step 4:** A prompt of Keplr will pop up on the screen > Click **Allow** to **Sign Transaction**
+
+Once done, you’ll be redirected to the **Transaction Details** 
