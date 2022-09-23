@@ -51,7 +51,7 @@ Explore our guides and code examples to integrate and build with TERPNET.
 <br />
 
 <div class="cards threeColumn">
-<a href="https://discord.gg/2VeRNJDRyZ" class="card lg" target="_blank">
+<a href="https://discord.gg/SYEjMwAac7" class="card lg" target="_blank">
     <img src="img/discord.svg">
     <div class="title">
      Discord

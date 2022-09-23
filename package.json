@@ -9,8 +9,8 @@
   },
   "repository": "/terp-core",
   "scripts": {
-    "dev": "vuepress dev",
-    "build": "vuepress build"
+    "dev": "export SET NODE_OPTIONS=--openssl-legacy-provider && vuepress dev",
+    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && vuepress build"
   },
   "license": "MIT",
   "devDependencies": {

@@ -5,7 +5,7 @@ Please use the links below to reference architectures for common terpnet infrast
 The reference architecture is specified ad Infrastructure As Code (IAC) using [Terraform](https://www.terraform.io/) and can be used as a starting point to deploy blockchain nodes.
 
 ::: tip
-More Terraform infrastructure configurations will be open sourced soon, including configurations with other cloud providers. 
+More Terraform  configurations will be open sourced soon. 
  :::
  
  ## Resources
@@ -24,13 +24,13 @@ More Terraform infrastructure configurations will be open sourced soon, includin
  ## Akash: The Decentralized Cloud 
 <div class="cards twoColumn" >
 
-  <a href="akash/single-rpc" class="card">
+  <a href="akash/validator-and-tmkms" class="card">
     <img src="/img/do.svg"  />
     <div class="title">
-    Single RPC node
+   Validator and TMKMS
     </div>
     <div class="text">
-        Runs a single-rpc node with the latest terpd binary and automatically syncs the state from a pruned snapshot.
+   This example outlines how to run a node on Akash, connected to a TMKMS signer hosted elsewhere. 
     </div>
   </a>  
   <a href="akash/load-balanced-rpc-nodes" class="card">
@@ -51,10 +51,10 @@ More Terraform infrastructure configurations will be open sourced soon, includin
         The snapshot script will shutdown the node for as long as the archive and upload process takes, so use a dedicated node for creating snapshots. 
     </div>
   </a>
-<a href="akash/statesync" class="card">
+<a href="akash/state-sync" class="card">
     <img src="/img/do.svg"  />
     <div class="title">
-    Statesync
+    State-sync
     </div>
     <div class="text">
        The statesync allows validators to rapidly join the network by syncing your node with a snapshot enabled RPC from a trusted block height. 

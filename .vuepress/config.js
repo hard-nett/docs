@@ -8,7 +8,7 @@ module.exports = {
   },
   base: "/",
   description:
-    "TERPNET - The Cosmos Hub for Terp AMM",
+    "TERPNET - The Cannabis De-Fi Hub. ",
   plugins: [
     [
       "@vuepress/register-components",
@@ -152,14 +152,6 @@ module.exports = {
           collapsable: true,
         },
         {
-          title: "TERPNET Tenatitve Roadmap",
-          children: [
-            '/overview/tenative-rio/',
-            '/overview/terp-app/learn-more',
-          ],
-          collapsable: true,
-        },
-        {
           title: 'Wallets',
           children: [
             '/overview/wallets/keplr/install-keplr',
@@ -275,11 +267,12 @@ module.exports = {
           title: "Infrastructure",
           children: [
             '/infra/',
-            '/infra/do/single-rpc',
-            '/infra/do/single-rpc-with-floating-ip',
-            '/infra/do/single-rpc-with-monitor-alerts',
-            '/infra/do/loadbalanced-rpc',
-            '/infra/do/loadbalanced-rpc-with-monitor-alerts',
+            '/infra/akash/load-balanced-rpc-nodes',
+            '/infra/akash/snapshot-backup',
+            '/infra/akash/state-sync',
+            '/infra/akash/validator-and-private-sentries',
+            '/infra/akash/validator-and-public-sentries',
+            '/infra/akash/validator-and-tmkms',
           ],
           collapsable: true,
         }

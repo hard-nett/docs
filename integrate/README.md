@@ -29,10 +29,10 @@ The guides on this page will explain the process of integrating with TerpNet.
   <a href="registration.html" class="card">
     <img src="/img/registration.svg" />
     <div class="title">
-     Chain Registration Guide
+     Registration Guide
     </div>
     <div class="text">
-      Register your chain and assets to various registries
+      Register your assets to various registries
     </div>
   </a>
   <a href="liquidity.html" class="card">
