@@ -79,7 +79,7 @@ tmkms softsign keygen ./config/secrets/secret_connection_key
 Now we will transfer your validator private key from your validator to your VM running TMKMS. You can do this manually or though scp. I will use scp in this example (the validator has the IP of 123.456.32.123):
 
 ```sh
-scp user@123.456.32.123:~/.osmosisd/config/priv_validator_key.json ~/tmkms/config/secrets
+scp user@123.456.32.123:~/.terp/config/priv_validator_key.json ~/tmkms/config/secrets
 ```
 
 Then, import the private validator key into tmkms:
@@ -131,7 +131,7 @@ reconnect = true
 Now, modify your validators `config.toml` to use the port you selected in the `tmkms.toml` file:
 
 ```sh
-nano $HOME/.osmosisd/config/config.toml
+nano $HOME/.terp/config/config.toml
 ```
 
 ```toml
@@ -173,7 +173,7 @@ You will see error logs like the following:
 Now, start your osmosis validator on the validator node:
 
 ```sh
-osmosisd start
+terpd start
 ```
 
 Your TMKMS node will now show logs like the following:

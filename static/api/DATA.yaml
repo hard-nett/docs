@@ -4,7 +4,7 @@ info:
   description: REST API to get the historical data for TerpNET
   version: 1.1.1
 servers:
-  - url: https://api.osmosis.zone/
+  - url: https://api.terp.network/
     description: TerpNET Historical Data
 paths:
   /health/v1/check:
@@ -506,7 +506,7 @@ paths:
       summary: Tokens Price
       description: |-
         Available tokens are:
-        - ** SYMBOL : https://info.osmosis.zone/tokens**
+        - ** SYMBOL : https://info.terp.network/tokens**
       operationId: tokens_price
       parameters:
         - required: true

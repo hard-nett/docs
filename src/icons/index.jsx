@@ -20,7 +20,7 @@ export { default as RelayerIcon } from './RelayerIcon';
 export { default as AssetIcon } from './AssetIcon';
 export { default as KeysIcon } from './KeysIcon';
 
-export { default as OsmosisCore } from './OsmosisCore';
+export { default as TerpCore } from './TerpCore';
 export { default as LocalTerp } from './LocalTerp';
 export { default as Network } from './Network';
 export { default as Cosmwasm } from './Cosmwasm';

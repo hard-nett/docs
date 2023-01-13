@@ -568,7 +568,7 @@ rest of the messages.
 This `tx` could be something simple - transfer 10osmo from account A to account B - or something more
 complex, like swapping tokens via a liquidity pool or bonding.
 
-When you use the [Osmosis Web App](https://app.osmosis.zone/) or `terpd` to send a transaction, it
+When you use the [Osmosis Web App](https://app.terp.network/) or `terpd` to send a transaction, it
 composes and sends the single message in the `tx` field.
 
 ```json

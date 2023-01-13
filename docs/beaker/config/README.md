@@ -23,14 +23,14 @@ rpc_endpoint = 'http://localhost:26657'
 [networks.testnet]
 chain_id = 'athena-3'
 network_variant = 'Shared'
-grpc_endpoint = 'https://grpc-test.osmosis.zone:9090'
-rpc_endpoint = 'https://rpc-test.osmosis.zone'
+grpc_endpoint = 'https://grpc-test.terp.network:9090'
+rpc_endpoint = 'https://rpc-test.terp.network'
 
 [networks.mainnet]
 chain_id = 'osmosis-1'
 network_variant = 'Shared'
-grpc_endpoint = 'https://grpc.osmosis.zone:9090'
-rpc_endpoint = 'https://rpc.osmosis.zone'
+grpc_endpoint = 'https://grpc.terp.network:9090'
+rpc_endpoint = 'https://rpc.terp.network'
 [accounts.validator]
 mnemonic = 'satisfy adjust timber high purchase tuition stool faith fine install that you unaware feed domain license impose boss human eager hat rent enjoy dawn'
 

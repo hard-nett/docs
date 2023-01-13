@@ -19,7 +19,7 @@ Once the contract is created query the contract information. Assuming you are co
 
 ### Contract info
 ```
-osmosisd query wasm contract terp1mpf0guu0t363xrshhedandypq003ahzaxvsxzgu69n3ej03mh2zqx5gk8l
+terpd query wasm contract terp1mpf0guu0t363xrshhedandypq003ahzaxvsxzgu69n3ej03mh2zqx5gk8l
 
 ```
 Output:
@@ -30,7 +30,7 @@ Output:
 ### Contract version
 Get the contract version by running the following command
 ```
-osmosisd query wasm contract-state raw terp1mpf0guu0t363xrshhedandypq003ahzaxvsxzgu69n3ej03mh2zqx5gk8l 636F6E74726163745F696E666F --node https://rpc-test.osmosis.zone:443 --output json | jq  -r .data | base64 -d | jq
+terpd query wasm contract-state raw terp1mpf0guu0t363xrshhedandypq003ahzaxvsxzgu69n3ej03mh2zqx5gk8l 636F6E74726163745F696E666F --node https://rpc-test.terp.network:443 --output json | jq  -r .data | base64 -d | jq
 ```
 What in the world is `636F6E74726163745F696E666F`? 😕 
 
@@ -43,7 +43,7 @@ Output:
 ### Downloading the Contract from the network
 
 ```
-osmosisd query wasm code 205 205_code.wasm --node https://rpc-test.osmosis.zone:443
+terpd query wasm code 205 205_code.wasm --node https://rpc-test.terp.network:443
 ```
 Output:
 

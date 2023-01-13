@@ -20,7 +20,7 @@ The following is a quick guide that shows the basics of deploying a contract to 
     - Execute the contract
 
 :::tip
-Please note this a detailed guide on how to deploy via `osmosisd`, it also covers additional tooling and useful tips.  You can also deploy to testnet with [Beaker](./cosmwasm-beaker.md) with a couple of commands. 
+Please note this a detailed guide on how to deploy via `terpd`, it also covers additional tooling and useful tips.  You can also deploy to testnet with [Beaker](./cosmwasm-beaker.md) with a couple of commands. 
 :::
 
 
@@ -61,7 +61,7 @@ Run the following and choose option #2 (Client Node) and #2 (Testnet) in order.
 ```bash
 curl -sL https://get.terp.network/install > i.py && python3 i.py
 ```
-Now you have successfully completed setting up an Osmosis client node in Testnet. In order to use `osmosisd` from the cli, either reload your terminal or refresh your profile with : `‘source ~/.profile’`
+Now you have successfully completed setting up an Osmosis client node in Testnet. In order to use `terpd` from the cli, either reload your terminal or refresh your profile with : `‘source ~/.profile’`
 
 ### Setup the Client
 
@@ -69,10 +69,10 @@ First, create a wallet with the command following:
 
 ```bash
 # add wallets for testing
-osmosisd keys add wallet
+terpd keys add wallet
 ```
 
-When you run the commands above, `osmosisd` will prompt you all the information related to that wallet in YAML (.yml) format.
+When you run the commands above, `terpd` will prompt you all the information related to that wallet in YAML (.yml) format.
 
 ```bash
 - name: wallet
@@ -92,7 +92,7 @@ You need some tokens named `OSMO`(`uosmo`) in your address to interact with the 
 ### faucet
 
 #### Official Faucet
-You can request tokens from the official faucet at [faucet.osmosis.zone](https://faucet.osmosis.zone) 
+You can request tokens from the official faucet at [faucet.terp.network](https://faucet.terp.network) 
 
 #### Discord Faucet
 Youcan also participate in the [Osmosis discord](https://discord.com/invite/osmosis) to request a faucet of the Osmosis Testnet. After gaining access to the testnet channel on the `#roles` channel of the discord, you can request a testnet token by sending the following message on the `#faucet` channel:
@@ -107,11 +107,11 @@ $request <address>
 Then, you can check that your faucet request has been successful by checking the balance of your wallet bank account by trying the command:
 
 ```bash
-osmosisd query bank balances $(osmosisd keys show -a wallet)
+terpd query bank balances $(terpd keys show -a wallet)
 ```
 
-- `osmosisd query bank balances [address]` commands query the total balance of an account.
-- `osmosisd keys show -a wallet` commands returns the address of the wallet that you created.
+- `terpd query bank balances [address]` commands query the total balance of an account.
+- `terpd keys show -a wallet` commands returns the address of the wallet that you created.
 
 
 
@@ -176,10 +176,10 @@ We have the wasm binary executable ready. Now it is time to store the code to th
 
 ```bash
 # store the code on chain
-RES=$(osmosisd tx wasm store artifacts/my_first_contract.wasm --from wallet --gas-prices 0.1uosmo --gas auto --gas-adjustment 1.3 -y --output json -b block)
+RES=$(terpd tx wasm store artifacts/my_first_contract.wasm --from wallet --gas-prices 0.1uosmo --gas auto --gas-adjustment 1.3 -y --output json -b block)
 ```
 
-- `osmosisd tx wasm store` : upload a wasm binary
+- `terpd tx wasm store` : upload a wasm binary
 - `--from` : name or address of private key with which to sign.
 - `--gas-prices` : gas prices in decimal format to determine the transaction fee.
 - `--gas` : gas limit to set per-transaction. set to "`auto`" to calculate sufficient gas automatically
@@ -223,11 +223,11 @@ We can now create an instance of this wasm contract. First, set the initial stat
 INIT='{"count":100}'
 
 # instantiate the contract
-osmosisd tx wasm instantiate $CODE_ID "$INIT" \
+terpd tx wasm instantiate $CODE_ID "$INIT" \
     --from wallet --label "my first contract" --gas-prices 0.025uosmo --gas auto --gas-adjustment 1.3 -b block -y --no-admin
 ```
 
-- `osmosisd tx wasm instantiate` : instantiate a wasm contract using CODE_ID of the uploaded binary.
+- `terpd tx wasm instantiate` : instantiate a wasm contract using CODE_ID of the uploaded binary.
 - `--label` : human-readable name for this contract in lists.
 - `--no-admin` : you must set this explicitly if you don’t want an admin.
 
@@ -236,10 +236,10 @@ If you have succeeded in instantiating the contract, you can search for output `
 Get the contract address using the command following:
 
 ```bash
-CONTRACT_ADDR=$(osmosisd query wasm list-contract-by-code $CODE_ID --output json | jq -r '.contracts[0]')
+CONTRACT_ADDR=$(terpd query wasm list-contract-by-code $CODE_ID --output json | jq -r '.contracts[0]')
 ```
 
-- `osmosisd query wasm list-contract-by-code` : list wasm all bytecode on the chain for given code id
+- `terpd query wasm list-contract-by-code` : list wasm all bytecode on the chain for given code id
 
 ## Execute the Contract
 
@@ -251,10 +251,10 @@ Send a `get_count` query to check the count value. The previously set `INIT` sta
 
 ```bash
 QUERY='{"get_count":{}}'
-osmosisd query wasm contract-state smart $CONTRACT_ADDR "$QUERY" --output json
+terpd query wasm contract-state smart $CONTRACT_ADDR "$QUERY" --output json
 ```
 
-- `osmosisd query wasm contract-state smart` : calls contract with given address with query data and prints the returned result
+- `terpd query wasm contract-state smart` : calls contract with given address with query data and prints the returned result
 
 ![](https://user-images.githubusercontent.com/70956926/172295110-e3ae455c-9681-41a4-abf2-ac33288bb13c.png)
 
@@ -266,10 +266,10 @@ If you run the `get_count` query again after sending the `increment` transaction
 
 ```bash
 TRY_INCREMENT='{"increment": {}}'
-osmosisd tx wasm execute $CONTRACT_ADDR "$TRY_INCREMENT" --from wallet --gas-prices 0.025uosmo --gas auto --gas-adjustment 1.3 -y
+terpd tx wasm execute $CONTRACT_ADDR "$TRY_INCREMENT" --from wallet --gas-prices 0.025uosmo --gas auto --gas-adjustment 1.3 -y
 ```
 
-- `osmosisd tx wasm execute` : execute a command on a wasm contract
+- `terpd tx wasm execute` : execute a command on a wasm contract
 
 ![](https://user-images.githubusercontent.com/70956926/172295183-89016c41-7832-41c4-b4c7-a2cf9d441256.png)
 
@@ -279,7 +279,7 @@ Lastly, let’s send a `reset` transaction. Like increment, reset transaction al
 
 ```bash
 RESET='{"reset": {"count": 0}}'
-osmosisd tx wasm execute $CONTRACT_ADDR "$RESET" --from wallet --gas-prices 0.025uosmo --gas auto --gas-adjustment 1.3 -y
+terpd tx wasm execute $CONTRACT_ADDR "$RESET" --from wallet --gas-prices 0.025uosmo --gas auto --gas-adjustment 1.3 -y
 ```
 
 ![](https://user-images.githubusercontent.com/70956926/172295239-ddf95369-5b9a-4096-a84d-aecc1ef30484.png)

@@ -28,7 +28,7 @@ function defineSection(section, options = {}) {
       id: section,
       sidebarPath: require.resolve('./sidebars-default.js'),
       breadcrumbs: false,
-      editUrl: 'https://github.com/osmosis-labs/docs/tree/main/',
+      editUrl: 'https://github.com/terpnetwork/docs/tree/main/',
       ...defaultSettings,
       ...options,
     }),
@@ -36,14 +36,14 @@ function defineSection(section, options = {}) {
 }
 
 const SECTIONS = [
-  defineSection('osmosis-core'),
+  defineSection('terp-core'),
   defineSection('localterp'),
   defineSection('networks'),
   defineSection('cosmwasm'),
   defineSection('frontend'),
   defineSection('beaker'),
   defineSection('telescope'),
-  defineSection('osmojs'),
+  defineSection('terpjs'),
   defineSection('overview'),
   defineSection('apis'),
 ];
@@ -53,7 +53,7 @@ const config = {
   title: 'Terp-Core Docs',
   tagline: 'Build on the leading decentralized Cosmos exchange. 🚀',
   // TODO: Update base url
-  url: 'https://docs.osmosis.zone',
+  url: 'https://docs.terp.network',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -62,7 +62,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'osmosis-labs', // Usually your GitHub org/user name.
+  organizationName: 'terpnetworkcommunity', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -87,7 +87,7 @@ const config = {
           breadcrumbs: false,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/osmosis-labs/docs/tree/main/',
+          editUrl: 'https://github.com/terpnetwork/docs/tree/main/',
           ...defaultSettings,
         },
         blog: false,
@@ -141,7 +141,7 @@ const config = {
           },
           {
             label: 'Develop',
-            to: 'osmosis-core',
+            to: 'terp-core',
             position: 'left',
             // className: 'new-badge',
             activeBaseRegex: '(.*ui-kit|.*web-core)',
@@ -168,12 +168,12 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://github.com/osmosis-labs',
+            href: 'https://github.com/terpnetwork',
             className: 'pseudo-icon github-icon',
             position: 'right',
           },
           {
-            href: 'https://discord.com/invite/osmosis',
+            href: 'https://discord.gg/SYEjMwAac7',
             className: 'pseudo-icon discord-icon',
             position: 'right',
           },
@@ -182,7 +182,7 @@ const config = {
             position: 'right',
           },
           {
-            label: 'Launch Dex',
+            label: 'Launch Osmosis DEX',
             href: 'https://app.osmosis.zone',
             position: 'right',
             className: 'dev-portal-signup dev-portal-link',
@@ -204,15 +204,15 @@ const config = {
             items: [
               {
                 label: 'Launch App',
-                href: 'https://app.osmosis.zone',
+                href: 'https://app.terp.network',
               },
               {
                 label: 'Developer Portal',
-                href: 'https://docs.osmosis.zone',
+                href: 'https://docs.terp.network',
               },
               {
                 label: 'Ecosystem',
-                href: 'https://osmosis.zone/ecosystem',
+                href: 'https://terp.network/ecosystem',
               },
             ],
           },
@@ -221,20 +221,20 @@ const config = {
             items: [
               {
                 label: 'Documentation',
-                href: 'https://docs.osmosis.zone',
+                href: 'https://docs.terp.network',
               },
               {
                 label: 'Medium',
-                href: 'https://medium.com/@Osmosis',
+                href: 'https://medium.com/@terpnetwork',
               },
               {
                 label: 'Community',
-                href: 'https://commonwealth.im/osmosis/',
+                href: 'https://commonwealth.im/terpnetwork/',
               },
             ],
           },
         ],
-        copyright: 'Copyright © Osmosis Labs since 2021. All rights reserved.',
+        copyright: 'Copyright © TerpNET Foundation since 2023. All rights reserved.',
       },
       prism: {
         theme: lightCodeTheme,

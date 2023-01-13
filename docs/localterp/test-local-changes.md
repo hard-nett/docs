@@ -13,7 +13,7 @@ You can now quickly test your changes to Osmosis with just a few commands:
 
 3. Once complete, run `make localnet-start`
     - You will now be running a local network with your changes!
-    - The files in `tests/e2e/localterp/.osmosisd` that are produced
+    - The files in `tests/e2e/localterp/.terp` that are produced
     by this command can only be removed by running `make localnet-remove`
     - That will reset the chain to genesis
 
@@ -21,7 +21,7 @@ You can now quickly test your changes to Osmosis with just a few commands:
     - These keys are added to your --keyring-backend test
     - If the keys are already on your keyring, you will get an "Error: aborted"
     - Ensure you use the name of the account as listed in the table below, as well as ensure you append the `--keyring-backend test` to your txs
-        - Example: `osmosisd tx bank send lo-test2 terp1cyyzpxplxdzkeea7kwsydadg87357qnahakaks --keyring-backend test --chain-id localterp`
+        - Example: `terpd tx bank send lo-test2 terp1cyyzpxplxdzkeea7kwsydadg87357qnahakaks --keyring-backend test --chain-id localterp`
 
 5. To remove all block history and start from scratch, run `make localnet-remove`
 

@@ -49,7 +49,7 @@ main();
 ```
 
 :: tip
-You can also connect to the mainnet by replacing rpcEndpoint to https://rpc.osmosis.zone/ [Learn more here.](../networks/)
+You can also connect to the mainnet by replacing rpcEndpoint to https://rpc.terp.network/ [Learn more here.](../networks/)
 ::
 
 ## Run it
@@ -120,7 +120,7 @@ Before we query smart contracts in localterp we must [deploy one by following th
 Once you have deployed the smart contract you can get the `<CONTRACT-ID>` by running:
 
 ```
-osmosisd query wasm list-code
+terpd query wasm list-code
 ```
 
 ![](../assets/contracts-list.png)
@@ -129,7 +129,7 @@ In this particular example there are 7 contracts available. The latest one is 7.
 You can now get the contract address by running
 
 ```
-osmosisd query wasm list-contract-by-code <CONTRACT-ID>
+terpd query wasm list-contract-by-code <CONTRACT-ID>
 
 ```
 

@@ -1,6 +1,6 @@
 # Public endpoints
 
-These following API's are recommended for development purposes. For maximun control and reliability it's recommended to run your own node. This can be easility accomplsihed by using the get.terp.network installer. 
+These following API's are recommended for development purposes. For maximum control and reliability it's recommended to run your own node. This can be easility accomplsihed by using the get.terp.network installer. 
 
 ## Official public endpoints 
 

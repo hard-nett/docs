@@ -1,5 +1,5 @@
 import {
-  OsmosisCore,
+  TerpCore,
   localterp,
   Network,
   Cosmwasm,
@@ -22,13 +22,13 @@ const SECTIONS = [
 
   // Core Development
   {
-    name: 'Osmosis Core',
-    id: 'osmosis-core',
-    icon: OsmosisCore,
+    name: 'Terp Core',
+    id: 'terp-core',
+    icon: TerpCore,
     section: 'core-sdk',
   },
   {
-    name: 'Local Osmosis',
+    name: 'Local Terp',
     id: 'localterp',
     icon: localterp,
     section: 'core-sdk',
@@ -61,8 +61,8 @@ const SECTIONS = [
     section: 'frontend',
   },
   {
-    name: 'OsmoJS',
-    id: 'osmojs',
+    name: 'TerpJS',
+    id: 'terpjs',
     icon: Osmojs,
     section: 'frontend',
   },
@@ -78,30 +78,30 @@ const SECTIONS = [
 const MULTI_SECTIONS = [
   [
     {
-      name: 'Osmosis Core',
+      name: 'Terp Core',
       section: 'core-sdk',
-      description: 'Osmosis Chain Development documentation.',
+      description: 'Terp Network Chain Development documentation.',
     },
     {
       name: 'CosmWasm',
       section: 'cosmwasm',
       description:
-        'Building and interacting with Smart contracts on Osmosis.',
+        'Building and interacting with Smart contracts on Terp Network.',
     },
     {
       name: 'Frontend & SDKs',
       section: 'frontend',
       description:
-        'Libraries & UI components to build on top of Osmosis.',
+        'Libraries & UI components to build on top of Terp-Core.',
     }
 
   ],
   [
     {
-      name: 'Osmosis Core',
+      name: 'Terp Core',
       section: 'mobile-core',
       isNew: true,
-      description: 'Osmosis Chain Development documentation.',
+      description: 'Terp Core Chain Development documentation.',
     },
     {
       name: 'Prebuilt SDK',

@@ -14297,7 +14297,7 @@ components:
       - STATE_OPEN
       - STATE_CLOSED
 servers:
-  - url: https://lcd.osmosis.zone
+  - url: https://lcd.terp.network
     description: TerpNET mainnet node
-  - url: https://lcd-test.osmosis.zone
+  - url: https://lcd-test.terp.network
     description: TerpNET testnet node

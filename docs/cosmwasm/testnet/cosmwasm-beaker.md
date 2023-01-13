@@ -112,9 +112,9 @@ There are four ways to query the proposal results
 beaker wasm proposal query store-code --network testnet counter
 ```
 
-2. Osmosisd 
+2. Terpd 
 ```
-osmosisd query gov tally 196
+terpd query gov tally 196
 ```
 
 2. Mintstan testnet explorer
@@ -125,7 +125,7 @@ https://testnet.mintscan.io/osmosis-testnet/proposals/196
 3. LCD Proposal endpoint
 
 ```
-https://lcd-test.osmosis.zone/cosmos/gov/v1beta1/proposals/196
+https://lcd-test.terp.network/cosmos/gov/v1beta1/proposals/196
 ```
 
 Note how the min_deposit was `500000000uosmo` that's why our prop.yml had `500000000uosmo`. If the deposit requirement is not met, then additional funds need to be send to the proposal. 
@@ -153,7 +153,7 @@ Even though the testnet is configured as permisionless, it's important to undert
 
 Please visit: 
 
-[https://faucet.osmosis.zone/#/contracts](https://faucet.osmosis.zone/#/contracts)
+[https://faucet.terp.network/#/contracts](https://faucet.terp.network/#/contracts)
 
 ![store-proposal](../../assets/faucet-vote.png) 
 

@@ -1,7 +1,7 @@
 # Beaker
 
 <p align="center">
-<a href="https://docs.osmosis.zone/cosmwasm/">
+<a href="https://docs.terp.network/cosmwasm/">
     <img src="/icons/beaker.svg" alt="Beaker logo" title="Beaker" width="150" align="center" height="150" />
 </a>
 </p>
@@ -76,7 +76,7 @@ Now `beaker` is ready to use!
 In the directory you want your project to reside, run:
 
 ```sh
-terp-beaker new counter-dapp
+beaker new counter-dapp
 ```
 
 This will generate new directory called `counter-dapp` which, by default, come from [this template](https://github.com/terpnetwork/beaker/tree/main/templates/project).

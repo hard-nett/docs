@@ -59,9 +59,9 @@ info:
     name: Apache 2.0
     url: https://github.com/tendermint/tendermint/blob/master/LICENSE
 servers:
-  - url: https://rpc.osmosis.zone
+  - url: https://rpc.terp.network
     description: TerpNET mainnet node to interact with the Tendermint RPC
-  - url: https://rpc-test.osmosis.zone
+  - url: https://rpc-test.terp.network
     description: TerpNET testnet node to interact with the Tendermint RPC
   - url: https://rpc.cosmos.network
     description: Cosmos mainnet node to interact with the Tendermint RPC

@@ -29,7 +29,7 @@ import {
 As described on the [Network page](../../networks). A gRPC endpoint is availble on the public Osmosis nodes so that you can start playing and intreacting with it right away.
 
 ## Enabling gRPC on a node
-If you are running your own node. It's also possible to enable them by editing  `~/.osmosisd/config/app.toml`: 
+If you are running your own node. It's also possible to enable them by editing  `~/.terp/config/app.toml`: 
 
 * `grpc.enable = true|false` field defines if the gRPC server should be enabled. Defaults to `true`.
 * `grpc.address = {string}` field defines the address (really, the port, since the host should be kept at `0.0.0.0`) the server should bind to. Defaults to `0.0.0.0:9090`.
@@ -54,7 +54,7 @@ Since the code generation library largely depends on your own tech stack, we wil
     description="Ideal for generic debugging and testing"
     to="/apis/grpc/interact-grpc-curl"
     icon={<Osmojs />}
-    svgFile="/icons/go_osmo.svg"
+    svgFile="/icons/go_terp.svg"
   />
   <Card
     title="Buf Studio"

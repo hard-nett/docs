@@ -17,9 +17,9 @@ curl -sL https://get.terp.network/install > i.py && python3 i.py
 
 ## Terp-Core CLI
 
-Make sure you have [installed the Terp Core Binary (CLI)](../osmosis-core/terpd) prior to following the below instructions.
+Make sure you have [installed the Terp Core Binary (CLI)](../terp-core/terpd) prior to following the below instructions.
 
-You may also [use the Terp-Core installer](../osmosis-core/terpd) if you want everything to be done automatically.
+You may also [use the Terp-Core installer](../terp-core/terpd) if you want everything to be done automatically.
 
 ## Faucet 
 In order to get testnet tokens use  [The Discord Faucet](https://discord.gg/rkwutDxvDJ)

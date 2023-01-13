@@ -1,54 +1,54 @@
 {
   "index_name": "Docs",
-  "sitemap_urls": ["https://docs.osmosis.zone/sitemap.xml"],
+  "sitemap_urls": ["https://docs.terp.network/sitemap.xml"],
   "start_urls": [
     {
-      "url": "https://docs.osmosis.zone/guides",
+      "url": "https://docs.terp.network/guides",
       "tags": "guides",
       "selectors_key": "guides"
     },
     {
-      "url": "https://docs.osmosis.zone/osmosis-core",
-      "tags": "osmosis-core",
-      "selectors_key": "osmosis-core"
+      "url": "https://docs.terp.network/terp-core",
+      "tags": "terp-core",
+      "selectors_key": "terp-core"
     },
     {
-      "url": "https://docs.osmosis.zone/cosmwasm",
+      "url": "https://docs.terp.network/cosmwasm",
       "tags": "cosmwasm",
       "selectors_key": "cosmwasm"
     },
     {
-      "url": "https://docs.osmosis.zone/localterp",
+      "url": "https://docs.terp.network/localterp",
       "tags": "localterp",
       "selectors_key": "localterp"
     },
     {
-      "url": "https://docs.osmosis.zone/networks",
+      "url": "https://docs.terp.network/networks",
       "tags": "networks",
       "selectors_key": "networks"
     },
     {
-      "url": "https://docs.osmosis.zone/beaker",
+      "url": "https://docs.terp.network/beaker",
       "tags": "beaker",
       "selectors_key": "beaker"
     },
 
     {
-      "url": "https://docs.osmosis.zone/telescope",
+      "url": "https://docs.terp.network/telescope",
       "tags": "telescope",
       "selectors_key": "telescope"
     },
     {
-      "url": "https://docs.osmosis.zone/osmojs",
+      "url": "https://docs.terp.network/osmojs",
       "tags": "osmojs",
       "selectors_key": "osmojs"
     },
     {
-      "url": "https://docs.osmosis.zone/overview",
+      "url": "https://docs.terp.network/overview",
       "tags": "overview",
       "selectors_key": "overview"
     },
-    "https://docs.osmosis.zone"
+    "https://docs.terp.network"
   ],
   "stop_urls": [],
 

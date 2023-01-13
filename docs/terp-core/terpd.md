@@ -24,7 +24,7 @@ Go to [https://get.terp.network/](https://get.terp.network/) or copy and past th
 curl -sL https://get.terp.network/install > i.py && python3 i.py
 ```
 
-![](../assets/installer.png)
+
 
 If you are running on an Apple M1 Chip and are running into issues with terpd not being a recognized command: 
 
