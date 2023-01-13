@@ -47,7 +47,7 @@ const msg = swapExactAmountIn({
 import { coins } from '@cosmjs/amino';
 
 const fee = {
-    amount: coins(0, 'uosmo'),
+    amount: coins(0, 'upersyx'),
     gas: '250000'
 }
 ```

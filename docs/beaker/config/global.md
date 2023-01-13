@@ -136,7 +136,7 @@
 
 ```toml
 name = ''
-gas_price = '0.025uosmo'
+gas_price = '0.025upersyx'
 gas_adjustment = 1.3
 account_prefix = 'osmo'
 derivation_path = '''m/44'/118'/0'/0/0'''
@@ -153,7 +153,7 @@ grpc_endpoint = 'https://grpc-test.terp.network:443'
 rpc_endpoint = 'https://rpc-test.terp.network'
 
 [networks.mainnet]
-chain_id = 'osmosis-1'
+chain_id = 'TBD'
 network_variant = 'Shared'
 grpc_endpoint = 'https://grpc.terp.network:9090'
 rpc_endpoint = 'https://rpc.terp.network'

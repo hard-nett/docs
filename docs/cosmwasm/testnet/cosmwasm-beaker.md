@@ -90,7 +90,7 @@ description: |
             A lengthy proposal description
             goes here  
             we expect this to be many lines...
-deposit: 500000000uosmo
+deposit: 500000000upersyx
 code:
     repo:   https://github.com/osmosis-labs/beaker/
     rust_flags: -C link-arg=-s
@@ -98,7 +98,7 @@ code:
 ```
 
 ```sh
-beaker wasm proposal store-code --proposal prop.yml --signer-account test1 --network testnet counter --gas 25000000uosmo --gas-limit 25000000
+beaker wasm proposal store-code --proposal prop.yml --signer-account test1 --network testnet counter --gas 25000000upersyx --gas-limit 25000000
 ```
 ![store-proposal](../../assets/store-prop.png)  
 
@@ -128,7 +128,7 @@ https://testnet.mintscan.io/osmosis-testnet/proposals/196
 https://lcd-test.terp.network/cosmos/gov/v1beta1/proposals/196
 ```
 
-Note how the min_deposit was `500000000uosmo` that's why our prop.yml had `500000000uosmo`. If the deposit requirement is not met, then additional funds need to be send to the proposal. 
+Note how the min_deposit was `500000000upersyx` that's why our prop.yml had `500000000upersyx`. If the deposit requirement is not met, then additional funds need to be send to the proposal. 
 
 #### Proposal period 
 On the testnet the voting period is very short to allow developers to move quickly with their testing, as you can see in this case it's `3 minutes`. This means you must vote within the next 3 minutes for your proposal to pass. In mainet the voting period is usually several days. If you take longer than 3 minutes, then you will get an error letting you know that the voting period has passed. 

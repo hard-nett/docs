@@ -72,7 +72,7 @@ async function moreExamples() {
   const getAccount = await client.getAccount("terp1phaxpevm5wecex2jyaqty2a4v02qj7qmlmzk5a")
   const getSequence = await client.getSequence("terp1phaxpevm5wecex2jyaqty2a4v02qj7qmlmzk5a")
   const getBlock = await client.getBlock(1)
-  const getBalance = await client.getBalance("terp1phaxpevm5wecex2jyaqty2a4v02qj7qmlmzk5a","uosmo")
+  const getBalance = await client.getBalance("terp1phaxpevm5wecex2jyaqty2a4v02qj7qmlmzk5a","upersyx")
 
   console.log(chainId);
   console.log(client);

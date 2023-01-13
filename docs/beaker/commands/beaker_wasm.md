@@ -62,7 +62,7 @@ Arguments:
 
 * `-n/--network <network>`: Name of the network to broadcast transaction to, the actual endpoint / chain-id are defined in config (default: `local`)
 
-* `--gas <gas>`: Coin (amount and denom) you are willing to pay as gas eg. `1000uosmo`
+* `--gas <gas>`: Coin (amount and denom) you are willing to pay as gas eg. `1000upersyx`
 
 * `--gas-limit <gas-limit>`: Limit to how much gas amount allowed to be consumed
 
@@ -116,7 +116,7 @@ Arguments:
 
 * `-n/--network <network>`: Name of the network to broadcast transaction to, the actual endpoint / chain-id are defined in config (default: `local`)
 
-* `--gas <gas>`: Coin (amount and denom) you are willing to pay as gas eg. `1000uosmo`
+* `--gas <gas>`: Coin (amount and denom) you are willing to pay as gas eg. `1000upersyx`
 
 * `--gas-limit <gas-limit>`: Limit to how much gas amount allowed to be consumed
 
@@ -148,7 +148,7 @@ Arguments:
 
 * `-n/--network <network>`: Name of the network to broadcast transaction to, the actual endpoint / chain-id are defined in config (default: `local`)
 
-* `--gas <gas>`: Coin (amount and denom) you are willing to pay as gas eg. `1000uosmo`
+* `--gas <gas>`: Coin (amount and denom) you are willing to pay as gas eg. `1000upersyx`
 
 * `--gas-limit <gas-limit>`: Limit to how much gas amount allowed to be consumed
 
@@ -190,7 +190,7 @@ Arguments:
 
 * `-n/--network <network>`: Name of the network to broadcast transaction to, the actual endpoint / chain-id are defined in config (default: `local`)
 
-* `--gas <gas>`: Coin (amount and denom) you are willing to pay as gas eg. `1000uosmo`
+* `--gas <gas>`: Coin (amount and denom) you are willing to pay as gas eg. `1000upersyx`
 
 * `--gas-limit <gas-limit>`: Limit to how much gas amount allowed to be consumed
 
@@ -228,7 +228,7 @@ Arguments:
 
 * `-n/--network <network>`: Name of the network to broadcast transaction to, the actual endpoint / chain-id are defined in config (default: `local`)
 
-* `--gas <gas>`: Coin (amount and denom) you are willing to pay as gas eg. `1000uosmo`
+* `--gas <gas>`: Coin (amount and denom) you are willing to pay as gas eg. `1000upersyx`
 
 * `--gas-limit <gas-limit>`: Limit to how much gas amount allowed to be consumed
 
@@ -272,7 +272,7 @@ Arguments:
 
 * `-n/--network <network>`: Name of the network to broadcast transaction to, the actual endpoint / chain-id are defined in config (default: `local`)
 
-* `--gas <gas>`: Coin (amount and denom) you are willing to pay as gas eg. `1000uosmo`
+* `--gas <gas>`: Coin (amount and denom) you are willing to pay as gas eg. `1000upersyx`
 
 * `--gas-limit <gas-limit>`: Limit to how much gas amount allowed to be consumed
 
@@ -312,7 +312,7 @@ Arguments:
 
 * `-n/--network <network>`: Name of the network to broadcast transaction to, the actual endpoint / chain-id are defined in config (default: `local`)
 
-* `--gas <gas>`: Coin (amount and denom) you are willing to pay as gas eg. `1000uosmo`
+* `--gas <gas>`: Coin (amount and denom) you are willing to pay as gas eg. `1000upersyx`
 
 * `--gas-limit <gas-limit>`: Limit to how much gas amount allowed to be consumed
 

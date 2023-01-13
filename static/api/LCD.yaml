@@ -8186,7 +8186,7 @@ paths:
     get:
       summary: |-
         Returns the total amount of osmo superfluidly staked.
-        Response is denominated in uosmo.
+        Response is denominated in upersyx.
       operationId: TotalSuperfluidDelegations
       responses:
         "200":

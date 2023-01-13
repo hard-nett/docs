@@ -10,7 +10,7 @@ The following list is the configuration references for beaker which can be used 
 # Default Config
 ```toml
 name = ''
-gas_price = '0.025uosmo'
+gas_price = '0.025upersyx'
 gas_adjustment = 1.3
 account_prefix = 'osmo'
 derivation_path = '''m/44'/118'/0'/0/0'''
@@ -27,7 +27,7 @@ grpc_endpoint = 'https://grpc-test.terp.network:9090'
 rpc_endpoint = 'https://rpc-test.terp.network'
 
 [networks.mainnet]
-chain_id = 'osmosis-1'
+chain_id = 'tbd'
 network_variant = 'Shared'
 grpc_endpoint = 'https://grpc.terp.network:9090'
 rpc_endpoint = 'https://rpc.terp.network'
@@ -69,7 +69,7 @@ mnemonic = 'prefer forget visit mistake mixture feel eyebrow autumn shop pair ad
 
 [workspace.template]
 name = 'workspace-template'
-repo = 'https://github.com/osmosis-labs/beaker.git'
+repo = 'https://github.com/terpnetwork/beaker.git'
 branch = 'main'
 subfolder = 'templates/project'
 target_dir = '.'

@@ -95,7 +95,7 @@ Now, modify the `tmkms.toml` file
 ```sh
 nano $HOME/tmkms/config/tmkms.toml
 ```
-In this example, my validator has the IP address of 123.456.32.123 and we will be using port 26659 to feed the validator key to the validator. We will also be using chain_id `osmosis-1`, but if you are doing this on the testnet be sure to use `athena-3` instead:
+In this example, my validator has the IP address of 123.456.32.123 and we will be using port 26659 to feed the validator key to the validator. We will also be using chain_id `tbd`, but if you are doing this on the testnet be sure to use `athena-3` instead:
 
 ```toml
 # Tendermint KMS configuration file
@@ -105,7 +105,7 @@ In this example, my validator has the IP address of 123.456.32.123 and we will b
 ### Cosmos Hub Network
 
 [[chain]]
-id = "osmosis-1"
+id = "tbd"
 key_format = { type = "bech32", account_key_prefix = "osmopub", consensus_key_prefix = "osmovalconspub" }
 state_file = "/root/tmkms/config/state/priv_validator_state.json"
 
@@ -114,14 +114,14 @@ state_file = "/root/tmkms/config/state/priv_validator_state.json"
 ### Software-based Signer Configuration
 
 [[providers.softsign]]
-chain_ids = ["osmosis-1"]
+chain_ids = ["tbd"]
 key_type = "consensus"
 path = "/root/tmkms/config/secrets/priv_validator_key"
 
 ## Validator Configuration
 
 [[validator]]
-chain_id = "osmosis-1"
+chain_id = "tbd"
 addr = "tcp://123.456.32.123:26659"
 secret_key = "/root/tmkms/config/secrets/secret_connection_key"
 protocol_version = "v0.34"
@@ -161,13 +161,13 @@ You will see error logs like the following:
 2022-03-08T23:42:37.926816Z  INFO tmkms::commands::start: tmkms 0.11.0 starting up...
 2022-03-08T23:42:37.926968Z  INFO tmkms::keyring: [keyring:softsign] added consensus Ed25519 key: osmovalconspub1zcjduepq2qfkp3ahrhaafzuqglme9mares0eluj58xr6cy7c37cdmzq0eecqk0yehr
 2022-03-08T23:42:37.927216Z  INFO tmkms::connection::tcp: KMS node ID: 948f8fee83f7715f99b8b8a53d746ef00e7b0d9e
-2022-03-08T23:42:37.929454Z ERROR tmkms::client: [osmosis-1@tcp://123.456.32.123:26659] I/O error: Connection refused (os error 111)
+2022-03-08T23:42:37.929454Z ERROR tmkms::client: [tbd@tcp://123.456.32.123:26659] I/O error: Connection refused (os error 111)
 2022-03-08T23:42:38.929746Z  INFO tmkms::connection::tcp: KMS node ID: 948f8fee83f7715f99b8b8a53d746ef00e7b0d9e
-2022-03-08T23:42:38.931428Z ERROR tmkms::client: [osmosis-1@tcp://123.456.32.123:26659] I/O error: Connection refused (os error 111)
+2022-03-08T23:42:38.931428Z ERROR tmkms::client: [tbd@tcp://123.456.32.123:26659] I/O error: Connection refused (os error 111)
 2022-03-08T23:42:39.931729Z  INFO tmkms::connection::tcp: KMS node ID: 948f8fee83f7715f99b8b8a53d746ef00e7b0d9e
-2022-03-08T23:42:39.932417Z ERROR tmkms::client: [osmosis-1@tcp://123.456.32.123:26659] I/O error: Connection refused (os error 111)
+2022-03-08T23:42:39.932417Z ERROR tmkms::client: [tbd@tcp://123.456.32.123:26659] I/O error: Connection refused (os error 111)
 2022-03-08T23:42:40.932732Z  INFO tmkms::connection::tcp: KMS node ID: 948f8fee83f7715f99b8b8a53d746ef00e7b0d9e
-2022-03-08T23:42:40.933425Z ERROR tmkms::client: [osmosis-1@tcp://123.456.32.123:26659] I/O error: Connection refused (os error 111)
+2022-03-08T23:42:40.933425Z ERROR tmkms::client: [tbd@tcp://123.456.32.123:26659] I/O error: Connection refused (os error 111)
 ```
 
 Now, start your osmosis validator on the validator node:
@@ -180,14 +180,14 @@ Your TMKMS node will now show logs like the following:
 
 ```
 2022-03-08T23:46:06.208451Z  INFO tmkms::connection::tcp: KMS node ID: 948f8fee83f7715f99b8b8a53d746ef00e7b0d9e
-2022-03-08T23:46:06.210568Z  INFO tmkms::session: [osmosis-1@tcp://164.92.136.160:26659] connected to validator successfully
-2022-03-08T23:46:06.210604Z  WARN tmkms::session: [osmosis-1@tcp://164.92.136.160:26659]: unverified validator peer ID! (ba44dd36899602e255b04e3608e5ef0fe4bc5f5b)
-2022-03-08T23:46:15.929787Z  INFO tmkms::session: [osmosis-1@tcp://164.92.136.160:26659] signed PreCommit:<nil> at h/r/s 3399910/0/2 (0 ms)
-2022-03-08T23:46:17.344579Z  INFO tmkms::session: [osmosis-1@tcp://164.92.136.160:26659] signed PreCommit:<nil> at h/r/s 3399911/0/2 (0 ms)
-2022-03-08T23:46:22.367627Z  INFO tmkms::session: [osmosis-1@tcp://164.92.136.160:26659] signed PreCommit:<nil> at h/r/s 3399912/0/2 (0 ms)
-2022-03-08T23:46:27.409777Z  INFO tmkms::session: [osmosis-1@tcp://164.92.136.160:26659] signed PreCommit:<nil> at h/r/s 3399913/0/2 (0 ms)
-2022-03-08T23:46:32.442300Z  INFO tmkms::session: [osmosis-1@tcp://164.92.136.160:26659] signed PreCommit:<nil> at h/r/s 3399914/0/2 (0 ms)
-2022-03-08T23:46:37.452162Z  INFO tmkms::session: [osmosis-1@tcp://164.92.136.160:26659] signed PreCommit:<nil> at h/r/s 3399915/0/2 (0 ms)
+2022-03-08T23:46:06.210568Z  INFO tmkms::session: [tbd@tcp://164.92.136.160:26659] connected to validator successfully
+2022-03-08T23:46:06.210604Z  WARN tmkms::session: [tbd@tcp://164.92.136.160:26659]: unverified validator peer ID! (ba44dd36899602e255b04e3608e5ef0fe4bc5f5b)
+2022-03-08T23:46:15.929787Z  INFO tmkms::session: [tbd@tcp://164.92.136.160:26659] signed PreCommit:<nil> at h/r/s 3399910/0/2 (0 ms)
+2022-03-08T23:46:17.344579Z  INFO tmkms::session: [tbd@tcp://164.92.136.160:26659] signed PreCommit:<nil> at h/r/s 3399911/0/2 (0 ms)
+2022-03-08T23:46:22.367627Z  INFO tmkms::session: [tbd@tcp://164.92.136.160:26659] signed PreCommit:<nil> at h/r/s 3399912/0/2 (0 ms)
+2022-03-08T23:46:27.409777Z  INFO tmkms::session: [tbd@tcp://164.92.136.160:26659] signed PreCommit:<nil> at h/r/s 3399913/0/2 (0 ms)
+2022-03-08T23:46:32.442300Z  INFO tmkms::session: [tbd@tcp://164.92.136.160:26659] signed PreCommit:<nil> at h/r/s 3399914/0/2 (0 ms)
+2022-03-08T23:46:37.452162Z  INFO tmkms::session: [tbd@tcp://164.92.136.160:26659] signed PreCommit:<nil> at h/r/s 3399915/0/2 (0 ms)
 ```
 
 You should now be signing blocks! If you cancel the TMKMS process, you will no longer sign blocks and will stop syncing. If you restart the TMKMS process, your validator node will continue to sync from where it left off.

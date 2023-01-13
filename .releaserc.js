@@ -29,7 +29,7 @@ const mainConfig = {
             }
         ]
     ],
-    repositoryUrl: 'https://github.com/osmosis-labs/docs'
+    repositoryUrl: 'https://github.com/terpnetwork/docs'
 };
 
 module.exports = mainConfig;

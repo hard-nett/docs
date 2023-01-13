@@ -49,7 +49,7 @@ The main outline is as follows:
         "block": "11",
         "app": "1"
       },
-      "chain_id": "osmosis-1",
+      "chain_id": "tbd",
       "height": "2836990",
       "time": "2022-01-17T17:14:01.589129908Z",
       "last_block_id": {
@@ -246,7 +246,7 @@ Below is part of the transaction at index 1 of the above block.
             },
             {
               "key": "amount",
-              "value": "15000000uosmo"
+              "value": "15000000upersyx"
             },
             {
               "key": "receiver",
@@ -268,7 +268,7 @@ Below is part of the transaction at index 1 of the above block.
             },
             {
               "key": "amount",
-              "value": "15000000uosmo"
+              "value": "15000000upersyx"
             },
             {
               "key": "spender",
@@ -316,7 +316,7 @@ Below is part of the transaction at index 1 of the above block.
             },
             {
               "key": "tokens_in",
-              "value": "15000000uosmo"
+              "value": "15000000upersyx"
             },
             {
               "key": "tokens_out",
@@ -358,7 +358,7 @@ Below is part of the transaction at index 1 of the above block.
             },
             {
               "key": "amount",
-              "value": "15000000uosmo"
+              "value": "15000000upersyx"
             },
             {
               "key": "recipient",
@@ -399,11 +399,11 @@ Below is part of the transaction at index 1 of the above block.
             },
             {
               "poolId": "1",
-              "tokenOutDenom": "uosmo"
+              "tokenOutDenom": "upersyx"
             }
           ],
           "tokenIn": {
-            "denom": "uosmo",
+            "denom": "upersyx",
             "amount": "15000000"
           },
           "tokenOutMinAmount": "15000000"
@@ -432,7 +432,7 @@ Below is part of the transaction at index 1 of the above block.
       "fee": {
         "amount": [
           {
-            "denom": "uosmo",
+            "denom": "upersyx",
             "amount": "0"
           }
         ],
@@ -495,11 +495,11 @@ Each transaction has an identical structure. The differences are in the details 
             },
             {
               "poolId": "1",
-              "tokenOutDenom": "uosmo"
+              "tokenOutDenom": "upersyx"
             }
           ],
           "tokenIn": {
-            "denom": "uosmo",
+            "denom": "upersyx",
             "amount": "15000000"
           },
           "tokenOutMinAmount": "15000000"
@@ -528,7 +528,7 @@ Each transaction has an identical structure. The differences are in the details 
       "fee": {
         "amount": [
           {
-            "denom": "uosmo",
+            "denom": "upersyx",
             "amount": "0"
           }
         ],
@@ -605,7 +605,7 @@ composes and sends the single message in the `tx` field.
   "fee": {
     "amount": [
       {
-        "denom": "uosmo",
+        "denom": "upersyx",
         "amount": "0"
       }
     ],

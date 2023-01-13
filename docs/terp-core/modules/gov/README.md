@@ -148,7 +148,7 @@ The proposal.json would look as follows:
   "recipient": "terp1r9pjvsuahxwkxg8cnhacd6alkmxq330fl9pqqt",
   "amount": [
     {
-      "denom": "uosmo",
+      "denom": "upersyx",
       "amount": "60000000000"
     }
   ]
@@ -181,7 +181,7 @@ The proposal.json would look as follows:
   "name": "v4",
   "time": "0001-01-01T00:00:00Z",
   "height": "1314500",
-  "info": "https://raw.githubusercontent.com/osmosis-labs/networks/main/osmosis-1/upgrades/v4/mainnet/upgrade_4_binaries.json",
+  "info": "https://raw.githubusercontent.com/osmosis-labs/networks/main/tbd/upgrades/v4/mainnet/upgrade_4_binaries.json",
 },
 ```
 :::
@@ -257,7 +257,7 @@ tx gov deposit [proposal-id] [deposit] --from --chain-id
 If proposal number 12 is in the deposit period and you would like to help bring it to a vote, you could deposit 500 OSMO to that proposal as follows:
 
 ```bash
-terpd tx gov deposit 12 500000000uosmo --from WALLET_NAME --chain-id CHAIN_ID
+terpd tx gov deposit 12 500000000upersyx --from WALLET_NAME --chain-id CHAIN_ID
 ```
 :::
 
@@ -330,7 +330,7 @@ An example of the output:
         "deposit_end_time": "2021-10-15T22:05:49.996956080Z",
         "total_deposit": [
           {
-            "denom": "uosmo",
+            "denom": "upersyx",
             "amount": "100000000"
           }
         ],
@@ -430,7 +430,7 @@ Which outputs:
   "deposit_params": {
     "min_deposit": [
       {
-        "denom": "uosmo",
+        "denom": "upersyx",
         "amount": "500000000"
       }
     ],

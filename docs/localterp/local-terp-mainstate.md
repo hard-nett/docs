@@ -92,7 +92,7 @@ terpd status
 11. Here is an example command to ensure complete understanding:
 
 ```sh
-terpd tx bank send wallet terp1nyphwl8p5yx6fxzevjwqunsfqpcxukmtk8t60m 10000000uosmo --chain-id testing1 --keyring-backend test
+terpd tx bank send wallet terp1nyphwl8p5yx6fxzevjwqunsfqpcxukmtk8t60m 10000000upersyx --chain-id testing1 --keyring-backend test
 ```
 
 12. To stop the container and remove its data:

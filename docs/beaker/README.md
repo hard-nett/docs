@@ -152,7 +152,7 @@ If you want to use other contract template, you can change the configuration, fo
 # Beaker.toml
 
 [wasm]
-template_repo = "https://github.com/terpnetwork/cw-tpl-osmosis.git"
+template_repo = "https://github.com/terpnetwork/cw-tpl-terp.git"
 ```
 
 ### Deploy contract on localterp
