@@ -1,1 +1,0 @@
-# Utilizinng CosmWasm
