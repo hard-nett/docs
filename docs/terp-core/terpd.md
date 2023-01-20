@@ -16,7 +16,7 @@ The minimum recommended specs for running terpd is as follows:
 ## Commands
 Go to [commands](#commands) to learn more.
 
-## Quick Start
+## Quick Start (DISREGARD, NOT YET FUNCTIONING)
 
 Go to [https://get.terp.network/](https://get.terp.network/) or copy and past the following into your terminal, then follow the onscreen instructions:
 
@@ -174,31 +174,9 @@ terpd init myNode
 Manages Keyring commands. 
 
 
-### `migrate`
-Migrates the source genesis into the target version and prints to STDOUT.
-
-**Syntax**
-```bash
-terpd migrate <path-to-genesis-file>
-```
-
-**Example**
-```bash
-terpd migrate /genesis.json --chain-id=testnet --genesis-time=2020-04-19T17:00:00Z --initial-height=4000
-```
-
 ### `query`
 
 Manages queries. 
-
-### `rosetta`
-
-Creates a Rosetta server.
-
-**Syntax**
-```bash
-terpd rosetta
-```
 
 ### `start`
 
@@ -222,19 +200,6 @@ terpd status
 
 Manages the Tendermint protocol. 
 
-### `testnet`
-
-Creates a testnet with the specified number of directories and populates each directory with the necessary files.
-
-**Syntax**
-```bash
-terpd testnet
-```
-
-**Example**
-```bash
-terpd testnet --v 6 --output-dir ./output --starting-ip-address 192.168.10.2
-```
 
 ### `tx`
 
@@ -255,28 +220,6 @@ terpd query tx --type=acc_seq <address>:<sequence>
 terpd query tx --type=signature <sig1_base64,sig2_base64...>
 ```
 
-### `txs`
-
-Retrieves transactions that match the specified events where results are paginated.
-
-**Syntax**
-```bash
-terpd query txs --events '<event>' --page <page-number> --limit <number-of-results>
-```
-
-**Example**
-```bash
-terpd query txs --events 'message.sender=cosmos1...&message.action=withdraw_delegator_reward' --page 1 --limit 30
-```
-
-### `unsafe-reset-all`
-
-Resets the blockchain database, removes address book files, and resets `data/priv_validator_state.json` to the genesis state.
-
-**Syntax**
-```bash
-terpd unsafe-reset-all
-```
 
 ### `validate-genesis`
 

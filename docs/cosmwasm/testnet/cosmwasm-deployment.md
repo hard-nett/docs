@@ -1,15 +1,15 @@
 # Cosmwasm testnet deployment
-The following is a quick guide that shows the basics of deploying a contract to a Osmosis Testnet (`athena-3`). It covers:
+The following is a quick guide that shows the basics of deploying a contract to a Terp Network Testnet (`athena-3`). It covers:
 
 - Initial Setup
     - Setup Rust
-    - Setup Osmosis Testnet via Osmosis Installer
+    - Setup Terp Network Testnet via Terp Installer
     - Setup Client
 - Deploy a Smart Contract
     - Clone cw-template
     - Compile the wasm contract with stable toolchain
     - Optimized Compilation
-    - Store to Osmosis Testnet chain
+    - Store to Terp Network Testnet chain
     - Instantiate the contract
 - Execute the Contract
     - Get contract’s count
@@ -26,7 +26,7 @@ Please note this a detailed guide on how to deploy via `terpd`, it also covers a
 
 ## Initial Setup
 
-This tutorial uses a Osmosis specific development tools to deploy contracts to Osmosis Testnet(`athena-3`).
+This tutorial uses a Terp-Core specific development tools to deploy contracts to Ter Testnet(`athena-3`).
 
 ### Setup Rust
 
@@ -52,16 +52,16 @@ cargo install cargo-generate --features vendored-openssl
 cargo install cargo-run-script
 ```
 
-### Setup Osmosis Testnet
+### Setup Terp-Core Testnet
 
-You can easily set up an Osmosis Testnet environment using the [Osmosis Installer](https://github.com/terpnetwork/terp-core-installer). 
+You can easily set up an Terp-Core Testnet environment using the [Terp-Core Installer](https://github.com/terpnetwork/terp-core-installer). 
 
 Run the following and choose option #2 (Client Node) and #2 (Testnet) in order.
 
 ```bash
 curl -sL https://get.terp.network/install > i.py && python3 i.py
 ```
-Now you have successfully completed setting up an Osmosis client node in Testnet. In order to use `terpd` from the cli, either reload your terminal or refresh your profile with : `‘source ~/.profile’`
+Now you have successfully completed setting up an Terp Network client node in Testnet. In order to use `terpd` from the cli, either reload your terminal or refresh your profile with : `‘source ~/.profile’`
 
 ### Setup the Client
 
@@ -95,7 +95,7 @@ You need some tokens named `OSMO`(`upersyx`) in your address to interact with th
 You can request tokens from the official faucet at [faucet.terp.network](https://faucet.terp.network) 
 
 #### Discord Faucet
-Youcan also participate in the [Osmosis discord](https://discord.com/invite/osmosis) to request a faucet of the Osmosis Testnet. After gaining access to the testnet channel on the `#roles` channel of the discord, you can request a testnet token by sending the following message on the `#faucet` channel:
+Youcan also participate in the [Terp Network discord](https://discord.com/invite/osmosis) to request a faucet of the Terp Network Testnet. After gaining access to the testnet channel on the `#roles` channel of the discord, you can request a testnet token by sending the following message on the `#faucet` channel:
 
 ```bash
 $request <address>
@@ -170,9 +170,9 @@ sudo docker run --rm -v "$(pwd)":/code \
 
 Binary file will be at `artifacts/my_first_contract.wasm` folder and its size will be about `130K`, which is more smaller than when only RUTFLAGS was used.
 
-### Store to Osmosis Testnet chain
+### Store to Terp Newtork Testnet chain
 
-We have the wasm binary executable ready. Now it is time to store the code to the Osmosis Testnet blockchain. 
+We have the wasm binary executable ready. Now it is time to store the code to the Terp Network Testnet blockchain. 
 
 ```bash
 # store the code on chain
@@ -231,7 +231,7 @@ terpd tx wasm instantiate $CODE_ID "$INIT" \
 - `--label` : human-readable name for this contract in lists.
 - `--no-admin` : you must set this explicitly if you don’t want an admin.
 
-If you have succeeded in instantiating the contract, you can search for output `txhash` in [Osmosis Explorer](https://testnet.ping.pub/osmosis) to verify your deployment.
+If you have succeeded in instantiating the contract, you can search for output `txhash` in [Terp Network Explorer](https://testnet.ping.pub/osmosis) to verify your deployment.
 
 Get the contract address using the command following:
 
@@ -325,4 +325,4 @@ In the Write Contract section, type `increment` messages and the OSMO to pay and
 
 ![](https://user-images.githubusercontent.com/70956926/172300485-4d66b5a9-1082-48da-ba1c-b979206f277e.png)
 
-Congratulations! Now you deployed your wasm smart contract on Osmosis Testnet successfully.
+Congratulations! Now you deployed your wasm smart contract on Terp Network Testnet successfully.

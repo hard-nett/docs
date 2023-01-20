@@ -1,5 +1,5 @@
 # Javascript & Smart Contracts
-This guide describes interacting with Osmosis Smart contracts via JavaScript runtimes such as Node.js and the browser.
+This guide describes interacting with Terp Network Smart contracts via JavaScript runtimes such as Node.js and the browser.
 
 ## Prerequisites
 - npm and node.js

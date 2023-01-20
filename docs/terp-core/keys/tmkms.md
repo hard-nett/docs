@@ -170,7 +170,7 @@ You will see error logs like the following:
 2022-03-08T23:42:40.933425Z ERROR tmkms::client: [tbd@tcp://123.456.32.123:26659] I/O error: Connection refused (os error 111)
 ```
 
-Now, start your osmosis validator on the validator node:
+Now, start your terp network validator on the validator node:
 
 ```sh
 terpd start

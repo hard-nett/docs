@@ -11,10 +11,10 @@
     <img height="20" src="https://github.com/terpnetwork/terpjs/actions/workflows/run-tests.yaml/badge.svg" />
   </a>
    <a href="https://github.com/terpnetwork/terpjs/blob/main/LICENSE"><img height="20" src="https://img.shields.io/badge/license-MIT-blue.svg"/></a>
-   <a href="https://www.npmjs.com/package/osmojs"><img height="20" src="https://img.shields.io/github/package-json/v/terpnetwork/terpjs?filename=packages%2Fosmojs%2Fpackage.json"/></a>
+   <a href="https://www.npmjs.com/package/terpjs"><img height="20" src="https://img.shields.io/github/package-json/v/terpnetwork/terpjs?filename=packages%2Fterpjs%2Fpackage.json"/></a>
 </p>
 
-[TerpJS](https://github.com/terpnetwork/terpjs) makes it easy to compose and broadcast Osmosis and Cosmos messages, with all of the proto and amino encoding handled for you.
+[TerpJS](https://github.com/terpnetwork/terpjs) makes it easy to compose and broadcast Terp-Core and Cosmos messages, with all of the proto and amino encoding handled for you.
 
 ---
 ## usage
@@ -69,7 +69,7 @@ const fee = {
 
 ### Initializing the Stargate Client
 
-Use `getSigningOsmosisClient` to get your `SigningStargateClient`, with the Osmosis proto/amino messages full-loaded. No need to manually add amino types, just require and initialize the client:
+Use `getSigningOsmosisClient` to get your `SigningStargateClient`, with the Terp-Core proto/amino messages full-loaded. No need to manually add amino types, just require and initialize the client:
 
 ```js
 import { getSigningOsmosisClient } from 'terpjs';

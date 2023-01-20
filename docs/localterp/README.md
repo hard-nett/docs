@@ -21,8 +21,8 @@ make localnet-build
 
 ### Advanced options
 
-- [Test local Osmosis core changes](./test-local-changes.md)
-- [Run local Osmosis with a copy of main state](./local-osmosis-mainstate.md)
+- [Test local Terp-Core core changes](./test-local-changes.md)
+- [Run local Terp-Core with a copy of main state](./local-osmosis-mainstate.md)
 
 ## Accounts
 

@@ -25,7 +25,7 @@ export { default as LocalTerp } from './LocalTerp';
 export { default as Network } from './Network';
 export { default as Cosmwasm } from './Cosmwasm';
 export { default as Beaker } from './Beaker';
-export { default as Osmojs } from './Osmojs';
+export { default as Terpjs } from './Terpjs';
 export { default as Telescope } from './Telescope';
 export { default as Createapp } from './Createapp';
 export { default as Cosmoskit } from './Cosmoskit';

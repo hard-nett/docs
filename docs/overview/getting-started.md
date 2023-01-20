@@ -14,7 +14,7 @@ Then exit and re-enter your shell.
 ```bash
 git clone https://github.com/terpnetwork/terp-core
 cd terp-core
-git checkout v0.2.0
+git checkout main 
 make install
 which terpd
 ```

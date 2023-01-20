@@ -1,6 +1,6 @@
 # Gov
 
-The ```gov``` module enables on-chain governance which allows Osmosis token holders to participate in a community led decision-making process. For example, users can:
+The ```gov``` module enables on-chain governance which allows Terp token holders to participate in a community led decision-making process. For example, users can:
 
 - Form an idea and seek feedback
 - Create a proposal and adjust according to feedback as needed
@@ -78,7 +78,7 @@ Submit a proposal in text form
 tx gov submit-proposal --title --description --type="Text" --from --chain-id
 ```
 
-Text proposals differ from other proposal submission types in that after it passes, no logic is automatically executed. This is good for proposing changes to Osmosis that are not linked to a specific daemon parameter.
+Text proposals differ from other proposal submission types in that after it passes, no logic is automatically executed. This is good for proposing changes to Terp-Core that are not linked to a specific daemon parameter.
 
 ::: details Example
 
@@ -143,8 +143,8 @@ The proposal.json would look as follows:
 
 ```json
 {
-  "title": "Osmosis DAO",
-  "description": "Establish a DAO for Osmosis. Potentially add external links for more information or allow discussion",
+  "title": "Terp DAO",
+  "description": "Establish a DAO for Terp-Core. Potentially add external links for more information or allow discussion",
   "recipient": "terp1r9pjvsuahxwkxg8cnhacd6alkmxq330fl9pqqt",
   "amount": [
     {
@@ -181,7 +181,7 @@ The proposal.json would look as follows:
   "name": "v4",
   "time": "0001-01-01T00:00:00Z",
   "height": "1314500",
-  "info": "https://raw.githubusercontent.com/osmosis-labs/networks/main/tbd/upgrades/v4/mainnet/upgrade_4_binaries.json",
+  "info": "https://raw.githubusercontent.com/terpnetwork/networks/main/tbd/upgrades/v4/mainnet/upgrade_4_binaries.json",
 },
 ```
 :::
@@ -207,39 +207,8 @@ terpd tx gov submit-proposal cancel-software-upgrade --title="cancel v4" --descr
 :::
 
 
-### submit-proposal (update pool incentives)
+### submit-proposal 
 
-Update the weight of specified pool gauges in regards to their share of incentives
-
-```
-tx gov submit-proposal update-pool-incentives [proposal-file] --from --chain-id
-```
-
-::: details Example
-
-Update the pool incentives for `gauge_id` 0 and 1:
-
-```bash
-terpd tx gov submit-proposal update-pool-incentives proposal.json --from WALLET_NAME --chain-id CHAIN_ID
-```
-
-The proposal.json would look as follows:
-
-```json
-{
-  "title": "Pool Incentive Adjustment",
-  "description": "Adjust pool incentives",
-  "records": [
-    {
-      "gauge_id": "0",
-      "weight": "100000"
-    },
-    {
-      "gauge_id": "1",
-      "weight": "1766249"
-    },
-  ]
-}
 ```
 :::
 

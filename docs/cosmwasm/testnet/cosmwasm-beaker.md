@@ -6,7 +6,7 @@ sidebar_position: 2
 # Cosmwasm & Beaker
 ## Deploying Cosmwasm Contracts to the testnet with Beaker
 
-The following guide will show you how to create and deploy a Cosmwasm smart contract to the Osmosis testnet. The testnet is permisonless by default to allow developers to test their contracts on a live environment. The Osmosis mainnet is permissioned meaning that you will need to submit a governance proposal in order to deploy to it. 
+The following guide will show you how to create and deploy a Cosmwasm smart contract to the Terp Network testnet. The testnet is permisonless by default to allow developers to test their contracts on a live environment. The Terp Network mainnet is permissioned meaning that you will need to submit a governance proposal in order to deploy to it. 
 
 ### Requirements
 - [Rust](https://www.rust-lang.org/tools/install)
@@ -47,7 +47,7 @@ The testnet is permisionless by default in order to allow developers to easyly d
 beaker wasm deploy counter --signer-account test1 --network testnet --no-wasm-opt --raw '{ "count": 0 }' --label 'My first Beaker Contract'
 ```
 
-Note how we added `--network testnet` to tell beaker to deploy to the testnet Osmosis chain. 
+Note how we added `--network testnet` to tell beaker to deploy to the testnet Terp-core chain. 
 
 ### Deploy with an admin
 In this example we are using `terp1nyphwl8p5yx6fxzevjwqunsfqpcxukmtk8t60m` which is the address from the beaker test1 account as seen in the [config.rs](https://github.com/osmosis-labs/beaker/blob/main/packages/cli/src/framework/config.rs) file. 

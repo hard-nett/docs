@@ -1,6 +1,6 @@
 # Submit a Cosmwasm Governance Proposal
 
-The following is a quick guide to provide a basic example on how submit a wasm binary proposal in Osmosis. This particular example will be with localterp but it can also be used with testnet.
+The following is a quick guide to provide a basic example on how submit a wasm binary proposal in Terp Network. This particular example will be with localterp but it can also be used with testnet.
 
 ## localterp
 The easiest way to setup your localterp is by downloading the [automated installer](https://get.terp.network/). You can learn more about localterp by reading the [README](https://github.com/terpnetwork/localterp) in the official repo. 

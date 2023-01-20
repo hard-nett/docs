@@ -157,9 +157,9 @@ template_repo = "https://github.com/terpnetwork/cw-tpl-terp.git"
 
 ### Deploy contract on localterp
 
-localterp, as it's name suggest, is Osmosis for local development. In the upcoming release, Beaker will have more complete integration with localterp, it has to be installed and run separately.
+localterp, as it's name suggest, is Terp-Core for local development. In the upcoming release, Beaker will have more complete integration with localterp, it has to be installed and run separately.
 
-You can install from source by following the instruction at [osmosis-labs/localterp](https://github.com/terpnetwork/localterp), or use the official installer and select option 3:
+You can install from source by following the instruction at [terpnetwork/localterp](https://github.com/terpnetwork/localterp), or use the official installer and select option 3:
 
 ```sh
 curl -sL https://get.terp.network/install > i.py && python3 i.py

@@ -99,7 +99,7 @@ body {
   --ifm-color-primary-lighter: #2722BB;
   --ifm-color-primary-lightest: #322DC2;
 
-  --ifm-navbar-shadow: none;
+  --ifm-navbar-shadow: #dedede;
   --ifm-toc-border-color: #dedede;
 
   --ifm-table-border-color: var(--docs-color-border);
@@ -809,7 +809,7 @@ img[src$='#terminal'] {
 }
 
 
-/* OSMOSIS */
+/* TERP */
 
 
     @media (min-width: 997px) 

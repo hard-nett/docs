@@ -182,8 +182,14 @@ const config = {
             position: 'right',
           },
           {
-            label: 'Launch Osmosis DEX',
-            href: 'https://app.osmosis.zone',
+            label: 'Launch Satellite Bridge',
+            href: 'https://satellite.money/',
+            position: 'right',
+            className: 'dev-portal-signup dev-portal-link',
+          },
+          {
+            label: 'Launch Osmosis Swap',
+            href: 'https://app.osmosis.zone/',
             position: 'right',
             className: 'dev-portal-signup dev-portal-link',
           },

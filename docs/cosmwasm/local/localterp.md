@@ -113,7 +113,7 @@ You will start seeing localterp block activity in your terminal. Keep localterp 
 In place of doing the above commands, you can instead start localterp with pre-made pools by starting localterp with the following commands:
 
 ```bash
-cd ~/osmosis
+cd ~/terp-core
 make localnet-start-with-state
 ```
 

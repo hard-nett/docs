@@ -1,6 +1,6 @@
 # Interacting with RPC endpoints
 
-As shown on the RPC specifications, there are different endpoints to communicate with the Osmosis chain. Unlike the LCD rest api, the RPC endpoints provide genereic endpoints to communicate with the various modules available. For example the [ABCI Query](/api?v=RPC#/operations/abci_query) allows you the query different data from Osmosis.
+As shown on the RPC specifications, there are different endpoints to communicate with the Terp Core chain. Unlike the LCD rest api, the RPC endpoints provide genereic endpoints to communicate with the various modules available. For example the [ABCI Query](/api?v=RPC#/operations/abci_query) allows you the query different data from Osmosis.
 
 For more information please read generating, [signing and boradcasting transactions.] https://docs.cosmos.network/v0.46/run-node/txs.html on the cosmos-sdk docs. 
 
@@ -23,7 +23,7 @@ yarn codegen
 Edit src/index.ts
 ```javascript 
 
-import { osmosis } from "./codegen";
+import { terpjs } from "./codegen";
 const { createRPCQueryClient } = osmosis.ClientFactory;
 
 
@@ -35,14 +35,6 @@ async function getBalance() {
         .allBalances({ address: 'terp1fl48vsnmsdzcv85q5d2q4z5ajdha8yu3aq6l09' });
 }
 
-async function getPools() {
-
-    const client = await createRPCQueryClient({ rpcEndpoint: "https://rpc.terp.network" });
-    const pools = await client.osmosis.gamm.v1beta1.pools();
-    console.log(pools);
-}
-
-getPools().catch(console.error);
 getBalance().catch(console.error);
 
 ```

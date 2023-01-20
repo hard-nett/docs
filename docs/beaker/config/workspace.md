@@ -57,7 +57,7 @@
 ```toml
 [workspace.template]
 name = 'workspace-template'
-repo = 'https://github.com/osmosis-labs/beaker.git'
+repo = 'https://github.com/terpnetwork/beaker.git'
 branch = 'main'
 subfolder = 'templates/project'
 target_dir = '.'

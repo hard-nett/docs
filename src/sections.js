@@ -4,7 +4,7 @@ import {
   Network,
   Cosmwasm,
   Beaker,
-  Osmojs,
+  Terpjs,
   Telescope,
   Frontend,
 } from './icons';
@@ -63,7 +63,7 @@ const SECTIONS = [
   {
     name: 'TerpJS',
     id: 'terpjs',
-    icon: Osmojs,
+    icon: Terpjs,
     section: 'frontend',
   },
   {

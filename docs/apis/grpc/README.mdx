@@ -16,7 +16,7 @@ import {
   RelayerIcon,
   AssetIcon,
   Telescope,
-  Osmojs,
+  Terpjs,
   Createapp,
   Cosmoskit,
   Tscodegen,
@@ -26,7 +26,7 @@ import {
 
 ## Interacting with the gRPC Server
 
-As described on the [Network page](../../networks). A gRPC endpoint is availble on the public Osmosis nodes so that you can start playing and intreacting with it right away.
+As described on the [Network page](../../networks). A gRPC endpoint is availble on the public Terp Network nodes so that you can start playing and intreacting with it right away.
 
 ## Enabling gRPC on a node
 If you are running your own node. It's also possible to enable them by editing  `~/.terp/config/app.toml`: 
@@ -37,7 +37,7 @@ If you are running your own node. It's also possible to enable them by editing  
 
 
 ### Grpc endpoints
-An overview of all available gRPC endpoints shipped with Osmosis is available in the [Osmosis Protobuf documentation](https://buf.build/terpnetwork/terp-core). There is also a Cosmos SDK is [Protobuf documentation](https://buf.build/cosmos/cosmos-sdk).
+An overview of all available gRPC endpoints shipped with Terp Network is available in the [Terp-Core Protobuf documentation](https://buf.build/terpnetwork/terp-core). There is also a Cosmos SDK is [Protobuf documentation](https://buf.build/cosmos/cosmos-sdk).
 
 You can send requests to the gRPC server using a gRPC client such as [grpcurl](#grpcurl) or from [Buf Studio](./interact-grpc-buf-studio).
 
@@ -53,7 +53,7 @@ Since the code generation library largely depends on your own tech stack, we wil
     title="grpcurl"
     description="Ideal for generic debugging and testing"
     to="/apis/grpc/interact-grpc-curl"
-    icon={<Osmojs />}
+    icon={<Terpjs />}
     svgFile="/icons/go_terp.svg"
   />
   <Card

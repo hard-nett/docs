@@ -138,7 +138,7 @@
 name = ''
 gas_price = '0.025upersyx'
 gas_adjustment = 1.3
-account_prefix = 'osmo'
+account_prefix = 'terp'
 derivation_path = '''m/44'/118'/0'/0/0'''
 [networks.local]
 chain_id = 'localterp'

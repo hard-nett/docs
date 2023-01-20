@@ -15,7 +15,7 @@ import {
   RelayerIcon,
   AssetIcon,
   Telescope,
-  Osmojs,
+  Terpjs,
   Createapp,
   Cosmoskit,
   Tscodegen,
@@ -51,7 +51,7 @@ export default function Homepage() {
           <Section title="Learn about Terp-Core">
             <Card
               title="What is Terp-Core?"
-              description="pools."
+              description="Introduction to Terp-Core & its ecosystem."
               to="/overview/"
             />
             <Card
@@ -62,7 +62,7 @@ export default function Homepage() {
             <Card
               title="The Terp Token"
               description="The TERP token is a governance token that allows staked token holders to decide the future of the protocol, including every implementation detail. "
-              to="/overview/getting-started"
+              to="/overview/terp-and-persy"
             />
           </Section>
 
@@ -148,8 +148,8 @@ export default function Homepage() {
     title="TerpJs"
     description="Compose and broadcast Terp-Core and Cosmos messages, with all of the proto and amino encoding handled for you."
     to="/terpjs"
-    icon={<Osmojs />}
-    svgFile="/icons/osmojs.svg"
+    icon={<Terpjs />}
+    svgFile="/icons/terpjs.svg"
   />
 
 <Card
