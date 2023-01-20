@@ -92,8 +92,8 @@ out of gas in location: WritePerByte; gasWanted: 177140, gasUsed: 177979: out of
 
 Please try subsituting:
 ```
---gas="auto" \
---gas-prices="0.0025upersyx"
+--gas="200000" \
+--fees="200000upersyx"
 ```
 
 with
