@@ -15,11 +15,6 @@ This document lays out the process of creating a state export to derive all terp
 ### Choosing a block height
 The current Terp Network block height can be found on the [ZenChain blocks page.](https://terp.zenscan.io/)To find the date/time of a specific block height in the past, type the desired block height in the Mintscan search bar and press enter. Here is the Mintscan block height page for block 2138101:
 
-![](../../assets/mintscan_height.png)
-
-In this example, block height 2138101 happened on 25 November 2021 at 12:59:55AM local time.
-
-
 ### Determine terp-core node type requirement
 First, determine how far in the past the desired block height is from the current time. If the desired block height is within the last seven days, you can make the state export with a default snapshot node. Anything further in the past more than likely needs to be done by setting up a node with an archive snapshot.
 

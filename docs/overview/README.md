@@ -17,7 +17,7 @@ At Terp Network, it mission is simple: to build a strong, supportive community t
 
 TERPNET  is a **decentralized platform** for the cannabis community to build applications and learn about the benefits of self-sovereign De-Fi tooling. 
 
- Powered by [Tendermint Core](https://tendermint.com/), [CosmosSDK](https://docs.cosmos.network/), & [CosmWasm](https://cosmwasm.com/), Terp Networks becomes the interface for teams to create solutions for specific problems in the cannabis industry, utilizing the credibility offered by smart contracts on the blockchain.
+ Powered by [Tendermint Core](https://tendermint.com/), [CosmosSDK](https://docs.cosmos.network/), & [CosmWasm](https://cosmwasm.com/), Terp Networks becomes the interface for teams to create solutions for specific problems in the cannabis industry, utilizing the credibility & censorship resistance features offered by smart contracts on the blockchain.
 
 ## Use Cases 
 

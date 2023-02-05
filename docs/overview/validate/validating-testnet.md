@@ -52,6 +52,8 @@ terpd tx staking create-validator \
 --commission-max-rate="[maximum_commission_rate]" \
 --commission-max-change-rate="[maximum_rate_of_change_of_commission]" \
 --min-self-delegation="[min_self_delegation_amount]" \
+--gas="[min_gas_wout_denom]" \
+--fees="[min_gas_w_denom]" \
 ```
 
 Here is the same command but with example values:
@@ -68,6 +70,8 @@ terpd tx staking create-validator \
 --commission-max-rate="0.2" \
 --commission-max-change-rate="0.05" \
 --min-self-delegation="400000000" \
+--gas="1000000" \
+--fees="1000000upersy" \
 ```
 
 If you need further explanation for each of these command flags:

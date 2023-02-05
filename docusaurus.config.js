@@ -163,6 +163,12 @@ const config = {
             position: 'left',
           },
           {
+          label: 'Genesis Launch',
+          to: 'overview/genesis-prep',
+          position: 'left',
+          className: 'new-badge'
+          },
+          {
             label: 'API Reference',
             to: 'apis',
             position: 'right',

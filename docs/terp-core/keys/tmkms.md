@@ -106,7 +106,7 @@ In this example, my validator has the IP address of 123.456.32.123 and we will b
 
 [[chain]]
 id = "tbd"
-key_format = { type = "bech32", account_key_prefix = "osmopub", consensus_key_prefix = "osmovalconspub" }
+key_format = { type = "bech32", account_key_prefix = "terppub", consensus_key_prefix = "osmovalconspub" }
 state_file = "/root/tmkms/config/state/priv_validator_state.json"
 
 ## Signing Provider Configuration

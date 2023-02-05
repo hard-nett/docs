@@ -12,31 +12,34 @@ Unless using a webapp ui that has already been configured and deployed by other 
 
 ## Types of Ways to Interact With Terp Network:
 
-- Connect a Keplr wallet to a web app configured to Terp Network 
-- Install the Terp Core CLI & broadcast messages to an RPC Endpoint provider on Terp Network
-- Install the Terp Core CLI & create a new full node
-- Install the Terp Core CLI & create a validator
-- Cross Chain Communication (Interchaintx, interchain accounts)  
+- Connect a [non-custodial](https://terp.network/ecosystem) wallet to a web app configured to Terp Network 
+- Install the Terp Core CLI & **broadcast messages** to an **RPC Endpoint** provider on Terp Network
+- Install the Terp Core CLI & **broadcast messages** through your own **full node**
+- Install the Terp Core CLI & **broadcast messages** through your own **validator**
+- Cross Chain Communication (Interchaintx, interchain accounts) *Coming Soon*  
 
 ### For now, we will focus on installing the Terp Core CLI, & setting the RPC endpoint to an RPC provider on Terp Network.
 
-Everything described below are commands that are given to a computer to run through what is called the Command-Line-Interface (CLI). 
+Everything described below are commands that are given to a computer to run through what is called the Command-Line-Interface (CLI). There are many ways to maximize user sercurity that this quick introduction does not cover, however resources will be added to this source repo as we continue. 
 
 ## Step 1: Install the Terp Core CLI
 
+### Minimum Requirements
+
+**Linux OS**
 Terp Core works best if you are using a computer that is compatible with linux.  There are dozens of platforms optimized for linux, but for those just starting out with command line interaction, its reccomended to use either Unbuntu or a Mac device. 
+**Hardware**
+The minimum recommended specs for running terpd is as follows:
+- 1 physical core x86_64 architecture processor
+- 8GB RAM (or equivalent swap file set up)
+- 100 GB of storage space
 
-
+## Commands
+Go to [commands](#commands) to learn more.
 
 ## Install pre-requisites (Linux)
 ```
-# Update the local package list and install any available upgrades
-
-sudo apt-get update && sudo apt upgrade -y
-
-# install toolchain and ensure accurate time synchronization
-
-sudo apt-get install make build-essential gcc git jq chrony -y
+sudo apt-get update && sudo apt upgrade -y && sudo apt-get install make build-essential gcc git jq chrony -y
 ```
 
 ## Install Go

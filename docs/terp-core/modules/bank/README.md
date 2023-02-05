@@ -4,11 +4,8 @@ Bank module allows you to manage assets for accounts loaded into the local keys 
 
 ## Available Commands
 
-### terpd query bank balances
-Query the total balance of an account or of a specific denomination. 
-
-### terpd query bank total
-
-### terpd tx bank send 
-
-Sending tokens to another address, this command includes generate, sign and broadcast steps.
+| Name | Description |
+| :--- | :--- |
+| [balances](bank.md#query-bank-balances) | Query for account balances by address |
+| [total](bank.md#terpd-query-bank-total) | Query the total supply of coins of the chain |
+| [send](bank.md#terpd-tx-bank-send) | Create and/or sign and broadcast a MsgSend transaction |
