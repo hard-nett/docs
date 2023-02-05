@@ -2,7 +2,7 @@
 title: IBC Channels
 sidebar_position: 3
 ---
-## IBC Channels for Osmosis
+## IBC Channels for Terp Network
 
 | source chain-id  | source channel  | destination | destination chain-id  | destination channel |
 | ---------------- | --------------- | ----------- | --------------------- | ------------------- |

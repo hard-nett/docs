@@ -35,7 +35,7 @@ First import the public keys of `test3` into your keyring.
 ```sh
 terpd keys add \
     test3 \
-    --pubkey=osmopub1addwnpepqgcxazmq6wgt2j4rdfumsfwla0zfk8e5sws3p3zg5dkm9007hmfysxas0u2
+    --pubkey=terppub1addwnpepqgcxazmq6wgt2j4rdfumsfwla0zfk8e5sws3p3zg5dkm9007hmfysxas0u2
 ```
 
 Generate the multisig key with 2/3 threshold.
@@ -55,13 +55,13 @@ terpd keys show multi
 - name: multi
   type: multi
   address: terp1e0fx0q9meawrcq7fmma9x60gk35lpr4xk3884m
-  pubkey: osmopub1ytql0csgqgfzd666axrjzq3mxw59ys6yqcd3ydjvhgs0uzs6kdk5fp4t73gmkl8t6y02yfq7tvfzd666axrjzq3sd69kp5usk492x6nehqjal67ynv0nfqapzrzy3gmdk27la0kjfqfzd666axrjzq6utqt639ka2j3xkncgk65dup06t297ccljmxhvhu3rmk92u3afjuyz9dg9
+  pubkey: terppub1ytql0csgqgfzd666axrjzq3mxw59ys6yqcd3ydjvhgs0uzs6kdk5fp4t73gmkl8t6y02yfq7tvfzd666axrjzq3sd69kp5usk492x6nehqjal67ynv0nfqapzrzy3gmdk27la0kjfqfzd666axrjzq6utqt639ka2j3xkncgk65dup06t297ccljmxhvhu3rmk92u3afjuyz9dg9
   mnemonic: ""
   threshold: 0
   pubkeys: []
 ```
 
-Let's add 10 OSMO to the multisig wallet:
+Let's add 10 TERPto the multisig wallet:
 
 ```bash
 terpd tx bank send \
@@ -76,7 +76,7 @@ terpd tx bank send \
 
 ### Step 2: Create the multisig transaction
 
-We want to send 5 OSMO from our multisig account to `terp1rgjxswhuxhcrhmyxlval0qa70vxwvqn2e0srft`.
+We want to send 5 TERPfrom our multisig account to `terp1rgjxswhuxhcrhmyxlval0qa70vxwvqn2e0srft`.
 
 ```bash
 terpd tx bank send \

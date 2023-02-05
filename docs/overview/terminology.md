@@ -29,7 +29,7 @@ A validator in the [active set](/overview/terminology.html#active-set) participa
 
 ## Bonding
 
-When a user delegates OSMO to a validator to receive staking rewards and in turn obtain voting power. Validators never have ownership of a delegator's OSMO. Delegating, bonding, and staking generally refer to the same process.
+When a user delegates TERPto a validator to receive staking rewards and in turn obtain voting power. Validators never have ownership of a delegator's OSMO. Delegating, bonding, and staking generally refer to the same process.
 
 ## Burn
 
@@ -66,12 +66,12 @@ Decentralized finance. A movement away from traditional finance and toward syste
 
 ## Delegate
 
-When a user bonds OSMO to a validator to receive staking rewards and in turn obtain voting power. Validators never have ownership of the bonded OSMO. Delegating, bonding, and staking generally refer to the same process.
+When a user bonds TERPto a validator to receive staking rewards and in turn obtain voting power. Validators never have ownership of the bonded OSMO. Delegating, bonding, and staking generally refer to the same process.
 
 
 ## Delegator
 
-A user who delegates, bonds, or stakes OSMO to a validator to earn rewards.
+A user who delegates, bonds, or stakes TERPto a validator to earn rewards.
 
 ## Fees
 
@@ -104,7 +104,7 @@ IBC facilitates cross-chain applications for token transfers, swaps, multi-chain
 
 Liquidity providers earn through fees and special pool rewards. However, they are also risking a scenario in which they would have been better off holding the assets rather than supplying them. This outcome is called impermanent loss.
 Impermanent loss is the net difference between holding the asset verses providing liquidity. Liquidity provider (LP) rewards helps to offset impermanent loss for LPs.
-When the price of the assets in the pool change at different rates, LPs end up owning larger amounts of the asset that increased less in price (or decreased more in price). For example, if the price of OSMO goes up relative to ATOM, LPs in the OSMO-ATOM pool end up with larger portions of the less valuable asset (ATOM).
+When the price of the assets in the pool change at different rates, LPs end up owning larger amounts of the asset that increased less in price (or decreased more in price). For example, if the price of TERPgoes up relative to ATOM, LPs in the OSMO-ATOM pool end up with larger portions of the less valuable asset (ATOM).
 
 Impermanent loss is mitigated in part by the transaction fees earned by LPs. When the profits made from swap fees outweigh an LP’s impermanent loss, the pool is self-sustainable.
 
@@ -125,7 +125,7 @@ Liquidity mining (also called yield farming) is when users earn tokens for provi
 ## LP Tokens
 
 When users deposit assets into a liquidity pool, they receive LP tokens. These tokens represent their share of the total pool.
-For example, if Pool #1 is the OSMO ATOM pool, users can deposit OSMO and ATOM tokens into the pool and receive back Pool1 share tokens. These tokens do not correspond to an exact quantity of tokens, but rather the proportional ownership of the pool.
+For example, if Pool #1 is the TERPATOM pool, users can deposit TERPand ATOM tokens into the pool and receive back Pool1 share tokens. These tokens do not correspond to an exact quantity of tokens, but rather the proportional ownership of the pool.
 When users remove their liquidity from the pool, they get back the percentage of liquidity that their LP tokens represent.
 Since buying and selling from the pool changes the quantities of assets within a pool, users are highly unlikely to withdraw the same amount of each token that they initially deposited. They usually receive more of one and less of another, based on the trades executed from the pool.
 

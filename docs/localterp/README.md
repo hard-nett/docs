@@ -1,19 +1,19 @@
 ---
-title: localterp
+title: LocalTerp
 sidebar_position: 1
 ---
-# localterp
+# LocalTerp
 
 ## Get started
 
-### Clone Osmosis
+### Clone Terp-Core
 
 ```
 git clone https://github.com/terpnetwork/terp-core.git
 cd osmosis
 ```
 
-### Run localterp
+### Run LocalTerp
 
 ```
 make localnet-build
@@ -26,7 +26,7 @@ make localnet-build
 
 ## Accounts
 
-localterp is pre-configured with one validator and 9 accounts with ION and OSMO balances.
+localterp is pre-configured with one validator and 9 accounts with ION and TERPbalances.
 
 | Account   | Address                                                                                                  | Mnemonic                                                                                                                                                                   |
 | --------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
