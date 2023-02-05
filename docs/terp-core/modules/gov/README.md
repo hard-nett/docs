@@ -12,19 +12,19 @@ The ```gov``` module enables on-chain governance which allows Terp token holders
 
 | Name | Description |
 | :--- | :--- |
-| [proposal](gov.md#terp-query-gov-proposal) | Query details of a single proposal |
-| [proposals](gov.md#terp-query-gov-proposals) | Query proposals with optional filter |
-| [vote](gov.md#terp-query-gov-vote) | Query details of a single vote |
-| [votes](gov.md#terp-query-gov-votes) | Query votes on a proposal |
-| [deposit](gov.md#terp-query-gov-deposit) | Query details of a deposit |
-| [deposits](gov.md#terp-query-gov-deposits) | Query deposits on a proposal |
-| [tally](gov.md#terp-query-gov-tally) | Get the tally of a proposal vote |
-| [param](gov.md#terp-query-gov-param) | Query the parameters \(voting |
-| [params](gov.md#terp-query-gov-params) | Query the parameters of the governance process |
-| [proposer](gov.md#terp-query-gov-proposer) | Query which address proposed a proposal with a given ID. |
-| [submit-proposal](gov.md#terp-tx-gov-submit-proposal) | Submit a proposal along with an initial deposit |
-| [deposit](gov.md#terp-tx-gov-deposit) | Deposit tokens for an active proposal |
-| [vote](gov.md#terp-tx-gov-vote) | Vote for an active proposal, options: yes/no/no\_with\_veto/abstain |
+| [proposal](README.md#terp-query-gov-proposal) | Query details of a single proposal |
+| [proposals](README.md#terp-query-gov-proposals) | Query proposals with optional filter |
+| [vote](README.md#terp-query-gov-vote) | Query details of a single vote |
+| [votes](README.md#terp-query-gov-votes) | Query votes on a proposal |
+| [deposit](README.md#terp-query-gov-deposit) | Query details of a deposit |
+| [deposits](README.md#terp-query-gov-deposits) | Query deposits on a proposal |
+| [tally](README.md#terp-query-gov-tally) | Get the tally of a proposal vote |
+| [param](README.md#terp-query-gov-param) | Query the parameters \(voting |
+| [params](README.md#terp-query-gov-params) | Query the parameters of the governance process |
+| [proposer](README.md#terp-query-gov-proposer) | Query which address proposed a proposal with a given ID. |
+| [submit-proposal](README.md#terp-tx-gov-submit-proposal) | Submit a proposal along with an initial deposit |
+| [deposit](README.md#terp-tx-gov-deposit) | Deposit tokens for an active proposal |
+| [vote](README.md#terp-tx-gov-vote) | Vote for an active proposal, options: yes/no/no\_with\_veto/abstain |
 
 ### terpd query gov proposal <a id="terp-query-gov-proposal"></a>
 
