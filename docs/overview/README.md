@@ -40,4 +40,4 @@ The **Inter-blockchain Communication** *protocol* (**IBC**) is a reliable & secu
 
 IBC can be used by any application which builds on top of Cosmos SDK networks, for things like cross-chain asset transfers, multichain smart contracts, with more being developed daily. 
 
-This is an exciting feature as **current projects focused on cannabis + web3 adoption are already interoperable with terp network.** If you are interested in providing real utility for your project, [**join our discord**](https://discord.gg/SYEjMwAac7) to find active community members! 
+This is an exciting feature as **current projects focused on cannabis culture & the Decentralized-Web adoption are already interoperable with terp network.** If you are interested in providing real utility for your project, [**join our discord**](https://discord.gg/SYEjMwAac7) to find active community members! 

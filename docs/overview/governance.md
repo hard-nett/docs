@@ -4,7 +4,8 @@
 
 Staked TERP holders are eligible to vote on governance proposals. Browse the available proposals, and use one's staked tokens to cast a vote.
 
-
+## UI 
+Block explorers provide a user-friendly interface for vieweing existing proposals, however there currently is not an alternative to broadcasting governance message only through a CLI for the TestNET currently.
 
 ## Creating a Proposal
 

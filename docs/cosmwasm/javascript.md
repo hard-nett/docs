@@ -123,9 +123,6 @@ Once you have deployed the smart contract you can get the `<CONTRACT-ID>` by run
 terpd query wasm list-code
 ```
 
-![](../assets/contracts-list.png)
-In this particular example there are 7 contracts available. The latest one is 7.
-
 You can now get the contract address by running
 
 ```
@@ -135,7 +132,7 @@ terpd query wasm list-contract-by-code <CONTRACT-ID>
 
 
 
-That's the contract address `terp1zlmaky7753d2fneyhduwz0rn3u9ns8rse3tudhze8rc2g54w9ysq725p3a` for code contract id 7.
+That's the contract address `TBD` for code contract id 7.
 
 ## Get contract 
 ```javascript
@@ -147,7 +144,7 @@ const rpcEndpoint = "http://localhost:26657/";
 async function queryContract() {
   const client = await CosmWasmClient.connect(rpcEndpoint);
  
-    const getContract = await client.getContract("terp1zlmaky7753d2fneyhduwz0rn3u9ns8rse3tudhze8rc2g54w9ysq725p3a")
+    const getContract = await client.getContract("TBD")
     console.log(getContract);
 }
 
@@ -160,7 +157,6 @@ Run the code
 node index.js
 ```
 The output should look like this:
-![](contract_details.png)
 
 ## Get the count from the contract
 The contract we are interacting with has a few simple functions. 'get_count', 'increment' and 'reset'. These two functions can be called via by using the `queryContractSmart` method. 
@@ -173,7 +169,7 @@ Please note there is a complete guide on how to upload the example contract on l
 async function getCount() {
     const client = await CosmWasmClient.connect(rpcEndpoint);
 
-    const getCount = await client.queryContractSmart("terp1zlmaky7753d2fneyhduwz0rn3u9ns8rse3tudhze8rc2g54w9ysq725p3a",{ "get_count": {}})
+    const getCount = await client.queryContractSmart("TBD",{ "get_count": {}})
     console.log(getCount);
 }
 getCount();

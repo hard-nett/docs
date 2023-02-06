@@ -58,7 +58,6 @@ go version
 
 Output should be: `go version go1.19.2 linux/amd64`
 
-<a id="install-terpd"></a>
 ### Install terpd from source
 
 #### 1. Clone repository
@@ -67,15 +66,9 @@ Output should be: `go version go1.19.2 linux/amd64`
 ```shell
 git clone https://github.com/terpnetwork/terp-core.git
 ```
-* Checkout latest tag
-```shell
-cd terp-core
-git fetch --tags
-git checkout 
-```
 #### 2. Install CLI
 ```shell
-make build && make install
+cd terp-core && make build && make install
 ```
 
 To confirm that the installation was successful, you can run:
@@ -121,29 +114,33 @@ terpd keys show <key-name> -a
 
 ### Download new genesis file
 ```bash:
-curl https://raw.githubusercontent.com/terpnetwork/test-net/master/athena-2/genesis.json > ~/.terp/config/genesis.json
+curl https://raw.githubusercontent.com/terpnetwork/test-net/master/athena-3/genesis.json > ~/.terp/config/genesis.json
 ```
 ### Set minimum gas fees
 ```bash:
 perl -i -pe 's/^minimum-gas-prices = .+?$/minimum-gas-prices = "0.0125upersyx"/' ~/.terp/config/app.toml
 ```
 ### P2P
+Currently there are some great community hosted resources: checkout all of the apps configured to Terp Network here: [All Apps](https://terp.network/ecosystem)
 
 #### Add seeds
 ```bash:
-TBD
+# Checkout active seeds for testnet & main-net here: https://nodejumper.io/terpnetwork-testnet 
 ```
 ### Add persistent peers
 ```bash:
-TBD
+# Checkout some availible persistent peers for testnet & main-net here: https://nodejumper.io/terpnetwork-testnet 
 ```
 ### OR
 
 ### Download addrbook.json
 ```bash:
-TBD
+# Checkout active address book for testnet & main-net here: https://nodejumper.io/terpnetwork-testnet 
 ```
-
+### (Optional) Snapshot sync
+```bash
+# Checkout available snapshot sync resource provided by the Highstakes Validator Team: https://tools.highstakes.ch/snapshots
+```
 ### Setup Unit/Daemon file
 
 ```bash:
@@ -203,7 +200,7 @@ terpd tx staking create-validator \
 --pubkey $(terpd tendermint show-validator) \ 
 --moniker $MONIKER_NAME \ 
 --chain-id $CHAIN_ID \ 
---gas 400000upersyx \
+--gas 400000 \
 --fees 400000upersyx \
 --from <KEY_NAME>
 ```
