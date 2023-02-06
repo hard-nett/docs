@@ -13,17 +13,17 @@ This document lays out the process of creating a state export to derive all terp
 
 
 ### Choosing a block height
-The current Terp Network block height can be found on the [ZenChain blocks page.](https://terp.zenscan.io/)To find the date/time of a specific block height in the past, type the desired block height in the Mintscan search bar and press enter. Here is the Mintscan block height page for block 2138101:
+The current Terp Network block height can be found on the [ZenChain blocks page.](https://terp.zenscan.io/)To find the date/time of a specific block height in the past, type the desired block height in the Zenscan search bar and press enter. Here is the Zenscan block height page for block [586664](https://terp.zenscan.io/block.php?height=586664)
 
 ![](../../assets/mintscan_height.png)
 
-In this example, block height 2138101 happened on 25 November 2021 at 12:59:55AM local time.
+In this example, block height 586664 happened on 6 February 2023 at 16:03:5PM local time.
 
 
 ### Determine terp-core node type requirement
 First, determine how far in the past the desired block height is from the current time. If the desired block height is within the last seven days, you can make the state export with a default snapshot node. Anything further in the past more than likely needs to be done by setting up a node with an archive snapshot.
 
-In our example, block height 2138101 is many months in the past, so we must use an archive snapshot.
+In our example, block height 586664 is in the past, so we must use an archive snapshot.
 
 
 ### Run an terp-core node
@@ -32,7 +32,7 @@ To set up either a default or archive node, either use the terp network bash ins
 
 
 ### Install the daemon version corresponding to snapshot height
-If you are looking to take a snapshot for a block height that occurred during a previously breaking major release (i.e v3.x, v4.x, v5.x, etc.), you must ensure your daemon is running that version before taking the state export. To see the block height for all major releases, go to [Terp-Core Releases](https://github.com/terpnetwork/terp-core/releases) sand check the titles of all major releases. You will see the block height the upgrade took place in the title. In our example, we are taking a state export at block height 2138101. Since v4 released at block height 1314500 and v5 didn't release until block height 2383300, we must ensure the daemon is now running v4 before we take the state export. To change the daemon version (in this example to v4.0.0):
+If you are looking to take a snapshot for a block height that occurred during a previously breaking major release (i.e v0.1x, v0.2x etc.), you must ensure your daemon is running that version before taking the state export. To see the block height for all major releases, go to [Terp-Core Releases](https://github.com/terpnetwork/terp-core/releases) sand check the titles of all major releases. You will see the block height the upgrade took place in the title. In our example, we are taking a state export at block height 586664. We must ensure the daemon is now running v0.2x before we take the state export:
 
 ```sh
 cd $HOME/terp-core
@@ -46,7 +46,7 @@ Then check the version
 terpd version
 ```
 
-Which in this example should output 4.0.0
+Which in this example should output 0.2.0
 
 To reiterate, if your snapshot is being taken on a more recent height where the daemon version is still current, this step will not be required and you can continue with the current daemon version.
 
@@ -56,15 +56,10 @@ To reiterate, if your snapshot is being taken on a more recent height where the 
 Ensure the daemon is not running in the background. Then, to take a state export at a specified height (in this example 2138101):
 
 ```sh
-terpd export 2138101 > state_export.json
+terpd export 586664 > state_export.json
 ```
 
 This process may take 30 minutes or more.
-
-::: warning NOTE
-Some cosmos sdk versions write to STDERR instead of STDOUT. If the above command does not work for you, try to replace the > with 2>
-As of this writing, v5 and later will require 2> while anything before v5 will just use >
-:::
 
 
 ### Export accounts in JSON format
