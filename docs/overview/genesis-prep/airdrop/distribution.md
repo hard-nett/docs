@@ -1,16 +1,20 @@
 # Distribution
 The majority of the genesis supply (Over 95%) was stake-dropped to BCNA stakers, committed to the community pool, and airdropped to the community members of other projects focused and involved with ongoing the process of integrating our culture to the censorship resistant ecosystems blockchains create.
 
-✅ Initial Circulating Supply: 420,000,000 $TERP & 710,000,000 $PERSY 
+| Supply Info  |  TERP | PERSY  |  |   |
+|-----------------|:-------:|:------:|:-----------:|---|
+| ✅ Initial Circulating Supply | 420,000,000 | 710,000,000 |
+| ✅ Initial Total Supply       | 420,000,000 | 6,754,110,500 PERSY |
 
-✅ Initial Total Supply:       420,000,000 $TERP & 6,754,110,500 $PERSY
 
 ## Distribution 
-36% - Vested Airdrops 
 
-50% - Treasury 
-
-24% - Foundation 
+| Type  |  % |  |  |   |
+|-----------------|:-------:|:------:|:-----------:|---|
+| Vested Airdrops | 26% | 
+| Treasury        | 50% |
+| Foundation      | 24% |
+  
 
 ## Minting Schedule
 ### TERP

@@ -1,5 +1,5 @@
 # Introduction
-Welcome to the Terp Network Journey! We are so glad you are joining us on our mission to build a hyperfocused ecosystem for all things terpene. This multi-month event serves multiple purposes and will be an exciting experience for all participants.
+Welcome to the Terp Network Journey! The TerpNET Foundation is grateful you are joining us on our mission to build a hyperfocused ecosystem for all things terpene. This multi-month event serves multiple purposes and will be an exciting experience for all participants.
 
 Firstly, we will introduce the Terp Network in a way that highlights the fundamentals required for participation. This will ensure that everyone is on the same page and has the necessary knowledge to fully participate.
 
@@ -9,15 +9,37 @@ Thirdly, this event is an opportunity for participants to receive feedback on th
 
 Finally, this event will provide an on-chain record of participation for TestNET Airdrop allocations. This will allow us to keep track of everyone's contributions and ensure that the airdrop process is transparent and fair for all participants.
 
-So, are you ready to join us on this exciting journey? Let's get started!
+So, are you ready to join us on this exciting journey? Let's go!
 ## When?
 ### Phase 1: Scavenger Hunt: Infrastructure Testing 
 - Timeline December 2022 -> January 2023
 - Snapshot taken of state 
-### Phase 2: Scavenger Hunt: Application 
+### Phase 2: Scavenger Hunt: Challenges
 - Timeline: Feburary 7th 2023 -> March 1st  2023 
 ## How?
-### Phase 1: Test-Net Infra
-- Validators & Nodes Underwent various network upgrade debugs & risk mitigation testing events
-### Phase 2: Application Interaction
-- DAO Consensus: We aim to treat all decisions made on the testNET prior to genesis launch as if they were Main Network consensus. participants will be able to propose to be added to the DAO, including all of the challenges (if any) completed during the upcoming Scavenger Hunt Event. 
+
+### Gaguing Contributions & Airdrop Distributions
+Contributions & Participation of this event will be tracked on a point based system. Upon the end of phase 2, the total results will be compared, & the proportion of contribution points that were earned will be used to calculate the proportion of airdrop tokens allocated to each participant.
+
+### Challenge Reward Ratios
+- % of toal supply allocated for Scavenger Hunt participants: 2.4%
+    - First Challenge: 0.8%
+    - Second Challenge: 1.2% 
+    - Third Challenge: 0.4%
+
+Points distribution
+
+|  contribution opportunity  |  Points for contribution | 
+|---------|:----------------:|:--------------:|
+|Validator Node |+1 point|
+|Relayer Deployment |+1 point|
+|dapp Deployment |+1 point|
+|Documentation Resources |+1 point|
+|Suggestions & improvements |+1 point|
+|Public RPC/REST/LCD Endpoint |+1 point|
+|Snapshot Provider |+1 point|
+
+
+
+
+All decisions are to be finalized via consnensus of TestNET DAO members.

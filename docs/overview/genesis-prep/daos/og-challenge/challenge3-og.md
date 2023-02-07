@@ -1,16 +1,16 @@
 # Third Challenge 
 ## Terp Founding OG Member Onboarding Challenge: Step 3
 
-The Terp OG Founding Member Rewards Program is for contributors to Terp's testnet, and is a warm thank you to our community. As a reminder, the program is limited to the top 100 members and involves 3 challenges. Each challenge has a corresponding reward, for a total of 7,350 TERPs & 7,350 PERSY, with bonuses of up to 2000 TERP & 2000 PERSY.
+The Terp OG Founding Member Rewards Program is for contributors to Terp's testnet, and is a warm thank you to our community. As a reminder, the program is limited to the top 100 members and involves 3 challenges. Each challenge has a corresponding reward, for a total of ! TERPs & ! PERSY, with bonuses of up to ! TERP & ! PERSY.
 
 Check out our Founding Member Rewards First Challenge article to learn more about the program. Following is our updated challenge schedule:
 - **Feb 7th:** Terp OG Founder Level 1, the first challenge is \
-worth **2,100** TERPs & **2,100** PERSY.
+worth **!** TERPs & **!** PERSY.
 
 - **Feb 14th:** Terp OG Founder Level 2, second challenge is \
-worth **3,150** TERPs & **3,150** PERSYs.
+worth **!** TERPs & **!** PERSYs.
 
-- **Feb 21st:** Terp OG Founder Level 3, third challenge is worth **4200** TERPs & **4200** PERSYs.
+- **Feb 21st:** Terp OG Founder Level 3, third challenge is worth **!** TERPs & **!** PERSYs.
 
 - **Feb 28th:** Deadline to complete our three challenges by 5 PM PST.
 
@@ -19,7 +19,7 @@ worth **3,150** TERPs & **3,150** PERSYs.
 ## Introducing Terp OG Founder Level 3 Final Challenge: Coming Soon :)
 This week, we present the Second Challenge, which qualifies you to earn 4,200 TERP & PERSY  Tokens.
 
-- **Reward:** 4200 TERP & PERSY
+- **Reward:** ! TERP & PERSY
 - **Challenge:** Coming Soon :)
 - **Winners:** First 100 submissions - measured by the timestamp of the git commit - that pass the qualification criteria.
 - **Instructions:** Follow the steps in this guide.

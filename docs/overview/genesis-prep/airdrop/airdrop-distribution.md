@@ -5,16 +5,17 @@ Process: percentile based, normalized for each project included via consensus of
 
 | Project Name  |  % of airdrop allocation  | Estimated Token Amount | Number of Holders |   |
 |---------|:----------------:|:------:|:-----------:|---|
-| Bitcanna               | 5%       | -  |  - |   |
-| Cannalabs              | 2.5%     | -  |  - | 
-| Chronic Token          | 2.5%     | -  |  - | 
-| Cosmos Hub Stakers     | 25%      | -  |  - | 
-| Crypto Canna Club      | 10.25%   | -  |  - | 
+| Bitcanna               | 7.5%     | -  |  - |   |
+| Cannalabs              | 2%       | -  |  - | 
+| Chronic Token          | 15%      | -  |  - | 
+| Cosmos Hub Stakers     | 24%      | -  |  - | 
+| Crypto Canna Club      | 10%      | -  |  - | 
 | Galaktic Gang          | 6%       | -  |  - | 
 | Monster Buds           | 9%       | -  |  - | 
 | Secret Sesh            | 3.5%     | -  |  - | 
-| Scavenger Hunt Winners | -        |    | -  | 
-| Terp-OG Membership     | -        |    | -  | 
+| Scavenger Hunt Winners | 9.23%    |    | -  | 
+| Terp-OG Membership     | 0.87%    |    | -  | 
+| Other CannabisxWeb3    | 12.65%    |    | -  | 
 
  - Any other Cannabis + Web3 Community Token Projects
 **Calculations:**

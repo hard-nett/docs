@@ -4,7 +4,7 @@ As a truly decentralized community, Terp needs your support to materialize our v
 In these early days, we want you to join and help us establish the foundation for a valuable and engaged community. In this effort, we're excited to announce the TerpNET Founding Member Rewards Program!
 
 ## Overview 
-Of the 420,000,000 TERP & 710,000,000 PERSY tokens that are proposed to only be pre-mined at genesis, we're allocating ~1% (3,900,000) TERP's & ~.05% (3,900,000) PERSY's! to a reward program for early contributors in our community. This reward program is inspired by projects from the community, such as Solana [Tour de Sol](https://solana.com/tds), Cosmos [Game of Stakes](https://github.com/cosmos/game-of-stakes), Kava [Founder Rewards](https://github.com/Kava-Labs/kava/blob/master/docs/REWARDS.md), And Akash [Founding Member Program](https://akash.network/).
+Of the 420,000,000 TERP & 710,000,000 PERSY tokens that are proposed to only be pre-mined at genesis, we're allocating ~0.225% (945,000) TERP's & ~0.001% (945,000) PERSY's! to a reward program for early contributors in our community. This reward program is inspired by projects from the community, such as Solana [Tour de Sol](https://solana.com/tds), Cosmos [Game of Stakes](https://github.com/cosmos/game-of-stakes), Kava [Founder Rewards](https://github.com/Kava-Labs/kava/blob/master/docs/REWARDS.md), And Akash [Founding Member Program](https://akash.network/).
 
 ### There is two genesis rewards programs to share:
 1) Terp Founding OG Member Onboarding Process

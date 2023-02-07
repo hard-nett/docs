@@ -1,18 +1,18 @@
 # Second Challenge
 ## Terp Founding OG Member Onboarding Challenge: Step 2
-*** Earn 6,300 Tokens and the Terp OG Founder Level 2 Badge! *** 
+*** Earn ! Tokens and the Terp OG Founder Level 2 Badge! *** 
 
 
-The program is limited to the top 100 members and involves 3 challenges. Each challenge has a corresponding reward, for a total of ***7,350* TERPs & *7,350*** PERSY, with bonuses of 25 TERP & 25 PERSY.
+The program is limited to the top 100 members and involves 3 challenges. Each challenge has a corresponding reward, for a total of **! TERPs & !** PERSY, with bonuses of ! TERP & ! PERSY.
 
 To learn more and participate, check out our Founding Member Rewards First Challenge article and stay tuned for our challenge schedule:
 - **Feb 7th:** Terp OG Founder Level 1, the first challenge is \
-worth **2,100** TERPs & **2,100** PERSY.
+worth **!** TERPs & **!** PERSY.
 
 - **Feb 14th:** Terp OG Founder Level 2, second challenge is \
-worth **3,150** TERPs & **3,150** PERSYs.
+worth **!** TERPs & **!** PERSYs.
 
-- **Feb 21st:** Terp OG Founder Level 3, third challenge is worth **4200** TERPs & **4200** PERSYs.
+- **Feb 21st:** Terp OG Founder Level 3, third challenge is worth **!** TERPs & **!** PERSYs.
 
 - **Feb 28th:** Deadline to complete our three challenges by 5 PM PST.
 
@@ -21,15 +21,15 @@ worth **3,150** TERPs & **3,150** PERSYs.
 ## First Challenge Results! (TBD)
 
 ## Introducing Terp OG Founder Level 2 Second Challenge: Coming Soon :)
-This week, we present the Second Challenge, which qualifies you to earn 3,150 TERP & PERSY  Tokens.
+This week, we present the Second Challenge, which qualifies you to earn ! TERP & PERSY  Tokens.
 
-- **Reward:** 2100 TERP & PERSY
+- **Reward:** ! TERP & PERSY
 - **Challenge:** Coming Soon :)
 - **Winners:** First 100 submissions - measured by the timestamp of the git commit - that pass the qualification criteria.
 - **Instructions:** Follow the steps in this guide.
 
-## Terp OG Founder Level 2 Bonus (25 TERP & 25 PERSY)
-Bonus TERPs & PERSYs will be awarded to the community members that help us spread our vision for creating a truly open-source culture. Sharing your experience on twitter and tagging us will earn you an additional 25 TERP & PERSY. Please note, this bonus is available only upon completion of the main challenge.
+## Terp OG Founder Level 2 Bonus (! TERP & !)
+Bonus TERPs & PERSYs will be awarded to the community members that help us spread our vision for creating a truly open-source culture. Sharing your experience on twitter and tagging us will earn you an additional ! TERP & PERSY. Please note, this bonus is available only upon completion of the main challenge.
 
 ## Qualification Criteria
 Although we do not limit anyone from participating, to claim TERP rewards:
