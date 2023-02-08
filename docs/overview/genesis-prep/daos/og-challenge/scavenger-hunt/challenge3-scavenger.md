@@ -1,4 +1,4 @@
-# Third Challenge: Scavenger Hunt
+# 3 - Third Challenge
 ## Scavenger Hunt Challenge: Step 3
 *** ! *** 
 

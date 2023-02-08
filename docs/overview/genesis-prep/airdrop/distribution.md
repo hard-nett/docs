@@ -1,5 +1,5 @@
 # Distribution
-The majority of the genesis supply (Over 95%) was stake-dropped to BCNA stakers, committed to the community pool, and airdropped to the community members of other projects focused and involved with ongoing the process of integrating our culture to the censorship resistant ecosystems blockchains create.
+No private sales. No investment rounds. The majority of the genesis supply (Over 95%) is proposed to be airdropped to BCNA holders, committed to the community pool, and airdropped to the community members of other projects focused and involved with ongoing the process of integrating our culture to the censorship resistant ecosystems blockchains create.
 
 | Supply Info  |  TERP | PERSY  |  |   |
 |-----------------|:-------:|:------:|:-----------:|---|

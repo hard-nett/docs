@@ -1,4 +1,4 @@
-# Second Challenge: Scavenger Hunt
+# 2 - Second Challenge
 ## Scavenger Hunt Challenge: Step 2
 *** ! *** 
 

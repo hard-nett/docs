@@ -1,4 +1,7 @@
-# Third Challenge 
+---
+title: "3 - Third Challenge"
+sidebar_position: 4
+---
 ## Terp Founding OG Member Onboarding Challenge: Step 3
 
 The Terp OG Founding Member Rewards Program is for contributors to Terp's testnet, and is a warm thank you to our community. As a reminder, the program is limited to the top 100 members and involves 3 challenges. Each challenge has a corresponding reward, for a total of ! TERPs & ! PERSY, with bonuses of up to ! TERP & ! PERSY.

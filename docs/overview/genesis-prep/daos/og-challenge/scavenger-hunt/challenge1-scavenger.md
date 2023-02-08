@@ -1,11 +1,11 @@
-# First Challenge: Scavenger Hunt
+# 1 - First Challenge
 ## Scavenger Hunt Level 1, Your First Challenge (2,100 TERP & PERSY)
-- **Reward:** 2100 TERP & PERSY
+- **Reward:** ! TERP & PERSY
 - **Challenge:** Adding a Validator & Persistent Peer Endpoint to the Repository
 - **Winners:** First 100 submissions - measured by the timestamp of the git commit - that pass the qualification criteria.
 
 ## Instructions
-REPO: [Link](https://github.com/terpnetwork/scavenger-hunt)
+REPO: [Link](https://github.com/terpnetwork/scavenger-hunt/tree/main/challenge-1)
 ## 1. Spin up your validator (optionally sentry node)
 Checkout [getting-started](https://docs.terp.network/overview/getting-started), and the [build docs](https://docs.terp.network/terp-core/build) on basics for this. 
 

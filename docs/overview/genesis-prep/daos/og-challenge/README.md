@@ -1,25 +1,28 @@
-# Introduction
+---
+title: "Introduction"
+sidebar_position: 1
+---
 As a truly decentralized community, Terp needs your support to materialize our vision of empowering the architects and foundation of our culture with greater access, freedom, and efficiency to create products that improve the human experience.
 
 In these early days, we want you to join and help us establish the foundation for a valuable and engaged community. In this effort, we're excited to announce the TerpNET Founding Member Rewards Program!
 
 ## Overview 
-Of the 420,000,000 TERP & 710,000,000 PERSY tokens that are proposed to only be pre-mined at genesis, we're allocating ~0.225% (945,000) TERP's & ~0.001% (945,000) PERSY's! to a reward program for early contributors in our community. This reward program is inspired by projects from the community, such as Solana [Tour de Sol](https://solana.com/tds), Cosmos [Game of Stakes](https://github.com/cosmos/game-of-stakes), Kava [Founder Rewards](https://github.com/Kava-Labs/kava/blob/master/docs/REWARDS.md), And Akash [Founding Member Program](https://akash.network/).
+Of the ! TERP & ! PERSY tokens that are proposed to only be pre-mined at genesis, we're allocating ~! (!) TERP's & ! (!) PERSY's! to a reward program for early contributors in our community. This reward program is inspired by projects from the community, such as Solana [Tour de Sol](https://solana.com/tds), Cosmos [Game of Stakes](https://github.com/cosmos/game-of-stakes), Kava [Founder Rewards](https://github.com/Kava-Labs/kava/blob/master/docs/REWARDS.md), And Akash [Founding Member Program](https://akash.network/).
 
 ### There is two genesis rewards programs to share:
 1) Terp Founding OG Member Onboarding Process
 2) Terp Incentivized Staking TestNET Program (Scavenger Hunt)
 
 ### Terp Founding OG Member Rewards Program
-Our Founding Member Rewards Program focuses on TerpNET TestNET scavenger hunt participation. The program is limited to only 100 members and involves 3 challenges. Each challenge has a corresponding reward, for a total of **7,350 TERPs & 7,350 PERSY**:
+Our Founding Member Rewards Program focuses on TerpNET TestNET scavenger hunt participation. The program is limited to only 100 members and involves 3 challenges. Each challenge has a corresponding reward, for a total of **! TERPs & ! PERSY**:
 
 - **Feb 7th:** Terp OG Founder Level 1, the first challenge is \
-worth **2,100** TERPs & **2,100** PERSY.
+worth **!** TERPs & **!** PERSY.
 
 - **Feb 14th:** Terp OG Founder Level 2, second challenge is \
-worth **3,150** TERPs & **3,150** PERSYs.
+worth **!** TERPs & **!** PERSYs.
 
-- **Feb 21st:** Terp OG Founder Level 3, third challenge is worth **4200** TERPs & **4200** PERSYs.
+- **Feb 21st:** Terp OG Founder Level 3, third challenge is worth **!** TERPs & **!** PERSYs.
 
 - **Feb 28th:** Deadline to complete our three challenges by 5 PM PST.
 

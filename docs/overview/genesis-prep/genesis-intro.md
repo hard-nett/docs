@@ -15,7 +15,10 @@ The genesis_time is defined at the top of the genesis file. It is a UTC time
 
 The chain_id is a unique identifier for your chain. It helps differentiate between different chains using the same version of the software.
 
-
+## Proposed Terp Network Inital State Params:
+```
+Coming Soon :)
+```
 ## **Consensus Parameters**
 
 Next, the genesis file defines consensus parameters. Consensus parameters regroup all the parameters that are related to the consensus layer, which is Tendermint in the case of Chronic Chain. Let us look at these parameters:
