@@ -1,5 +1,5 @@
 # 1 - First Challenge
-## Scavenger Hunt Level 1, Your First Challenge (2,100 TERP & PERSY)
+## Scavenger Hunt Level 1, Your First Challenge (! TERP & PERSY)
 - **Reward:** ! TERP & PERSY
 - **Challenge:** Adding a Validator & Persistent Peer Endpoint to the Repository
 - **Winners:** First 100 submissions - measured by the timestamp of the git commit - that pass the qualification criteria.
