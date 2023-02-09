@@ -16,15 +16,15 @@ Of the ! TERP & ! PERSY tokens that are proposed to only be pre-mined at genesis
 ### Terp Founding OG Member Rewards Program
 Our Founding Member Rewards Program focuses on TerpNET TestNET scavenger hunt participation. The program is limited to only 100 members and involves 3 challenges. Each challenge has a corresponding reward, for a total of **! TERPs & ! PERSY**:
 
-- **Feb 7th:** Terp OG Founder Level 1, the first challenge is \
+- **Feb 8th:** Terp OG Founder Level 1, the first challenge is \
 worth **!** TERPs & **!** PERSY.
 
-- **Feb 14th:** Terp OG Founder Level 2, second challenge is \
+- **Feb 15th:** Terp OG Founder Level 2, second challenge is \
 worth **!** TERPs & **!** PERSYs.
 
-- **Feb 21st:** Terp OG Founder Level 3, third challenge is worth **!** TERPs & **!** PERSYs.
+- **Feb 22nd:** Terp OG Founder Level 3, third challenge is worth **!** TERPs & **!** PERSYs.
 
-- **Feb 28th:** Deadline to complete our three challenges by 5 PM PST.
+- **Feb 29th:** Deadline to complete our three challenges by 5 PM PST.
 
 - **TBD:** Winners Announced!
 

@@ -7,15 +7,15 @@ sidebar_position: 4
 The Terp OG Founding Member Rewards Program is for contributors to Terp's testnet, and is a warm thank you to our community. As a reminder, the program is limited to the top 100 members and involves 3 challenges. Each challenge has a corresponding reward, for a total of ! TERPs & ! PERSY, with bonuses of up to ! TERP & ! PERSY.
 
 Check out our Founding Member Rewards First Challenge article to learn more about the program. Following is our updated challenge schedule:
-- **Feb 7th:** Terp OG Founder Level 1, the first challenge is \
+- **Feb 8th:** Terp OG Founder Level 1, the first challenge is \
 worth **!** TERPs & **!** PERSY.
 
-- **Feb 14th:** Terp OG Founder Level 2, second challenge is \
+- **Feb 15th:** Terp OG Founder Level 2, second challenge is \
 worth **!** TERPs & **!** PERSYs.
 
-- **Feb 21st:** Terp OG Founder Level 3, third challenge is worth **!** TERPs & **!** PERSYs.
+- **Feb 22nd:** Terp OG Founder Level 3, third challenge is worth **!** TERPs & **!** PERSYs.
 
-- **Feb 28th:** Deadline to complete our three challenges by 5 PM PST.
+- **Feb 29th:** Deadline to complete our three challenges by 5 PM PST.
 
 - **TBD:** Winners Announced!
 
