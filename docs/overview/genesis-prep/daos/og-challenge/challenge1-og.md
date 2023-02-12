@@ -44,7 +44,7 @@ Use "terpd tx gov [command] --help" for more information about a command.
 ```
 
 ## 2. Create New Forum Post in Discord
-As we expect discussion to be able to occur naturally prior to a proposal, we want to create this governance requirements by having each participant create a new [blog post here](https://discord.gg/zpytveXenW). The following is a template you can use:
+As we expect discussion to be able to occur naturally prior to a proposal, we want to create this governance requirements by having each participant create a new [blog post here](https://discord.gg/2NsAXhmG). The following is a template you can use:
 ```
 Title - **TerpNET OG Challenge-1:** Add <your-moniker>
 Description - <your-wallet-address> is requesting to be added to the terpNET og DAO 
