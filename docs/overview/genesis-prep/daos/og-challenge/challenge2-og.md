@@ -23,15 +23,46 @@ worth **!** TERPs & **!** PERSYs.
 
 ## First Challenge Results! (TBD)
 
-## Introducing Terp OG Founder Level 2 Second Challenge: Coming Soon :)
+## Introducing Terp OG Founder Level 2 Second Challenge: Deploy & interact with your own DAO!
 This week, we present the Second Challenge, which qualifies you to earn ! TERP & PERSY  Tokens.
 
 - **Reward:** ! TERP & PERSY
-- **Challenge:** Coming Soon :)
+- **Challenge:** Using the (DAO-DAO interface)[https://daodao.terp.network], create a DAO!
 - **Winners:** First 100 submissions - measured by the timestamp of the git commit - that pass the qualification criteria.
 - **Instructions:** Follow the steps in this guide.
 
-## Terp OG Founder Level 2 Bonus (! TERP & !)
+# Instructions
+
+## Step 1
+Navigate to the [DAO-DAO web-app](https://daodao.terp.network/).
+
+*NOTE: This is a test-net deployment, you can find the real one on Juno [here](https://daodao.zone).*
+
+## Step 2 
+Connect your Wallet, & select the create button on the left column of the application 
+
+# Step 3 
+Configure your DAO with your desired parameters, & broadcast the instantiate message to create your DAO.
+
+# Step 4 
+Create 3 different proposals, & 1 subDAO.
+
+# Step 5 
+Create a new forum post in discord, including the following data:
+```
+- Name: your-moniker
+- DAO address: terp1...
+```
+# Step 6 
+- Using the application [here](https://proposals.subtract.fi/draft?type=TextProposal&chain=terpnettestnet), create a text-based governance proposal to complete challenge-2
+
+## Gov proposal Template
+```md 
+Title: OG Challenge 2 - <your-moniker> , <your-DAO-address>
+Description: "this is a proposal to validate my participation on the Second OG Challenge. 
+```
+
+## Terp OG Founder Level 2 Bonus (! TERP & ! PERSY )
 Bonus TERPs & PERSYs will be awarded to the community members that help us spread our vision for creating a truly open-source culture. Sharing your experience on twitter and tagging us will earn you an additional ! TERP & PERSY. Please note, this bonus is available only upon completion of the main challenge.
 
 ## Qualification Criteria
