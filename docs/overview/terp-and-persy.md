@@ -15,7 +15,3 @@ Governance is the critical component of how Terp Network evolves. Active stakeho
 The $Persy token is what is rewarded to validators actively participating in consensus of each newly minted block. The amount of $PERSY minted each year decreases, with a Maximum supply of 1 Billion Tokens.
 
 These tokens are your personal stash to interact with Terp Network. 
-
-### Foundational Grants
-
-In order to fuel the growth of Terp Network, teams are encouraged to contact contributors to set up a fee-grant structure for their application. This will be epoch based, & can help bootstrap user interaction intially. 

@@ -317,7 +317,7 @@ In the Read Contract section, type `get_count` messages and press the `Run query
 
 #### increment
 
-In the Write Contract section, type `increment` messages and the OSMO to pay and click the `Execute Contract` button to execute the transaction.
+In the Write Contract section, type `increment` messages and the TERPto pay and click the `Execute Contract` button to execute the transaction.
 
 ![](https://user-images.githubusercontent.com/70956926/172300637-bb29452d-1d23-4c30-8cbb-d72f358b490e.png)
 

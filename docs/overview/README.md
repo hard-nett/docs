@@ -1,36 +1,32 @@
 # Introduction
 
-`The Cannabis community has largely been a decentralized space.`
+The cannabis community is built on the principles of decentralization and diversity, where people from all walks of life can come together, learn from each other, and build lifelong connections. However, these values are being threatened, and it's important that we educate and raise awareness about the tools available to combat censorship.
 
-This truth is what makes cannabis culture so diverse, giving those between other cultures a chance to experience & learn from each other, while building lifelong friendships & achieving goals in the process. This aspect of **decentralization is being attacked** from many vectors, & in order to combat this, education & awareness of the true values of these tools is needed. 
-
- *TERPNET is infrastructure that helps address these challenges, and we believe that **self-soviergty** via **blockchain technology** will play an integral role in achieving a part in surfacing intentions.*
+That's where Terp Network comes in. We believe that blockchain technology and self-sovereignty can help ensure a fair and transparent cannabis industry.
 
 ## Industry Concerns
 
-It is obvious that in the cannabis market that there is a urgent demand for tooling that gives us a better chance at 
-- Growth
-- Sustainability
-- Innovation
+Our goal is to support growth, sustainability, and innovation in the cannabis market. We know that there's a need for better tools and resources, and Terp Network is here to fill that gap.
 
 ## Mission Statement
 
-*TERPNET's mission is to build this project on the **foundation of community.** We take on this initiative confident that TERPNET & those involved will contribute to the success of the cannabis industry and support its sustainable growth in a meaningful way. The industry itself is our motivation.*
+At Terp Network, it mission is simple: to build a strong, supportive community that contributes to the success and sustainability of the cannabis industry. We believe that by cooporating within a growing ecosystem, we can make a positive impact on this industry and the people it serves.
 
 
-##  What is TERPNET?
+##  What is Terp Network?
 
-TERPNET is a **decentralized ledger** for cannabis culture to build applications & learn the values of self-soveirgn De-Fi tooling. 
+TERPNET  is a **decentralized platform** for the cannabis community to build applications and learn about the benefits of self-sovereign De-Fi tooling. 
 
- Powered by [Tendermint Core](https://tendermint.com/), [CosmosSDK](https://docs.cosmos.network/), & [CosmWasm](https://cosmwasm.com/), teams will be able to create solutions to cannabis specific problems, directly leveraging smart contracts & immutability blockchain transactions provide!
+ Powered by [Tendermint Core](https://tendermint.com/), [CosmosSDK](https://docs.cosmos.network/), & [CosmWasm](https://cosmwasm.com/), Terp Networks becomes the interface for teams to create solutions for specific problems in the cannabis industry, utilizing the credibility & censorship resistance features offered by smart contracts on the blockchain.
 
 ## Use Cases 
 
 - ### Smart Contracts 
-TERPNET is an exciting opportunity for teams to create solutions to cannabis-specific problems, directly leveraging smart contracts and the immutability blockchain transactions provide. Users can develop applications for their specific needs locally, & deploy useful features in a Proof-of-Stake network to handle fast transactions from person to person.
+With TERPNET, users can develop and deploy customized applications to meet their specific needs in a secure and fast Proof-of-Stake network. This opens up exciting possibilities for the cannabis community to find new and innovative solutions.
 
 - ### Governance Capabilities
-  Governance is decisions made as a whole via voting of each specific's protocols participants. Governance is coordinated formally both off & on-chain to vote & mold Terp-Net itself.
+Governance on Terp Network is achieved through formal voting by the protocol's participants. This allows the community to make decisions and shape the direction of the platform, both on and off-chain. Decisions can be made through text-based proposals, protocol parameter changes, and binary upgrades.
+
 
 *What kind of changes are made via on-chain governance with Terp-Net?* 
 
@@ -44,4 +40,4 @@ The **Inter-blockchain Communication** *protocol* (**IBC**) is a reliable & secu
 
 IBC can be used by any application which builds on top of Cosmos SDK networks, for things like cross-chain asset transfers, multichain smart contracts, with more being developed daily. 
 
-This is an exciting feature as **current projects focused on cannabis + web3 adoption are already interoperable with terp network.** If you are interested in providing real utility for your project, [**join our discord**](https://discord.gg/SYEjMwAac7) to find active community members! 
+This is an exciting feature as **current projects focused on cannabis culture & the Decentralized-Web adoption are already interoperable with terp network.** If you are interested in providing real utility for your project, [**join our discord**](https://discord.gg/SYEjMwAac7) to find active community members! 

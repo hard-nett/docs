@@ -5,15 +5,11 @@
 Join a network by using Terp-Core Installer from [https://get.terp.network](https://get.terp.network) 
 
 
-![](../assets/installer_11.png)
-
 Simply run:
 
 ```
 curl -sL https://get.terp.network/install > i.py && python3 i.py
 ```
-
-
 
 ## Terp-Core CLI
 

@@ -15,11 +15,6 @@ This document lays out the process of creating a state export to derive all terp
 ### Choosing a block height
 The current Terp Network block height can be found on the [ZenChain blocks page.](https://terp.zenscan.io/)To find the date/time of a specific block height in the past, type the desired block height in the Zenscan search bar and press enter. Here is the Zenscan block height page for block [586664](https://terp.zenscan.io/block.php?height=586664)
 
-![](../../assets/mintscan_height.png)
-
-In this example, block height 586664 happened on 6 February 2023 at 16:03:5PM local time.
-
-
 ### Determine terp-core node type requirement
 First, determine how far in the past the desired block height is from the current time. If the desired block height is within the last seven days, you can make the state export with a default snapshot node. Anything further in the past more than likely needs to be done by setting up a node with an archive snapshot.
 
@@ -50,8 +45,6 @@ Which in this example should output 0.2.0
 
 To reiterate, if your snapshot is being taken on a more recent height where the daemon version is still current, this step will not be required and you can continue with the current daemon version.
 
-
-
 ### Take the state export (snapshot)
 Ensure the daemon is not running in the background. Then, to take a state export at a specified height (in this example 2138101):
 
@@ -60,7 +53,6 @@ terpd export 586664 > state_export.json
 ```
 
 This process may take 30 minutes or more.
-
 
 ### Export accounts in JSON format
 TBD

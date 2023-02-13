@@ -11,12 +11,12 @@ You can now deploy contracts to localterp with [Beaker](https://github.com/terp-
 
 The following is detailed guide that shows the basics of manually deploying a contract to a Terp Network local environment. It covers: 
 
-- Initial Setup
+- **Initial Setup**
     - Rust
     - localterp via Terp-Core installer. 
         - terpd binary automatically configured to connect to your localterp
         - localterp setup in the $HOME directory (~/localterp)
-- Deploy a smart contract
+- **Deploy a smart contract**
     - Clone a base template contract
     - Compile contract
     - Optimize  contract
@@ -25,25 +25,24 @@ The following is detailed guide that shows the basics of manually deploying a co
     - Initialize
     - Get contract address
     - Query contract
-     - Increment contract's count
-     - Reset contracts count
-     - Get contract's state
-     - Query contract info
-     - List all contracts
+    - Increment contract's count
+    - Reset contracts count
+    - Get contract's state
+    - Query contract info
+    - List all contracts
 
 
 ## Initial Setup: Rust, Contract Environment, Beaker, and Terp-Core
 
 Before beginning, you must set up Rust, your contract environment, Beaker, and Terp-Core with one of the two following options:
 
-### Option 1: Automatic Setup
+### Option 1: Automatic Setup (NO)
 
 Start the installer with the following command, choose localterp (option 3), and follow the prompts:
 
 ```bash
 bash <(curl -sL https://get.terp.network/run)
 ```
-![](../../assets/local-installer.png)
 
 
 ### Option 2: Manual Setup

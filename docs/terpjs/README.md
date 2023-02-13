@@ -69,12 +69,12 @@ const fee = {
 
 ### Initializing the Stargate Client
 
-Use `getSigningOsmosisClient` to get your `SigningStargateClient`, with the Terp-Core proto/amino messages full-loaded. No need to manually add amino types, just require and initialize the client:
+Use `getSigningTerpClient` to get your `SigningStargateClient`, with the Terp-Core proto/amino messages full-loaded. No need to manually add amino types, just require and initialize the client:
 
 ```js
-import { getSigningOsmosisClient } from 'terpjs';
+import { getSigningTerpClient } from 'terpjs';
 
-const client = await getSigningOsmosisClient({
+const client = await getSigningTerpClient({
   rpcEndpoint,
   signer // OfflineSigner
 });
