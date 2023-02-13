@@ -5,6 +5,7 @@ The explorers in the Cosmos ecosystem are rapidily growing. The following is a l
 
 ## Testnet
 #### Block Explorers
+- [NodeX Capital](https://explorer.nodexcapital.com/terp)
 - [ZenChain](https://terp.zenscan.io/)
 - [KJ-Nodes](https://explorer.kjnodes.com/terp-test)
 - [BCC-Nodes](https://explorer.bccnodes.com/terp)
