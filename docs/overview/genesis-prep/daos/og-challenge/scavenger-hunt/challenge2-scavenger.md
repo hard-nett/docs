@@ -27,7 +27,7 @@ Following this example, please add all contributions you have made during the te
     "social-contributions":{
         "a": "Hosted community events",
         "b": "Optimized documentation in TerpNetwork's repo's. <insert-PR-link>",
-        "c": ""
+        "c": "other social contributions"
     },
     "infrastructure-contributions":{
         "a": "testnet validator; <link-to-delegation-page>",
