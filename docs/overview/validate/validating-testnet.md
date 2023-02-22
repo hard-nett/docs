@@ -4,29 +4,6 @@
 
 Before creating a testnet validator, ensure you have first followed the instructions on how to [join the testnet](/networks/join-testnet)
 
-## Initialize Wallet Keyring
-
-If you decide you want to turn your node into a validator, you will first need to add a wallet to your keyring.
-
-While you can add an existing wallet through your seed phrase, we will create a new wallet in this example (replace KEY_NAME with a name of your choosing):
-
-```bash
-terpd keys add KEY_NAME
-```
-Ensure you write down the mnemonic as you can not recover the wallet without it. To ensure your wallet was saved to your keyring, the WALLET_NAME is in your keys list:
-
-```bash
-terpd keys list
-```
-
-## Validator Public Key
-
-The last thing needed before initializing the validator is to obtain your validator public key which was created when you first initialized your node. To obtain your validator pubkey:
-
-```bash
-terpd tendermint show-validator
-```
-
 ## Create Validator Command
 
 Ensure you have a small amount of TERPX & PERSYX on the wallet address you are using on your keyring in order to successfully send a transaction. 
@@ -65,13 +42,13 @@ terpd tx staking create-validator \
 --pubkey=$(terpd tendermint show-validator)  \
 --moniker="Terpington" \
 --security-contact="" \
---chain-id="athena-3" \
+--chain-id="4" \
 --commission-rate="0.1" \
 --commission-max-rate="0.2" \
 --commission-max-change-rate="0.05" \
 --min-self-delegation="400000000" \
 --gas="1000000" \
---fees="1000000upersy" \
+--fees="1000000upersyx" \
 ```
 
 If you need further explanation for each of these command flags:
@@ -137,11 +114,11 @@ terpd tendermint show-validator
 Use your validators public key queried above:
 
 ```bash
-terpd query slashing signing-info [validator-pubkey] --chain-id athena-3
+terpd query slashing signing-info [validator-pubkey] --chain-id athena-4
 ```
 
 Example:
 
 ```bash
-terpd query slashing signing-info '{"@type":"/cosmos.crypto.ed25519.PubKey","key":"HlixoxNZBPq4pBOYEimtSq9Ak4peBISVsIbI5ZHrEAU="}' --chain-id athena-3
+terpd query slashing signing-info '{"@type":"/cosmos.crypto.ed25519.PubKey","key":"HlixoxNZBPq4pBOYEimtSq9Ak4peBISVsIbI5ZHrEAU="}' --chain-id athena-4
 ```

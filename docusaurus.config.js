@@ -147,17 +147,6 @@ const config = {
             activeBaseRegex: '(.*ui-kit|.*web-core)',
           },
           {
-            label: 'Networks',
-            to: '/networks',
-            position: 'left',
-            // className: 'new-badge',
-          },
-          {
-            label: 'Integrate',
-            to: 'overview/integrate',
-            position: 'left',
-          },
-          {
             label: 'Validate',
             to: 'overview/validate',
             position: 'left',

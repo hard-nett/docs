@@ -6,38 +6,41 @@ That's where Terp Network comes in. We believe that blockchain technology and se
 
 ## Industry Concerns
 
-Our goal is to support growth, sustainability, and innovation in the cannabis market. We know that there's a need for better tools and resources, and Terp Network is here to fill that gap.
+Our goal is to support growth, sustainability, and innovation in the cannabis market through verifiable software that is accessable to everyone. We know that there's a need for better tools and resources, and Terp Network is here to fill that gap.
 
 ## Mission Statement
 
-At Terp Network, it mission is simple: to build a strong, supportive community that contributes to the success and sustainability of the cannabis industry. We believe that by cooporating within a growing ecosystem, we can make a positive impact on this industry and the people it serves.
+At Terp Network, it mission is simple: to build a strong, supportive community that contributes to the success and sustainability of the cannabis industry through verifiable, decentralized, open source, permissionless, & censorship resistance software & education. We believe that by cooporating within a growing ecosystem, we can make a positive impact on this industry and the people it serves, which roots many other cultures both alike and independent from each other.
 
 
 ##  What is Terp Network?
 
-TERPNET  is a **decentralized platform** for the cannabis community to build applications and learn about the benefits of self-sovereign De-Fi tooling. 
+TERPNET is a **decentralized platform** for the cannabis community to build applications and learn about the benefits of self-sovereign De-Fi tooling, in an hyperfocused ecosystem for our community. 
 
- Powered by [Tendermint Core](https://tendermint.com/), [CosmosSDK](https://docs.cosmos.network/), & [CosmWasm](https://cosmwasm.com/), Terp Networks becomes the interface for teams to create solutions for specific problems in the cannabis industry, utilizing the credibility & censorship resistance features offered by smart contracts on the blockchain.
+
+Powered by [Tendermint Core](https://tendermint.com/), [CosmosSDK](https://docs.cosmos.network/), & [CosmWasm](https://cosmwasm.com/), Terp Network is a verifiable interface for teams to create solutions for specific problems in the cannabis industry, utilizing the credibility & censorship resistance features offered by smart contracts and accuracy blockchains manifest.
 
 ## Use Cases 
 
 - ### Smart Contracts 
-With TERPNET, users can develop and deploy customized applications to meet their specific needs in a secure and fast Proof-of-Stake network. This opens up exciting possibilities for the cannabis community to find new and innovative solutions.
+With TERPNET, users can develop and deploy customized applications to meet their specific needs in a secure and fast Proof-of-Stake network. Smart contracts are logic that can be designed for very useful implementations.
 
-- ### Governance Capabilities
-Governance on Terp Network is achieved through formal voting by the protocol's participants. This allows the community to make decisions and shape the direction of the platform, both on and off-chain. Decisions can be made through text-based proposals, protocol parameter changes, and binary upgrades.
+- ### Governance 
+Governance on Terp Network is achieved through formal voting. This allows the community to make decisions and shape the direction of the platform, both on and off-chain. Decisions can be made through text-based proposals, protocol parameter changes, and binary upgrades.
 
 
 *What kind of changes are made via on-chain governance with Terp-Net?* 
 
-    - Text Based Proposals
-    - Protocol Parameter Changers
+    - Text Based Proposals 
+    - Protocol Parameter Changers 
     - Binary Upgrades
 
-### Cross Chain Interoperablity
+###  Interoperable 
 
-The **Inter-blockchain Communication** *protocol* (**IBC**) is a reliable & secure interoperability protocol that handles reliable transport, authentication, and ordering of data across different sovereign blockchains.
 
-IBC can be used by any application which builds on top of Cosmos SDK networks, for things like cross-chain asset transfers, multichain smart contracts, with more being developed daily. 
+
+Terp Network is built with IBC (Interblockchain-Communication) functionalities, meaning that users interacting with terp network are directly exposed to functions & use cases of a large majority of projects within the interchain including Ethereum, Polygon, Osmosis, Crypto.com , Juno, Axelar, Secret , and dozens others. **
 
 This is an exciting feature as **current projects focused on cannabis culture & the Decentralized-Web adoption are already interoperable with terp network.** If you are interested in providing real utility for your project, [**join our discord**](https://discord.gg/SYEjMwAac7) to find active community members! 
+
+

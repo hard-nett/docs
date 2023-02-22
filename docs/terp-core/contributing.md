@@ -4,11 +4,11 @@ sidebar_position: 6
 ---
 # Contributing
 
-The following information provides a set of guidelines for contributing to the Osmo chain dev repo. Use your best judgment, and, if you see room for improvement, please propose changes to this document.
+The following information provides a set of guidelines for contributing to the Terp-Core dev repo. Use your best judgment, and, if you see room for improvement, please propose changes to this document.
 
 The contributing guide for Terp Network explains the branching structure, how to use the SDK fork, how to make / test updates to SDK branches and how to create release notes.
 
-Contributions come in the form of writing documentation, raising issues / PRs, and any other actions that help develop the Osmo protocol documentation.
+Contributions come in the form of writing documentation, raising issues / PRs, and any other actions that help develop the Terp protocol documentation.
 
 ## First steps
 

@@ -8,12 +8,12 @@ sidebar_position: 1
 
 [grpcurl](https://github.com/fullstorydev/grpcurl) is like `curl` but for gRPC. It is also available as a Go library, but we will use it only as a CLI command for debugging and testing purposes. Follow the instructions in the previous link to install it.
 
-Assuming you already installed terpd with the [installer](../terp-core/terpd), you should be able to run the following command to list the Protobuf services available (you can replace `grpc.terp.network:9000` by the gRPC server endpoint of another node such as the testnet, another provider or your own node.
+Assuming you already installed terpd with the [installer](../terp-core/terpd), you should be able to run the following command to list the Protobuf services available (you can replace `grpc-terp.zenchainlabs.io:9000` by the gRPC server endpoint of another node such as the testnet, another provider or your own node.
 
 Listing all the methods from the mainnet
 
 ```bash
-grpcurl -plaintext grpc.terp.network:9090 list
+grpcurl -plaintext grpc-terp.zenchainlabs.io:9090 list
 ```
 Output will look like: 
 ```
@@ -48,14 +48,14 @@ In order to get a description of the service you can run the following command:
 
 ```bash
 grpcurl  -plaintext \
-    grpc.terp.network:9090 \
+    grpc-terp.zenchainlabs.io:9090 \
     describe cosmos.staking.v1beta1.Query           
 ```
 
 It's also possible to execute an RPC call to query the node for information:
 
 ```bash
-grpcurl -plaintext grpc.terp.network:443 cosmos.staking.v1beta1.Query
+grpcurl -plaintext grpc-terp.zenchainlabs.io:443 cosmos.staking.v1beta1.Query
 ```
 
 
@@ -71,9 +71,9 @@ grpcurl \
     -plaintext \
     -H "x-cosmos-block-height: 6312618" \
     -d '{"address":"terp19a7pmytd9vk26l57q8chacuprsmx05g23mg6yc"}' \
-    grpc.terp.network:9090 \
+    grpc-terp.zenchainlabs.io:9090 \
     cosmos.bank.v1beta1.Query/AllBalances
 ```
-Note: This endpoint might change to  grpc.terp.network:443 in the near future. 
+Note: This endpoint might change to  grpc-terp.zenchainlabs.io:443 in the near future. 
 
 Assuming the state at that block has not yet been pruned by the node, this query should return a non-empty response.

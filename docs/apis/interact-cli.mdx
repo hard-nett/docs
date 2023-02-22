@@ -81,14 +81,14 @@ In this example when we install terpd as a client with the [installer](../terp-c
 ### Change node
 
 ```
-Terp Network config node https://rpc.terp.network:443
+Terp Network config node https://api-terp.zenchainlabs.io:443/
 ```
 
 ### Connect to the testnet
 
 ```bash
-terpd config node https://rpc-test.terp.network:443
-terpd config chain-id athena-3
+terpd config node https://api-terp.zenchainlabs.io:443/
+terpd config chain-id athena-4
 ```
 
 To add a  new account on your local keyring
@@ -108,6 +108,5 @@ terpd query bank balances $MYACCOUNT
 ```
 ![](../assets/query-balance.png)  
 
-For more information about querying terpd via the CLI visit the [Cosmos documentation](https://hub.cosmos.network/main/hub-tutorials/gaiad.html).
 
 

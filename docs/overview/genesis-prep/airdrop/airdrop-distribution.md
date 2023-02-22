@@ -26,20 +26,14 @@ Where a,b are for percentile cutoffs over a range of points in terms of min,max.
 This process ensures that the decision-making process is transparent, fair, and inclusive, and that the communities that could utilize this project most is selected for the decentralized protocol bootstrapping.
 
 **Airdrop Communities:**
+The following token holders are proposed to be included in the genesis file
+
 
 | Project Name  |  % of airdrop allocation  | piecewise range - min | piecewise range - max |   |
 |---------|:----------------:|:------:|:-----------:|---|
-| Bitcanna               | 7.5%      | 0   |  85 |   
-| Cannalabs              | 2%        | -   |  -  | 
-| Chronic Token          | 15%       | 14  |  84 | 
-| Cosmos Hub Stakers     | 24%       | -   |  -  | 
-| Crypto Canna Club      | 10%       | 0   |  95 | 
-| Galaktic Gang          | 6%        | 0   |  95 | 
-| Monster Buds           | 9%        | 0   |  90 | 
-| Secret Sesh            | 3.5%      | 0   |  95 | 
-| Scavenger Hunt Winners | 9.23%     |  -  | -   | 
-| Terp-OG Membership     | 0.87%     |  -  | -   | 
-| Other CannabisxWeb3    | 12.65%    |  -  | -   | 
+| Bitcanna               | -     | -   |  -  |   
+| Cosmos Hub Stakers     | -     | -   |  -  | 
+| Other CannabisxWeb3    | -     |  -  | -   | 
 
 
 ## Vesting 
@@ -47,13 +41,3 @@ As Terp Network continues to progressively decentralize, there are many techniqu
 
 Tokens that are vesting will only be able to be used for delegating to validators for things like governance and earning rewards. a [Cliff Vesting](https://legalnodes.com/article/unpaid-token-distribution) structure will give us time to do things where having tokens in active circulation would not permit viable bootstrapping opportunities.\
 
-**General Wallets:**
-Most wallets airdropped TERP's will be for 6 months, & after 6 months 100% of tokens will be avaialable to claim 
- - 6 months linear vesting 
-
-**Foundation Ownership (24% of Terp Supply) :**
- - 10% unlocked initially
- - 5% unlocked every 24 months, until 50 % of Foundation Tokens have been fully vested
- - 25% unlocked after 144 months from 50% of inital Foundation DAO tokens 
-
- It is the intention that the foundation holds the tokens much longer than strictly necessary

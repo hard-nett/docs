@@ -1,19 +1,19 @@
 # Joining Testnet
+    A Test Network exist for community members to have a way to familiarize themselves with terp-core & battleharden their custom smart contract code. Below are multiple methods to configure a node & interact with the current test networks of Terp Network. If you plan to run a node on main network, it is highly reccomended to treat the test network as a production environment to get into the habit of best practices in terms of node operation security. 
 
-## Terp-Core Installer
+## Quick Sync [Not production reccomended]:Terp-Core Installer
 
 Join a network by using Terp-Core Installer from [https://get.terp.network](https://get.terp.network) 
-
 
 Simply run:
 
 ```
 curl -sL https://get.terp.network/install > i.py && python3 i.py
 ```
-
+![installer](../assets/launcher.png)
 ## Terp-Core CLI
 
-Make sure you have [installed the Terp Core Binary (CLI)](../terp-core/terpd) prior to following the below instructions.
+Make sure you have [installed the Terp Core Binary (CLI)](../overview/getting-started) prior to following the below instructions.
 
 You may also [use the Terp-Core installer](../terp-core/terpd) if you want everything to be done automatically.
 
@@ -25,7 +25,7 @@ In order to get testnet tokens use  [The Discord Faucet](https://discord.gg/rkwu
 Use terpd to initialize your node (replace the ```NODE_NAME``` with a name of your choosing):
 
 ```bash
-terpd init NODE_NAME --chain-id=athena-3
+terpd init NODE_NAME --chain-id=athena-4
 ```
 
 Open the config.toml to edit the seeds and persistent peers:
@@ -85,7 +85,7 @@ Download and replace the genesis file:
 
 ```bash
 cd $HOME/.terp/config
-curl https://raw.githubusercontent.com/terpnetwork/test-net/master/athena-3/genesis.json
+curl https://raw.githubusercontent.com/terpnetwork/test-net/master/athena-4/genesis.json
 ```
 
 Copy the current terpd binary into the cosmovisor/genesis folder:

@@ -2,19 +2,19 @@
 
 These following API's are recommended for development purposes. For maximum control and reliability it's recommended to run your own node. This can be easility accomplsihed by using the get.terp.network installer. 
 
-## Official public endpoints 
+## Official public endpoints [Link](https://github.com/terpnetwork/chain-registry)
 
 | Network | Mainnet | Testnet | Docs |
 | -------- | -------- | -------- | -------- | 
-| **Chain ID**  | TBD | athena-3  |
-| **gRPC endpoint**  | TBD | https://grpc-test.terp.network:443 |
-| **gRPC-gateway**  | TBD  | https://rpc-test.terp.network:443 |
-| **RPC API Reference**  | TBD | [API Reference](/api) |
-| **LCD API Reference**  |  TBD | [API Reference](/api/?v=LCD) |
-| **LCD endpoint**  | TBD | https://lcd-test.terp.network  |
-| **LCD Swagger**  |  TBD |  [Swagger](https://lcd-test.terp.network/swagger/) |
-| **RPC Swagger**  |  TBD | [Swagger](https://rpc-docs.terp.network/) |
-| **Faucet** | I wish 🤑 | [faucet.terp.network](https://faucet.terp.network/) |
+| **Chain ID**  | TBD | athena-4 |
+| **gRPC endpoint**  | TBD | TBD |
+| **gRPC-gateway**  | TBD  | TBD |
+| **RPC API Reference**    | TBD | [API Reference](/api) |
+| **LCD API Reference**    | TBD | [API Reference](/api/?v=LCD) |
+| **LCD endpoint**  | TBD  | TBD |
+| **LCD Swagger**  |  TBD  | TBD |
+| **RPC Swagger**  |  TBD  | TBD |
+| **Faucet** | I wish 🤑   | TBD |
 
 
 ### API Docs
@@ -31,8 +31,3 @@ This repo contains a chain.json and assetlist.json for a number of cosmos-sdk ba
 Did you know there is also an NPM package that fetch chain-registry data? <br/>
 **Learn more** : [https://www.npmjs.com/package/chain-registry](https://www.npmjs.com/package/chain-registry) 
 :::
-
-
-## Other providers
-
-- TBD

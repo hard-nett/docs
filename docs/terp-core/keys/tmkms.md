@@ -95,7 +95,7 @@ Now, modify the `tmkms.toml` file
 ```sh
 nano $HOME/tmkms/config/tmkms.toml
 ```
-In this example, my validator has the IP address of 123.456.32.123 and we will be using port 26659 to feed the validator key to the validator. We will also be using chain_id `tbd`, but if you are doing this on the testnet be sure to use `athena-3` instead:
+In this example, my validator has the IP address of 123.456.32.123 and we will be using port 26659 to feed the validator key to the validator. We will also be using chain_id `tbd`, but if you are doing this on the testnet be sure to use `athena-4` instead:
 
 ```toml
 # Tendermint KMS configuration file
