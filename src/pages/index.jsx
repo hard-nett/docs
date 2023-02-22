@@ -92,13 +92,6 @@ export default function Homepage() {
     icon={<IDEIcon />}
   />
   <Card
-    title="Terpd CLI"
-    description="Install terpd to join the network or simple query it."
-    to="/terp-core/terpd"
-    icon={<TerminalIcon />}
-    svgFile="/icons/cli.svg"
-  />
-  <Card
     title="Modules"
     description="Terp-Core modules and their respective CLI commands"
     to="/terp-core/modules"
@@ -197,13 +190,7 @@ export default function Homepage() {
 
 
           <Section title="🛠 Tools">
-            <Card
-              title="Terpd CLI"
-              description="A command line tool to get things done quick!"
-              to="/terp-core/terpd"
-              icon={<TerminalIcon />}
-              svgFile="/icons/cli.svg"
-            />
+          
           </Section>
 
           <Section title="📜 API Reference">
