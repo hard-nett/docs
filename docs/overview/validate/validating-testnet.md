@@ -1,124 +1,108 @@
 # Validating On Testnet
 
-## Synced Node
+## Install Go and Cosmovisor
+Feel free to skip this step if you already have Go and Cosmovisor.
 
-Before creating a testnet validator, ensure you have first followed the instructions on how to [join the testnet](/networks/join-testnet)
-
-## Create Validator Command
-
-Ensure you have a small amount of TERPX & PERSYX on the wallet address you are using on your keyring in order to successfully send a transaction. 
-Once you have have a balance on the address on your keyring, you can now send the create-validator transaction. 
-
-## Get TERPX via the Faucet
-If you need testnet testnet TERPX & PERSYX you have two options.
-
-- Join the terp discord, get the testnet role [here](https://discord.gg/rkwutDxvDJ), and then utilize the faucet bot [in the faucet channel](https://canary.discord.com/channels/798583171548840026/911309363464007741).
-
-
-Here is the empty command:
-
-```bash
-terpd tx staking create-validator \
---from=[KEY_NAME] \
---amount=[staking_amount_upersyx] \
---pubkey=$(terpd tendermint show-validator) \
---moniker="[moniker_id_of_your_node]" \
---security-contact="[security contact email/contact method]" \
---chain-id="[chain-id]" \
---commission-rate="[commission_rate]" \
---commission-max-rate="[maximum_commission_rate]" \
---commission-max-change-rate="[maximum_rate_of_change_of_commission]" \
---min-self-delegation="[min_self_delegation_amount]" \
---gas="[min_gas_wout_denom]" \
---fees="[min_gas_w_denom]" \
+#### Install Go 
+We will use Go `v1.19.2` as example here. The code below also cleanly removes any previous Go installation.
 ```
-
-Here is the same command but with example values:
-
-```bash
-terpd tx staking create-validator \
---from=wallet1 \
---amount=400000000upersyx \
---pubkey=$(terpd tendermint show-validator)  \
---moniker="Terpington" \
---security-contact="" \
---chain-id="4" \
---commission-rate="0.1" \
---commission-max-rate="0.2" \
---commission-max-change-rate="0.05" \
---min-self-delegation="400000000" \
---gas="1000000" \
---fees="1000000upersyx" \
+sudo rm -rvf /usr/local/go/
+wget https://golang.org/dl/go1.19.2.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.19.2.linux-amd64.tar.gz
+rm go1.19.3.linux-amd64.tar.gz
 ```
-
-If you need further explanation for each of these command flags:
-- the `from` flag is the KEY_NAME you created when initializing the key on your keyring
-- the `amount` flag is the amount you will place in your own validator in upersyx (in the example, 500000000upersyx is 500persyx)
-- the `pubkey` is the validator public key found earlier
-- the `moniker` is a human readable name you choose for your validator
-- the `security-contact` is an email your delegates are able to contact you at
-- the `chain-id` is whatever chain-id you are working with.
-- the `commission-rate` is the rate you will charge your delegates (in the example above, 10 percent)
-- the `commission-max-rate` is the most you are allowed to charge your delegates (in the example above, 20 percent)
-- the `commission-max-change-rate` is how much you can increase your commission rate in a 24 hour period (in the example above, 5 percent per day until reaching the max rate)
-- the `min-self-delegation` is the lowest amount of personal funds the validator is required to have in their own validator to stay bonded (in the example above, 500osmo)
-- the `gas-prices` is the amount of gas used to send this create-validator transaction
-
-### Troubleshooting
-
-If you inspect your `create-validator` transaction in the explorer, and see the following error:
+#### Configure Go 
+Unless you want to configure in a non-standard way, then set these in the `~/.profile` file.
 ```
-out of gas in location: WritePerByte; gasWanted: 177140, gasUsed: 177979: out of gas
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export GO111MODULE=on
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 ```
-
-Please try subsituting:
+#### Install Cosmovisor
+We will use Cosmovisor v1.0.0 as example here.
 ```
---gas="200000" \
---fees="200000upersyx"
-```
-
-with
+go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v1.0.0
 
 ```
---gas=<value significantly larger than gasUsed value from the error>
+## Install Node 
+Install the current version of node binary.
+```
+git clone https://github.com/terpnetwork/terp-core terp-core
+cd terp-core
+git checkout v0.4.0
+make install
+```
+## Configure Node 
+#### Initialize Node
+Please replace `YOUR_MONIKER` with your own moniker.
+```
+terpd init YOUR_MONIKER --chain-id athena-4
+```
+#### Download Genesis
+ The best practice is to find the official genesis download link.
+ ```
+wget -O genesis.json https://raw.githubusercontent.com/terpnetwork/test-net/master/athena-4/genesis.json 
+mv genesis.json ~/.terp/config/
+ ```
+#### Configure Seed
+Using a seed node to bootstrap is the best practice in our view. Alternatively, you can use [addrbook](https://nodejumper.io/terpnetwork-testnet/sync) or [persistent_peers](https://github.com/terpnetwork/chain-registry/blob/master/testnets/terpnettestnet/chain.json).
+```
+sed -i 's/seeds = ""/seeds = ""/' ~/.terp/config/config.toml
+```
+## Launch Node 
+#### Configure Cosmovisor Folder
+Create Cosmovisor folders and load the node binary.
+```
+# Create Cosmovisor Folders
+mkdir -p ~/.terp/cosmovisor/genesis/bin
+mkdir -p ~/.terp/cosmovisor/upgrades
+
+# Load Node Binary into Cosmovisor Folder
+cp ~/go/bin/terpd ~/.terp/cosmovisor/genesis/bin
+```
+#### Create Service File
+```
+touch /etc/systemd/system/terpd.service
+
+```
+#### Configure `terpd.service`
+Make sure to replace USER with your Linux user name. You need sudo previlege to do this step.
+```
+[Unit]
+Description="terp node"
+After=network-online.target
+
+[Service]
+User=USER
+ExecStart=/home/USER/go/bin/cosmovisor start
+Restart=always
+RestartSec=3
+LimitNOFILE=4096
+Environment="DAEMON_NAME=terpd"
+Environment="DAEMON_HOME=/home/USER/.terp"
+Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
+Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
+Environment="UNSAFE_SKIP_BACKUP=true"
+
+[Install]
+WantedBy=multi-user.target
+```
+#### Download Snapshot
+[Highstakes Validators](https://highstakes.ch/) has provided us with a daily snapshot to quickly catch up your new node to the latest block height. Below are instructions to fetch a snapshot of the test network
+```
+wget https://tools.highstakes.ch/files/terp.tar.gz
+```
+extract to `~/.terp`:
+```
+tar -xvf terp.tar.gz -C ~/.terp
 ```
 
-## Track Validator Active Set
-
-To see the current validator active set:
-
-```bash
-terpd query staking validators --limit 300 -o json | jq -r '.validators[] |
-[.operator_address, .status, (.tokens|tonumber / pow(10; 6)),
-.commission.update_time[0:19], .description.moniker] | @csv' | column -t -s","
+### Start Node Service
 ```
-
-You can search for your specific moniker by adding grep MONIKER at the end:
-
-```bash
-terpd query staking validators --limit 300 -o json | jq -r '.validators[] |
-[.operator_address, .status, (.tokens|tonumber / pow(10; 6)),
-.commission.update_time[0:19], .description.moniker] | @csv' | column -t -s"," | grep Wosmongton
-```
-
-If your bond status is `BOND_STATUS_BONDED`, congratulations, your validator is part of the active validator set!
-
-## Track Validator Signing
-
-To track your validator's signing history, copy the validator public key:
-
-```bash
-terpd tendermint show-validator
-```
-
-Use your validators public key queried above:
-
-```bash
-terpd query slashing signing-info [validator-pubkey] --chain-id athena-4
-```
-
-Example:
-
-```bash
-terpd query slashing signing-info '{"@type":"/cosmos.crypto.ed25519.PubKey","key":"HlixoxNZBPq4pBOYEimtSq9Ak4peBISVsIbI5ZHrEAU="}' --chain-id athena-4
+systemctl daemon-reload
+# enable service - this means the service will start up automatically after a system reboot
+systemctl enable terpd.service
+# start daemon
+systemctl start terpd.service
 ```
