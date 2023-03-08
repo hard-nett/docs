@@ -29,7 +29,7 @@ const { createRPCQueryClient } = osmosis.ClientFactory;
 
 async function getBalance() {
 
-    const client = await createRPCQueryClient({ rpcEndpoint: "https://rpc.terp.network" });
+    const client = await createRPCQueryClient({ rpcEndpoint: "https://rpc-terp.zenchainlabs.io" });
     // // now you can query the cosmos modules
     const balance = await client.cosmos.bank.v1beta1
         .allBalances({ address: 'terp1fl48vsnmsdzcv85q5d2q4z5ajdha8yu3aq6l09' });

@@ -8,8 +8,7 @@ This document lays out the process of creating a state export to derive all terp
 
 ### Prerequisites
 1. Know what height you want to take the snapshot at
-2. Know the pool IDs if looking to airdrop to accounts LPing to specific pools
-3. Run an terp-core node with enough state history to state export at the desired height
+2. Run an terp-core node with enough state history to state export at the desired height
 
 
 ### Choosing a block height
@@ -31,7 +30,7 @@ If you are looking to take a snapshot for a block height that occurred during a 
 
 ```sh
 cd $HOME/terp-core
-git checkout v0.2.0
+git checkout v0.4.0
 make install
 ```
 
@@ -41,7 +40,7 @@ Then check the version
 terpd version
 ```
 
-Which in this example should output 0.2.0
+Which in this example should output 0.4.0
 
 To reiterate, if your snapshot is being taken on a more recent height where the daemon version is still current, this step will not be required and you can continue with the current daemon version.
 
@@ -55,4 +54,4 @@ terpd export 586664 > state_export.json
 This process may take 30 minutes or more.
 
 ### Export accounts in JSON format
-TBD
+ You can use the [airdrop tool](https://github.com/DA0-DA0/drop) built by the daodao team to produce a CSV list of addresses and amounts.

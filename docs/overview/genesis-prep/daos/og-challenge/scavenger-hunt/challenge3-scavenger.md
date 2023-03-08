@@ -1,5 +1,5 @@
 # 3 - Third Challenge
-## Scavenger Hunt Challenge: Step 3
+## Scavenger Hunt Challenge: Join the Scavenger Hunt DAO
 *** ! *** 
 
 
@@ -19,3 +19,12 @@ To learn more and participate, check out our Founding Member Rewards First Chall
 ## First Challenge Results! (TBD)
 
 ## Instructions
+If you have participated in any of the last two challenges, then all that is left is to join the DAO. A batch transaction will occur to each participant the nessesary tokens that will be used to stake & join the DAO. Note that these tokens utility are to be staked to become a TerpNET OG member on the testnet  
+
+## Step 1: Go to DAO Page
+[https://daodao.terp.network](https://daodao.terp.network )
+
+## Step 2: Stake your tokens
+
+
+Thats it!

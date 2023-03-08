@@ -67,6 +67,6 @@ source ~/.profile
 git clone https://github.com/terpnetwork/terp-core
 cd terp-core
 git fetch
-git checkout 0.2.0-3-g2b8926a
+git checkout 0.4.0
 ```
 Once you're on the correct tag, you can build normally, or being custom testing

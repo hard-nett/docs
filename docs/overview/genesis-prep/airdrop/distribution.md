@@ -11,9 +11,9 @@ No private sales. No investment rounds. The majority of the genesis supply (Over
 
 | Type  |  % |  |  |   |
 |-----------------|:-------:|:------:|:-----------:|---|
-| Vested Airdrops | 26% | 
-| Treasury        | 50% |
-| Foundation      | 24% |
+| Vested Airdrops | - | 
+| Treasury        | - |
+| Foundation      | - |
   
 
 ## Minting Schedule

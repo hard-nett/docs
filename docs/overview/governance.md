@@ -3,10 +3,10 @@ Governance exists for the community of token holders to decide on key issues inv
 ## Voting
 
 There are four forms of governance proposal:
-- Text proposal - this type of proposal is text only. The outcome is not automatically implemented and may require actions by third parties to implement.
-- Community spend - the outcome of this type of proposal will be the transfer of funds from the community pool to the address and for the amount nominated in the proposal.
-- Parameter change - the outcome of this proposal will be modified blockchain parameters in accordance with the proposal submission.
-- Software upgrade - the outcome of this proposal will be validators and node operators undertaking a coordinated software upgrade at the block height specified in the proposal.
+- **Text proposal** - this type of proposal is text only. The outcome is not automatically implemented and may require actions by third parties to implement.
+- **Community spend** - the outcome of this type of proposal will be the transfer of funds from the community pool to the address and for the amount nominated in the proposal.
+- **Parameter change** - the outcome of this proposal will be modified blockchain parameters in accordance with the proposal submission.
+- **Software upgrade** - the outcome of this proposal will be validators and node operators undertaking a coordinated software upgrade at the block height specified in the proposal.
 
 Please refer to the following best practice for developing and submitting governance proposals. This procedure is intended to enable discussion and gauging support for the proposal prior to submitting on-chain.Please note the following special circumstances before proceeding:
 - If the proposal is a parameter change with implications for development or smart contract usage, consider speaking to your friendly neighborhood core dev.

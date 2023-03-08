@@ -21,7 +21,7 @@ grpc_endpoint = 'http://localhost:9090'
 rpc_endpoint = 'http://localhost:26657'
 
 [networks.testnet]
-chain_id = 'athena-3'
+chain_id = 'athena-4'
 network_variant = 'Shared'
 grpc_endpoint = 'https://grpc-test.terp.network:9090'
 rpc_endpoint = 'https://rpc-test.terp.network'
@@ -29,8 +29,8 @@ rpc_endpoint = 'https://rpc-test.terp.network'
 [networks.mainnet]
 chain_id = 'tbd'
 network_variant = 'Shared'
-grpc_endpoint = 'https://grpc.terp.network:9090'
-rpc_endpoint = 'https://rpc.terp.network'
+grpc_endpoint = 'https://grpc-terp.zenchainlabs.io:9090'
+rpc_endpoint = 'https://rpc-terp.zenchainlabs.io'
 [accounts.validator]
 mnemonic = 'satisfy adjust timber high purchase tuition stool faith fine install that you unaware feed domain license impose boss human eager hat rent enjoy dawn'
 

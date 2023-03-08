@@ -23,11 +23,6 @@
       "selectors_key": "localterp"
     },
     {
-      "url": "https://docs.terp.network/networks",
-      "tags": "networks",
-      "selectors_key": "networks"
-    },
-    {
       "url": "https://docs.terp.network/beaker",
       "tags": "beaker",
       "selectors_key": "beaker"
@@ -86,20 +81,6 @@
         "selector": "",
         "global": true,
         "default_value": "localterp"
-      },
-      "lvl1": "article h1",
-      "lvl2": "article h2",
-      "lvl3": "article h3",
-      "lvl4": "article h4",
-      "lvl5": "article h5, article td:first-child",
-      "lvl6": "article h6",
-      "text": "article p, article li, article td:last-child"
-    },
-    "networks": {
-      "lvl0": {
-        "selector": "",
-        "global": true,
-        "default_value": "Networks"
       },
       "lvl1": "article h1",
       "lvl2": "article h2",

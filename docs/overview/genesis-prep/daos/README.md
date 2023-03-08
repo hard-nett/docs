@@ -9,3 +9,10 @@ At its simplest, a DAO is an organization where you can vote on proposals. Propo
 
 The DAO's governance can itself be modified by governance proposals. For example, the voting rules of the DAO themselves (e.g., how long voting periods last, what proportion of people need to vote on something for it to pass, etc.) can be modified by governance proposals.
 
+## What would a DAO be used for?
+
+Daos can be used for almost anything, one could imagine in the future for DAO's to be how buisnesses run their entire operations. Legally recognized, self-soviergn (meaning it manages itself) on-chain entity could be where DAO's come into play for our culture. This is what they call a pipe dream most definetly, but this is what applications like [Wrappr](https:/wrappr.wtf) & [DAODAO](https://daodao.zone) are being built for.
+
+## What can DAO's Do?
+
+

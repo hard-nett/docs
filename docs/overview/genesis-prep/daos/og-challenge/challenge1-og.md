@@ -12,7 +12,7 @@ sidebar_position: 2
 
 # Instructions 
 ## 1. Create Proposal From Template
-**Ensure you have the terp-core cli installed to your local environment & your are connected to the current testnet (Athena-3), set up link [here](https://3000-terpnetwork-docs-6w1hz3big1j.ws-us86.gitpod.io/overview/getting-started).**
+**Ensure you have the terp-core cli installed to your local environment & your are connected to the current testnet (Athena-4), set up link [here](https://3000-terpnetwork-docs-6w1hz3big1j.ws-us86.gitpod.io/overview/getting-started).**
 ### Step 1: Query Governance Transaction Sub-Commands
 ```
 terpd tx gov 
@@ -60,7 +60,7 @@ terpd tx gov submit-proposal --title "OG Challenge-1: Add <your-discord-alias> t
 <Jurisdiction/Country>, to participate in the TerpNET OG Challenge 1. The thing(s)  \ 
 I am most excited for about Terp Network is(are) \
 <insert-the-thing(s)-you-are-most-excited-about-Terp-Network?>." \  
---gas 2000000 --fees 2000000upersyx --chain-id athena-3 --from <your-wallet>
+--gas 2000000 --fees 2000000upersyx --chain-id athena-4 --from <your-wallet>
 
 ```
 Alternatively, you can use this UI to broadcast your text based proposal [here](https://proposals.subtract.fi/draft?type=TextProposal&chain=terpnettestnet) ;)
@@ -80,7 +80,6 @@ My address will not be included in the initial members of the TerpNET OG Founder
 ## Qualification Criteria
 Although we do not limit anyone from participating, to claim TERP rewards:
 - You must not be a resident of any of the [OFAC sanctioned](https://home.treasury.gov/policy-issues/office-of-foreign-assets-control-sanctions-programs-and-information) countries.
-- You must pass KYC/AML verification when collecting the reward. The details for which will be posted at a later time.
 
 ## Join the conversation 
 Subscribe to our newsletter and join our community channels on Matrix and Discord to stay up to date and get your questions answered! And make sure to watch out for future badge announcements

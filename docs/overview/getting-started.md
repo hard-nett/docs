@@ -1,248 +1,50 @@
-# Quickstart
-_(Note: This repository is under active development. Architecture and implementation may change without documentation)_
+# Getting Started
 
-This is what you'd use to get a node up and running, fast. It assumes that it is starting on a blank ubuntu machine.  It eschews a systemd unit, allowing automation to be up to the user.  It assumes that installing Go is in-scope since Ubuntu's repositories aren't up to date and you'll be needing go to use terp-core.  It handles the Go environment variables because those are a common pain point.
+Anyone can use interchain applications via Terp Network. If this is your first time learning about Terp Network, please take a look at the following introduction to concepts that should help you understand how to navigate and get started with Terp Network in a way that serves you best:
 
-#  Terp-Node Base Setup
+## What you will need 
+- An internet connection 
+- A Cryptocurrency wallet 
 
-## Hardware Requirements
-* **Minimal**
-    * 4 GB RAM
-    * 100 GB SSD
-    * 3.2 x4 GHz CPU
-* **Recommended**
-    * 8 GB RAM
-    * 1 TB NVME SSD
-    * 3.2 GHz x4 GHz CPU
+## Why do I need a cryptocurrency wallet?
+Terp Network is compatible with a growing number of cryptocurrency wallets. These wallets are your Keys to EVERYTHING that you do on a blockchain. Whether it is to send tokens to grandma, or providing a unique cryptographic signature in a on chain buisness agreement, your cryptocurrency wallet allows you to manage these functions. 
 
-## Operating System
+This is why it is extremely important to take precautionary measures to keep your private keys extremely secure (the thing that gives you your access to your wallet)
 
-* **Recommended**
-    * Linux(x86_64)
+**Check out [this FAQ](../overview/wallets/saftey.md) to learn more saftey practices for crypto wallets** 
 
+## Cryptocurrency wallet?
 
-## Installation Steps
-#### 1. Basic Packages
-```bash:
-# update the local package list and install any available upgrades 
-sudo apt-get update && sudo apt upgrade -y 
-# install toolchain and ensure accurate time synchronization 
-sudo apt-get install make build-essential gcc git jq chrony -y
-```
-```bash:
-# install gcc & make
-sudo apt install gcc && sudo apt install make
-```
+Currently terp network is tested & confirmed compatible with:
+- [Keplr](https://keplr.app) 
+- [Ledger](https://www.ledger.com/) 
 
-#### 2. Install Go
-Follow the instructions [here](https://golang.org/doc/install) to install Go.
+Upcoming support for:
+- [Cosmosstation](https://www.cosmostation.io/) 
+- [Trezor](https://trezor.io/) 
+- [Leap Wallet](https://www.leapwallet.io/) 
+- Other Interchain Wallets 
+- Other Hardware wallets
 
-Alternatively, for Ubuntu LTS, you can do:
-```bash:
-wget https://go.dev/dl/go1.19.2.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.19.2.linux-amd64.tar.gz
-```
+##  Internet Connection?
 
-Unless you want to configure in a non standard way, then set these in the `.profile` in the user's home (i.e. `~/`) folder.
+If you are reading this, you are good to go! Anyone is able to broadcast messages (AKA transactions) through an internet connection to a node on Terp Network. This can happen via **[web applications](https://en.wikipedia.org/wiki/Web_application)** that are built by community members, which route messages to an active node on the network, or even manually with the terp-cores CLI (command-line interface)
 
-```bash:
-cat <<EOF >> ~/.profile
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export GO111MODULE=on
-export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
-EOF
-source ~/.profile
-go version
-```
+## How to Interact With Terp Network
 
-Output should be: `go version go1.19.2 linux/amd64`
-
-### Install terpd from source
-
-#### 1. Clone repository
-
-* Clone git repository
-```shell
-git clone https://github.com/terpnetwork/terp-core.git
-```
-#### 2. Install CLI
-```shell
-cd terp-core && make build && make install
-```
-
-To confirm that the installation was successful, you can run:
-
-```bash:
-terpd version
-```
-Output should be: ``
-
-## Instruction for new validators
-
-### Init
-```bash:
-terpd init "$MONIKER_NAME" --chain-id $CHAIN_ID
-```
-
-### Generate keys
-
-```bash:
-# To create new keypair - make sure you save the mnemonics!
-terpd keys add <key-name> 
-```
-
-or
-```
-# Restore existing terp wallet with mnemonic seed phrase. 
-# You will be prompted to enter mnemonic seed. 
-terpd keys add <key-name> --recover
-```
-or
-```
-# Add keys using ledger
-terpd keys show <key-name> --ledger
-```
-
-Check your key:
-```
-# Query the keystore for your public address 
-terpd keys show <key-name> -a
-```
-
-## Validator Setup Instructions
-
-### Download new genesis file
-```bash:
-curl https://raw.githubusercontent.com/terpnetwork/test-net/master/athena-3/genesis.json > ~/.terp/config/genesis.json
-```
-### Set minimum gas fees
-```bash:
-perl -i -pe 's/^minimum-gas-prices = .+?$/minimum-gas-prices = "0.0125upersyx"/' ~/.terp/config/app.toml
-```
-### P2P
-Currently there are some great community hosted resources: checkout all of the apps configured to Terp Network here: [All Apps](https://terp.network/ecosystem)
-
-#### Add seeds
-```bash:
-# Checkout active seeds for testnet & main-net here: https://nodejumper.io/terpnetwork-testnet 
-```
-### Add persistent peers
-```bash:
-# Checkout some availible persistent peers for testnet & main-net here: https://nodejumper.io/terpnetwork-testnet 
-```
-### OR
-
-### Download addrbook.json
-```bash:
-# Checkout active address book for testnet & main-net here: https://nodejumper.io/terpnetwork-testnet 
-```
-### (Optional) Snapshot sync
-```bash
-# Checkout available snapshot sync resource provided by the Highstakes Validator Team: https://tools.highstakes.ch/snapshots
-```
-### Setup Unit/Daemon file
-
-```bash:
-# 1. create daemon file
-touch /etc/systemd/system/terpd.service
-# 2. run:
-cat <<EOF >> /etc/systemd/system/terpd.service
-[Unit]
-Description=Terp Net daemon
-After=network-online.target
-[Service]
-User=<USER>
-ExecStart=/home/<USER>/go/bin/terpd start
-Restart=on-failure
-RestartSec=3
-LimitNOFILE=4096
-[Install]
-WantedBy=multi-user.target
-EOF
-# 3. reload the daemon
-systemctl daemon-reload
-# 4. enable service - this means the service will start up 
-# automatically after a system reboot
-systemctl enable terpd.service
-# 5. start daemon
-systemctl start terpd.service
-```
-
-In order to watch the service run, you can do the following:
-```
-journalctl -u terpd.service -f
-```
-
-Congratulations! You now have a full node. Once the node is synced with the network, 
-you can then make your node a validator.
-
-### Create validator
-1. Transfer funds to your validator address. A minimum of 1  (1000000uterpx) is required to start a validator.
-
-2. Confirm your address has the funds.
-
-```
-terpd q bank balances $(terpd keys show -a <key-alias>)
-```
-
-3. Run the create-validator transaction
-**Note: 1,000,000 uterpx = 1 , so this validator will start with 1 **
-
-```bash:
-terpd tx staking create-validator \ 
---amount 1000000uterpx \ 
---commission-max-change-rate "0.05" \ 
---commission-max-rate "0.10" \ 
---commission-rate "0.05" \ 
---min-self-delegation "1" \ 
---details "validators write bios too" \ 
---pubkey $(terpd tendermint show-validator) \ 
---moniker $MONIKER_NAME \ 
---chain-id $CHAIN_ID \ 
---gas 400000 \
---fees 400000upersyx \
---from <KEY_NAME>
-```
-
-To ensure your validator is active, run:
-```
-terpd q staking validators | grep moniker
-```
-
-### Backup critical files
-```bash:
-priv_validator_key.json
-node_key.json
-```
-
-## Instruction for old validators
-
-### Stop node
-```bash:
-systemctl stop terpd.service
-```
+### No / Minimal Crypto Experience
+- [Interact with Applications](https://terp.network/ecosystem)
+- [Staking & Governance](governance.md)
+- [Community-Events]
+- [Learning-Portal]
+- [Dao Participation](../overview/genesis-prep/daos/README.md)
+### Intermediary & Expert Crypto Experience
+- [Interact with Applications](https://terp.network/ecosystem)
+- [Staking & Governance](governance.md)
+- [Run a Node Validator or Relayer](../overview/validate/FAQ.md)
+- [Dao Participation](../overview/genesis-prep/daos/README.md)
+- [Develop your own application](../frontend/)
+- [Contribute to Terp-Core binary development](../terp-core/build.md)
 
 
 
-### Clean old state
-
-```bash:
-terpd tendermint unsafe-reset-all --home ~/.terp --keep-addr-book
-```
-
-### Rerun node
-```bash:
-systemctl daemon-reload
-systemctl start terpd.service
-```
-
-More Nodes ==> More Network
-
-More Network ==> Faster Sync
-
-Faster Sync ==> Less Developer Friction
-
-Less Developer Friction ==> More Terp Network
-
-Thank you for supporting a healthy blockchain network and community by running an Terp-Network node!
