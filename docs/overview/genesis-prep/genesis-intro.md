@@ -1,250 +1,78 @@
 ---
-title: "NEW: Genesis Info"
-sidebar_position: 3
+title: "NEW: Introduction"
+sidebar_position: 2
 ---
+# Genesis Prelaunch Introduction
+Welcome! This process ensures that the decision-making process is transparent, fair, and inclusive decentralized protocol bootstrapping.
+- [**Genesis Introduction**](./docs/genesis-intro.md)
+- [**Gentx Folder**](./gentxs/)
+## Genesis Launch Checklist
+- [X] Genesis Launch Documentaion: [Link](./docs/genesis-intro.md)
+- [] Solventless Terp Airdrop Cycles Documentation: [Link](./docs/distribution.md)
+- [X] Gentx Process: [Link](./gentxs/README.md)
+- [X] Foundation Delegation Policy: [Link](https://github.com/TerpNETFoundationDAO/hello-world)
+## Post Launch Checklist
+- [] 2nd Airdrop Cycle Proposal
+- [] Smart Contract Upload Proposals
 
 
 ## Current Proposed Genesis Parameters Configuration
-```json
-{
-    "genesis_time": "2022-07-10T00:00:00.0000000Z",
-    "chain_id": "testing",
-    "initial_height": "1",
-    "consensus_params": {
-      "block": {
-        "max_bytes": "22020096",
-        "max_gas": "-1",
-        "time_iota_ms": "1000"
-      },
-      "evidence": {
-        "max_age_num_blocks": "100000",
-        "max_age_duration": "172800000000000",
-        "max_bytes": "1048576"
-      },
-      "validator": {
-        "pub_key_types": [
-          "ed25519"
-        ]
-      },
-      "version": {}
-    },
-    "app_hash": "",
-    "app_state": {
-      "auth": {
-        "params": {
-          "max_memo_characters": "256",
-          "tx_sig_limit": "7",
-          "tx_size_cost_per_byte": "10",
-          "sig_verify_cost_ed25519": "590",
-          "sig_verify_cost_secp256k1": "1000"
-        },
-        "accounts": []
-      },
-      "authz": {
-        "authorization": []
-      },
-      "bank": {
-        "params": {
-          "send_enabled": [],
-          "default_send_enabled": false
-        },
-        "balances": [],
-        "supply": [],
-        "denom_metadata": []
-      },
-      "capability": {
-        "index": "1",
-        "owners": []
-      },
-      "crisis": {
-        "constant_fee": {
-          "denom": "uterp",
-          "amount": "1000"
-        }
-      },
-      "distribution": {
-        "params": {
-          "community_tax": "0.020000000000000000",
-          "base_proposer_reward": "0.010000000000000000",
-          "bonus_proposer_reward": "0.040000000000000000",
-          "withdraw_addr_enabled": true
-        },
-        "fee_pool": {
-          "community_pool": []
-        },
-        "delegator_withdraw_infos": [],
-        "previous_proposer": "",
-        "outstanding_rewards": [],
-        "validator_accumulated_commissions": [],
-        "validator_historical_rewards": [],
-        "validator_current_rewards": [],
-        "delegator_starting_infos": [],
-        "validator_slash_events": []
-      },
-      "evidence": {
-        "evidence": []
-      },
-      "feegrant": {
-        "allowances": []
-      },
-      "feeibc": {
-        "identified_fees": [],
-        "fee_enabled_channels": [],
-        "registered_payees": [],
-        "registered_counterparty_payees": [],
-        "forward_relayers": []
-      },
-      "genutil": {
-        "gen_txs": []
-      },
-      "gov": {
-        "starting_proposal_id": "1",
-        "deposits": [],
-        "votes": [],
-        "proposals": [],
-        "deposit_params": {
-          "min_deposit": [
-            {
-              "denom": "uterp",
-              "amount": "710000000"
-            }
-          ],
-          "max_deposit_period": "1440s"
-        },
-        "voting_params": {
-          "voting_period": "1440s"
-        },
-        "tally_params": {
-          "quorum": "0.334000000000000000",
-          "threshold": "0.500000000000000000",
-          "veto_threshold": "0.334000000000000000"
-        }
-      },
-      "ibc": {
-        "client_genesis": {
-          "clients": [],
-          "clients_consensus": [],
-          "clients_metadata": [],
-          "params": {
-            "allowed_clients": [
-              "06-solomachine",
-              "07-tendermint"
-            ]
-          },
-          "create_localhost": false,
-          "next_client_sequence": "0"
-        },
-        "connection_genesis": {
-          "connections": [],
-          "client_connection_paths": [],
-          "next_connection_sequence": "0",
-          "params": {
-            "max_expected_time_per_block": "30000000000"
-          }
-        },
-        "channel_genesis": {
-          "channels": [],
-          "acknowledgements": [],
-          "commitments": [],
-          "receipts": [],
-          "send_sequences": [],
-          "recv_sequences": [],
-          "ack_sequences": [],
-          "next_channel_sequence": "0"
-        }
-      },
-      "interchainaccounts": {
-        "controller_genesis_state": {
-          "active_channels": [],
-          "interchain_accounts": [],
-          "ports": [],
-          "params": {
-            "controller_enabled": true
-          }
-        },
-        "host_genesis_state": {
-          "active_channels": [],
-          "interchain_accounts": [],
-          "port": "icahost",
-          "params": {
-            "host_enabled": true,
-            "allow_messages": []
-          }
-        }
-      },
-      "intertx": null,
-      "mint": {
-        "minter": {
-          "inflation": "0.130000000000000000",
-          "annual_provisions": "0.000000000000000000"
-        },
-        "params": {
-          "mint_denom": "upersyx",
-          "inflation_rate_change": "0.130000000000000000",
-          "inflation_max": "0.200000000000000000",
-          "inflation_min": "0.070000000000000000",
-          "goal_bonded": "0.000710000000000000",
-          "blocks_per_year": "6311520"
-        }
-      },
-      "params": null,
-      "slashing": {
-        "params": {
-          "signed_blocks_window": "1420",
-          "min_signed_per_window": "0.242000000000000000",
-          "downtime_jail_duration": "600s",
-          "slash_fraction_double_sign": "0.050000000000000000",
-          "slash_fraction_downtime": "0.001000000000000000"
-        },
-        "signing_infos": [],
-        "missed_blocks": []
-      },
-      "staking": {
-        "params": {
-          "unbonding_time": "1814400s",
-          "max_validators": 100,
-          "max_entries": 7,
-          "historical_entries": 10000,
-          "bond_denom": "uterpx"
-        },
-        "last_total_power": "0",
-        "last_validator_powers": [],
-        "validators": [],
-        "delegations": [],
-        "unbonding_delegations": [],
-        "redelegations": [],
-        "exported": false
-      },
-      "terp": {
-        "params": {},
-        "terpidList": [],
-        "terpidCount": "0",
-        "supplychainList": [],
-        "supplychainCount": "0"
-      },
-      "transfer": {
-        "port_id": "transfer",
-        "denom_traces": [],
-        "params": {
-          "send_enabled": true,
-          "receive_enabled": true
-        }
-      },
-      "upgrade": {},
-      "vesting": {},
-      "wasm": {
-        "params": {
-          "code_upload_access": {
-            "permission": "Nobody",
-            "address": "",
-            "addresses": []
-          },
-          "instantiate_default_permission": "Nobody"
-        },
-        "codes": [],
-        "contracts": [],
-        "sequences": []
-      }
-    }
-  }
-  ```
+
+### Inital Supply Parameters
+- TERP: `420 Million`
+- THIOL: `420 Million`
+### Inital Distribution Parameters
+- Protocol Treasury Tokens: `284,025,703UTERP, 284,025,703UTHIOL`
+- Airdrop Cycle One: `72,974,297UTERP & 72,974,297UTHIOL`
+- TerpNET Foundation DAO: `63000000UTERP & 63000000UTHIOL`
+- community_tax: `2%`
+- base_proposer_reward: `1%`
+- bonus_proposer_reward: `4%`
+- withdraw_addr_enabled: `true`
+- inflation: `93%`
+- mint_denom: `uthiol`
+- inflation_max: `93%`
+- inflation_min: `93%`
+- goal_bonded: `0.000100000000000000`
+- blocks_per_year: `6311520`
+- send_enabled: `true`
+- receive_enabled: `true`
+
+### Inital Vesting Parameters
+Only the TerpNET Foundation DAO & 10 inital validators will have any tokens in circulation at genesis. 
+- TerpNET Foundation DAO: `50% at 7 years.`
+- Every Bitcanna, CosmosHub, TerpOG, & Scavenger Hunt Reward: `100% at 6 months from 4/20/2023` 
+### Initial Delegation Parameters
+- unbonding_time: `3 weeks`
+- max_validators: `69`
+- max_entries: `7`
+- historical_entries: `10000`
+- bond_denom: `uterp`
+### Initial Governance Parameters
+- min_deposit: `100TERP`
+- max_deposit_period: `3 days`
+- voting_period: `4 days`
+- quorum: `33.4%`
+- threshold: `50%`
+- veto_threshold: `33.4%`
+## Initial Smart Contract Parameters
+- code_upload_access: `Nobody`
+- instantiate_default_permission: `Nobody`
+### Initial ICA (Inter-Chain Accounts) Parameters
+- controller_enabled: `true`
+- host_enabled: `true`
+### Inital Slashing Parameters
+- signed_blocks_window: `12,000`
+- min_signed_per_window: `25%`
+- downtime_jail_duration: `600 seconds`
+- slash_fraction_double_sign: `5%`
+slash_fraction_downtime: `.1%`
+
+The current proposed genesis to be used to collect gentxs for Main Network 1 is located [here.](../gentxs/genesis.json). The scripts used to make this genesis file can be found [here](./gen-account-scripts/).
+
+
+# **Disclaimer**
+
+Terp Network is *highly* experimental software. In these early days, we can expect to have issues, updates, and bugs. The existing tools require advanced technical skills and involve risks which are outside of the control of the Terp Network and/or the TerpNET Foundation team . Any use of this open source Apache 2.0 licensed software is done at your *own risk and on a “AS IS” basis, without warranties or conditions of any kind*, and any and all liability of the teams for damages arising in connection to the software is excluded. **Please exercise extreme caution!**
+
+Furthermore, it must be noted that it remains in the community's discretion to adopt or not to adopt the Genesis State that the TerpNET Foundation DAO recommends within the Genesis Block Software. Therefore, The dev team *cannot* guarantee that (i) TERPS will be created and (ii) the recommended allocation as set forth herein will actually take place.
