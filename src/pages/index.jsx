@@ -9,12 +9,9 @@ import {
 } from '../components/HomepageComponents';
 import {
   APIReferenceIcon,
-  TerminalIcon,
   IDEIcon,
   ModulesIcon,
-  RelayerIcon,
   AssetIcon,
-  Telescope,
   Terpjs,
   Createapp,
   Cosmoskit,
@@ -24,7 +21,6 @@ import {
   TerpCore,
   Contribute,
 } from '../icons';
-import GuidesSection from '../components/GuidesSection';
 
 export default function Homepage() {
   const router = useHistory();
@@ -70,7 +66,7 @@ export default function Homepage() {
             <Card
               title="Governance Basics"
               description="Fundamental starting point for understanding Governance."
-              to="/community/"
+              to="/governance/"
             />
             <Card
               title="Terp Network Goverance Resources"
@@ -80,7 +76,7 @@ export default function Homepage() {
             <Card
               title="DAOs & subDAOs"
               description="Learn how smart contract DAO's are being used to set up optimal methods of collaboration."
-              to="/overview/subdaos"
+              to="/daos/subdaos"
             />
           </Section>
           

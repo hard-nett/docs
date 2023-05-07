@@ -1,0 +1,14 @@
+{
+  "position": 4,
+  "label": "Terp Core",
+  "collapsible": true,
+  "collapsed": true,
+  "className": "red",
+  "link": {
+  
+    "title": "Terp-Core Guides"
+  },
+  "customProps": {
+    "description": "The guides on this page will explain the process of interacting with Terp Network."
+  }
+}
