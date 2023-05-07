@@ -8,7 +8,7 @@ ___
 **Author(s)** - List of authors and contributors involved in the writing of the proposal.
 **Summary** - A brief, high-level summary of what changes are being suggested. Summary should be a single sentence, or a bulleted list.
 **Abstract** - Abstract is a multi-sentence (short paragraph) technical summary. This should be a very terse and human-readable version of the motivation and specification sections. Someone should be able to read only the abstract to get the gist of what this specification does.
-**Motivation** - The motivation section should describe the "why" of this proposal. What problem does it solve? What benefit does it provide to the Evmos network?
+**Motivation** - The motivation section should describe the "why" of this proposal. What problem does it solve? What benefit does it provide to the Terp network?
 ___
 ## B. Project/Protocol Introduction
 ___
@@ -29,4 +29,3 @@ List all the achievements you have managed to accomplish so far, and the obstacl
 Anyone may start a subdao and gather momentum behind it by posting on Commonwealth. For more information on Subdao proposals, refer to [this section](/governance/proposals/definitions#subdao--special-initiatives).
 
 ## D. Protocol (ParamChange) Proposals
-Refer to the [official Evmos documentation](https://docs.evmos.org/users/governance/param_change.html) for protocol and `ParamChange` proposals.

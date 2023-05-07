@@ -1,3 +1,8 @@
+---
+title: Submission Guidelines
+sidebar_position: 3
+---
+
 # Proposals Framework
 
 ## Terp Community Proposals (TCPs)
@@ -9,8 +14,13 @@ The Terp Community Proposal (TCP) Framework provides guidance for all future TCP
 
 ## TCP Components
 
-### 1. **Definitions of the TCP Framework** - *Defines core concepts of the TCP Framework and the different types of proposals*
-### 2. **The TCP Lifecycle** - *Defines the formal stages in the lifecycle of proposals from conception to approval, rejection, or deferral.*
-### 3. **TCP Standards & Templates** - *Defines the processes, rules, and components required for all proposals before going to vote.*
-### 4. **TCP Submission Guidelines** - *Defines the proposal submission procedures and guidelines for on-chain voting.*
-### 5. **Terp Governance Council** - *Defines the responsibilities and enforcement powers reserved to the Governance Council of Terp DAO*
+### 1. **Definitions of the TCP Framework** 
+*Defines core concepts of the TCP Framework and the different types of proposals*
+### 2. **The TCP Lifecycle** 
+*Defines the formal stages in the lifecycle of proposals from conception to approval, rejection, or deferral.*
+### 3. **TCP Standards & Templates** 
+*Defines the processes, rules, and components required for all proposals before going to vote.*
+### 4. **TCP Submission Guidelines** 
+*Defines the proposal submission procedures and guidelines for on-chain voting.*
+### 5. **Terp Governance Council** 
+*Defines the responsibilities and enforcement powers reserved to the Governance Council of Terp DAO*

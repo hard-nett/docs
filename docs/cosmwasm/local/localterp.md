@@ -184,7 +184,7 @@ terpd tx wasm store cw_tpl_terpnet.wasm  --from <unsafe-test-key-name> --chain-i
 `<chain-id>` = localterp
 
 Replace `<unsafe-test-key-name>` with the key name from your local keys. `terpd keys list`
-Replace `<chain-id>` with localterp or athena-4. 
+Replace `<chain-id>` with localterp or 90u-1. 
 Save the CODE_ID from the output of the command above as a local variable `CODE_ID=XX`
 
 ### Or Store CODE_ID 

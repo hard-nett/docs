@@ -153,7 +153,7 @@ const config = {
           },
           {
           label: 'Governance',
-          to: 'governance/genesis-prep',
+          to: 'overview/governance',
           position: 'left',
           className: 'new-badge'
           },

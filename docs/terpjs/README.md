@@ -118,7 +118,7 @@ import { signAndBroadcast } from 'terpjs';
 
 const res = await signAndBroadcast({
   client, // SigningStargateClient
-  chainId: 'terpnet-1', // use 'athena-4' for testnet
+  chainId: 'morocco-1', // use '90u-1' for testnet
   address,
   msgs: [msg],
   fee,

@@ -26,7 +26,7 @@ ___
 
 **Abstract** - Abstract is a multi-sentence (short paragraph) technical summary. This should be a very terse and human-readable version of the motivation and specification sections. Someone should be able to read only the abstract to get the gist of what this specification does.
 
-**Motivation** - The motivation section should describe the "why" of this proposal. What problem does it solve? What benefit does it provide to the Evmos network?
+**Motivation** - The motivation section should describe the "why" of this proposal. What problem does it solve? What benefit does it provide to the Terp network?
 
 **Proposal Type Specific Content**
 

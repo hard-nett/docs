@@ -25,7 +25,7 @@ In order to get testnet tokens use  [The Discord Faucet](https://discord.gg/rkwu
 Use terpd to initialize your node (replace the ```NODE_NAME``` with a name of your choosing):
 
 ```bash
-terpd init NODE_NAME --chain-id=athena-4
+terpd init NODE_NAME --chain-id=90u-1
 ```
 
 Open the config.toml to edit the seeds and persistent peers:
@@ -85,7 +85,7 @@ Download and replace the genesis file:
 
 ```bash
 cd $HOME/.terp/config
-curl https://raw.githubusercontent.com/terpnetwork/test-net/master/athena-4/genesis.json
+curl https://raw.githubusercontent.com/terpnetwork/test-net/master/90u-1/genesis.json
 ```
 
 Copy the current terpd binary into the cosmovisor/genesis folder:
@@ -101,7 +101,7 @@ cosmovisor version
 terpd version
 ```
 
-These two command should both output 7.0.3
+These two command should both output 1.0.1
 
 Reset private validator file to genesis state:
 

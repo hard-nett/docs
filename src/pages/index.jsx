@@ -69,7 +69,7 @@ export default function Homepage() {
               to="/governance/"
             />
             <Card
-              title="Terp Network Goverance Resources"
+              title="Governance Proposal Resources"
               description="Learn about the Proposal Framework, workflow for broacasting proposals, and more! "
               to="/governance/proposals"
             />
