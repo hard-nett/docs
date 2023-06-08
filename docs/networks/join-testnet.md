@@ -1,188 +1,176 @@
 # Joining Testnet
-    A Test Network exist for community members to have a way to familiarize themselves with terp-core & battleharden their custom smart contract code. Below are multiple methods to configure a node & interact with the current test networks of Terp Network. If you plan to run a node on main network, it is highly reccomended to treat the test network as a production environment to get into the habit of best practices in terms of node operation security. 
+**A Test Network exist for community members to have a way to familiarize themselves with terp-core & battleharden their custom smart contract code.** 
 
-## Quick Sync [Not production reccomended]:Terp-Core Installer
+If you plan to run a node on main network, it is highly reccomended to treat the test network as a production environment to get into the habit of best practices in terms of node operation security. 
 
-Join a network by using Terp-Core Installer from [https://get.terp.network](https://get.terp.network) 
+## Current testnet 
 
-Simply run:
+Below is the list of Terp testnets and their current status. You will need to know the version tag for installation of the `terpd` binary.
 
-```
-curl -sL https://get.terp.network/install > i.py && python3 i.py
-```
-![installer](../assets/launcher.png)
-## Terp-Core CLI
+For details of upgrades on the current testnet, as well as syncing, you can check out the testnets repo, which is the definitive source of truth.
 
-Make sure you have [installed the Terp Core Binary (CLI)](../overview/getting-started) prior to following the below instructions.
+If you get stuck, then please ask on Discord.
 
-You may also [use the Terp-Core installer](../terp-core/terpd) if you want everything to be done automatically.
+| chain-id | Current Github version tag |
+| -------- | -------------------------- |
+| 90u-2    | huckleberry                |
 
-## Faucet 
-In order to get testnet tokens use  [The Discord Faucet](https://discord.gg/rkwutDxvDJ)
+## Minimum Hardware Requirements
 
-## Initialize TerpNET Node
+The minimum recommended hardware requirements for running a validator for the Juno testnets are:
 
-Use terpd to initialize your node (replace the ```NODE_NAME``` with a name of your choosing):
+| Requirements                                                                          |
+| ------------------------------------------------------------------------------------- |
+| <ul><li>16GB RAM</li><li>200GB of disk space</li><li>2 Cores (modern CPU's)</li></ul> |
 
-```bash
-terpd init NODE_NAME --chain-id=90u-1
-```
+> These specifications are the minimum recommended. As Terp Network is a smart contract platform, it can at times be very demanding on hardware. Low spec validators WILL get stuck on difficult to process blocks.
 
-Open the config.toml to edit the seeds and persistent peers:
 
-```bash
-cd $HOME/.terp/config
-nano config.toml
-```
+> Note that the testnets accumulate data as the blockchain continues. This means that you will need to expand your storage as the blockchain database gets larger with time.
 
-Use page down or arrow keys to get to the line that says seeds = "" and replace it with the following:
+## terpd Installation
 
-```bash
-seeds = ""
-```
+To get up and running with the terpd binary, please follow the instructions [here](getting-setup.md)
 
-Next, add persistent peers:
+## Configuration of Shell Variables
 
-```bash
-persistent_peers = ""
-```
+For this guide, we will be using shell variables. This will enable the use of the client commands verbatim. It is important to remember that shell commands are only valid for the current shell session, and if the shell session is closed, the shell variables will need to be re-defined.
 
-Then press ```Ctrl+O``` then enter to save, then ```Ctrl+X``` to exit
+If you want variables to persist for multiple sessions, then set them explicitly in your shell .profile, as you did for the Go environment variables.
 
-## Set Up Cosmovisor
+To clear a variable binding, use unset $VARIABLE_NAME. Shell variables should be named with ALL CAPS.
 
-Set up cosmovisor to ensure future upgrades happen flawlessly. To install Cosmovisor:
+### Choose a testnet
+
+Set the `CHAIN_ID`:
 
 ```bash
-go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v1.0.0
+CHAIN_ID=90u-2
 ```
+### Set your moniker name
 
-Create the required directories:
+Choose your `<moniker-name>`, this can be any name of your choosing and will identify your validator in the explorer. Set the `MONIKER_NAME`:
 
 ```bash
-mkdir -p ~/.terp/cosmovisor
-mkdir -p ~/.terp/cosmovisor/genesis
-mkdir -p ~/.terp/cosmovisor/genesis/bin
-mkdir -p ~/.terp/cosmovisor/upgrades
+MONIKER_NAME=<moniker-name>
+
+#Example
+MONIKER_NAME="HASHONLY 9000"
 ```
 
-Set the environment variables:
+### **Set persistent peers**
+
+Persistent peers will be required to tell your node where to connect to other nodes and join the network. To retrieve the peers for the chosen testnet:
+
+
+> NB: If you are unsure about this, you can ask in discord for the current peers and explicitly set them in `~/.juno/config/config.toml` instead.
+
+### Set minimum gas prices 
+For RPC nodes and Validator nodes we recommend setting the following minimum-gas-prices. This setting will help protect against contract spam and potential wasm contract attack vectors.
+
+In `$HOME/.terp/config/app.toml`, set minimum gas prices:
+```
+# note testnet denom
+
+```
+
+## Setting up the Node
+
+> Running a node is different from running a Validator. In order to run a Validator, you must create and sync a node, and then upgrade it to a Validator.
+
+These instructions will direct you on how to initialise your node, synchronise to the network and upgrade your node to a validator.
+
+### **Initialize the chain**
+```bash
+terpd init $MONIKER_NAME --chain-id $CHAIN_ID
+```
+
+This will generate the following files in `~/.terp/config/`
+
+* `genesis.json`
+* `node_key.json`
+* `priv_validator_key.json`
+
+> Note that this means if you jumped ahead and already downloaded the genesis file, this command will replace it and you will get an error when you attempt to start the chain.
+
+### Download the genesis file
+```
+curl https://raw.githubusercontent.com/terpnetwork/test-net/main/$CHAIN_ID/genesis.json > ~/.terp/config/genesis.json
+```
+
+This will replace the genesis file created using `terpd init` command with the genesis file for the testnet.
+
+### **Set persistent peers**
+
+### **Create a local key pair**
+Create a new key pair or restore a key for your validator:
+
+```
+# Create new keypair 
+terpd keys add <key-name>
+
+# OR 
+
+# Restore existing terp wallet with mnemonic seed phrase. 
+# You will be prompted to enter mnemonic seed. 
+terpd keys add <key-name> --recover
+
+# OR 
+
+# Store a local reference to a connected ledger device
+terpd keys add <key-name> --recover --ledger
+
+# Query the keystore for your public address
+terpd keys show <key-name> -a
+```
+Replace `<key-name>` with a key name of your choosing.
+
+> After creating a new key, the key information and seed phrase will be shown. It is essential to write this seed phrase down and keep it in a safe place. The seed phrase is the only way to restore your keys.
+
+### **Get some testnet tokens**
+
+Testnet tokens can be requested from the `#faucet` channel on Discord
+
+## Setup cosmovisor
+
+Follow [these](setting-up-cosmovisor.md) instructions to setup cosmovisor and start the node.
+
+## Syncing the node
+
+After starting the terpd daemon, the chain will begin to sync to the network. The time to sync to the network will vary depending on your setup, but could take a very long time. To query the status of your node:
 
 ```bash
-echo "# Setup Cosmovisor" >> ~/.profile
-echo "export DAEMON_NAME=terpd" >> ~/.profile
-echo "export DAEMON_HOME=$HOME/.terp" >> ~/.profile
-echo "export DAEMON_ALLOW_DOWNLOAD_BINARIES=false" >> ~/.profile
-echo "export DAEMON_LOG_BUFFER_SIZE=512" >> ~/.profile
-echo "export DAEMON_RESTART_AFTER_UPGRADE=true" >> ~/.profile
-echo "export UNSAFE_SKIP_BACKUP=true" >> ~/.profile
-source ~/.profile
+# Query via the RPC (default port: 26657)
+curl http://localhost:26657/status | jq .result.sync_info.catching_up
 ```
 
-You may leave out `UNSAFE_SKIP_BACKUP=true`, however the backup takes a decent amount of time and public snapshots of old states are available.
+If this command returns `true` then your node is still catching up. If it returns `false` then your node has caught up to the network current block and you are safe to proceed to upgrade to a validator node.
 
-Download and replace the genesis file:
+> Validators and sentries can rapidly join the network with state-sync. See instructions for using state-sync.
 
-```bash
-cd $HOME/.terp/config
-curl https://raw.githubusercontent.com/terpnetwork/test-net/master/90u-1/genesis.json
+## Upgrade to a validator
+To upgrade the node to a validator, you will need to submit a `create-validator` transaction:
+
 ```
+terp tx staking create-validator \
+  --amount 1000000uterpx \
+  --commission-max-change-rate "0.1" \
+  --commission-max-rate "0.20" \
+  --commission-rate "0.1" \
+  --min-self-delegation "1" \
+  --details "validators write bios too" \
+  --pubkey=$(terpd tendermint show-validator) \
+  --moniker "$MONIKER_NAME" \
+  --chain-id $CHAIN_ID \
+  --gas auto\
+  --fees 30000upersyx\
+  --gas-adjustment 1.5
+  --from <key-name>
+  ```
 
-Copy the current terpd binary into the cosmovisor/genesis folder:
+  ## Backup critical files
+There are certain files that you need to backup to be able to restore your validator if, for some reason, it damaged or lost in some way. Please make a secure backup of the following files located in `~/.terp/config/`:
+* `priv_validator_key.json`
+* `node_key.json`
 
-```bash
-cp $GOPATH/bin/terpd ~/.terp/cosmovisor/genesis/bin
-```
-
-To check your work, ensure the version of cosmovisor and terpd are the same:
-
-```bash
-cosmovisor version
-terpd version
-```
-
-These two command should both output 1.0.1
-
-Reset private validator file to genesis state:
-
-```bash
-terpd unsafe-reset-all
-```
-
-## Download Chain Data
-
-Download the latest chain data from a snapshot provider. In the following commands, I will use <a href="" target="_blank">https://tools.highstakes.ch/snapshots/terp</a> to download the chain data. You may choose the pruned or archive based on your needs.
-
-Download liblz4-tool to handle the compressed file:
-
-```bash
-sudo apt-get install wget liblz4-tool aria2 -y
-```
-
-Download the chain data:
-
-- Select the tab to the desired node type (Pruned or Archive)
-
-```bash
-wget https://tools.highstakes.ch/files/terp.tar.gz
-```
-
-extract to ~/.terp 
-```
-tar -xvf terp.tar.gz -C ~/.terp/
-```
-
-## Set Up Terp-Core Service
-
-Set up a service to allow cosmovisor to run in the background as well as restart automatically if it runs into any problems:
-
-```bash
-echo "[Unit]
-Description=Cosmovisor daemon
-After=network-online.target
-[Service]
-Environment="DAEMON_NAME=terpd"
-Environment="DAEMON_HOME=${HOME}/.terp"
-Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
-Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
-Environment="DAEMON_LOG_BUFFER_SIZE=512"
-Environment="UNSAFE_SKIP_BACKUP=true"
-User=$USER
-ExecStart=${HOME}/go/bin/cosmovisor start
-Restart=always
-RestartSec=3
-LimitNOFILE=infinity
-LimitNPROC=infinity
-[Install]
-WantedBy=multi-user.target
-" >cosmovisor.service
-```
-
-Move this new file to the systemd directory:
-
-```bash
-sudo mv cosmovisor.service /lib/systemd/system/cosmovisor.service
-```
-
-## Start Terp-Core Service
-
-Reload and start the service:
-
-```bash
-sudo systemctl daemon-reload
-systemctl restart systemd-journald
-sudo systemctl start cosmovisor
-```
-
-Check the status of the service:
-
-```bash
-sudo systemctl status cosmovisor
-```
-
-To see live logs of the service:
-
-```bash
-journalctl -u cosmovisor -f
-```
-
+It is recommended that you encrypt the backup of these files.

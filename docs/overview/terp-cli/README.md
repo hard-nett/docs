@@ -3,7 +3,7 @@ title: Terp-CLI
 sidebar_position: 1
 ---
 
-# Terp-Core Command Line Interface (TerpCLI)
+# Terp-Core Command Line Interface (Terpd)
 
 `terpd` is the all-in-one command-line interface (CLI). It allows you to run an Terp node, manage wallets and interact with the Terp Network through queries and transactions. This introduction will explain how to install the terpd binary onto your system and guide you through some simple examples how to use terpd.
 

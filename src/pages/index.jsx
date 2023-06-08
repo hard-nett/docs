@@ -53,7 +53,7 @@ export default function Homepage() {
             <Card
               title="How to Interact with Terp-Core"
               description="Learn about how to swap, provide liquidity and more."
-              to="/overview/getting-started"
+              to="/overview"
             />
             <Card
               title="TERP & THIOL"
@@ -66,17 +66,17 @@ export default function Homepage() {
             <Card
               title="Governance Basics"
               description="Fundamental starting point for understanding Governance."
-              to="/governance/"
+              to="/overview/governance/"
             />
             <Card
               title="Governance Proposal Resources"
               description="Learn about the Proposal Framework, workflow for broacasting proposals, and more! "
-              to="/governance/proposals"
+              to="/overview/governance/proposals"
             />
             <Card
               title="DAOs & subDAOs"
               description="Learn how smart contract DAO's are being used to set up optimal methods of collaboration."
-              to="/daos/subdaos"
+              to="/overview/daos/subdaos"
             />
           </Section>
           
