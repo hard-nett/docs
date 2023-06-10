@@ -35,7 +35,7 @@ Install the current version of node binary.
 ```bash
 git clone https://github.com/terpnetwork/terp-core terp-core
 cd terp-core
-git checkout v1.0.1
+git checkout barberry
 make install
 ```
 ## Configure Node 

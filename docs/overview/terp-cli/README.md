@@ -10,7 +10,7 @@ sidebar_position: 1
 ## Prerequisites 
 
 ### Go
-Terp Core is build using Go verison 1.20+. Check your version with:
+Terp Core is build using Go verison 1.19+. Check your version with:
 ```
 go verison
 ```
@@ -30,7 +30,7 @@ sudo apt install -y curl git jq lz4 build-essential unzip
 ```
 git clone https://github.com/terpnetwork/terp-core.git
 cd terp-core || return
-git checkout v1.0.1
+git checkout barberry
 make install
 terpd version # 1.0.1
 ```

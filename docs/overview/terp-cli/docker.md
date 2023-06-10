@@ -16,7 +16,7 @@ There are multiple ways to use Terp-Core with Docker. If you want to run Terp-Co
 In order to build Terp-Core binaries with Heighliner, it is necessary to
 - Have go installed.
 - Clone the heighliner repository to your local machine (e.g. `git clone https://github.com/strangelove-ventures/heighliner`)
-- Checkout the commit, branch, or release tag you want to build for Terp Network  (e.g. `terpnetwork/v1.0.1`)
+- Checkout the commit, branch, or release tag you want to build for Terp Network  (e.g. `terpnetwork/barberry`)
 
 ## Building A Docker Image 
 
@@ -26,11 +26,11 @@ go download
 ```
 ### Build a docker image & save it locally 
 ```
-./heighliner build -c terpnetwork --git-ref v1.0.1
+./heighliner build -c terpnetwork --git-ref barberry
 ```
-This will create an image with the name `terpnetwork/terp-core` and the version tag `v1.0.1`. Now it is possible to run the `terpd` binary in the container, e.g. evaluating its version: 
+This will create an image with the name `terpnetwork/terp-core` and the version tag `barberry`. Now it is possible to run the `terpd` binary in the container, e.g. evaluating its version: 
 ```
-docker run -it --rm terpnetwork/terp-core:v1.0.1 terpd version
+docker run -it --rm terpnetwork/terp-core:barberry terpd version
 ```
 
 
