@@ -85,7 +85,7 @@ terpd tx bank send \
     5000000upersyx \
     --gas=200000 \
     --fees=1000000upersyx \
-    --chain-id=athena-4 \
+    --chain-id=90u-1 \
     --generate-only > unsignedTx.json
 ```
 
@@ -140,7 +140,7 @@ terpd tx sign \
     --multisig=terp1e0fx0q9meawrcq7fmma9x60gk35lpr4xk3884m \
     --from=test1 \
     --output-document=test1sig.json \
-    --chain-id=athena-4
+    --chain-id=90u-1
 ```
 
 ```sh
@@ -149,7 +149,7 @@ terpd tx sign \
     --multisig=terp1e0fx0q9meawrcq7fmma9x60gk35lpr4xk3884m \
     --from=test2 \
     --output-document=test2sig.json \
-    --chain-id=athena-4
+    --chain-id=90u-1
 ```
 
 ### Step 4: Create multisignature
@@ -162,7 +162,7 @@ terpd tx multisign \
     multi \
     test1sig.json test2sig.json \
     --output-document=signedTx.json \
-    --chain-id=athena-4
+    --chain-id=90u-1
 ```
 
 The TX is now signed:
@@ -254,6 +254,6 @@ The TX is now signed:
 
 ```sh
 terpd tx broadcast signedTx.json \
-    --chain-id=athena-4 \
+    --chain-id=90u-1 \
     --broadcast-mode=block
 ```

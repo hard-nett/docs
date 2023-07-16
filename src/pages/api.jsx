@@ -8,7 +8,6 @@ import clsx from 'clsx';
 
 import useBreakpoint from '../lib/useBreakpoint';
 import SectionsMenu from '../components/SectionsMenu';
-import RunInPostmanButton from '../components/RunInPostmanButton';
 
 const API_TOOLTIP_KEY = 'dyte-api-v2-tooltip-shown';
 

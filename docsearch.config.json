@@ -43,6 +43,16 @@
       "tags": "overview",
       "selectors_key": "overview"
     },
+    {
+      "url": "https://docs.terp.network/governance",
+      "tags": "governance",
+      "selectors_key": "governance"
+    },
+    {
+      "url": "https://docs.terp.network/daos",
+      "tags": "daos",
+      "selectors_key": "daos"
+    },
     "https://docs.terp.network"
   ],
   "stop_urls": [],

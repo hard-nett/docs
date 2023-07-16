@@ -1,14 +1,19 @@
+---
+sidebar_position: 4
+---
+
+
 # Validating On Testnet
 
 ## Install Go and Cosmovisor
 Feel free to skip this step if you already have Go and Cosmovisor.
 
 #### Install Go 
-We will use Go `v1.19.2` as example here. The code below also cleanly removes any previous Go installation.
+We will use Go `v1.20.3` as example here. The code below also cleanly removes any previous Go installation.
 ```bash
 sudo rm -rvf /usr/local/go/
-wget https://golang.org/dl/go1.19.2.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.19.2.linux-amd64.tar.gz
+wget https://golang.org/dl/go1.20.3.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.20.3.linux-amd64.tar.gz
 rm go1.19.3.linux-amd64.tar.gz
 ```
 #### Configure Go 
@@ -30,19 +35,18 @@ Install the current version of node binary.
 ```bash
 git clone https://github.com/terpnetwork/terp-core terp-core
 cd terp-core
-git checkout v0.4.0
+git checkout barberry
 make install
 ```
 ## Configure Node 
 #### Initialize Node
 Please replace `YOUR_MONIKER` with your own moniker.
 ```bash
-terpd init YOUR_MONIKER --chain-id athena-4
-```
+terpd init YOUR_MONIKER --chain-id 90u-1
 #### Download Genesis
  The best practice is to find the official genesis download link.
  ```bash
-wget -O genesis.json https://raw.githubusercontent.com/terpnetwork/test-net/master/athena-4/genesis.json 
+wget -O genesis.json https://raw.githubusercontent.com/terpnetwork/test-net/master/90u-1/genesis.json 
 mv genesis.json ~/.terp/config/
  ```
 #### Configure Seed
@@ -88,16 +92,6 @@ Environment="UNSAFE_SKIP_BACKUP=true"
 [Install]
 WantedBy=multi-user.target
 ```
-#### Download Snapshot
-[Highstakes Validators](https://highstakes.ch/) has provided us with a daily snapshot to quickly catch up your new node to the latest block height. Below are instructions to fetch a snapshot of the test network
-```bash
-wget https://tools.highstakes.ch/files/terp.tar.gz
-```
-extract to `~/.terp`:
-```
-tar -xvf terp.tar.gz -C ~/.terp
-```
-
 ### Start Node Service
 ```bash
 systemctl daemon-reload

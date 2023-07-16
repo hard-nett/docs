@@ -1,5 +1,5 @@
 # Cosmwasm testnet deployment
-The following is a quick guide that shows the basics of deploying a contract to a Terp Network Testnet (`athena-4`). It covers:
+The following is a quick guide that shows the basics of deploying a contract to a Terp Network Testnet (`90u-1`). It covers:
 
 - Initial Setup
     - Setup Rust
@@ -26,7 +26,7 @@ Please note this a detailed guide on how to deploy via `terpd`, it also covers a
 
 ## Initial Setup
 
-This tutorial uses a Terp-Core specific development tools to deploy contracts to Ter Testnet(`athena-4`).
+This tutorial uses a Terp-Core specific development tools to deploy contracts to Ter Testnet(`90u-1`).
 
 ### Setup Rust
 

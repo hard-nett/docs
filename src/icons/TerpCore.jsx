@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export default function ReactIcon(props) {
+export default function ReactIcon() {
   return (
 <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" width="520" height="520">
 	<title>Terp-DAO-Back-Text</title>

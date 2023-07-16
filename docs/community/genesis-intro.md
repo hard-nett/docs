@@ -1,3 +1,7 @@
+---
+title: "Governance Basics"
+sidebar_position: 2
+---
 # Governance
 Governance exists for the community of token holders to decide on key issues involving the blockchain and its development. This is achieved by proposing items of business to be voted on by the token holders.
 ## Voting

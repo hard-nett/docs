@@ -6,7 +6,7 @@ These following API's are recommended for development purposes. For maximum cont
 
 | Network | Mainnet | Testnet | Docs |
 | -------- | -------- | -------- | -------- | 
-| **Chain ID**  | TBD | athena-4 |
+| **Chain ID**  | morocco-1 | 90u-1 |
 | **gRPC endpoint**  | TBD | TBD |
 | **gRPC-gateway**  | TBD  | TBD |
 | **RPC API Reference**    | TBD | [API Reference](/api) |

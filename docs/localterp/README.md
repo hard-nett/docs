@@ -10,7 +10,7 @@ sidebar_position: 1
 
 ```
 git clone https://github.com/terpnetwork/terp-core.git
-cd osmosis
+cd teerp-core
 ```
 
 ### Run LocalTerp
@@ -22,7 +22,7 @@ make localnet-build
 ### Advanced options
 
 - [Test local Terp-Core core changes](./test-local-changes.md)
-- [Run local Terp-Core with a copy of main state](./local-osmosis-mainstate.md)
+- [Run local Terp-Core with a copy of main state](./local-terp-mainstate.md)
 
 ## Accounts
 

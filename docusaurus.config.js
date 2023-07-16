@@ -147,13 +147,13 @@ const config = {
             activeBaseRegex: '(.*ui-kit|.*web-core)',
           },
           {
-            label: 'Validate',
-            to: 'overview/validate',
+            label: 'Terp-CLI',
+            to: 'overview/terp-cli',
             position: 'left',
           },
           {
-          label: 'Genesis Launch',
-          to: 'overview/genesis-prep',
+          label: 'Governance',
+          to: 'overview/governance',
           position: 'left',
           className: 'new-badge'
           },

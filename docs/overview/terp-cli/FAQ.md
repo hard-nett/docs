@@ -1,4 +1,4 @@
-# Validator FAQ 
+# Node & Validator FAQ 
 
 ## General Concepts 
 

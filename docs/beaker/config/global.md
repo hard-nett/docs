@@ -147,7 +147,7 @@ grpc_endpoint = 'http://localhost:9090'
 rpc_endpoint = 'http://localhost:26657'
 
 [networks.testnet]
-chain_id = 'athena-4'
+chain_id = '90u-1'
 network_variant = 'Shared'
 grpc_endpoint = 'https://grpc-terp.zenchainlabs.io:443/'
 rpc_endpoint = 'https://rpc-terp.zenchainlabs.io:443/'

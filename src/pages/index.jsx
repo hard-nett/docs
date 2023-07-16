@@ -9,12 +9,9 @@ import {
 } from '../components/HomepageComponents';
 import {
   APIReferenceIcon,
-  TerminalIcon,
   IDEIcon,
   ModulesIcon,
-  RelayerIcon,
   AssetIcon,
-  Telescope,
   Terpjs,
   Createapp,
   Cosmoskit,
@@ -24,7 +21,6 @@ import {
   TerpCore,
   Contribute,
 } from '../icons';
-import GuidesSection from '../components/GuidesSection';
 
 export default function Homepage() {
   const router = useHistory();
@@ -48,23 +44,42 @@ export default function Homepage() {
 
 
 
-          <Section title="Learn about Terp-Core">
+          <Section title="Terp-Core">
             <Card
               title="What is Terp-Core?"
               description="Introduction to Terp-Core & its ecosystem."
               to="/overview/"
             />
             <Card
-              title="How to Interact with Terp Core"
+              title="How to Interact with Terp-Core"
               description="Learn about how to swap, provide liquidity and more."
-              to="/overview/getting-started"
+              to="/overview"
             />
             <Card
-              title="The Terp Token"
-              description="The TERP token is a governance token that allows staked token holders to decide the future of the protocol, including every implementation detail. "
+              title="TERP & THIOL"
+              description="The native tokens of Terp Network"
               to="/overview/terp-and-persy"
             />
           </Section>
+
+          <Section title="Community Governance">
+            <Card
+              title="Governance Basics"
+              description="Fundamental starting point for understanding Governance."
+              to="/overview/governance/"
+            />
+            <Card
+              title="Governance Proposal Resources"
+              description="Learn about the Proposal Framework, workflow for broacasting proposals, and more! "
+              to="/overview/governance/proposals"
+            />
+            <Card
+              title="DAOs & subDAOs"
+              description="Learn how smart contract DAO's are being used to set up optimal methods of collaboration."
+              to="/overview/daos/subdaos"
+            />
+          </Section>
+          
 
           <Section title="Developers" id="web-sdks" hasSubSections>
             <Section

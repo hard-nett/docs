@@ -21,7 +21,7 @@ grpc_endpoint = 'http://localhost:9090'
 rpc_endpoint = 'http://localhost:26657'
 
 [networks.testnet]
-chain_id = 'athena-4'
+chain_id = '90u-1'
 network_variant = 'Shared'
 grpc_endpoint = 'https://grpc-test.terp.network:9090'
 rpc_endpoint = 'https://rpc-test.terp.network'

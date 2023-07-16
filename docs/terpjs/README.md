@@ -69,12 +69,12 @@ const fee = {
 
 ### Initializing the Stargate Client
 
-Use `getSigningTerpClient` to get your `SigningStargateClient`, with the Terp-Core proto/amino messages full-loaded. No need to manually add amino types, just require and initialize the client:
+Use `getSigningTerpdent` to get your `SigningStargateClient`, with the Terp-Core proto/amino messages full-loaded. No need to manually add amino types, just require and initialize the client:
 
 ```js
-import { getSigningTerpClient } from 'terpjs';
+import { getSigningTerpdent } from 'terpjs';
 
-const client = await getSigningTerpClient({
+const client = await getSigningTerpdent({
   rpcEndpoint,
   signer // OfflineSigner
 });
@@ -118,7 +118,7 @@ import { signAndBroadcast } from 'terpjs';
 
 const res = await signAndBroadcast({
   client, // SigningStargateClient
-  chainId: 'terpnet-1', // use 'athena-4' for testnet
+  chainId: 'morocco-1', // use '90u-1' for testnet
   address,
   msgs: [msg],
   fee,

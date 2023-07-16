@@ -71,12 +71,12 @@ Output:
 	"chain-id": "tbd",
 	"keyring-backend": "os",
 	"output": "text",
-	"node": "http://osmosis.artifact-staking.io:26657",
+	"node": "http://rpc-terp.zenchainlabs.io:26657",
 	"broadcast-mode": "sync",
 	"grpc-concurrency": false
 }
 ```
-In this example when we install terpd as a client with the [installer](../terp-core/terpd), it connects to the `http://osmosis.artifact-staking.io:26657`. 
+In this example when we install terpd as a client with the [installer](../terp-core/terpd), it connects to the `http://rpc-terp.zenchainlabs.io:26657`. 
 
 ### Change node
 
@@ -88,7 +88,7 @@ Terp Network config node https://api-terp.zenchainlabs.io:443/
 
 ```bash
 terpd config node https://api-terp.zenchainlabs.io:443/
-terpd config chain-id athena-4
+terpd config chain-id 90u-1
 ```
 
 To add a  new account on your local keyring
