@@ -2,7 +2,7 @@
 
 These following API's are recommended for development purposes. For maximum control and reliability it's recommended to run your own node. This can be easility accomplsihed by using the get.terp.network installer. 
 
-## Official public endpoints [Link](https://github.com/terpnetwork/chain-registry)
+
 
 | Network | Mainnet | Testnet | Docs |
 | -------- | -------- | -------- | -------- | 
@@ -17,9 +17,7 @@ These following API's are recommended for development purposes. For maximum cont
 | **Faucet** | I wish 🤑   | TBD |
 
 
-### API Docs
 
-Please visit the [API reference](/api) to interact with these endpoints. 
 
 
 ## Chain Registry

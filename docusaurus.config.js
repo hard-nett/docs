@@ -36,16 +36,13 @@ function defineSection(section, options = {}) {
 }
 
 const SECTIONS = [
-  defineSection('terp-core'),
-  defineSection('localterp'),
   defineSection('networks'),
   defineSection('cosmwasm'),
-  defineSection('frontend'),
-  defineSection('beaker'),
-  defineSection('telescope'),
-  defineSection('terpjs'),
   defineSection('overview'),
   defineSection('apis'),
+  defineSection('developers'),
+  defineSection('guides'),
+  defineSection('governance'),
 ];
 
 /** @type {import('@docusaurus/types').Config} */
@@ -141,19 +138,19 @@ const config = {
           },
           {
             label: 'Develop',
-            to: 'terp-core',
+            to: 'developers',
             position: 'left',
             // className: 'new-badge',
             activeBaseRegex: '(.*ui-kit|.*web-core)',
           },
           {
-            label: 'Terp-CLI',
-            to: 'overview/terp-cli',
+            label: 'CLI',
+            to: '/developers/developer-tools/cli',
             position: 'left',
           },
           {
           label: 'Governance',
-          to: 'overview/governance',
+          to: 'governance',
           position: 'left',
           className: 'new-badge'
           },

@@ -8,9 +8,9 @@
       "selectors_key": "guides"
     },
     {
-      "url": "https://docs.terp.network/terp-core",
-      "tags": "terp-core",
-      "selectors_key": "terp-core"
+      "url": "https://docs.terp.network/nodes",
+      "tags": "validators",
+      "selectors_key": "validators"
     },
     {
       "url": "https://docs.terp.network/cosmwasm",
@@ -23,20 +23,9 @@
       "selectors_key": "localterp"
     },
     {
-      "url": "https://docs.terp.network/beaker",
-      "tags": "beaker",
-      "selectors_key": "beaker"
-    },
-
-    {
-      "url": "https://docs.terp.network/telescope",
-      "tags": "telescope",
-      "selectors_key": "telescope"
-    },
-    {
-      "url": "https://docs.terp.network/terpjs",
-      "tags": "terpjs",
-      "selectors_key": "terpjs"
+      "url": "https://docs.terp.network/developers",
+      "tags": "developer",
+      "selectors_key": "developers"
     },
     {
       "url": "https://docs.terp.network/overview",
@@ -47,6 +36,11 @@
       "url": "https://docs.terp.network/governance",
       "tags": "governance",
       "selectors_key": "governance"
+    },
+    {
+      "url": "https://docs.terp.network/telescope",
+      "tags": "telescope",
+      "selectors_key": "telescope"
     },
     {
       "url": "https://docs.terp.network/daos",
