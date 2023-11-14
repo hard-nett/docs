@@ -1,21 +1,21 @@
 /* Fonts */
 
 @font-face {
-  font-family: Inter var;
+  font-family: TWK Everett;
   font-weight: 100 900;
   font-display: block;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url(/static/fonts/Inter-roman.var.woff2) format('woff2');
+  src: url(/static/fonts/TWKEverett-Regular.woff2) format('woff2');
 }
 
 @font-face {
-  font-family: Inter var;
+  font-family: TWK Everett;
   font-weight: 100 900;
   font-display: block;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url(/static/fonts/Inter-italic.var.woff2) format('woff2');
+  src: url(/static/fonts/TWKEverett-RegularItalic.woff2) format('woff2');
 }
 
 @font-face {
@@ -67,7 +67,7 @@ body {
   --docs-color-text: #ffffff;
   --docs-color-text-100: #b4b4b4;
 
-  --docs-color-background: #161616;
+  --docs-color-background:rgba(240,130,125,0.10);
   --docs-color-background-100: #1c1c1c;
   --docs-color-background-200: #2a2a2a;
   --docs-color-background-300: #2e2e2e;

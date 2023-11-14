@@ -1,9 +1,6 @@
 ---
-title: 5. configure a node
+title: 5. configuration details
 sidebar_position: 5
----
----
-sidebar_position: 2
 ---
 
 # Configuration

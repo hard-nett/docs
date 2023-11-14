@@ -1,5 +1,5 @@
 # Joining Mainnet
-**General instructions to join the Juno mainnet after network genesis.** 
+**General instructions to join the Terp mainnet after network genesis.** 
 
 Below are multiple methods to configure a node & interact with the current test networks of Terp Network. 
 
@@ -15,7 +15,7 @@ Terp Network will go through upgrades as it matures.
 
 The first mainnet is "Morocco 1".
 
-The correct version of the binary for mainnet at genesis was `v1.0.0-stable.`
+The correct version of the binary for mainnet at genesis was `v3.1.0`
 
 Releases after genesis can be found in the mainnet repo.
 
@@ -76,7 +76,7 @@ Download the "Morocco" genesis file. The following instructions download the gen
 ```
 # Download genesis.json file
 rm ~/.terp/config/genesis.json
-curl -s https://raw.githubusercontent.com/terpnetwork/mainnet/main/morocco-1/genesis.json > $HOME/.terp/config/genesis.json
+curl -s https://raw.githubusercontent.com/terpnetwork/networks/main/mainnet/morocco-1/genesis.json> $HOME/.terp/config/genesis.json
 ```
 
 This will replace the genesis file created using terpd init command with the mainnet `genesis.json`

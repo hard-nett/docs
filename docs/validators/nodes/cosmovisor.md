@@ -1,5 +1,5 @@
 ---
-title: 6. Using Cosmovisor 
+title: 6. automation via cosmovisor
 sidebar_position: 6
 ---
 

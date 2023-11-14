@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '@theme/Layout';
-import { useHistory } from '@docusaurus/router';
-import { DyteButton } from '@dytesdk/react-ui-kit';
+// import { useHistory } from '@docusaurus/router';
 
 import {
   HomepageCard as Card,
@@ -9,25 +8,19 @@ import {
 } from '../components/HomepageComponents';
 import {
   APIReferenceIcon,
-  IDEIcon,
-  ModulesIcon,
-  AssetIcon,
   Terpjs,
-  Createapp,
-  Cosmoskit,
+  Telescope,
   Tscodegen,
-  KeysIcon,
-  Transaction,
-  TerpCore,
-  Contribute,
 } from '../icons';
 
 export default function Homepage() {
-  const router = useHistory();
+  // const router = useHistory();
 
   return (
     <Layout
-      description="The Terp Network blockchain is a decentralized network, ran by 100+ validators and full nodes, with many front-ends and development teams on it. 🚀"
+      description="Terp Network is a blockchain protocol built for ownership by community members of the cannabis culture.
+
+      "
       wrapperClassName="homepage"
     >
       <div className="pad">
@@ -35,56 +28,94 @@ export default function Homepage() {
           <div className='margin-bottom--lg'>
             <h2>Terp-Core Docs</h2>
             <p>
-            The TerpNET blockchain is a decentralized network, ran by 100+ validators and full nodes, with many front-ends and development teams on it. Explore our docs and examples to quickly learn, develop & integrate with the TerpNET blockchain.
+              Welcome! Terp network is changing the way we approach infusing nfts & cryptography within cannabis communities. Here you will find guides & resources to understanding what exact tools we have available for doing so.
             </p>
-            <DyteButton onClick={() => router.push('/terp-core/')}>
-              Get Started &rarr;
-            </DyteButton>
           </div>
 
+<Section title="Get Started">
+
+<Card
+title="Run a node"
+description="Getting started with Terp Network is simple & easy with a local node"
+to="/validators"
+icon={<Terpjs />}
+svgFile=""
+/>
+<Card
+title="Build Censorship Resistant Applications"
+description="Front End, Smart Contract, Decentralized Hosting, and so much more!"
+to="developers/"
+icon={<Tscodegen />}
+svgFile="/icons/tscodegen.svg"
+/>
+<Card
+title="Participate"
+description="Learn how to participate in governance on Terp Network."
+to="/governance"
+icon={<Telescope />}
+svgFile=""
+/>
+{/* <Card
+title="Learn About Wallet Tech "
+description="Introduction to compatible cryptographic wallets, also basic guidelines & security best practices."
+to="/overview/wallets"
+icon=""
+svgFile="/icons/bag.svg"
+/>
 
 
-          <Section title="Terp-Core">
+<Card
+title="Glossary"
+description="The npm package for the Official Cosmos chain registry"
+to="overview/terminology"
+icon={<Cosmoskit />}
+svgFile="/icons/registry.svg"
+/> */}
+
+</Section>
+
+          <Section title="Learn more about Terp Network">
             <Card
-              title="What is Terp-Core?"
-              description="Introduction to Terp-Core & its ecosystem."
+              title="Overview"
+              description="Introduction to Terp Network & its ecosystem."
               to="/overview/"
             />
             <Card
-              title="How to Interact with Terp-Core"
-              description="Learn about how to swap, provide liquidity and more."
-              to="/overview"
+              title="Guides"
+              description="Learn about how to configure nodes, interact with smart contracts, and more."
+              to="/guides"
             />
             <Card
               title="TERP & THIOL"
-              description="The native tokens of Terp Network"
-              to="/overview/terp-and-persy"
+              description="The native tokens of Terp Network."
+              to="/overview/terp-and-thiol"
             />
           </Section>
 
-          <Section title="Community Governance">
+          <Section title="Participate">
             <Card
               title="Governance Basics"
-              description="Fundamental starting point for understanding Governance."
-              to="/overview/governance/"
+              description="Discover what and how you, as a community member, make the difference."
+              to="/governance/"
             />
             <Card
               title="Governance Proposal Resources"
-              description="Learn about the Proposal Framework, workflow for broacasting proposals, and more! "
-              to="/overview/governance/proposals"
+              description="Learn about the proposal framework - the workflow for broacasting proposals, and more! "
+              to="/governance/proposals"
             />
+
             <Card
-              title="DAOs & subDAOs"
-              description="Learn how smart contract DAO's are being used to set up optimal methods of collaboration."
-              to="/overview/daos/subdaos"
-            />
+title="DAO Tech"
+description="Learn about the ways we can utilize on chain features to self-govern"
+to="/governance/daos/subdaos"
+/>
           </Section>
           
 
-          <Section title="Developers" id="web-sdks" hasSubSections>
+          {/* <Section title="Developers" id="web-sdks" hasSubSections>
             <Section
               title="⚙️ Chain Development"
-              id="core-sdks"
+              id="terp-core-sdks"
               HeadingTag="h4"
               description={
                 <>
@@ -148,10 +179,12 @@ export default function Homepage() {
   />
 
             </Section>
-          </Section>
+          </Section> */}
 
-    
-   <Section title="Frontend Libraries & Utilities" id="front-end">
+          <Section  id="start" hasSubSections >
+</Section>
+
+   {/* <Section title="Frontend Libraries & Utilities" id="front-end">
     <Card
     title="TerpJs"
     description="Compose and broadcast Terp-Core and Cosmos messages, with all of the proto and amino encoding handled for you."
@@ -201,12 +234,12 @@ export default function Homepage() {
     svgFile="/icons/tscodegen.svg"
   />   
  
-  </Section>
+  </Section> */}
 
+{/* 
+<Section title="🛠 Tools">
 
-          <Section title="🛠 Tools">
-          
-          </Section>
+</Section> */}
 
           <Section title="📜 API Reference">
             <Card

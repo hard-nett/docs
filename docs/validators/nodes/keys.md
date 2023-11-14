@@ -1,5 +1,5 @@
 ---
-title: 4. set up the nodes's Keys
+title: 4. managing key's
 sidebar_position: 4
 ---
 
