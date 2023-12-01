@@ -1,0 +1,7 @@
+{
+  "label": "d. relay via IBC",
+  "position": 5,
+  "link": {
+    "type": "generated-index"
+  }
+}

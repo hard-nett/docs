@@ -36,22 +36,20 @@ function defineSection(section, options = {}) {
 }
 
 const SECTIONS = [
-  defineSection('terp-core'),
-  defineSection('localterp'),
-  defineSection('networks'),
-  defineSection('cosmwasm'),
-  defineSection('frontend'),
-  defineSection('beaker'),
-  defineSection('telescope'),
-  defineSection('terpjs'),
-  defineSection('overview'),
   defineSection('apis'),
+  defineSection('cosmwasm'),
+  defineSection('developers'),
+  defineSection('guides'),
+  defineSection('governance'),
+  defineSection('networks'),
+  defineSection('overview'),
+  defineSection('validators'),
 ];
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Terp-Core Docs',
-  tagline: 'Build on the leading decentralized Cosmos exchange. 🚀',
+  tagline: 'Build with the latest innovations in sovieregn, distributed blockchain ecosystems.',
   // TODO: Update base url
   url: 'https://docs.terp.network',
   baseUrl: '/',
@@ -140,27 +138,31 @@ const config = {
             position: 'left',
           },
           {
+            label: 'Interact',
+            to: '/developers/developer-tools/cli',
+            position: 'left',
+          },
+          {
+            label: 'Validate',
+            to: '/validators',
+            position: 'left',
+          },
+          {
             label: 'Develop',
-            to: 'terp-core',
+            to: '/developers',
             position: 'left',
-            // className: 'new-badge',
-            activeBaseRegex: '(.*ui-kit|.*web-core)',
-          },
+            },
           {
-            label: 'Terp-CLI',
-            to: 'overview/terp-cli',
+            label: 'Participate',
+            to: '/governance',
             position: 'left',
-          },
-          {
-          label: 'Governance',
-          to: 'overview/governance',
-          position: 'left',
-          className: 'new-badge'
-          },
+            className: 'new-badge'
+            },
+    
           {
             label: 'API Reference',
             to: 'apis',
-            position: 'right',
+            position: 'left',
           },
           {
             href: 'https://github.com/terpnetwork',
@@ -254,8 +256,8 @@ const config = {
         playgroundPosition: 'bottom',
       },
       algolia: {
-        appId: '2CBDVP21VK',
-        apiKey: 'd983fd8603756b134758592e0334d240',
+        appId: 'L68SOVCZ0W',
+        apiKey: '6704a652afae825186d73d7c2141e4a7',
         indexName: 'Docs',
         contextualSearch: true,
         searchParameters: {},

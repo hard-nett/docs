@@ -1,0 +1,65 @@
+---
+title: a. welcome, developers
+sidebar_position: 1
+---
+---
+import {
+  HomepageCard as Card,
+  HomepageSection as Section,
+} from '../../src/components/HomepageComponents';
+import Link from '@docusaurus/Link';
+import {
+  ChainIcon,
+  IDEIcon,
+  TerminalIcon,
+  ModulesIcon,
+  RelayerIcon,
+  AssetIcon,
+  Terpjs,
+  Createapp,
+  Cosmoskit,
+  Tscodegen,
+  Chain
+} from '../../src/icons';
+
+# Welcome, dapp developer.
+
+Comprehensive guides & information to get started
+
+<Section title="Guides" id="frontend-guides" hasSubSections >
+<Section>
+  <Card
+  title="Getting Started"
+  description="Set up your development environment."
+  to="/cosmwasm"
+  icon=""
+  svgFile="/icons/telescope.svg"
+  />
+
+  <Card
+  title="Developer Tools"
+  description="Understand the functions of terp-cli, terpd, FAQ's, and troubleshooting."
+  to="/developers/developer-tools/introduction"
+  icon=""
+  svgFile="/icons/bag.svg"
+  />
+
+  <Card
+  title="CosmWasm Smart Contracts"
+  description="Learn how to build, deploy, and interact with custom smart contracts."
+  to="/cosmwasm"
+  icon=""
+  svgFile="/icons/cosmwasm.svg"
+  />
+  
+    <Card
+  title="Build Your First dapp"
+  description="A step-by-step guide on storing and configuring a smart contract on Terp Network."
+  to="/guides/develop/my-first-dapp"
+  icon={<Terpjs />}
+  svgFile=""
+  />
+
+  </Section>
+</Section>
+

@@ -3,9 +3,6 @@ import {
   localterp,
   Network,
   Cosmwasm,
-  Beaker,
-  Terpjs,
-  Telescope,
   Frontend,
 } from './icons';
 
@@ -22,22 +19,22 @@ const SECTIONS = [
 
   // Core Development
   {
-    name: 'Terp Core',
-    id: 'terp-core',
+    name: 'Run a Node',
+    id: 'validators',
     icon: TerpCore,
-    section: 'core-sdk',
+    section: 'validators',
   },
   {
     name: 'Local Terp',
     id: 'localterp',
     icon: localterp,
-    section: 'core-sdk',
+    section: 'terp-core-sdk',
   },
   {
     name: 'Networks',
     id: 'networks',
     icon: Network,
-    section: 'core-sdk',
+    section: 'terp-core-sdk',
   },
   //Cosmwasm
   {
@@ -46,68 +43,47 @@ const SECTIONS = [
     icon: Cosmwasm,
     section: 'cosmwasm',
   },
-  {
-    name: 'Beaker',
-    id: 'beaker',
-    icon: Beaker,
-    section: 'cosmwasm',
-  },
 
   // UI SDKs
   {
-    name: 'Frontend',
-    id: 'frontend',
+    name: 'Build a Dapp',
+    id: 'developers',
     icon: Frontend,
-    section: 'frontend',
+    section: 'developers',
   },
-  {
-    name: 'TerpJS',
-    id: 'terpjs',
-    icon: Terpjs,
-    section: 'frontend',
-  },
-  {
-    name: 'Telescope',
-    id: 'telescope',
-    icon: Telescope,
-    section: 'frontend',
-  },
+
+
 
 ];
 
 const MULTI_SECTIONS = [
   [
     {
-      name: 'Terp Core',
-      section: 'core-sdk',
-      description: 'Terp Network Chain Development documentation.',
+      name: 'Run a Node',
+      section: 'validators',
+      description: 'Connect with a node, valdidate with a validator, relay with a relayer.',
     },
     {
-      name: 'CosmWasm',
+      name: 'Develop ',
+      section: 'developers',
+      description:
+        'Libraries & UI components to build on top of Terp Network.',
+    },
+    {
+      name: 'Develop - CosmWasm',
       section: 'cosmwasm',
       description:
         'Building and interacting with Smart contracts on Terp Network.',
-    },
-    {
-      name: 'Frontend & SDKs',
-      section: 'frontend',
-      description:
-        'Libraries & UI components to build on top of Terp-Core.',
     }
-
   ],
   [
     {
       name: 'Terp Core',
-      section: 'mobile-core',
+      section: 'terp-core',
       isNew: true,
       description: 'Terp Core Chain Development documentation.',
     },
-    {
-      name: 'Prebuilt SDK',
-      section: 'mobile-sdk',
-      description: 'Use our pre-built mobile SDK, ready to go',
-    }
+
   ]
 ];
 

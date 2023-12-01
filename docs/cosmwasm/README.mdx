@@ -1,5 +1,5 @@
 ---
-title: Cosmwasm
+title: A. Cosmwasm
 sidebar_position: 1
 ---
 ---
@@ -17,53 +17,27 @@ import {
   AssetIcon,
   KeysIcon,
   Cosmwasm,
-  Beaker,
   localterp,
   Terpjs,
 } from '../../src/icons';
 
-# Smart Contracts Development
+# CosmWasm - Smart Contracts
 
-The following are a collection of guides on how to build and deploy CosmWasm smart contracts on the Terp Network blockchain. Please note that a user can deploy contracts with tools such as Beaker or directly with the Terpd binary via CLI. 
+## What is cosmwasm?
 
-<Section title="Guides" id="web-sdks" hasSubSections >
+CosmWasm is a smart contract platform written as a module that can be integrated into any blockchain built on top of the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk). In simple terms, it is the Cosmos (Cosm) way of utilizing WebAssembly (Wasm), hence its name.
 
-   <Section>
-    <Card
-    title="CosmWasm on localterp"
-    description=" Compile, upload and interact with a contract with localterp."
-    to="/cosmwasm/local/localterp"
-    icon={<Cosmwasm />}
-  />
-    <Card
-    title=" Deploy Cosmwasm Contracts to Testnet"
-    description=" Deploying contracts to testnet via terpd binary"
-    to="/cosmwasm/testnet/cosmwasm-deployment"
-    icon={<Cosmwasm />}
-  />
-    <Card
-    title=" Submit a CosmWasm Governance Proposal"
-    description="  Example on how submit a CosmWasm binary proposal."
-    to="/cosmwasm/local/submit-wasm-proposal"
-    icon={<Cosmwasm />}
-  />
-    <Card
-    title=" Deploy Cosmwasm Contracts to Testnet with Beaker"
-    description=" Deploying contracts to testnet with Beaker"
-    to="/cosmwasm/testnet/cosmwasm-beaker"
-    icon={<Cosmwasm />}
-  />
- 
-  <Card
-    title="Verifying Smart Contracts"
-    description=" Download contract and verify the hash."
-    to="/cosmwasm/cosmwasm-verify-contract"
-    icon={<Cosmwasm />}
-  />
- 
-  </Section>
+[Rust](https://www.rust-lang.org/) is currently the most widely used programming language for CosmWasm. In the future, other programming languages, such as Go, may also be utilized. Read CosmWasm’s launch article [here](https://blog.cosmos.network/announcing-the-launch-of-cosmwasm-cc426ab88e12).
 
-  </Section>
+## Sections
+
+- **[Getting Started](/cosmwasm/getting-started)**
+
+- **[Architecture](/cosmwasm/architecture/multi-chain-contracts)**
+
+- **[Tutorials](../guides/cosmwasm)**
+
+- **[Cosmwasm Specs](/cosmwasm/smart-contracts/semantics)**
 
 
 <Section title="Resources" id="web-sdks" hasSubSections >
@@ -75,67 +49,51 @@ The following are a collection of guides on how to build and deploy CosmWasm sma
     icon={<Cosmwasm />}
   />
     <Card
-    title="Your first contract"
-    description=" Official CosmWasm Documentation"
-    to="https://docs.cosmwasm.com/docs/1.0/getting-started/intro"
+    title="CosmWasm - Zero to Hero"
+    description=" Learn Cosmwasm from Zero to Hero "
+    to="https://github.com/Callum-A/cosmwasm-zero-to-hero"
+    icon={<Cosmwasm />}
+  />
+      <Card
+    title="CosmWasm - Area 52"
+    description=" Cosmwasm focused tutorial series "
+    to="https://github.com/Callum-A/cosmwasm-zero-to-hero"
     icon={<Cosmwasm />}
   />
     </Section>
   </Section>
 
 
-<Section title="Front-end Development" id="web-sdks" hasSubSections >
+<Section title="Guides" id="web-sdks" hasSubSections >
+
    <Section>
     <Card
-    title=" Cosmwasm & Javascript"
-    description="Interacting via JavaScript runtimes such as Node.js and the browser."
-    to="/cosmwasm/javascript"
+    title="CosmWasm on Terp-Core Locally"
+    description=" Compile, upload and interact with a contract with terp-core locally."
+    to="/cosmwasm/local/localterp"
     icon={<Cosmwasm />}
   />
-    </Section>
-  </Section>
-
-
-<Section title="Tools" id="web-sdks" hasSubSections >
-   <Section>
     <Card
-    title="Beaker"
-    description="Easy to scaffold a new cosmwasm app."
-    to="/beaker"
-    icon={<Beaker />}
+    title=" Deploy Cosmwasm Contracts to Testnet"
+    description=" Deploying contracts to testnet via terpd binary"
+    to="/cosmwasm/testnet/deployment-and-interaction"
+    icon={<Cosmwasm />}
   />
     <Card
-    title="localterp"
-    description="Run Terp Network locally"
-    to="/localterp"
-    icon={<localterp />}
+    title=" Submit a CosmWasm Governance Proposal"
+    description="  Example on how submit a CosmWasm binary proposal."
+    to="/cosmwasm/mainnet/submit-wasm-proposal"
+    icon={<Cosmwasm />}
   />
-<Card
-    title="OsmoJs"
-    description="Terp-Core JS Stargate Client"
-    to="/terpjs"
-    icon={<Terpjs />}
+
+  <Card
+    title="Verifying Smart Contracts"
+    description=" Download contract and verify the hash."
+    to="/cosmwasm/smart-contracts/verify"
+    icon={<Cosmwasm />}
   />
-    </Section>
-  </Section>
  
+  </Section>
 
+  </Section>
 
-<Section title="Networks" id="web-sdks" hasSubSections >
-   <Section>
-    <Card
-    title="Public endpoints"
-    description="Official and third party API endpoints."
-    to="/networks"
-    icon={<KeysIcon />}
-  />
-
-<Card
-    title="Explorers"
-    description="Block and contract explorers"
-    to="/networks/explorers"
-    icon={<KeysIcon />}
-  />
-
-</Section>
-</Section>

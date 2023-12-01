@@ -8,9 +8,9 @@
       "selectors_key": "guides"
     },
     {
-      "url": "https://docs.terp.network/terp-core",
-      "tags": "terp-core",
-      "selectors_key": "terp-core"
+      "url": "https://docs.terp.network/nodes",
+      "tags": "validators",
+      "selectors_key": "validators"
     },
     {
       "url": "https://docs.terp.network/cosmwasm",
@@ -18,25 +18,9 @@
       "selectors_key": "cosmwasm"
     },
     {
-      "url": "https://docs.terp.network/localterp",
-      "tags": "localterp",
-      "selectors_key": "localterp"
-    },
-    {
-      "url": "https://docs.terp.network/beaker",
-      "tags": "beaker",
-      "selectors_key": "beaker"
-    },
-
-    {
-      "url": "https://docs.terp.network/telescope",
-      "tags": "telescope",
-      "selectors_key": "telescope"
-    },
-    {
-      "url": "https://docs.terp.network/terpjs",
-      "tags": "terpjs",
-      "selectors_key": "terpjs"
+      "url": "https://docs.terp.network/developers",
+      "tags": "developer",
+      "selectors_key": "developers"
     },
     {
       "url": "https://docs.terp.network/overview",
@@ -86,6 +70,20 @@
       "lvl6": "article h6",
       "text": "article p, article li, article td:last-child"
     },
+    "validators": {
+      "lvl0": {
+        "selector": "",
+        "global": true,
+        "default_value": "Validators"
+      },
+      "lvl1": "article h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
     "localterp": {
       "lvl0": {
         "selector": "",
@@ -100,48 +98,8 @@
       "lvl6": "article h6",
       "text": "article p, article li, article td:last-child"
     },
-    "beaker": {
-      "lvl0": {
-        "selector": "",
-        "global": true,
-        "default_value": "Beaker"
-      },
-      "lvl1": "article h1",
-      "lvl2": "article h2",
-      "lvl3": "article h3",
-      "lvl4": "article h4",
-      "lvl5": "article h5, article td:first-child",
-      "lvl6": "article h6",
-      "text": "article p, article li, article td:last-child"
-    },
-    "telescope": {
-      "lvl0": {
-        "selector": "",
-        "global": true,
-        "default_value": "telescope"
-      },
-      "lvl1": "article h1",
-      "lvl2": "article h2",
-      "lvl3": "article h3",
-      "lvl4": "article h4",
-      "lvl5": "article h5, article td:first-child",
-      "lvl6": "article h6",
-      "text": "article p, article li, article td:last-child"
-    },
-    "terpjs": {
-      "lvl0": {
-        "selector": "",
-        "global": true,
-        "default_value": "terpjs"
-      },
-      "lvl1": "article h1",
-      "lvl2": "article h2",
-      "lvl3": "article h3",
-      "lvl4": "article h4",
-      "lvl5": "article h5, article td:first-child",
-      "lvl6": "article h6",
-      "text": "article p, article li, article td:last-child"
-    },
+
+
     "overview": {
       "lvl0": {
         "selector": "",

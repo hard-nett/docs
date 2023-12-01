@@ -1,5 +1,5 @@
 ---
-title: Lets Get Terpd up!
+title: Overview 
 sidebar_position: 1
 ---
 ---
@@ -15,7 +15,6 @@ import {
   ModulesIcon,
   RelayerIcon,
   AssetIcon,
-  Telescope,
   Terpjs,
   Createapp,
   Cosmoskit,
@@ -23,10 +22,7 @@ import {
   Chain
 } from '../../src/icons';
 
-# General Categories
-
-
-
+### Discover why and how to build, run a node, and participate on Terp Network, the smart contract platform being built for the culture.
 
 
 <Section  id="start" hasSubSections >
@@ -34,31 +30,32 @@ import {
    <Section>
    
      <Card
-    title="Launch your Local Node"
+    title="Run a node"
     description="Getting started with Terp Network is simple & easy with a local node"
-    to="/networks/single-node"
+    to="/validators/"
     icon={<Terpjs />}
     svgFile=""
   />
+  <Card
+    title="Build Censorship Resistant Applications"
+    description="Front End, Smart Contract, Decentralized Hosting, and so much more!"
+    to="/developers"
+    icon={<Tscodegen />}
+    svgFile="/icons/tscodegen.svg"
+  />
 
   <Card
-    title="Learn about Wallet Tech "
+    title="Learn About Wallet Tech "
     description="Introduction to compatible cryptographic wallets, also basic guidelines & security best practices."
-    to="/overview/wallets"
+    to="/guides/wallets"
     icon=""
     svgFile="/icons/bag.svg"
   />
+
   <Card
-    title="Community Protocol Governance"
-    description="Learn how to participate in governance on Terp Network."
-    to="/overview/governance"
-    icon={<Telescope />}
-    svgFile=""
-  />
-  <Card
-    title="DAO Tech on Terp Network"
+    title="DAO Tech"
     description="Learn about the ways we can utilize on chain features to self-govern"
-    to="/overview/daos/subdaos"
+    to="/governance/daos/subdaos"
     icon={<Createapp />}
     svgFile="/icons/create-cosmos-app.svg"
   />
@@ -69,70 +66,65 @@ import {
     icon={<Cosmoskit />}
     svgFile="/icons/registry.svg"
   />
-  <Card
-    title="Build Censorship Resistant Applications"
-    description="Front End, Smart Contract, Decentralized Hosting, and so much more!"
-    to="frontend/"
-    icon={<Tscodegen />}
-    svgFile="/icons/tscodegen.svg"
-  />   
+   
   </Section>
 
 
-## Getting Started
+# About Terp Network
 
-Anyone can use interchain applications via Terp Network. If this is your first time learning about Terp Network, please take a look at the following introduction to concepts that should help you understand how to navigate and get started with Terp Network in a way that serves you best:
+Terp Network is a blockchain protocol built for ownership by community members of the cannabis culture. 
 
-## What you will need 
-- An internet connection 
-- A Cryptocurrency wallet 
+The protocol provides its users and developers with the tools to build & launch scalable, hyperfocused dapps and recieve rewards for the value that the dApps contribute to the network.
 
-## What you might want 
-- A VPN or sentry node solution 
-- A hardware/cold-wallet
+# The Terp Mission
 
-## Why do I need a cryptocurrency wallet?
-Terp Network is compatible with a growing number of cryptocurrency wallets. These wallets are your Keys to EVERYTHING that you do on a blockchain. Whether it is to send tokens to grandma, or providing a unique cryptographic signature in a on chain buisness agreement, your cryptocurrency wallet allows you to manage these functions. 
+The broad goal of Terp Network is to foster innovation & adoption of sovereign applications that empower and reward cannabis community members for participating in the network. 
 
-This is why it is extremely important to take precautionary measures to keep your private keys extremely secure (the thing that gives you your access to your wallet)
-
-**Check out [this FAQ](../overview/wallets/saftey.md) to learn more saftey practices for crypto wallets** 
-
-## Cryptocurrency wallet?
-
-Currently terp network is tested & confirmed compatible with:
-- [Keplr](https://keplr.app) 
-- [Ledger](https://www.ledger.com/) 
-
-Upcoming support for:
-- [Cosmosstation](https://www.cosmostation.io/) 
-- [Trezor](https://trezor.io/) 
-- [Leap Wallet](https://www.leapwallet.io/) 
-- Other Interchain Wallets 
-- Other Hardware wallets
-
-##  Internet Connection?
-
-If you are reading this, you are good to go! Anyone is able to broadcast messages (AKA transactions) through an internet connection to a node on Terp Network. This can happen via **[web applications](https://en.wikipedia.org/wiki/Web_application)** that are built by community members, which route messages to an active node on the network, or even manually with the terp-cores CLI (command-line interface)
-
-## How to Interact With Terp Network
-
-### New Terp Users
-- [Permissionlessly Interact With Applications](https://terp.network/ecosystem)
-- [Staking & Governance](governance.md)
-- [Community Events](https://zealy.io/c/terpnetwork/questboard)
-- [Learning Portal](https://zealy.io/c/terpnetwork/questboard)
-- [DAO Participation](../overview/genesis-prep/daos/README.md)
-### Intermediary & Expert Terp Users
-- [Interact with Applications](https://terp.network/ecosystem)
-- [Staking & Governance](governance.md)
-- [Run a Node Validator or Relayer](../overview/validate/FAQ.md)
-- [Dao Participation](../overview/genesis-prep/daos/README.md)
-- [Develop your own application](../frontend/)
-- [Contribute to Terp-Core binary development](../terp-core/build.md)
+The last 10 years has included a dramatic shift in the landscape of cannabis industries. The mission of Terp Network is to ensure that the pioneering cannabis communities continue to have undoubtable access & sovereignty to shaping how we collaborate with each other in a techological world.
 
 
 
+# Architectural Overview
+
+Terp Network is a Cosmos SDK blockchain powered by Comet-BFT for the networking and consensus layers. The network utilizes modified Cosmos modules to manage various functions, including:
+
+- **Minting** - Responsible for minting tokens and managing inflation.
+- **CosmWasm** - A runtime for WebAssembly Smart Contracts.
+- **Staking** - Manages changes to validators.
+- **Governance** - Supports the one-vote-per-token voting and governance system for token holders.
+- **IBC** - Inter-Blockchain Communication protocol that enables asset transfers across Cosmos blockchains.
+
+In addition to using the predefined Cosmos modules, Terp Network employs custom modules for additional network features:
+
+- **Feeshare** - This module shares contract execution fees with the smart contract developers, creating additional layers of potential revenue streams for teams & smart contract deployers.
+- **Global Fee** - A module that sets a minimum fee across all transactions. 
+- **IBChooks** - This module allows incoming token transfers to call a function on any smart contract.
+- **Tokenfactory** - The tokenfactory module allows any account to create a new native denom. 
+
+# Smart Contracts
+The Terp Network protocol uses CosmWasm, WebAssembly (Wasm), Go, and Rust. Over 40 high-level programming languages support Wasm, including C and C++, TypeScript, Python, and Java.
+
+# Economic Overview
+With Terp Network, dapps can earn a portion of transaction fees in exchange for their contributions to the network.
+This earning model is similar to how validators are rewarded for operating nodes in a typical Proof-of-Stake (PoS) chain.
+
+
+Terp Network allows each dapp developer and their community to configure how rewards are managed and distributed. 
+When a contract is instantiated, the dapp creator specifies an **owner** address where all fees and rewards are automatically deposited. 
+This target address can be the creator's address, a multisig address, or an address that is controlled by a separate custom contract. Ownership can then be transferred to a new address as needed. Ownership transfer requires only the signature of the previous owner.
+
+#### Inflation
+
+The overall inflation rate on the Terp network follows the model of the <a href="https://github.com/gavinly/CosmosParametersWiki/blob/master/Mint.md" target="_blank">mint module</a> in the Cosmos Hub.
+
+The Terp Network protocol then shares a portion of these total inflation rewards directly to the community pool.
+These distribution values are configurable parameters that can be adjusted by the Terp Network community through network governance.
+
+Inflationary rewards are paid out by the network on a per-block basis.
+
+#### Smart Contract Fees
+
+Smart contract platforms today charge network fees ("gas") based on the amount of computational processing required by on-chain transactions.
+While this method of measurement works for the underlying economics of a network, it does not support use cases where a developer has to cover additional costs, such as distributed storage, access to off-chain processing, external data sources, or other premium features such as audited and insured contracts.
 
   </Section>
-

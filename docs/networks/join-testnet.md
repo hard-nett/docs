@@ -13,11 +13,11 @@ If you get stuck, then please ask on Discord.
 
 | chain-id | Current Github version tag |
 | -------- | -------------------------- |
-| 90u-2    | huckleberry                |
+| 90u-2    | v4.0.0                |
 
 ## Minimum Hardware Requirements
 
-The minimum recommended hardware requirements for running a validator for the Juno testnets are:
+The minimum recommended hardware requirements for running a validator for the Terp testnets are:
 
 | Requirements                                                                          |
 | ------------------------------------------------------------------------------------- |
@@ -63,7 +63,7 @@ MONIKER_NAME="HASHONLY 9000"
 Persistent peers will be required to tell your node where to connect to other nodes and join the network. To retrieve the peers for the chosen testnet:
 
 
-> NB: If you are unsure about this, you can ask in discord for the current peers and explicitly set them in `~/.juno/config/config.toml` instead.
+> NB: If you are unsure about this, you can ask in discord for the current peers and explicitly set them in `~/.terp/config/config.toml` instead.
 
 ### Set minimum gas prices 
 For RPC nodes and Validator nodes we recommend setting the following minimum-gas-prices. This setting will help protect against contract spam and potential wasm contract attack vectors.
@@ -71,7 +71,7 @@ For RPC nodes and Validator nodes we recommend setting the following minimum-gas
 In `$HOME/.terp/config/app.toml`, set minimum gas prices:
 ```
 # note testnet denom
-
+0.025uterpx
 ```
 
 ## Setting up the Node
@@ -95,7 +95,7 @@ This will generate the following files in `~/.terp/config/`
 
 ### Download the genesis file
 ```
-curl https://raw.githubusercontent.com/terpnetwork/test-net/main/$CHAIN_ID/genesis.json > ~/.terp/config/genesis.json
+curl https://raw.githubusercontent.com/terpnetwork/networks/main/testnet/90u-2/genesis.json > ~/.terp/config/genesis.json
 ```
 
 This will replace the genesis file created using `terpd init` command with the genesis file for the testnet.
@@ -163,7 +163,7 @@ terp tx staking create-validator \
   --moniker "$MONIKER_NAME" \
   --chain-id $CHAIN_ID \
   --gas auto\
-  --fees 30000upersyx\
+  --fees 30000uthiolx\
   --gas-adjustment 1.5
   --from <key-name>
   ```
