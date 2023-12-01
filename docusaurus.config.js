@@ -143,7 +143,7 @@ const config = {
             position: 'left',
           },
           {
-            label: 'Validate',
+            label: 'Network',
             to: '/validators',
             position: 'left',
           },

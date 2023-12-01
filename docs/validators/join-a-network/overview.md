@@ -18,35 +18,19 @@ Please visit the [API reference](/api) to interact with these endpoints.
 ```
 ### RPC
 ```
-## COMING SOON
-```
-### GRPC
-```
-## COMING SOON
-```
-### GRPC
-```
-## COMING SOON
-```
-### GRPC-Web
-```
-## COMING SOON
-```
-### LCD
-```
-## COMING SOON
+https://terp-testnet-rpc.itrocket.net:443
 ```
 ### Block Explorers
 ```
-## COMING SOON
+ITRocket - https://testnet.itrocket.net/terp/staking
 ```
 ### Genesis
 ```
-## COMING SOON
+https://raw.githubusercontent.com/terpnetwork/networks/main/testnet/90u-2/genesis.json
 ```
 ### P2P Seed
 ```
-## COMING SOON
+a6ee57fb457f71530d165afd1901d0d62cd7d7e0@terp-testnet-seed.itrocket.net:13656
 ```
 
 </TabItem>
@@ -58,31 +42,25 @@ morocco-1
 ```
 ### RPC
 ```
-## COMING SOON
+https://rpc.cosmos.directory/terpnetwork:443
+```
+### API
+```
+https://rest.cosmos.directory/terpnetwork:443
 ```
 ### GRPC
 ```
-## COMING SOON
-```
-### GRPC
-```
-## COMING SOON
-```
-### GRPC-Web
-```
-## COMING SOON
-```
-### LCD
-```
-## COMING SOON
+https://grpc.terp.nodestake.top:443
 ```
 ### Block Explorers
 ```
-## COMING SOON
+Ping.pub      - https://ping.pub/terp
+Nodestake.top - https://explorer.nodestake.top
+Zenchain Labs - https://terp.zenscan.io/
 ```
 ### Genesis
 ```
-## COMING SOON
+https://raw.githubusercontent.com/terpnetwork/networks/main/mainnet/morocco-1/genesis.json
 ```
 ### P2P Seed
 ```

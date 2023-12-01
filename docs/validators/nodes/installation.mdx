@@ -2,6 +2,9 @@
 title: 2. install a node
 sidebar_position: 2
 ---
+---
+import {MoroccoBinaryVersion, TestnetBinaryVersion} from '../../../src/client/terpd-version';
+
 
 This guide provides instructions on how various methods to install and run a full node on the Terp Network blockchain.
 
@@ -12,11 +15,11 @@ This guide provides instructions on how various methods to install and run a ful
 git clone https://github.com/terpnetwork/terp-core
 cd terp-core
 git fetch
-git checkout <version-tag>
+git checkout <verison-tag>
 ```
 The `<version-tag>` will need to be set to either a **[testnet chain-id](../../networks/join-testnet)** or the **[latest mainnet version tag](../../networks/join-mainnet)**.
 
-Do the following to build and install the terpd  daemon:
+Do the following to build and install the terpd daemon:
 
 ```bash
 cd terp-core
@@ -44,13 +47,13 @@ For Linux, depending on your architechture:
 <TabItem value="amd64" label="amd64">
 
 ```bash
-wget https://github.com/terpnetwork/terp-core/releases/download/barberry/terpd_linux_amd64
+wget https://github.com/terpnetwork/terp-core/releases/download/v4.1.0/terpd_linux_amd64
 ```
 </TabItem>
 <TabItem value="arm64" label="arm64">
 
 ```bash
-wget https://github.com/terpnetwork/terp-core/releases/download/barberry/terpd_linux_arm64
+wget https://github.com/terpnetwork/terp-core/releases/download/v4.1.0/terpd_linux_arm64
 ```
 </TabItem>
 </Tabs>
@@ -66,30 +69,29 @@ You can now verify the download by generating the sha256 hash for the downloaded
 <TabItem value="amd64" label="amd64">
 
 ```bash
-sha256sum terpd_linux_amd64
+sha256sum terpd_linux_amd64 
+// returns: 00f568aaa7b289fb2920d0051901ac07dc901873c6e71630c928644f0008ffdb
 ```
 </TabItem>
 <TabItem value="arm64" label="arm64">
 
 ```bash
 sha256sum terpd_linux_arm64
+// returns: 00eccd8d3a202f6e3611b59195da5db45e61ceecbdd55b0a6d22aec5057fa3d7
 ```
-
 </TabItem>
 </Tabs>
 </Container>
 
-Using the *sha256sum* should give you a string (i.e.
-*07e5d6994f7f157a1f1d07698947a731a4daf7908cd2480d7cc9898e8e4ca77c*).
 
-## Use the terpd docker image
+## Use Docker
 
 ### Build or Pull the docker image
 
 You can pull the docker image from the following repositories:
 
 - **Production** *Image coming soon*
-- **[End to End Repo](https://github.com/terpnetwork/terp-core/pkgs/container/terp-core-e2e)** *Currently configured to v2.0.0*
+- **[End to End Repo](https://github.com/terpnetwork/terp-core/pkgs/container/terp-core-e2e)** *Currently configured to v4.1.0*
 :::info 
 Make sure to always use the image tag that points to the network you want to connect.
 :::
