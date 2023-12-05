@@ -29,4 +29,12 @@ terpd init <YOUR_NODE_MONIKER> --chain-id morocco-1
 
 ## Next Steps
 
+Your node is now initialized in it's default configuration! From here, you can decide how to further configure your node, whether that is to:
+-  [set up your nodes keys](./keys.md)
+-  configure a node to be various endpoints, such as:
+    -  [sentry node](../../guides/nodes/sentry)
+    -  [archive node](../../guides/nodes/archive)
+    -  [seed-node](../../guides/seed)
+    -  [full-node](../../guides/nodes/)
+
 you can now set up the [node keys](./keys.md)

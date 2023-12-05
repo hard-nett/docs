@@ -1,19 +1,22 @@
-# Node & Validator FAQ 
+---
+title: a. faq - node & validator 
+sidebar_position: 1
+---
 
 ## General Concepts 
 
-### What is a Terp validator?
+## What is a validator?
 
 Terp Network is based on Tendermint that relies on a set of validators to secure the network. The role of validators is to run a full node and participate in consensus by broadcasting votes that contain cryptographic signatures signed by the validator's private key. Validators commit new blocks in the blockchain and receive reward in exchange for their work. Validators must also participate in governance by voting on proposals. Validators are weighted according to their total stake.
 
-### What is staking? 
+## What is staking? 
 Terp Network is a public Proof-Of-Stake (PoS) blockchain, meaning that the weight of validators is determined by the amount of staking tokens (TERP) bonded as collateral. These TERP tokens can be self-delegated directly by the validator or delegated to the validator by other TERP holders.
 
 Any user in the system can declare their intention to become a validator by sending a create-validator transaction to become validator candidates.
 
 The weight (i.e. voting power) of a validator determines whether they are an active validator. The active validator set is limited to an amount (opens new window)that changes over time.
 
-### What is a full node? 
+## What is a full node? 
 
 A full node is a server running a chain's binary (its software) that fully validates transactions and blocks of a blockchain and keeps a full record of all historic activity. A full node is distinct from a pruned node that processes only block headers and a small subset of transactions. Running a full node requires more resources than a pruned node. Validators can decide to run either a full node or a pruned node, but they need to make sure they retain enough blocks to be able to validate new blocks.
 

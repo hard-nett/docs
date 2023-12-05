@@ -1,6 +1,6 @@
 ---
-title: LocalTerp
-sidebar_position: 1
+title: d. create a local-network
+sidebar_position: 4
 ---
 # LocalTerp
 

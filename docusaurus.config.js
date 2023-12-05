@@ -151,14 +151,18 @@ const config = {
             label: 'Develop',
             to: '/developers',
             position: 'left',
-            },
+          },
           {
             label: 'Participate',
             to: '/governance',
             position: 'left',
+          },
+          {
+            label: 'Guides',
+            to: '/guides',
+            position: 'left',
             className: 'new-badge'
-            },
-    
+          },
           {
             label: 'API Reference',
             to: 'apis',
@@ -190,7 +194,7 @@ const config = {
             position: 'right',
             className: 'dev-portal-signup dev-portal-link',
           },
-        
+
         ],
       },
       footer: {
