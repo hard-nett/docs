@@ -1,4 +1,4 @@
-# Create Keplr Wallet
+# create keplr wallet
 
 ## How to create a new Account via Manemonic/Seed Phrase
 If you are setting up Keplr for the first time: In the initial pop-up window, choose [Create New Account]

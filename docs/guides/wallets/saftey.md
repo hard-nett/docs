@@ -1,8 +1,13 @@
-# Key Knowledge 
+# Wallet Saftey 
 
 
+## Hot and cold keys
+To touch on a point of vocabulary, all key management products described above can be considered hot, in that it can and must produce valid signatures at any time. Even. This is a higher security risk compared to **cold** keys, which are kept out of a networked computer altogether, or at least require human approval before being accessed (like an HSM device stored in your desk drawer).
 
-## What validator keys
+Your validator operator and potential delegator keys should be **cold**.
+
+
+## What are validator keys?
 A validator handles two, perhaps three, different keys. Each has a different purpose:
 
 1. **The Tendermint consensus key** is used to sign blocks on an ongoing basis. It is of the key type ed25519, which the KMS can keep. When Bech-encoded, the address is prefixed with `terpvalcons` and the public key is prefixed with `terpvalconspub`.
@@ -10,13 +15,9 @@ A validator handles two, perhaps three, different keys. Each has a different pur
 2. **The validator operator application key** is used to create transactions that create or modify validator parameters. It is of type secp256k1, or whichever type the application supports. When Bech-encoded, the address is prefixed with `terpvaloper`.
 
 3. **The delegator application key** is used to handle the stake that gives the validator more weight. When Bech-encoded, the address is prefixed with `terp` and the public key is prefixed with `terppub`.
-
+ disc
 Most likely keys 2 and 3 are the same when you are a node operator.
 
-## Hot and cold keys
-To touch on a point of vocabulary, the Tendermint consensus key can be considered hot, in that it can and must produce valid signatures at any time. Even when safely housed in an HSM, this key is considered hot because it is usable immediately by your computers. This is a higher security risk compared to **cold** keys, which are kept out of a networked computer altogether, or at least require human approval before being accessed (like an HSM device stored in your desk drawer).
-
-Your validator operator and potential delegator keys should be **cold**.
 
 ## Private key security considerations
 More precisely than needing ongoing access to private keys, validators only need the capability to sign blocks on an ongoing basis. There is a security difference between access to the private key and access to a signing facility:

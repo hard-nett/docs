@@ -1,1 +1,1 @@
-# CosmWasm 
+# cosmwasm 

@@ -6,16 +6,9 @@ sidebar_position: 4
 
 ## Get started
 
-### Clone Terp-Core
-
 ```
 git clone https://github.com/terpnetwork/terp-core.git
-cd teerp-core
-```
-
-### Run LocalTerp
-
-```
+cd terp-core
 make localnet-build
 ```
 
