@@ -137,11 +137,11 @@ const config = {
             to: '/overview',
             position: 'left',
           },
-          {
-            label: 'Interact',
-            to: '/developers/developer-tools/cli',
-            position: 'left',
-          },
+          // {
+          //   label: 'Interact',
+          //   to: '/developers/developer-tools/cli',
+          //   position: 'left',
+          // },
           {
             label: 'Network',
             to: '/validators',

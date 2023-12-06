@@ -17,17 +17,18 @@ cd terp-core
 git fetch
 git checkout <verison-tag>
 ```
-The `<version-tag>` will need to be set to either a **[testnet chain-id](../../networks/join-testnet)** or the **[latest mainnet version tag](../../networks/join-mainnet)**.
+The `<version-tag>` for `morocco-1` is 
+### <MoroccoBinaryVersion/>
+The `<version-tag>` for `90u-2` is 
+### <TestnetBinaryVersion/>
 
+
+### Ensure that terpd is installed
 Do the following to build and install the terpd daemon:
-
 ```bash
 cd terp-core
 make install
 ```
-
-
-### Ensure that terpd is installed
 You can now verify that **terpd** has been correctly installed by launching:
 
 ```bash
@@ -91,7 +92,7 @@ sha256sum terpd_linux_arm64
 You can pull the docker image from the following repositories:
 
 - **Production** *Image coming soon*
-- **[End to End Repo](https://github.com/terpnetwork/terp-core/pkgs/container/terp-core-e2e)** *Currently configured to v4.1.0*
+- **[End to End Repo](https://github.com/terpnetwork/terp-core/pkgs/container/terp-core-e2e)**
 :::info 
 Make sure to always use the image tag that points to the network you want to connect.
 :::

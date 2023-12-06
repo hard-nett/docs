@@ -70,24 +70,20 @@ import {
   </Section>
 
 
-# About Terp Network
-
-Terp Network is a blockchain framework built for ownership and alignment by the cannabis culture. 
-
-The protocol provides its users and developers with the tools to build & launch scalable, hyperfocused dapps and recieve rewards for the value that the dApps contribute to the network.
 
 # The Terp Mission
 
-The broad goal of Terp Network is to foster innovation & adoption of sovereign applications that support, empower and sustain cannabis community members. 
+The last 10 years has revealed the dramatic shift in the landscape of cannabis industries. The mission of Terp Network is to ensure that the pioneering cannabis communities continue to have undoubtable access & sovereignty to shaping how we collaborate with each other in a techological world.
 
-The last 10 years has included a dramatic shift in the landscape of cannabis industries. The mission of Terp Network is to ensure that the pioneering cannabis communities continue to have undoubtable access & sovereignty to shaping how we collaborate with each other in a techological world.
+**A broad goal of Terp Network is to foster innovation & adoption of sovereign applications that support, empower and sustain cannabis community members.**
+
 
 
 # Architectural Overview
 
-Terp Network is powered by what are called modules, each powering a specific function or feature than a network has. These modules are able to be assembled by means of the Cosmos-SDK, a framework for building custom blockchain applications.
+Terp Network is powered by modules, each serving a specific use-case or function. These modules are able to be assembled by means of the Cosmos-SDK, a framework for building custom blockchain applications, and are how Terp Network will continue to evolve its feature set over time.
 
-## Modules
+## `Modules`
 
 - **Authorization** - granular permission grants for accounts, which is very useful for multi-faceted systems. 
 - **CosmWasm** - smart contract runtime for WebAssembly.
@@ -99,59 +95,56 @@ Terp Network is powered by what are called modules, each powering a specific fun
 - **Staking** - Staking on Terp Network quite literally is how the network is secured, and those who are securing the network (delegators) get rewarded.
 - **Slashing** - Programmed disincentive module for bad actors on Terp Network.
 
-In addition to using the predefined Cosmos modules, Terp Network employs custom modules for additional network features:
+*In addition to using the predefined Cosmos modules, Terp Network employs custom modules for additional network features:*
 
 - **Clock** - This module allows smart contracts to execute logic at the end of every block without an external bot.
 - **Drip** -  This module allows specific addresses (usually smart contracts) to send tokens to the fee_pool module in order to perform a live airdrop
 - **Feeshare** - This module shares contract execution fees with the smart contract developers, creating additional layers of potential revenue streams for teams & smart contract deployers.
 - **Global Fee** - A module that sets a minimum fee across all transactions. 
 - **IBChooks** - This module allows incoming token transfers to call a function on any smart contract.
-- **Packetforward Middleware** - 
+- **Packetforward Middleware** - Allows complex, multi-chain transfers with 1 tx.
 - **Tokenfactory** - The tokenfactory module allows any account to create a new native denom. 
 
-## Smart Contracts
+## `Smart Contracts`
 The Terp Network protocol uses CosmWasm, WebAssembly (Wasm), Go, and Rust. Over 40 high-level programming languages support Wasm, including C and C++, TypeScript, Python, and Java.
 
-## IBC Protocol - Inter Blockchain Communication
+## `IBC Protocol - Inter Blockchain Communication`
 
 The Inter-Blockchain Communication Protocol IBC is a protocol to handle authentication and transport of data between two blockchains. IBC provides a permissionless way for relaying data packets between blockchains, unlike most trusted bridging technologies. 
 Data packets that are relayed between blockchains often include data that triggers state changes on the destination chain; whether it calls a smart contract to perform an action, or sends tokens to a destination address, IBC creates true protocol interoperability.
 The following examples are powered by IBC on Terp Network: 
 
-### Packet-Forward-Middleware (PFM)
+### `Packet-Forward-Middleware (PFM)`
+Allows complex, multi-chain transfers with 1 tx.
 
-
-### IBC-Hooks 
+### `IBC-Hooks`
 Allow ICS-20 token transfers to initiate contract calls. This powers cross-chain contract calls, that involve token movement. 
 
-### Interchain Queries
+### `Interchain Queries`
  Enables on-chain applications to query the state of other chains seamlessly: without involving the queried chain, and requiring very little from the querying chain.
 
-### Interchain Accounts (ICA) 
+### `Interchain Accounts (ICA)` 
  Interchain accounts, or ICA: allow for a chain, a module, or a user on that chain to programmatically control an account (the interchain account) on a remote chain.
 
-### Interchain Security (ICS)
+### `Interchain Security (ICS)`
   Enables other blockchains to be secured through Proof-of-Stake (PoS) by the TERP token. 
 
 
 # Economic Overview
 
-Terp Network allows each dapp developer and their community to configure how rewards are managed and distributed. 
-This earning model is similar to how validators are rewarded for operating nodes in a typical Proof-of-Stake (PoS) chain, but with smart contract execution fees.
-When a contract is instantiated, the dapp creator specifies an **owner** address where all fees and rewards are automatically deposited. 
-This target address can be the creator's address, a multisig address, or an address that is controlled by a separate custom contract. Ownership can then be transferred to a new address as needed. Ownership transfer requires only the signature of the previous owner.
+### `Inflation`
 
-#### Inflation
-
-The overall inflation rate on the Terp network follows the model of the <a href="https://github.com/gavinly/CosmosParametersWiki/blob/master/Mint.md" target="_blank">mint module</a> in the Cosmos Hub.
-
+**The overall inflation rate on the Terp network follows the model of the <a href="https://github.com/gavinly/CosmosParametersWiki/blob/master/Mint.md" target="_blank">mint module</a> in the Cosmos Hub.**
 The Terp Network protocol then shares a portion of these total inflation rewards directly to the community pool.
-These distribution values are configurable parameters that can be adjusted by the Terp Network community through network governance.
+These distribution values are parameters that can be adjusted by the community of Terp Network, through network governance. 
+**Inflationary rewards are paid out by the network on a per-block basis.**
 
-Inflationary rewards are paid out by the network on a per-block basis.
+### `Network Fees`
 
-#### Smart Contract Fees
+### `Smart Contract Fees`
+Each dapp developer and their community can configure how rewards are managed and distributed, for smart contracts they deploy or utilize. This earning model is similar to how validators are rewarded for operating nodes in a typical Proof-of-Stake (PoS) chain, but with smart contract execution fees.
+Developers can specifies an **owner** address where all fees and rewards are automatically deposited. This target address can be the creator's address, a multisig address, or an address that is controlled by a separate custom contract. Ownership can then be transferred to a new address as needed. Ownership transfer requires only the signature of the previous owner.
 
-Smart contract platforms today charge network fees ("gas") based on the amount of computational processing required by on-chain transactions.
-While this method of measurement works for the underlying economics of a network, it does not support use cases where a developer has to cover additional costs, such as distributed storage, access to off-chain processing, external data sources, or other premium features such as audited and insured contracts.
+
+
   </Section>
