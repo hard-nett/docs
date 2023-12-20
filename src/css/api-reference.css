@@ -1,7 +1,7 @@
 /* Stoplight Elements tokens */
 
 :root {
-  --font-ui: var(--ifm-font-family-base) !important;
+  /* --font-ui: var(--ifm-font-family-base) !important; */
   --font-prose: var(--font-ui) !important;
   --font-mono: var(--ifm-font-family-monospace) !important;
 

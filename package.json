@@ -26,6 +26,8 @@
     "@dytesdk/react-web-core": "file:./modules/dytesdk-react-web-core-1.5.1-stripped.1.tgz",
     "@dytesdk/ui-kit": "^1.21.0",
     "@dytesdk/web-core": "file:./modules/dytesdk-web-core-0.28.2-stripped.5.tgz",
+    "@fontsource/inter": "^5.0.16",
+    "@fontsource/jetbrains-mono": "^5.0.18",
     "@mdx-js/react": "^1.6.22",
     "@radix-ui/react-icons": "^1.1.1",
     "@radix-ui/react-select": "^0.1.1",

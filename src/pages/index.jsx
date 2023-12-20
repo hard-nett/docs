@@ -22,7 +22,7 @@ export default function Homepage() {
         <div className="center homepage-content">
           <div className='margin-bottom--lg'>
             <h2>Terp-Core Docs</h2>
-            <p>Welcome! Terp network is changing the way we approach infusing nfts & cryptography within cannabis communities. Here you will find guides & resources to understanding what exact tools we have available for doing so.
+            <p>Welcome! Terp Network, verifiable way we approach infusing nfts & cryptography within cannabis communities. Here you will find guides & resources to understanding what exact tools we have available for doing so.
             </p>
           </div>
 
