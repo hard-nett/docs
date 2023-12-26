@@ -93,8 +93,8 @@ We can set the `seeds` by retrieving the list of seeds from the chain registry
 For RPC nodes and Validator nodes we recommend setting the following minimum-gas-prices. This setting will help protect against contract spam and potential wasm contract attack vectors.
 
 In `$HOME/.terp/config/app.toml`, set minimum gas prices:
-```
-
+```sh
+0.05uthiol
 ```
 
 ### Create (or restore) a local key participate

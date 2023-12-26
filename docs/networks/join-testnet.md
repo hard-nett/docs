@@ -13,7 +13,7 @@ If you get stuck, then please ask on Discord.
 
 | chain-id | Current Github version tag |
 | -------- | -------------------------- |
-| 90u-2    | v4.0.0                |
+| 90u-2    | v4.1.testnet               |
 
 ## Minimum Hardware Requirements
 
@@ -71,7 +71,7 @@ For RPC nodes and Validator nodes we recommend setting the following minimum-gas
 In `$HOME/.terp/config/app.toml`, set minimum gas prices:
 ```
 # note testnet denom
-0.025uterpx
+0.05uthiolx
 ```
 
 ## Setting up the Node
@@ -105,7 +105,7 @@ This will replace the genesis file created using `terpd init` command with the g
 ### **Create a local key pair**
 Create a new key pair or restore a key for your validator:
 
-```
+```sh
 # Create new keypair 
 terpd keys add <key-name>
 
@@ -151,7 +151,7 @@ If this command returns `true` then your node is still catching up. If it return
 ## Upgrade to a validator
 To upgrade the node to a validator, you will need to submit a `create-validator` transaction:
 
-```
+```sh
 terp tx staking create-validator \
   --amount 1000000uterpx \
   --commission-max-change-rate "0.1" \

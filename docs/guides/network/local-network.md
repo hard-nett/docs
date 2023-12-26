@@ -19,7 +19,7 @@ make localnet-build
 
 ## Accounts
 
-localterp is pre-configured with one validator and 9 accounts with ION and TERPbalances.
+localterp is pre-configured with one validator and 9 accounts with THIOL and TERP balances.
 
 | Account   | Address                                                                                                  | Mnemonic                                                                                                                                                                   |
 | --------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

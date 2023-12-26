@@ -179,10 +179,6 @@ const config = {
             position: 'right',
           },
           {
-            type: 'search',
-            position: 'right',
-          },
-          {
             label: 'Launch Satellite Bridge',
             href: 'https://satellite.money/',
             position: 'right',
@@ -258,13 +254,6 @@ const config = {
       },
       liveCodeBlock: {
         playgroundPosition: 'bottom',
-      },
-      algolia: {
-        appId: 'L68SOVCZ0W',
-        apiKey: '6704a652afae825186d73d7c2141e4a7',
-        indexName: 'Docs',
-        contextualSearch: true,
-        searchParameters: {},
       },
       posthog: {
         apiKey: '00',
