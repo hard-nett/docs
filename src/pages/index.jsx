@@ -25,18 +25,34 @@ export default function Homepage() {
             <p>Welcome! Terp Network, verifiable way we approach infusing nfts & cryptography within cannabis communities. Here you will find guides & resources to understanding what exact tools we have available for doing so.
             </p>
           </div>
-
+          <Section title="Learn more about Terp Network">
+            <Card
+              title="Overview"
+              description="Introduction to the Terp Network ecosystem."
+              to="/overview/"
+            />
+            <Card
+              title="Guides"
+              description="Basics to configure nodes, interact with smart contracts, and more."
+              to="/guides"
+            />
+            <Card
+              title="TERP & THIOL"
+              description="Details about the 2 native tokens of Terp Network."
+              to="/overview/terp-and-thiol"
+            />
+          </Section>
           <Section title="Get Started">
             <Card
-              title="Run a node"
-              description="Getting started with Terp Network is simple & easy with a local node"
+              title="Deploy a node"
+              description="Setup a local node to connect, permissionlessly."
               to="/validators"
               icon={<Terpjs />}
               svgFile=""
             />
             <Card
-              title="Build Censorship Resistant Applications"
-              description="Front End, Smart Contract, Decentralized Hosting, and so much more!"
+              title="Censorship Resistant Applications"
+              description="Basic overview on front ends, smart contracts & decentralized hosting tech."
               to="developers/"
               icon={<Tscodegen />}
               svgFile="/icons/tscodegen.svg"
@@ -49,23 +65,7 @@ export default function Homepage() {
               svgFile=""
             />
           </Section>
-          <Section title="Learn more about Terp Network">
-            <Card
-              title="Overview"
-              description="Introduction to Terp Network & its ecosystem."
-              to="/overview/"
-            />
-            <Card
-              title="Guides"
-              description="Learn about how to configure nodes, interact with smart contracts, and more."
-              to="/guides"
-            />
-            <Card
-              title="TERP & THIOL"
-              description="The native tokens of Terp Network."
-              to="/overview/terp-and-thiol"
-            />
-          </Section>
+{/*      
           <Section title="Participate">
             <Card
               title="Governance Basics"
@@ -82,7 +82,7 @@ export default function Homepage() {
               description="Learn about the ways we can utilize on chain features to self-govern"
               to="/governance/daos/subdaos"
             />
-          </Section>
+          </Section> */}
           <Section title="📜 API Reference">
             <Card
               title="API Reference"

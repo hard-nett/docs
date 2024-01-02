@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <p align="center">
   <a href="https://terp.network">
-    <img src="static/img/terp-logo-coloful.png" alt="Logo" width="120">
+    <img src="static/img/terp-2024.png" alt="Logo" width="120">
   </a>
 
   <h2 align="center">Terp-Core Docs</h3>

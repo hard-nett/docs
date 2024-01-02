@@ -1,6 +1,6 @@
 ---
-title: 1. cosmwasm & localterp
-sidebar_position: 5
+title: b. verify code
+sidebar_position: 2
 ---
 
 # CosmWasm & LocalTerp 

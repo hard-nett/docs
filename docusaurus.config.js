@@ -111,7 +111,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: '/img/terp-logo-colorful.png',
+      image: '/img/terp-2024.png',
       colorMode: {
         defaultMode: 'dark',
       },
@@ -125,11 +125,11 @@ const config = {
         // hideOnScroll: true,
         logo: {
           href: '/',
-          src: '/logo/light.svg',
-          srcDark: '/logo/dark.svg',
+          src: '/favicon.png',
+          srcDark: '/favicon.png',
           alt: 'Terp-Core Docs',
           height: '26px',
-          width: '114px',
+          width: '26px',
         },
         items: [
           {
@@ -174,7 +174,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://discord.gg/SYEjMwAac7',
+            href: 'https://discord.gg/fW4SjH2c7d',
             className: 'pseudo-icon discord-icon',
             position: 'right',
           },
