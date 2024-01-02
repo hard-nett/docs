@@ -1,4 +1,4 @@
-# Install Keplr
+# install keplr
 
 Go to [https://wallet.keplr.app/](https://wallet.keplr.app/) and click ** Install for Chrome **
 

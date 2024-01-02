@@ -88,6 +88,7 @@ In order to safely manage your validator keys, you can look further on how to in
 - **[Tendermint KMS support for Ledger.](https://hub.cosmos.network/main/validators/kms/kms.html)**
 - **[TKMS support for YubiHSM.](https://github.com/iqlusioninc/tmkms/blob/main/README.yubihsm.md)**
 
+### TKMS Guide - [click here for guide](../../guides/nodes/tkms)
 ## Next steps
 
 Now you are ready to [join a network](/validators/join-a-network/overview).

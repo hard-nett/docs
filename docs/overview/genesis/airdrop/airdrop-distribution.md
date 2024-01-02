@@ -1,7 +1,7 @@
 # Airdrop 
 Checkout [this article](https://akash.network/blog/a-founders-guide-to-the-secs-safe-harbor-proposal-for-utility-tokens/) that describes a framework that puts true decentralized initiatives in a good position to bootstrap. 
 
-The process of finding a fair airdrop method is based on WyndDAOs decentralized airdrop process, which uses percentiles and normalization for each projects token holder map statistics included via consensus of various TestNET DAOs and subDAOs. This process involves the following steps:
+The process of finding a fair airdrop method is based percentiles and normalization for each projects token holder map statistics included via consensus of various TestNET DAOs and subDAOs. This process involves the following steps:
 
 ## Determination of percentiles
 Percentiles are calculated for each project based on how many holders there are, and the distribution of supply between those holders. If you are a holder of a project with X amount of tokens, then your X amount ownership would fall into one of the ownership percentile ranges. 

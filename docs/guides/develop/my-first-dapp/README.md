@@ -2,40 +2,31 @@
 title: my first dapp
 sidebar_position: 1
 ---
-# Project Setup
+# Introduction
+Distributed applications (dApps) are software applications that run on distributed networks. Blockchains provide persistent data, or the state, as well as persistent processes and logic. The Cosmos SDK helps developers create such applications. A user interface is important in most cases, and server interactions are important in many cases.
 
-1. [Create a new project](#creating-a-project)
-2. [Build your code](#building)
-3. [Request testnet Tokens](../../network/faucet.md)
-4. [Transpile CosmWasm code binaries](#producing-wasm-executables)
-5. [Deploy to a testnet](#deploying-your-contract-on-chain)
-6. [Create transactions and query data from a deployed contract](#interacting-with-your-contract)
-7. [Build a dapp frontend](#building-a-dapp-frontend)
+There are many ways to build a dapp that can connect & communicate with Terp Network. The most common languages used are **[react](https://nextjs.org/)**, **[react-native](https://reactnative.dev/)**, & **[vue](https://github.com/ping-pub/explorer)**.
 
-## Creating a project
+ **This guide will show you how to setup a minimal template for creating an application.** We will be using **[Cosmology](https://cosmology.tech)**, an exellect package library specifically for network using Cosmos-SDK.
 
-## Building
+## The Server \ Client Tech
+Often, applications grapple with multple or heavy computations, as well as the challenge of securing sensitive communication like passwords and wallet keys on public websites. The client-server model, akin to a farmers market, offers a straightforward solution.
 
-### Producing Wasm executables
-*CosmWasm* **wasm** executables are optimized using the **cosmwasm/rust-optimizer** which produces a smaller executable size than **cargo wasm**.
-```
+ Imagine the client as a shopper making a request. a reliable vendor selling goods (the server), takes requests from clients. The client **requests** specific items, and if the server both **speaks the same language** as the request, and **can provide** that specific request from the client, the transfer is made.
 
-```
-The rust-optimizer will make sure that the WASM binary is as small as possible in order to minimize fees and blockchain storage.
+**This is how applications work when communicating with Terp Network.** 
+
+Web-apps are usually both a server and client. It serves the HTML code for the components of the app, and also can make request to other servers to use in its own processes. 
+
+If we have built a web-app and have a component that queries & displays my token balance, the communication flow for that request will look like:
+
+ `my-device --> web-app --> blockchain-node --> web-app --> my-device`  
+ 
+  Notice that the web-app will translate the balance request, then request a public-endpoint of Terp Network, which will provide a response back to the web-apps server, which can then provide a response back to my device.
+
 :::info
-To use the rust-optimizer you will need to have [Docker](https://docs.docker.com/engine/install/ubuntu/) installed.
+*Its important to highlight a web-app may have multiple databases it uses to store data, usually to improve the user experience such as query & data population times. These are preconfigured prior to deployment of the web-app. [DAO DAO UI](https://github.com/da0-da0/dao-dao-ui) is a great example of a web-app acting as a client and taking use of indexer servers.*
 :::
 
-## Deploying your contract on chain
 
-## Storing the contract on chain
-
-## Instantiating the contract
-
-## Interacting with your contract
-
-### Querying
-
-### Transacting
-
-## Building a dApp frontend
+** In this guide, we will show you how to setup a web-app which will act as both a client & server, for communicating with Terp Network.** 

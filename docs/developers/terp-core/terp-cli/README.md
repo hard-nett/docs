@@ -24,29 +24,26 @@ For Linux, and depending on your architecture:
 <TabItem value="amd64" label="amd64">
 
 ```
-wget https://github.com/terpnetwork/terp-core/releases/download/barberry/terpd_linux_amd64
+wget https://github.com/terpnetwork/terp-core/releases/download/v4.1.0/terpd_linux_amd64
 ```
 
 </TabItem>
 <TabItem value="arm64" label="arm64">
 
 ```
-wget https://github.com/terpnetwork/terp-core/releases/download/barberry/terpd_linux_arm64
+wget https://github.com/terpnetwork/terp-core/releases/download/v4.1.0/terpd_linux_arm64
 ```
 
 </TabItem>
 </Tabs>
 </Container>
 
-You can now verify the download by generating the sha256 hash for the downloaded file:
-:::info
-Using the sha256sum should give you a string *(i.e. 4dd95ee0729b6593c9c390bde6e0c7bf3af0957d7f323e216b76ddb663fa7bc7)*.
-:::
+
 
 You can then download the sha256 checksum file relative to the release file:
 
 ```
-wget terpdsha256.txt https://github.com/terpnetwork/terp-core/releases/download/barberry/terpd_checksums.txt
+wget terpdsha256.txt https://github.com/terpnetwork/terp-core/releases/download/v4.1.0/checksums.txt
 ```
 
 and you can compare that the sha256 hash strings match, By doing so, you are ensuring that the downloaded file matches the actual release file.

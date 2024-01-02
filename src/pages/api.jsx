@@ -74,10 +74,8 @@ export default function Home() {
         <link rel="stylesheet" href="/assets/css/elements.min.css" />
       </Head>
       <div className="header">
-        <h2>Terpd {currentVersion} endpoints</h2>
+        <h2>Terpd endpoints</h2>
         <div className="aside">
-          {/* <RunInPostmanButton /> */}
-          <a className="navbar__item navbar__link dev-portal-signup dev-postman-link"  target='_blank' href='https://www.postman.com/flight-astronomer-81853429/workspace/osmosis' rel="noreferrer">Open Postman Collection</a>
 
           <DyteTooltip
             placement="bottom"

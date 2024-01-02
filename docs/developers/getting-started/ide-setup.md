@@ -19,21 +19,27 @@ Please refer to the steps below for your respective operating system:
 <Container>
 <Tabs>
 <TabItem value="macOs" label="macOS">
+
 1. [Download Visual Studio Code](https://code.visualstudio.com/Download) for macOS.
 2. Open the browser's download list and locate the downloaded app or archive.
 3. If archive, extract the archive contents. Use double-click for some browsers or select the 'magnifying glass' icon with Safari.
 4. Drag Visual Studio Code.app to the Applications folder, making it available in the macOS Launchpad.
 5. Open VS Code from the Applications folder, by double-clicking the icon.
 Add VS Code to your Dock by right-clicking on the icon, located in the Dock, to bring up the context menu and choosing Options, Keep in Dock.
+
 </TabItem>
 
 <TabItem value="windows" label="Windows">
+
 1. Download the [Visual Studio Code installer](https://code.visualstudio.com/docs?dv=win) for Windows.
 2. Once it is downloaded, run the installer.
+
 </TabItem>
 
 <TabItem value="linux" label="Linux">
+
 See the [Download Visual Studio Code](https://code.visualstudio.com/download) page for a complete list of available installation options. For more detailed instructions on installing via the terminal for various distributions, see [Visual Studio Code on Linux](https://code.visualstudio.com/docs/setup/linux).
+
 </TabItem>
 </Tabs>
 </Container>

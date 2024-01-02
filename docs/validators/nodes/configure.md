@@ -45,12 +45,29 @@ One example config to tweak is the `minimum-gas-prices` field inside `app.toml`,
 
 If it's empty, make sure to edit the field with some value, for example `10token`, or else the node will halt on startup.
 
+<Container>
+<Tabs>
+<TabItem value="morocco-1" label="morocco-1">
+
 ```toml
  # The minimum gas prices a validator is willing to accept for processing a
  # transaction. A transaction's fees must meet the minimum of any denomination
  # specified in this config (e.g. 0.25token1;0.0001token2).
- minimum-gas-prices = "0.002uthiol"
+ minimum-gas-prices = "0.05uthiol"
 ```
+</TabItem>
+<TabItem value="90u" label="90u-2">
+
+```toml
+ # The minimum gas prices a validator is willing to accept for processing a
+ # transaction. A transaction's fees must meet the minimum of any denomination
+ # specified in this config (e.g. 0.25token1;0.0001token2).
+ minimum-gas-prices = "0.05uthiolx"
+```
+</TabItem>
+</Tabs>
+</Container>
+
 
 ### Pruning of State
 
@@ -91,15 +108,7 @@ We can make changes to the default settings upon our choices, so it allows users
 For example, the chain identifier can be changed to `90u-2` from a blank name by using:
 
 ```bash
-terpd config "chain-id" 90u-2
-terpd config
-{
- "chain-id": "90u-2",
- "keyring-backend": "os",
- "output": "text",
- "node": "tcp://localhost:26657",
- "broadcast-mode": "sync"
-}
+terpd config chain-id 90u-2
 ```
 
 Other values can be changed in the same way.

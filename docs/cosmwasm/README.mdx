@@ -25,9 +25,9 @@ import {
 
 ## What is cosmwasm?
 
-CosmWasm is a smart contract platform written as a module that can be integrated into any blockchain built on top of the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk). In simple terms, it is the Cosmos (Cosm) way of utilizing WebAssembly (Wasm), hence its name.
+CosmWasm is a smart contract platform that is supported by Terp Network. In simple terms, it is the Cosmos (Cosm) way of utilizing WebAssembly (Wasm), hence its name.
+CosmWasm contracts are genrally written in the software language [Rust](https://www.rust-lang.org/), which is known for its speed & security.
 
-[Rust](https://www.rust-lang.org/) is currently the most widely used programming language for CosmWasm. In the future, other programming languages, such as Go, may also be utilized. Read CosmWasm’s launch article [here](https://blog.cosmos.network/announcing-the-launch-of-cosmwasm-cc426ab88e12).
 
 ## Sections
 
@@ -68,28 +68,22 @@ CosmWasm is a smart contract platform written as a module that can be integrated
 
    <Section>
     <Card
-    title="CosmWasm on Terp-Core Locally"
-    description=" Compile, upload and interact with a contract with terp-core locally."
-    to="/cosmwasm/local/localterp"
-    icon={<Cosmwasm />}
-  />
-    <Card
-    title=" Deploy Cosmwasm Contracts to Testnet"
-    description=" Deploying contracts to testnet via terpd binary"
-    to="/cosmwasm/testnet/deployment-and-interaction"
+    title="Deploy A Contract"
+    description=" Compile, upload and interact with a contract."
+    to="/guides/contracts/deploy"
     icon={<Cosmwasm />}
   />
     <Card
     title=" Submit a CosmWasm Governance Proposal"
     description="  Example on how submit a CosmWasm binary proposal."
-    to="/cosmwasm/mainnet/submit-wasm-proposal"
+    to="/guides/contracts/gov-cosmwasm"
     icon={<Cosmwasm />}
   />
 
   <Card
     title="Verifying Smart Contracts"
     description=" Download contract and verify the hash."
-    to="/cosmwasm/smart-contracts/verify"
+    to="/guides/contracts/verify-cosmwasm"
     icon={<Cosmwasm />}
   />
  

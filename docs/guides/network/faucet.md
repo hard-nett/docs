@@ -1,10 +1,11 @@
 ---
-title: Requesting testnet tokens
+title: a. request testnet tokens
 sidebar_position: 1
 ---
-In order to deploy your dapp code on chain while working on a testnet, it will be necessary to have the respective testnet Tokens to cover the associated gas costs. Once you have set up an account, you can request funds from the faucet by using our Discord channel.
+# 
 
-1. Join our Discord server here
-2. Send the following message in the 🚰 ｜ faucet channel
+Get funds through a browser GET request or cURL, making it easy for users without needing a discord bot.
 
-The tokens will be deposited into your account within a few minutes on all available testnets.
+# `GET https://faucet.terp.network/90u-2/<address>`
+
+*[source](https://github.com/hard-nett/cosmos-faucet)*

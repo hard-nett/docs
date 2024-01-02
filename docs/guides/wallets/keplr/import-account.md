@@ -1,5 +1,5 @@
 
-# Import a Keplr account
+# import a keplr account
 
 If you are setting up Keplr for the first time:
 In the initial pop-up window, choose [Import Ledger]

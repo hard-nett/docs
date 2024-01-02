@@ -1,3 +1,6 @@
+
+import {MoroccoBinaryVersion, TestnetBinaryVersion} from '../../src/client/terpd-version';
+
 # Joining Mainnet
 **General instructions to join the Terp mainnet after network genesis.** 
 
@@ -13,9 +16,9 @@ Make sure you have [installed the Terp Core Binary (Terpd)](../overview/getting-
 
 Terp Network will go through upgrades as it matures. 
 
-The first mainnet is "Morocco 1".
+The first mainnet is "morocco-1".
 
-The correct version of the binary for mainnet at genesis was `v3.1.0`
+The correct version of the binary for mainnet is <MoroccoBinaryVersion/>
 
 Releases after genesis can be found in the mainnet repo.
 
@@ -90,8 +93,8 @@ We can set the `seeds` by retrieving the list of seeds from the chain registry
 For RPC nodes and Validator nodes we recommend setting the following minimum-gas-prices. This setting will help protect against contract spam and potential wasm contract attack vectors.
 
 In `$HOME/.terp/config/app.toml`, set minimum gas prices:
-```
-
+```sh
+0.05uthiol
 ```
 
 ### Create (or restore) a local key participate

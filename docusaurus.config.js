@@ -111,7 +111,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: '/img/terp-logo-colorful.png',
+      image: '/img/terp-2024.png',
       colorMode: {
         defaultMode: 'dark',
       },
@@ -125,11 +125,11 @@ const config = {
         // hideOnScroll: true,
         logo: {
           href: '/',
-          src: '/logo/light.svg',
-          srcDark: '/logo/dark.svg',
+          src: '/favicon.png',
+          srcDark: '/favicon.png',
           alt: 'Terp-Core Docs',
           height: '26px',
-          width: '114px',
+          width: '26px',
         },
         items: [
           {
@@ -137,13 +137,13 @@ const config = {
             to: '/overview',
             position: 'left',
           },
+          // {
+          //   label: 'Interact',
+          //   to: '/developers/developer-tools/cli',
+          //   position: 'left',
+          // },
           {
-            label: 'Interact',
-            to: '/developers/developer-tools/cli',
-            position: 'left',
-          },
-          {
-            label: 'Validate',
+            label: 'Network',
             to: '/validators',
             position: 'left',
           },
@@ -151,14 +151,18 @@ const config = {
             label: 'Develop',
             to: '/developers',
             position: 'left',
-            },
+          },
           {
             label: 'Participate',
             to: '/governance',
             position: 'left',
+          },
+          {
+            label: 'Guides',
+            to: '/guides',
+            position: 'left',
             className: 'new-badge'
-            },
-    
+          },
           {
             label: 'API Reference',
             to: 'apis',
@@ -170,12 +174,8 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://discord.gg/SYEjMwAac7',
+            href: 'https://discord.gg/fW4SjH2c7d',
             className: 'pseudo-icon discord-icon',
-            position: 'right',
-          },
-          {
-            type: 'search',
             position: 'right',
           },
           {
@@ -190,7 +190,7 @@ const config = {
             position: 'right',
             className: 'dev-portal-signup dev-portal-link',
           },
-        
+
         ],
       },
       footer: {
@@ -254,13 +254,6 @@ const config = {
       },
       liveCodeBlock: {
         playgroundPosition: 'bottom',
-      },
-      algolia: {
-        appId: 'L68SOVCZ0W',
-        apiKey: '6704a652afae825186d73d7c2141e4a7',
-        indexName: 'Docs',
-        contextualSearch: true,
-        searchParameters: {},
       },
       posthog: {
         apiKey: '00',
