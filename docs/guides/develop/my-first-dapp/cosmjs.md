@@ -18,4 +18,7 @@ Among many more, here are some example packages:
 ![](../../../../static/img/cosmjs.png)
 
 ### Modularity
-The repository is nicely modular and keeps clean dependencies. This ensures software quality and lets users pick exactly what they need and only what they need. The following diagram shows how everything fits together (every item is a npm package; right depends on left):
+The repository is nicely modular and keeps clean dependencies. This ensures software quality and lets users pick exactly what they need and only what they need.
+
+## [Terp-Ts](https://github.com/terpnetwork/terp-ts)
+

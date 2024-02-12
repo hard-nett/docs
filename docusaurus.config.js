@@ -143,7 +143,7 @@ const config = {
           //   position: 'left',
           // },
           {
-            label: 'Network',
+            label: 'Participate',
             to: '/validators',
             position: 'left',
           },
@@ -153,7 +153,7 @@ const config = {
             position: 'left',
           },
           {
-            label: 'Participate',
+            label: 'Governance',
             to: '/governance',
             position: 'left',
           },

@@ -16,7 +16,7 @@ Make sure you have [installed the Terp Core Binary (Terpd)](../overview/getting-
 
 Terp Network will go through upgrades as it matures. 
 
-The first mainnet is "morocco-1".
+The first mainnet is `morocco-1`.
 
 The correct version of the binary for mainnet is <MoroccoBinaryVersion/>
 

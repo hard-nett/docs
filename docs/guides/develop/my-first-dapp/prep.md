@@ -10,12 +10,10 @@ There are many ways to build a dapp that can connect & communicate with Terp Net
 ## The Server <--> Client Tech
 
 :::info
-Often, applications grapple with multple or heavy computations, as well as the challenge of securing sensitive communication like passwords and wallet keys on public websites. The client-server model, akin to a farmers market, offers a straightforward solution.
+Often, applications grapple with multple or heavy computations, as well as the challenge of securing sensitive communication like passwords and wallet keys on public websites.
 :::
 
- Imagine the client as a shopper making a request. a reliable vendor selling goods (the server), takes requests from clients. The client **requests** specific items, and if the server both **speaks the same language** as the request, and **can provide** that specific request from the client, the transfer is made.
 
-**This is how applications work when communicating with Terp Network.** 
 
 Web-apps are usually both a server and client. It serves the HTML code for the components of the app, and also can make request to other servers to use in its own processes. 
 

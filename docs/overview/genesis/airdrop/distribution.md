@@ -1,10 +1,10 @@
 # Distribution
 No private sales. No investment rounds. The majority of the genesis supply (Over 95%) is proposed to be airdropped to BCNA holders, committed to the community pool, and airdropped to the community members of other projects focused and involved with ongoing the process of integrating our culture to the censorship resistant ecosystems blockchains create.
 
-| Supply Info  |  TERP | PERSY  |  |   |
+| Supply Info  |  TERP | THIOL  |  |   |
 |-----------------|:-------:|:------:|:-----------:|---|
 | ✅ Initial Circulating Supply | 420,000,000 | 710,000,000 |
-| ✅ Initial Total Supply       | 420,000,000 | 6,754,110,500 PERSY |
+| ✅ Initial Total Supply       | 420,000,000 | 6,754,110,500 THIOL |
 
 
 ## Distribution 
@@ -19,7 +19,7 @@ No private sales. No investment rounds. The majority of the genesis supply (Over
 ## Minting Schedule
 ### TERP
 No minting or inflation schedule set
-### PERSY
+### THIOL
 93% first year, 1/3rd less each following year (Model based off of Osmosis Zones Thirdening Schedule)
 
 | year 0  |  710,000,000.00  | 93.00% | 660,300,000 |   |
