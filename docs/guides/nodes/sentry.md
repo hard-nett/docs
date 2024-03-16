@@ -31,7 +31,7 @@ If two sentry nodes are going to be mounted, one of them could be deployed in th
 
 
 ## Step by step guide
-To follow this guide, we will use a node created & connected to 90u-2 testnet network. In case you have not deployed the node yet, [how to install the terp-core binary](../../validators/nodes/installation)
+To follow this guide, we will use a node created & connected to 90u-3 testnet network. In case you have not deployed the node yet, [how to install the terp-core binary](../../validators/nodes/installation)
 
 ### Creating the sentry nodes
 Once we have contracted the two sentry node servers and we have the access IPs, we must perform the same installation that we would perform as if it were a validator node on both servers.
@@ -56,16 +56,16 @@ It will also be necessary to initialize the node so that the .terp directory is 
 
 **On sentry node A:**
 ```
-terpd init "terpd-up - Sentry A" --chain-id 90u-2
+terpd init "terpd-up - Sentry A" --chain-id 90u-3
 ```
 **On sentry node B:**
 ```
-terpd init "terpd-up - Sentry B" --chain-id 90u-2
+terpd init "terpd-up - Sentry B" --chain-id 90u-3
 ```
 Once the previous step is done, the .terp folder will already exist, so we can download the genesis.json file:
 
 ```
-curl https://raw.githubusercontent.com/terpnetwork/networks/main/testnet/90u-2/genesis.json > ~/.terp/config/genesis.json
+curl https://raw.githubusercontent.com/terpnetwork/networks/main/testnet/90u-3/genesis.json > ~/.terp/config/genesis.json
 ```
 
 ### Configure service
@@ -177,7 +177,7 @@ Source: https://docs.tendermint.com/master/nodes/validators.html
 
 Having sentry nodes will not only help our validator node not to fall victim to a denial of service attack, but will also make the Terp network more robust. The installation of the sentry nodes does not differ much from that of a validator node, and the additional configurations to be performed are very simple and intuitive.
 
-Now that Terp Network is doing the 90u-2 testnet, it is a good time to try to set up sentry nodes and once the mainnet is launched, to be able to replicate it with the experience of having been able to test it in 90u-2. If you already have your node on 90u-2, what are you waiting for to set up your sentry nodes and protect yourself from unwanted attacks?
+Now that Terp Network is doing the 90u-3 testnet, it is a good time to try to set up sentry nodes and once the mainnet is launched, to be able to replicate it with the experience of having been able to test it in 90u-3. If you already have your node on 90u-3, what are you waiting for to set up your sentry nodes and protect yourself from unwanted attacks?
 
 
 :::info

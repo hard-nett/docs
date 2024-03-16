@@ -24,14 +24,14 @@ For Linux, and depending on your architecture:
 <TabItem value="amd64" label="amd64">
 
 ```
-wget https://github.com/terpnetwork/terp-core/releases/download/v4.1.0/terpd_linux_amd64
+wget https://github.com/terpnetwork/terp-core/releases/download/v4.2.0/terpd_linux_amd64
 ```
 
 </TabItem>
 <TabItem value="arm64" label="arm64">
 
 ```
-wget https://github.com/terpnetwork/terp-core/releases/download/v4.1.0/terpd_linux_arm64
+wget https://github.com/terpnetwork/terp-core/releases/download/v4.2.0/terpd_linux_arm64
 ```
 
 </TabItem>
@@ -43,7 +43,7 @@ wget https://github.com/terpnetwork/terp-core/releases/download/v4.1.0/terpd_lin
 You can then download the sha256 checksum file relative to the release file:
 
 ```
-wget terpdsha256.txt https://github.com/terpnetwork/terp-core/releases/download/v4.1.0/checksums.txt
+wget terpdsha256.txt https://github.com/terpnetwork/terp-core/releases/download/v4.2.0/checksums.txt
 ```
 
 and you can compare that the sha256 hash strings match, By doing so, you are ensuring that the downloaded file matches the actual release file.

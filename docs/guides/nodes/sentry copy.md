@@ -27,7 +27,7 @@ sudo nano /etc/nginx/sites-available/<your-endpoint-dns>
 ```
 
 :::info
-A template for the nginx configuration can be found [here](https://).
+A template for the nginx configuration can be found [here](https://github.com/permissionlessweb/o-line-playbook/blob/main/nginx/sites-available/rpc-api).
 :::
 
 link `sites-available` to `sites-enabled` 

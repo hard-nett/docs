@@ -13,7 +13,7 @@ If you get stuck, then please ask on Discord.
 
 | chain-id | Current Github version tag |
 | -------- | -------------------------- |
-| 90u-2    | v4.1.testnet               |
+| 90u-3    | v4.1.testnet               |
 
 ## Minimum Hardware Requirements
 
@@ -45,7 +45,7 @@ To clear a variable binding, use unset $VARIABLE_NAME. Shell variables should be
 Set the `CHAIN_ID`:
 
 ```bash
-CHAIN_ID=90u-2
+CHAIN_ID=90u-3
 ```
 ### Set your moniker name
 
@@ -95,7 +95,7 @@ This will generate the following files in `~/.terp/config/`
 
 ### Download the genesis file
 ```
-curl https://raw.githubusercontent.com/terpnetwork/networks/main/testnet/90u-2/genesis.json > ~/.terp/config/genesis.json
+curl https://raw.githubusercontent.com/terpnetwork/networks/main/testnet/90u-3/genesis.json > ~/.terp/config/genesis.json
 ```
 
 This will replace the genesis file created using `terpd init` command with the genesis file for the testnet.

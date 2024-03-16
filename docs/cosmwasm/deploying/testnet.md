@@ -17,14 +17,14 @@ terpd keys add testnet-key
 #### 2. Request funds through the `faucet`
 
 ```
-https://faucet.terp.network/90u-2/<address>
+https://faucet.terp.network/90u-3/<address>
 ```
 
 #### 3. Configure RPC endpoint & Chain ID
 
 ```
 terpd config node https:://rpc.terp.network:443
-terpd config chain-id 90u-2
+terpd config chain-id 90u-3
 ```
 
 #### 4. Check your account has balance 

@@ -17,7 +17,7 @@ In the [Compile Contract](../getting-started/compile-a-contract) page, we genera
 
 Now you will store the wasm bytecode of the **cw_namespace** contract on chain and obtain the **code id**. This **code id** will be used later to create an instance of the **cw_namespace** contract.
 ```
-RES=$(terpd tx wasm store artifacts/cw_nameservice.wasm --from mywallet --chain-id 90u-2 --gas auto --gas-adjustment 1.3 --fees 30000uthiolx -y --output json -b block --node TBD)
+RES=$(terpd tx wasm store artifacts/cw_nameservice.wasm --from mywallet --chain-id 90u-3 --gas auto --gas-adjustment 1.3 --fees 30000uthiolx -y --output json -b block --node TBD)
 ```
 
 The following is an easier way to get the Code Id from the response:
