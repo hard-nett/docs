@@ -3,7 +3,7 @@ title: Guides
 sidebar_position: 1
 ---
 
-To make it easier for developers to get started with building on the Terp Network platform, we have created a number of guides that cover various aspects of dapp development. By providing these resources, we aim to make it easier for developers to create high-quality, secure, and effective applications that can take advantage of the unique features and capabilities of the Terp Network.
+To make it easier for developers to get started with building on the Terp Network platform, we have created a number of guides that cover various aspects of dapp development. By providing these resources, we aim to make it easier for developers to create high-quality, secure, and effective applications that can take enjoy of the potent features and capabilities of Terp Network.
 <!-- 
 ## Available Guides
 
