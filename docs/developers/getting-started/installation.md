@@ -69,7 +69,7 @@ rustup target add wasm32-unknown-unknown
 
 # Terpd
 
-**terpd** is an implementation of a Cosmos zone with **wasm** smart contracts enabled.
+**Terpd** is the command-line-interface & node software for Terp Network.
 
 You can download the latest release of the pre-built binary from the <a href='https://github.com/terpnetwork/terp-core/releases' target='_blank'>releases page</a>.
 

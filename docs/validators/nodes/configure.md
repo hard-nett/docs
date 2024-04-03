@@ -59,7 +59,7 @@ If it's empty, make sure to edit the field with some value, for example `10token
  minimum-gas-prices = "0.05uthiol"
 ```
 </TabItem>
-<TabItem value="90u" label="90u-3">
+<TabItem value="90u" label="90u-4">
 
 ```yaml
  # The minimum gas prices a validator is willing to accept for processing a
@@ -845,10 +845,10 @@ terpd config
 
 We can make changes to the default settings upon our choices, so it allows users to set the configuration beforehand all at once, so it would be ready with the same config afterward.
 
-For example, the chain identifier can be changed to `90u-3` from a blank name by using:
+For example, the chain identifier can be changed to `90u-4` from a blank name by using:
 
 ```bash
-terpd config chain-id 90u-3
+terpd config chain-id 90u-4
 ```
 
 Other values can be changed in the same way.
@@ -863,7 +863,7 @@ Alternatively, we can directly make the changes to the config values in one plac
 
 # The network chain ID
 
-chain-id = "90u-3"
+chain-id = "90u-4"
 
 # The keyring's backend, where the keys are stored (os|file|kwallet|pass|test|memory)
 
@@ -882,12 +882,12 @@ node = "tcp://localhost:26657"
 broadcast-mode = "sync"
 ```
 
-  After the necessary changes are made in the `client.toml`, then save. For example, if we directly change the chain-id to `90u-3`, and output to number, it would change instantly as shown below.
+  After the necessary changes are made in the `client.toml`, then save. For example, if we directly change the chain-id to `90u-4`, and output to number, it would change instantly as shown below.
 
 ```bash
 terpd config
 {
- "chain-id": "90u-3",
+ "chain-id": "90u-4",
  "keyring-backend": "os",
  "output": "number",
  "node": "tcp://localhost:26657",

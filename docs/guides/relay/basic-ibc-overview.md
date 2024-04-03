@@ -1,5 +1,5 @@
 ---
-title: a. IBC-101: grasping ibc channels, clients, connections and more.
+title: grasping ibc channels, clients, connections and more.
 sidebar_position: 1
 ---
 

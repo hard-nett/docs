@@ -14,7 +14,7 @@ You can set up the moniker of your node by launching the following command:
 <TabItem value="testnet" label="testnet">
 
 ```bash
-terpd init <YOUR_NODE_MONIKER> --chain-id 90u-3
+terpd init <YOUR_NODE_MONIKER> --chain-id 90u-4
 ```
 </TabItem>
 <TabItem value="mainnet" label="mainnet">

@@ -78,7 +78,7 @@ echo "<just-your-mnemonic-seed>" > "$FILE_NAME"
 then, add by restoring the key:
 
 ```bash
-hermes keys add --key-name key-1 --chain 90u-3 --mnemonic-file $HOME/.hermes/key-1.txt
+hermes keys add --key-name key-1 --chain 90u-4 --mnemonic-file $HOME/.hermes/key-1.txt
 ```
 
 repeat this process for the chains you intend to relay packets for.

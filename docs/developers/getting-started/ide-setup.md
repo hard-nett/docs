@@ -44,7 +44,7 @@ See the [Download Visual Studio Code](https://code.visualstudio.com/download) pa
 </Tabs>
 </Container>
 
-# Configure vs code
+# Configure VSCode
 To enable Rust support in VS Code, you need to install a few extensions, namely **rust-analyzer** and **CodeLLDB**, that provide syntax highlighting, code completion, debugging capabilities and other essential functionalities.
 
 #### Rust-analyzer 
@@ -68,28 +68,6 @@ Follow these steps to install the extension:
 
 For full details on how to use the CodeLLDB extension, please see the [Manual](https://github.com/vadimcn/codelldb/blob/v1.9.0/MANUAL.md).
 
-#### Basic rust program
-Let's test if you are able to write and execute Rust programs within VS Code. Create a new file main.rs and add the following to the file:
-```rust 
-fn main() {
-    println!("Hello, Terp Technician!");
-}
-```
-
-Launch a terminal within VS Code by going to **Terminal -> New Terminal** and execute the following command to compile the program:
-```bash
-rustc main.rs
-```
-To execute the program, use the following command:
-```bash
-./main
-```
-:::info
-On Windows this might be ./main.exe
-:::
-The output of the program should be: `Hello, Terp Technician!`
-
-Syntax **highlighting** should be in effect alongside **code completion**, **error checking**, among other features.
 
 # Cosmy wasmy
 [Cosmy Wasmy](https://marketplace.visualstudio.com/items?itemName=spoorthi.cosmy-wasmy) is a VS Code plugin that simplifies the process of developing and interacting with CosmWasm smart contracts. It comes pre-configured with the most popular testnets for CosmWasm chains, making chain interactions during testing a breeze. With Cosmy Wasmy, you can perform all interactions within VS Code without having to use the CLI.

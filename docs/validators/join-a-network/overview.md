@@ -10,11 +10,11 @@ Please visit the [API reference](/api) to interact with these endpoints.
 
 <Container>
 <Tabs>
-<TabItem value="testnet-90u" label="testnet: 90u-3">
+<TabItem value="testnet-90u" label="testnet: 90u-4">
 
 ### Chain ID
 ```
-90u-3
+90u-4
 ```
 ### RPC
 ```
@@ -26,7 +26,7 @@ ITRocket - https://testnet.itrocket.net/terp/staking
 ```
 ### Genesis
 ```
-https://raw.githubusercontent.com/terpnetwork/networks/main/testnet/90u-3/genesis.json
+https://raw.githubusercontent.com/terpnetwork/networks/main/testnet/90u-4/genesis.json
 ```
 ### P2P Seed
 ```
