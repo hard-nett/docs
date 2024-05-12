@@ -71,6 +71,13 @@ If it's empty, make sure to edit the field with some value, for example `10token
 </Tabs>
 </Container>
 
+to update the value:
+
+```sh
+$min_gas="0.05uthiolx"
+sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"$min_gas\"/" ~/.terp/config/app.toml
+
+```
 ### Pruning of State
 
 There are four strategies for pruning state. These strategies apply only to state and do not apply to block storage.

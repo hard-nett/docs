@@ -4,7 +4,7 @@ sidebar_position: 1
 ---
 This guide explains what the requirements are to install and run an Terp Network full node. We assume that you are on a linux distrubtion with atleast 100GB of storage, 1 CPU, and 16GB of RAM.
 
-To quickly spin up a linux testing environment, Digital Ocean or Gitpod are two options available.
+To quickly spin up a linux testing environment, Akash Console, or Digital Ocean, are two options available to spiun up a linux envoronment.
 
 ## Install prerequisites
 ```bash

@@ -3,7 +3,7 @@ title: 1. IDE setup
 sidebar_position: 1
 ---
 
-# Integrated development environment setup
+# Integrated Development Environment setup
 
 This tutorial will guide you through the process of setting up an Integrated Development Environment (IDE) for developing CosmWasm smart contracts. Since CosmWasm contracts are currently built using Rust, this tutorial will focus on setting up your IDE for Rust development.
 

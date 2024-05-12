@@ -23,6 +23,11 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install pkg-config postgresql postgresql-contrib libpq-dev
 ```
 
+# Install Rust 
+```sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
 ### Database Setup 
 first, switch to postgres user
 ```sh
@@ -41,9 +46,13 @@ createdb --host=localhost --port=5432 --username=postgres --no-password myindexe
 
 create a password for the db user. in this example the username is `postgres`
 ```sh
-ALTER USER username WITH PASSWORD 'new_password';
+ALTER USER postgres WITH PASSWORD 'welcometest';
 ```
 
+to leave the postgres terminal:
+```sh
+\q
+```
 ### Install Diesel
 make sure you have installed rust before running this command
 ```sh 

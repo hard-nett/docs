@@ -4,9 +4,8 @@ import {MoroccoBinaryVersion, TestnetBinaryVersion} from '../../src/client/terpd
 # Joining Mainnet
 **General instructions to join the Terp mainnet after network genesis.** 
 
-Below are multiple methods to configure a node & interact with the current test networks of Terp Network. 
-
 If you plan to run a node on main network, it is highly reccomended to treat the test network as a production environment to get into the habit of best practices in terms of node operation security. 
+___
 
 ## Terp-Core Installation
 

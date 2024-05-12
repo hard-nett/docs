@@ -7,23 +7,22 @@ sidebar_position: 1
 
 The following is detailed guide that shows the basics of manually deploying a contract to a Terp Network local environment.
 
-
-You now have the wasm binary ready. It's time to deploy it to the Terp (90-u2) testnet and begin interacting with your smart contract. You can use the [terpd CLI](../../overview/terp-cli/). 
-
 # Deploy contract
 In the [Compile Contract](../getting-started/compile-a-contract) page, we generated a wasm binary executable. You can upload the code to the blockchain, and once the process is complete, you can download the bytecode for verification purposes.
 
 ### Deploy using terpd
-
-Now you will store the wasm bytecode of the **cw_namespace** contract on chain and obtain the **code id**. This **code id** will be used later to create an instance of the **cw_namespace** contract.
+Now you will store the wasm bytecode of the **cw_counter** contract on chain and obtain the **code id**. This **code id** will be used later to create an instance of the **cw_counter** contract.
 ```sh
-RES=$(terpd tx wasm store artifacts/cw_nameservice.wasm --from mywallet --chain-id 90u-4 --gas auto --gas-adjustment 1.3 --fees 30000uthiolx -y --output json -b block --node TBD)
+terpd tx wasm store contract.wasm --from testnet-key --gas-prices 0.025uthiolx --gas-adjustment 1.7 --gas auto
 ```
 
 The following is an easier way to get the Code Id from the response:
 ```sh
-CODE_ID=$(echo $RES | jq -r '.logs[0].events[] | select(.type=="store_code") | .attributes[] | select(.key=="code_id") | .value')
-echo $CODE_ID
+terpd q tx [hash] | jq 
+# or use sed to return just the code_id
+terpd q tx [hash] | sed -n 's/.*"key":"code_id","value":"\([^"]*\)".*/\1/p'
+# or check the block explorer
+https://testnet-ping.pub/terp/tx/[hash]
 ```
 You can see the list of contracts instantiated using the CODE_ID generated above by executing the following command:
 ```sh

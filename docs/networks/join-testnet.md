@@ -2,7 +2,7 @@
 **A Test Network exist for community members to have a way to familiarize themselves with terp-core & battleharden their custom smart contract code.** 
 
 If you plan to run a node on main network, it is highly reccomended to treat the test network as a production environment to get into the habit of best practices in terms of node operation security. 
-
+___
 ## Current testnet 
 
 Below is the list of Terp testnets and their current status. You will need to know the version tag for installation of the `terpd` binary.
