@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/vsDark');
+const darkCodeTheme = require('prism-react-renderer/themes/github');
 
 // const UIKitReferencePlugins = require('./plugins/ui-kit-reference-plugin.cjs');
 const { webpackPlugin } = require('./plugins/webpack-plugin.cjs');
@@ -137,11 +137,6 @@ const config = {
             to: '/overview',
             position: 'left',
           },
-          // {
-          //   label: 'Interact',
-          //   to: '/developers/developer-tools/cli',
-          //   position: 'left',
-          // },
           {
             label: 'Participate',
             to: '/validators',
@@ -179,13 +174,7 @@ const config = {
             position: 'right',
           },
           {
-            label: 'Launch Satellite Bridge',
-            href: 'https://satellite.money/',
-            position: 'right',
-            className: 'dev-portal-signup dev-portal-link',
-          },
-          {
-            label: 'Launch Osmosis Swap',
+            label: 'Launch Headstash Dashboard',
             href: 'https://app.osmosis.zone/',
             position: 'right',
             className: 'dev-portal-signup dev-portal-link',

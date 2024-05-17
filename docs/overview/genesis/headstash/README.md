@@ -1,5 +1,5 @@
 ---
-title:  a. Intro
+title:  Introduction - Secret Headstash
 sidebar_position: 1
 ---
 # Secret TERP & THIOL Headstash 

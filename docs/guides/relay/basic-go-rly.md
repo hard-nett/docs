@@ -1,5 +1,5 @@
 ---
-title: f. run a GoLang relayer 
+title: run a GoLang relayer 
 sidebar_position: 2
 ---
 

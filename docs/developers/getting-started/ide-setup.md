@@ -1,11 +1,11 @@
 ---
-title: 1. IDE setup
+title: 1. Workspace setup
 sidebar_position: 1
 ---
 
-# Integrated Development Environment setup
+# Initial Development Workspace Environment setup
 
-This tutorial will guide you through the process of setting up an Integrated Development Environment (IDE) for developing CosmWasm smart contracts. Since CosmWasm contracts are currently built using Rust, this tutorial will focus on setting up your IDE for Rust development.
+This tutorial will guide you through the process of setting up an Development Workspace Environment (DWE) for developing CosmWasm smart contracts. Since CosmWasm contracts are currently built using Rust, this tutorial will focus on setting up your DWE for Rust development.
 
 # Prerequisites
 Please refer to the Installation guide to [install](./installation.md) the Rust compiler (rustc) before proceeding.

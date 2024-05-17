@@ -1,5 +1,5 @@
 ---
-title:  b. FAQ
+title:  FAQ
 sidebar_position: 2
 ---
 *Get questions answered about workflow leading up to the airdrop, during the airdrop, and possibilities for after the airdrop of TERP & THIOL tokens.*

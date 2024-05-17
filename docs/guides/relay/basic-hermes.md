@@ -1,5 +1,5 @@
 ---
-title: f. run a relayer via hermes
+title: run a relayer via hermes
 sidebar_position: 3
 ---
 

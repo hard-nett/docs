@@ -8,7 +8,7 @@ sidebar_position: 1
 The following is detailed guide that shows the basics of manually deploying a contract to a Terp Network local environment.
 
 # Deploy contract
-In the [Compile Contract](../getting-started/compile-a-contract) page, we generated a wasm binary executable. You can upload the code to the blockchain, and once the process is complete, you can download the bytecode for verification purposes.
+In the [Compile Contract](../../cosmwasm/getting-started/compile-a-contract) page, we generated a wasm binary executable. You can upload the code to the blockchain, and once the process is complete, you can download the bytecode for verification purposes.
 
 ### Deploy using terpd
 Now you will store the wasm bytecode of the **cw_counter** contract on chain and obtain the **code id**. This **code id** will be used later to create an instance of the **cw_counter** contract.
