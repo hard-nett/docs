@@ -1,5 +1,5 @@
 ---
-title: my first dapp
+title: front end UI
 sidebar_position: 1
 ---
 # Introduction

@@ -7,22 +7,17 @@ sidebar_position: 1
 
 ## What is a validator?
 
-Terp Network is based on Tendermint that relies on a set of validators to secure the network. The role of validators is to run a full node and participate in consensus by broadcasting votes that contain cryptographic signatures signed by the validator's private key. Validators commit new blocks in the blockchain and receive reward in exchange for their work. Validators must also participate in governance by voting on proposals. Validators are weighted according to their total stake.
+Validators play a crucial role in maintaining the integrity of the blockchain by performing two key tasks. First, they participate in consensus by broadcasting votes that contain cryptographic signatures signed with their private key, representing their agreed-upon opinion on which block should be added to the blockchain. This helps to ensure that the network reaches a collective agreement on the state of the blockchain. Second, validators commit new blocks to the blockchain by signing and publishing them, which ultimately enables the creation of an immutable and tamper-proof record of all transactions.
+
 
 ## What is staking? 
-Terp Network is a public Proof-Of-Stake (PoS) blockchain, meaning that the weight of validators is determined by the amount of staking tokens (`$TERP`) bonded as collateral. These `$TERP` tokens can be self-delegated directly by the validator or delegated to the validator by other `$TERP` holders.
-
-Any user in the system can declare their intention to become a validator by sending a create-validator transaction to become validator candidates.
-
-The weight (i.e. voting power) of a validator determines whether they are an active validator. The active validator set is limited to an amount (opens new window)that changes over time.
+In Terp Network's Proof-of-Stake (PoS) architecture, validators are randomly chosen to create new blocks based on the amount of staking tokens ($TERP) they have committed to the network. The more tokens a validator has staked, the more likely their validator will be chosen to create new blocks. Staking tokens can be done by the validator themselves or by delegating their tokens to another validator. By staking, validators are incentivized to behave honestly and maintain the integrity of the network, as they have skin in the game. In turn, the network rewards validators with a share of the block rewards in proportion to their staking power.
 
 ## What is a full node? 
 
-A full node is a server running a chain's binary (its software) that fully validates transactions and blocks of a blockchain and keeps a full record of all historic activity. A full node is distinct from a pruned node that processes only block headers and a small subset of transactions. Running a full node requires more resources than a pruned node. Validators can decide to run either a full node or a pruned node, but they need to make sure they retain enough blocks to be able to validate new blocks.
+A full node is a server that fully validates transactions and blocks of a blockchain and keeps a full record of all historic activity. A full node is distinct from a pruned node that processes only block headers and a small subset of transactions. Running a full node requires more resources than a pruned node. Validators can decide to run either a full node or a pruned node, but they need to make sure they retain enough blocks to be able to validate new blocks.
 
 Of course, it is possible and encouraged for users to run full nodes even if they do not plan to be validators.
-
-You can find more details about the requirements in the Joining Mainnet Tutorial.
 
 ## What is a delegator?
 Delegators are `$TERP` holders who cannot, or do not want to, run a validator themselves. `$TERP` holders can delegate `$TERP` to a validator and obtain a part of their reward in exchange. For details on how reward is distributed, see What is the incentive to stake? and What are validators commission? in this document.
@@ -30,18 +25,6 @@ Delegators are `$TERP` holders who cannot, or do not want to, run a validator th
 Because delegators share reward with their validators, they also share risks. If a validator misbehaves, each of their delegators are partially slashed in proportion to their delegated stake. This penalty is one of the reasons why delegators must perform due diligence on validators before delegating. Spreading their stake over multiple validators is another layer of protection.
 
 Delegators play a critical role in the system, as they are responsible for choosing validators. Being a delegator is not a passive role. Delegators must actively monitor the actions of their validators and participate in governance. For details on being a delegator, read the Delegator FAQ (opens new window).
-
-
-## What are the different states a validator can be in?
-After a validator is created with a create-validator transaction, the validator is in one of three states:
-
-in validator set: Validator is in the active set and participates in consensus. The validator is earning rewards and can be slashed for misbehavior.
-
-jailed: Validator misbehaved and is in jail, i.e. outside of the validator set.
-
-If the jailing is due to being offline for too long (i.e. having missed more than 95% out of the last 10,000 blocks), the validator can send an unjail transaction in order to re-enter the validator set.
-If the jailing is due to double signing, the validator cannot unjail.
-unbonded: Validator is not in the active set, and therefore not signing blocks. The validator cannot be slashed and does not earn any reward. It is still possible to delegate `$TERP` to an unbonded validator. Undelegating from an unbonded validator is immediate, meaning that the tokens are not subject to the unbonding period.
 
 ## What is self-delegation? How can I increase my self-delegation?
 Self-delegation is a delegation of `$TERP` from a validator to themselves. The delegated amount can be increased by sending a delegate transaction from your validator's application application key.
@@ -55,6 +38,22 @@ Delegators are free to choose validators according to their own subjective crite
 - **Track record:** Delegators review the track record of the validators they plan to delegate to. This track record includes past votes on proposals and historical average uptime.
 - **Community contributions:** Another (more subjective) criteria is the work that validators have contributed to the community, such as educational content, participation in the community channels, contributions to open source software, etc.
 Apart from these criteria, validators send a create-validator transaction to signal a website address to complete their resume. Validators must build reputation one way or another to attract delegators. For example, a good practice for validators is to have a third party audit their setup. Note though, that the Tendermint team does not approve or conduct any audits themselves. For more information on due diligence, see the A Delegator’s Guide to Staking (opens new window)blog post.
+
+## What are the different states a validator can be in?
+After a validator is created with a create-validator transaction, the validator is in one of three states:
+
+in validator set: Validator is in the active set and participates in consensus. The validator is earning rewards and can be slashed for misbehavior.
+
+jailed: Validator misbehaved and is in jail, i.e. outside of the validator set.
+
+If the jailing is due to being offline for too long (i.e. having missed more than 95% out of the last 10,000 blocks), the validator can send an unjail transaction in order to re-enter the validator set.
+If the jailing is due to double signing, the validator cannot unjail.
+unbonded: Validator is not in the active set, and therefore not signing blocks. The validator cannot be slashed and does not earn any reward. It is still possible to delegate `$TERP` to an unbonded validator. Undelegating from an unbonded validator is immediate, meaning that the tokens are not subject to the unbonding period.
+
+## Can a validator run away with their delegators' `$TERP`?
+By delegating to a validator, a user delegates voting power. The more voting power a validator have, the more weight they have in the consensus and governance processes. This does not mean that the validator has custody of their delegators' `$TERP`. A validator cannot run away with its delegator's funds.
+
+Even though delegated funds cannot be stolen by their validators, delegators' tokens can still be slashed by a small percentage if their validator suffers a slashing event, which is why we encourage due diligence when selecting a validator.
 
 # Responsibilities
 ## Do validators need to be publicly identified?
@@ -79,16 +78,11 @@ Staking `$TERP` can be thought of as a safety deposit on validation activities. 
 
 Validators, and by association delegators, receive block rewards, fees, and have the right to participate in governance. If a validator misbehaves, a certain portion of their total stake is slashed. This means that every delegator that bonded `$TERP` to this validator gets penalized in proportion to their bonded stake. Delegators are therefore incentivized to delegate to validators that they anticipate will function safely.
 
-## Can a validator run away with their delegators' `$TERP`?
-By delegating to a validator, a user delegates voting power. The more voting power a validator have, the more weight they have in the consensus and governance processes. This does not mean that the validator has custody of their delegators' `$TERP`. A validator cannot run away with its delegator's funds.
-
-Even though delegated funds cannot be stolen by their validators, delegators' tokens can still be slashed by a small percentage if their validator suffers a slashing event, which is why we encourage due diligence when selecting a validator.
-
 ## How often is a validator chosen to propose the next block? Does frequency increase with the quantity of bonded `$TERP`?
 The validator that is selected to propose the next block is called the proposer. Each proposer is selected deterministically. The frequency of being chosen is proportional to the voting power (i.e. amount of bonded `$TERP`) of the validator. For example, if the total bonded stake across all validators is 100 `$TERP` and a validator's total stake is 10 `$TERP`, then this validator is the proposer ~10% of the blocks.
 
-## Are validators of the Cosmos Hub required to validate other zones in the Cosmos ecosystem?
-This depends, currently no validators are required to validate other blockchains. But when the first version of Interchain Security (opens new window)is launched on the Cosmos Hub, delegators can vote to have certain blockchains secured via Interchain Security. In those cases, validators are required to validate on these chains as well.
+## Are validators of the Terp Network required to validate other zones in the Cosmos ecosystem?
+No. Validator of Terp Network may vote to include other networks in the validation, with use of the Shared Security Feature.
 
 ## How can a validator safely quit validating on the Cosmos Hub?
 If a validator simply shuts down their node, this would result in the validator and their delegators getting slashed for being offline. The only way to safely exit a validator node running on the Cosmos Hub is by unbonding the validator's self-delegated stake so that it falls below its minimum self-delegation limit. As a result, the validator gets jailed and kicked out of the active set of validators, without getting slashed. They can then proceed to shut down their node without risking their tokens.

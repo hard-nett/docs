@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # Verifying A CosmWasm Code Contract
 
-Accurate contract execution is essential. Fortunately, verifying any smart contract deployed on a blockchain is possible. Let's consider a practical example: you have an active contract on the blockchain, and you need to determine its code name and version.
+We can verify any contract on chain with a few simple commands. Let's consider a practical example: you have an active contract on the blockchain, and you need to determine its code name and version.
 
 ## Inspect code
 We can query the contract information using the following command:

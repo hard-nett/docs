@@ -175,7 +175,7 @@ const config = {
           },
           {
             label: 'Launch Headstash Dashboard',
-            href: 'https://app.osmosis.zone/',
+            href: 'https://headstash.terp.network/',
             position: 'right',
             className: 'dev-portal-signup dev-portal-link',
           },

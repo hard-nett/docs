@@ -1,8 +1,4 @@
 {
     "label": "Headstash Airdrop",
-    "position": 7,
-    "link": {
-      "type": "generated-index",
-      "description": "Resources for the headstash airdrop distribution event"
-    }
+    "position": 7
 }

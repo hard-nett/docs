@@ -26,11 +26,11 @@ go download
 ```
 ### Build a docker image & save it locally 
 ```
-./heighliner build -c terpnetwork --git-ref v4.2.0
+./heighliner build -c terpnetwork --git-ref v4.2.2
 ```
-This will create an image with the name `terpnetwork/terp-core` and the version tag `v4.2.0`. Now it is possible to run the `terpd` binary in the container, e.g. evaluating its version: 
+This will create an image with the name `terpnetwork/terp-core` and the version tag `v4.2.2`. Now it is possible to run the `terpd` binary in the container, e.g. evaluating its version: 
 ```
-docker run -it --rm terpnetwork/terp-core:v4.2.0 terpd version
+docker run -it --rm terpnetwork/terp-core:v4.2.2 terpd version
 ```
 
 

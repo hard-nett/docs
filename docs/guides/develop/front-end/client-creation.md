@@ -1,5 +1,5 @@
 ---
-title: 4 - client creation
+title: client creation
 sidebar_position: 4
 ---
 # Overview

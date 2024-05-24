@@ -3,18 +3,20 @@ title:  Introduction - Secret Headstash
 sidebar_position: 1
 ---
 # Secret TERP & THIOL Headstash 
-The Secret Headstash Airdrop is an ownership distribution event, decentralizing decision making power, while making use of Terp Network's native interoperability and Secret Networks trusted execution environments. 
+The Secret Headstash Airdrop is an ownership distribution event, decentralizing decision making & ownership of Terp Network.
 
+*At the time of this writing, there is an active headstash airdrop contract deployed and funded, however any claim that occurs is public.* This was viewed as **a flaw in respect to the privacy** of the individuals choosing to participate.
 ___
 ## Concept
-This airdrop is designed so eligible ethereum wallet addresses verify ownership, to claim TERP & THIOL with a fresh, uncorrelated interchain compatible wallet. 
+This Headstash is designed so eligible ethereum wallet addresses verify ownership in order to claim TERP & THIOL with a fresh interchain compatible wallet, **without** creating an on-chain correlation between the two addresses. 
 
 
-*At the time of this writing, there is an active headstash airdrop contract deployed and funded, however any claim that occurs is public.* This was viewed as **a flaw in respect to the privacy** of individuals who choose to participate in Terp Network, and is now being avoided thanks to the secret implementation of the airdrop contract.
+This is possible due to [Secret Network's trusted execution environment](https://docs.scrt.network/secret-network-documentation/overview-ecosystem-and-technology/techstack/privacy-technology/intel-sgx), where smart contracts can have internal states that are not public.
+
 
 ### Initial Snapshot details
 
-Snapshots were made and distributions were calculated for the public headstash airdrop to holders of the following communities:
+The following communities were included in the first secret headstash:
 
 - [Crypto Canna Club](https://opensea.io/collection/cryptocannabisclub)
 - [Chronic Token](https://etherscan.io/token/0x19fAb8f7dfFfF38268644eAEBd3d538F68036000)
@@ -24,7 +26,7 @@ Snapshots were made and distributions were calculated for the public headstash a
 - [Galaktic Gang](https://discord.gg/u9XEbP9dbD)
 - [Hippie Life Krew](https://opensea.io/collection/hippie-life-krew-the-cloudalia-story)
 
-Calculations to determine allocations to snapshot method prevents whales of these projects disproportionally receiving large amounts, by making use of a [piecewise-linear curve](https://en.wikipedia.org/wiki/Piecewise_linear). *You can find the repository with airdrop details & calculation [here](https://github.com/terpnetwork/airdrop).*
+Calculations to determine allocations to snapshot method minimize whales of these projects disproportionally receiving large amounts, by making use of a [piecewise-linear curve](https://en.wikipedia.org/wiki/Piecewise_linear). *You can find the repository with airdrop details & calculation [here](https://github.com/terpnetwork/airdrop).*
 
 *If you would like to see a cannabis & web3 project included in the airdrop, please reach out to the community via [Discord](https://discord.gg/u9XEbP9dbD) or [Telegram](https://t.me/+FuFi63JcwuEzNmVh)! A governance proposal is required in order to make any decision on the included communities, and a snapshot export that can be verified of its authenticity is expected.* 
 

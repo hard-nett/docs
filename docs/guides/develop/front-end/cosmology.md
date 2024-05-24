@@ -1,11 +1,11 @@
 ---
-title: 1 - prep
+title: deploy basic template with Cosmology
 sidebar_position: 1
 ---
 # Introduction
-There are many ways to build a dapp that can connect & communicate with Terp Network. The most common languages used are **[react](https://nextjs.org/)**, **[react-native](https://reactnative.dev/)**, & **[vue](https://github.com/ping-pub/explorer)**.
+There are many ways to build a dapp that can connect & communicate with Terp Network.
 
- **This guide will show you how to setup a minimal template for creating an application.** We will be using **[Cosmology](https://cosmology.tech)**, an exellect package library specifically for network using Cosmos-SDK.
+ **This guide will show you how to setup a minimal template for creating an application.** We will be using **[Cosmology](https://cosmology.tech)**, a package library specifically for network using Cosmos-SDK.
 
 ## The Server <--> Client Tech
 
@@ -102,3 +102,24 @@ cca --name ibc-example --example --template ibc-transfer
 </Container>
 
 
+# App Layout
+
+Now we have a basic application ready for customization! Lets dive into the folder layout of our new app:
+
+*[send-token example](https://github.com/cosmology-tech/create-cosmos-app/tree/main/examples/send-tokens)*
+```bash
+.                                   
+  ├── components/      # Contains the ui components logic (buttons, widgets, navbar, etc)
+      ├── wallet.tsx   # wallet component
+  ├── config/          # General app configuration 
+  ├── pages/           # Web-app pages
+      ├── _app.tsx     # setup global app (wallet router, toast, etc.).
+      ├── index.tsx    # home page of web-app
+  ├── public/          # Images, fonts, and content consumed by UI
+  └── styles/          # CSS & SCSS files for making your app beautiful
+  ├── next.config.js   # Configuration file for Next.Js apps. 
+  ├── package.json/    # node modules dependency list. 
+  ├── tsconfig.json/   # Typescript config file. 
+```
+
+You may choose whichever folder structure works best for you during customization.
