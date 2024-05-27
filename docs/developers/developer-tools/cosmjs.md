@@ -7,7 +7,7 @@ sidebar_position: 1
 
  CosmJS is a TypeScript/JavaScript library. It helps developers integrate frontend user interfaces and backend servers with Cosmos blockchains that implement distributed applications.
 
- In general, user interfaces help users interpret the blockchain state, compose and sign transactions, and send them - all things that are potentially accomplished by other less convenient methods. A user interface is supported by servers or micro-services that also interact with the blockchain.
+ In general, UI's help users interpret the blockchain state, compose and sign transactions, and send them - all things that are potentially accomplished by other less convenient methods. A UI is supported by servers or micro-services that also interact with the blockchain.
 
 ### Packages
 CosmJS is a library that consists of many smaller npm packages within the [@cosmjs namespace](https://www.npmjs.com/org/cosmjs), a so-called "monorepo".
@@ -23,3 +23,4 @@ The repository is nicely modular and keeps clean dependencies. This ensures soft
 
 ## [Terp-Ts](https://github.com/terpnetwork/terp-ts)
 
+Terp-Ts is the Cosmjs library built specifically for interacting with Terp Network.  Checkout our guide on [how to use Terp-Ts](../../guides/develop/front-end/client-creation) for various functions.

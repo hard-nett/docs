@@ -34,3 +34,5 @@ Please look through `tmkms.toml` after it's generated, as various sections
 will require some customization.
 
 ## Running: `tmkms start`
+
+## Further Resources

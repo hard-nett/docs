@@ -19,5 +19,10 @@ The **gas price** in Terp Network determines the cost of each unit of computatio
 
 To prevent validators from accepting transactions with low fees that might lead to spamming the network and additional security issues, a Minimum Price of Gas system was put in place. Consequently, transactions will fail if the set gas price falls beneath this threshold. Therefore, it's not ideal to set the gas price manually but instead utilize the endpoint or CLI command that returns the minimum price of gas and then use this value as the gas price. This falls under the **estimate fees** feature of the **rewards** module.
 
+### Standard Gas & Fee Config 
 
-Commands executed via the **terpd** CLI can pull in the minimum price of gas by accessing the **estimate-fees** command:
+```
+terpd config gas auto 
+terpd config gas-adjustments 1.8 
+terpd config gas-prices 0.05uthiolx
+```

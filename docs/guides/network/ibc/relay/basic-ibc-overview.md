@@ -12,6 +12,18 @@ sidebar_position: 1
 
 ## IBC Transaction Lifecycle
 
+### Create Client A 
+
+### Create Client B
+
+### MsgConnectionOpenInit A
+### MsgConnectionOpenTry B
+### MsgConnectionOpenAck A 
+### MsgConnectionOpenConfirm A 
+### MsgChannelOpenInit A
+### MsgChannelOpenTry B
+### MsgChannelOpenAck A
+### MsgChannelOpenConfirm B
 ## IBC denoms
 
 ### How are IBC denoms derived?

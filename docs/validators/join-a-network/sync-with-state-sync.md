@@ -6,6 +6,10 @@ sidebar_position: 3
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+:::danger 
+Statesync Providers are 3rd-party, non-audited sources. It is generally not good practive to run statesync or configure your local node to a public endpoints, without VPN or sentry array setup. 
+:::
+
 **state-sync** is a feature that allows nodes to quickly sync their state by fetching a snapshot of the application state at a specific block height. 
 
 This greatly reduces the time required for node to sync with the network, compared to the default method of replaying all blocks from the genesis block. The syncing happens through a snapshot-enabled RPC and from a trusted block height.

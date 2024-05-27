@@ -48,5 +48,15 @@ If the **diff** command yields an empty output, this indicates that the two file
 
 You can now create an instance of the wasm contract. After instantiation, you can make queries and execute transactions.
 
+```sh
+terpd tx wasm i <code_id_here> '{"msg_name_here":{}}' --from testnet-key
+
+```
+
 # Contract Interaction
 Now that the contract is instantiated, you can register a name and transfer it to another address by paying the transfer fee.
+
+to get the contract address from the code-id tx:
+```sh 
+terpd q tx <tx_hash> -o json | jq -r '.logs[].events[] | select(.type == "instantiate") | .attributes[] | select(.key == "_contract_address") | .value)'
+```

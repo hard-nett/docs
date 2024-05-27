@@ -6,9 +6,9 @@ sidebar_position: 1
 # Command Line Interface - TERPD
 
 
-TERPD CLI is a tool that empowers you to interact seamlessly with the Terp Network protocol. Leveraging **TERPD**, it allows you to execute a wide array of operations, from sending transactions to querying the blockchain's state and beyond.
+TERPD CLI is a tool that powers interacting seamlessly with the Terp Network. Terpd has a wide array of operations, from sending transactions to querying the blockchain's state and more.
 
-TERPD CLI is not strictly limited to those running their own nodes. You can engage with the network even without hosting a node personally. You can utilize TERPD CLI to submit transactions or probe the network's state via RPC. This opens up opportunities for a variety of users to interact with the Terp Network blockchain, making it a versatile tool for a range of operations.
+TERPD CLI is not strictly limited to those running their own nodes. You can engage with the network even without hosting a node personally. You can utilize TERPD CLI to submit transactions or probe the network's state via RPC. This opens up opportunities to interact with the Terp Network blockchain, making it a versatile tool for a range of operations.
 
 ## Installation
 

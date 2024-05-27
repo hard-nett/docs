@@ -24,7 +24,7 @@ If you prefer, you can use Docker Engine instead of Docker Desktop.
 
 In order to run **terpd**, you will need to install <a href="https://go.dev/doc/install" target="_blank" >Golang</a>.
 
-# Rustc
+# Rust
 **rustc**, provided by the  <a href="https://www.rust-lang.org/" target="_blank" title="Rust Homepage">Rust</a> project maintainers, is the compiler for the Rust programming language. **rustc** takes your Rust source code and produces binary code as a library or an executable.
 
 To install Rust, follow the instructions for your operating system <a href="https://www.rust-lang.org/tools/install" target="_blank" title="Install Rust">here</a>.
@@ -33,29 +33,6 @@ To install Rust, follow the instructions for your operating system <a href="http
 Cargo is the Rust package manager, like **go get** for Golang or **npm** is for JavaScript. Cargo comes with Rust if you installed **rustc** using **rustup**.
 
 If you did not already install **rustc** with **rustup**, or don't have **cargo** in your command line path, see the instructions for installing Cargo <a href="https://doc.rust-lang.org/cargo/getting-started/installation.html" target="_blank" title="Install Rust">here</a>.
-
-# Cargo Generate
-The cargo-generate tool creates a new Rust project quickly by leveraging a pre-existing code base.
-
-Terp Network uses **cargo-generate** and **cargo-run-script** to provide and manage project templates for dapp development.
-
-To install **cargo-generate** with **vendored-openssl**, and the **cargo-run-script** module, run the commands:
-
-```bash
-cargo install cargo-generate --features vendored-opensslcargo install cargo-run-script
-```
-
-# Cargo Generate
-The **cargo-generate** tool creates a new Rust project quickly by leveraging a pre-existing code base.
-
-Terp Network uses **cargo-generate** and **cargo-run-script** to provide and manage project templates for dapp development.
-
-To install **cargo-generate** with **vendored-openssl**, and the **cargo-run-script** module, run the commands:
-
-```bash
-cargo install cargo-generate --features vendored-openssl
-cargo install cargo-run-script
-```
 
 # wasm32
 

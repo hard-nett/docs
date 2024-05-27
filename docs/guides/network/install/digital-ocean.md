@@ -11,3 +11,9 @@ This guide will walkthrough the inital steps of setting up a digital ocean accou
 ### Create Account
 
 ### Create Droplet
+
+### Access Droplet Remotely 
+
+### Setup Multiple Users on Droplet
+
+## Further Resources
