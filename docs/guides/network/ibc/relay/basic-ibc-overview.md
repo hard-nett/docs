@@ -21,14 +21,10 @@ IBC clients are able to track and effeciently vverify the validity of cross-chai
 **IF A CLIENT IS NOT UPDATED WITHIN THE `TrustingPeriod`, THE CLIENT WILL EXPIRE**
 
 ### Connections
-
-Connections are responsible for facilitation all cross-chain verifications on an IBC state. A connection can be associated with any number of channels, and is associated with a specific light client of the counterparty chain.
-
-The connection handshake is responsible for verifying the light clients on each chain are the correct ones for their respective counterparties.
+Connections are responsible for facilitation all cross-chain verifications on an IBC state. connections have many channels, but only one light client of the counterparty chain. The connection handshake is responsible for verifying the light clients on each chain are the correct ones for their respective counterparties.
 
 ### Channels
-
-a module on one blockchain can communicate with a other modules on other blockchains by sending, recieving, and acknowledging packets through channels that are uniquely identified by the (`channelId`, `portId`) tuple. Channels encapsulate 2 `ChannelEnds` that are associated with a connection. 
+A user or module on one blockchain can communicate with a other modules on other blockchains by sending, recieving, and acknowledging packets through channels that are uniquely identified by the (`channelId`, `portId`) tuple. Each channel consists of 2 clients. 1 client for each connected chain/zones.
 
 Just like connections, channels are established with a handshake.
 
@@ -36,7 +32,6 @@ Just like connections, channels are established with a handshake.
 `UNORDERED` channels process packets in order they arrive.
 
 ## Ports
-
 IBC modules can bind to any number of ports. Each port is identified by unique portID. the `portId` denotes the type of application. 
 
 `transfer` is the `portID` for fungible token transfers

@@ -4,25 +4,22 @@ sidebar_position: 2
 ---
 
 ## Goal
-
-- review why and how clients expire
-- review the process to update an expired client
+In this guide, we review why and how IBC clients expire, as well as review the process to update an expired client.
 
 
 ## Why Do Clients Expire?
+Clients expire when `TrustingPeriod` has passed since the last updated client state. This is usually due to lack of use of the ibc channel, or lack of active relayers.
 
 ## How is a Client Updated Normally?
+These command are usually ran by a relayer during the ibc transaction workflow to update the state of a client for a channel:
 
 <Container>
 <Tabs>
-
 <TabItem value="hermes" label="hermes">
 
 ```sh
 hermes update client --host-chain <chain-id> --client <client>
 ```
-
-
 
 </TabItem>
 
@@ -36,52 +33,62 @@ rly tx update-clients <path-name>
 </Tabs>
 </Container>
 
-### Query Clients 
+### Steps to carry out the process of reviving the IBC client:
+1. Determine which client is expired and on which host chain
+2. Create a new client on that host chain
+3. Push a proposal on-chain that replaces the expired client-id with an active newly created one
+4. Check if the channel is once again operational
+
+## 1. Check for Expired Clients 
+You will know if a client is expired if your ibc tx fails, and the error logs communicates that the client is expired. You can also get the status of a client with:
 
 <Container>
 <Tabs>
 <TabItem value="hermes" label="hermes">
 
+```sh
+hermes query client state --chain chain-id --client 07-tendermint-xyz
+
+```
+
+</TabItem>
+
+<TabItem value="rly" label="rly">
+
+```sh
+rly q clients-expiration hostchain-counterpartychain
+```
+
+</TabItem>
+</Tabs>
+</Container>
+
+## 2. Create a New Client on Host Chain 
+<Container>
+<Tabs>
+<TabItem value="hermes" label="hermes">
+
+```sh
+hermes tx client
+
+```
+
 </TabItem>
 <TabItem value="rly" label="rly">
 
 ```sh
-rly q clients <chain-name>
+rly tx clients 
 ```
 </TabItem>
 </Tabs>
 </Container>
 
-details about each `client_id` that exists are returned
 
-```json
-{
-    "client_id": "07-tendermint-6",
-    "client_state": {
-        "@type": "/ibc.lightclients.tendermint.v1.ClientState",
-        "chain_id": "pulsar-3",
-        "trust_level": {
-            "numerator": "1",
-            "denominator": "3"
-        },
-        "trusting_period": "25100s",
-        "unbonding_period": "86400s",
-        "max_clock_drift": "55s",
-        "frozen_height": {
-            "revision_number": "0",
-            "revision_height": "0"
-        },
-        "latest_height": {
-            "revision_number": "3",
-            "revision_height": "226705"
-        },
-        "proof_specs": [],
-        "upgrade_path": [
-            "upgrade",
-            "upgradedIBCState"
-        ],
-        "allow_update_after_expiry": true,
-        "allow_update_after_misbehaviour": true
-    }
-}
-```
+
+
+## 3. Create Governance Proposal To Update Expired Client
+
+### References 
+
+- [simply-staking guide](https://medium.com/simplystaking/reviving-an-ibc-client-with-governance-hermes-relayer-362a1da4814d)
+- [ida-documentation]()
