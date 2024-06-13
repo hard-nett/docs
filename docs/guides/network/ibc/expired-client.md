@@ -83,12 +83,14 @@ rly tx clients
 </Tabs>
 </Container>
 
-
-
-
 ## 3. Create Governance Proposal To Update Expired Client
+
+to propose to update an expired client:
+```sh
+terpd tx gov submit-legacy-proposal update-client [subject-client-id] [substitute-client-id] [flags]
+```
 
 ### References 
 
 - [simply-staking guide](https://medium.com/simplystaking/reviving-an-ibc-client-with-governance-hermes-relayer-362a1da4814d)
-- [ida-documentation]()
+- [ida-documentation](https://ida.interchain.io/)

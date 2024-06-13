@@ -87,9 +87,6 @@ rly q balance terpnetwork
 
 ### linking two blockchains
 
-
-
-
 ## Step 5: Spinning Up A Fresh Channel 
 
 ## Step 6: Setup Continuous Relay Service

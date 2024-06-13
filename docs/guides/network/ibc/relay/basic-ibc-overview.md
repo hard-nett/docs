@@ -36,28 +36,46 @@ IBC modules can bind to any number of ports. Each port is identified by unique p
 
 `transfer` is the `portID` for fungible token transfers
 
-## IBC Client, Connection, and Channel Creation Workflow
+## New Connection Workflow
 
-### Create Client A
+Establishing an IBC connection (for example, between chain A and chain B) requires four handshakes:
 
-### Create Client B
+- `OpenInit`
+- `OpenTry`
+- `OpenAck`
+- `OpenConfirm`
 
-### Initialize Connection A
+### Initialize Connection A  
+`OpenInit` initializes any connection which may occur. It is like an identifying announcement from the IBC module on chain A which is submitted by a relayer. 
 
 ### Try Open Conection B
+`OpenTry` is where chain B verifies the identity of chain A according to information that chain B has about chain A in its light client (the algorithm and the last snapshot of the consensus state containing the root hash of the latest height as well as the next validator set). It also responds to some of the information about its own identity in the OpenInit announcement from chain A.
 
 ### Acknowledge Open Connection A
+`OpenAck` is very similar to the functionality of OpenInit, except that the information verification now occurs for chain A.
 
 ### Confirm Open Connection B
+`OpenConfirm` is the final handshake, in which chain B confirms that both self-identification and counterparty identification were successful.
+
+
+## New Channel Workflow 
+Similarly to how connections are established, channels are established through a four-way handshake, in which each step is initiated by a relayer:
+
 
 ### Initialize Channel A 
+`ChanOpenInit`: will set the chain A into `INIT` state. This will call `OnChanOpenInit` so application A can apply the custom callback that it has set on `INIT`, e.g. check if the port has been set correctly, the channel is indeed unordered/ordered as expected, etc. An application version is also proposed in this step.
 
 ### Try Open Channel B
 
-### Acknowledge Open Channel  A
+`ChanOpenTry`: will set chain B into `TRY` state. It will call `OnChanOpenTry` so application B can apply its custom `TRY` callback. Application version negotiation also happens during this step.
+
+### Acknowledge Open Channel A
+
+`ChanOpenAck`: will set the chain A into `OPEN` state. This will call `OnChanOpenAck` which will be implemented by the application. Application version negotiation is finalised during this step.
 
 ### Confirm Open Channel B
 
+`ChanOpenConfirm`: will set chain B into `OPEN` state so application B can apply its `CONFIRM` logic.
 
 ## IBC denoms
 

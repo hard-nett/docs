@@ -59,8 +59,6 @@ hermes config auto --output $HOME/.hermes/config.toml --chain terpnetwork secret
 
 you should have now created a config.toml file that we can further modify for our needs. Running `cat $HOME/.hermes/config.toml` should return the default template from the chains you intend to relay packets for
 
-
-
 ## Step 3: Configure Your Relayer Keys
 
 Your relayer will need to sign & broadcast messages on chain, so first the private keys that we will grant to the relayer must be set up.Generally it is ideal to utilize a fresh wallet and private key, not associated with any personal or critical keys in your possession.
@@ -95,16 +93,24 @@ if there is no existing channels between the pair of networks:
 ```
 
 ## Step 6: Setup Continuous Relay Service
+setup a systemd file for your server:
 
 ```sh
+[Unit]
+Description=Hermes Service
+After=network.target
 
+[Service]
+User=<username>
+ExecStart=/usr/local/bin/hermes start
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
 ```
 
 ## Step 7: Monitering IBC Relaying on Terp Network
-
-```sh
-
-```
+A comprehensive guide for [monitoring your relayer can be found here](https://hermes.informal.systems/tutorials/production/setup-grafana.html).
 ___
 > Sources:
 * https://hermes.informal.systems/
