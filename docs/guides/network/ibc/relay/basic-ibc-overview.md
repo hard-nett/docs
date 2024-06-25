@@ -12,11 +12,16 @@ sidebar_position: 1
 ## IBC Transport Layer
 
 The transport layer consists of 4 specific items:
+- light clients
+- connection
+- channels
+- ports
 
 ### Light Clients
-IBC clients are able to track and effeciently vverify the validity of cross-chain transactions, without the need for an intermediary. A client can be associated with any number of connections to a counterparty chain.
+IBC clients are able to track and effeciently vverify the validity of cross-chain transactions, without the need for an intermediary. A client can be associated with any number of connections to a counterparty chain. 
 
 #### Client State
+- proofs - block of recent proof must be in a light client state.
 
 **IF A CLIENT IS NOT UPDATED WITHIN THE `TrustingPeriod`, THE CLIENT WILL EXPIRE**
 
@@ -31,7 +36,7 @@ Just like connections, channels are established with a handshake.
 `ORDERED` channels process packets in order they were sent.
 `UNORDERED` channels process packets in order they arrive.
 
-## Ports
+### Ports
 IBC modules can bind to any number of ports. Each port is identified by unique portID. the `portId` denotes the type of application. 
 
 `transfer` is the `portID` for fungible token transfers

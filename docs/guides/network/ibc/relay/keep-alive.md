@@ -8,13 +8,22 @@ Keepalive is a script built by the [DAO-DAO](https://github.com/da0-da0/polytone
 - how to install your node to run the keepalive scripts
 - how to setup a cronjob service on your computer locally
 
+## Alternate Approach
+
+### Go Relayer
+By default, a running instance of [go-relayer](https://github.com/cosmos/relayer) is able to automatically update clients if the client has less than 1/3 of its trusting period left.
+
+You can choose to update clients more frequently by using the `--time-threshold` flag when running `rly start`. 
+
+### Rust Relayer (Hermes)
+
 ## Install Relayer & Keepalive
 The scripts expect to be run in an environment where either hermes or ibc-rly relayer binaries are installed. It may also be useful to run a full node for both chains you expect to relay between locally.
 
 ## Setup CronJob Locally 
 
 Cron is a time-based job scheduling system. `crontab` is a special file that holds the schedule of jobs cron will run. You can edit your crontab with the following command:
-```
+```sh
 crontab -e 
 ```
 If this is the first time you’re running the crontab command under this user profile, it will prompt you to select a default text editor to use when editing your crontab:
