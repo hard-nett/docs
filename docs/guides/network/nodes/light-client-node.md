@@ -1,11 +1,11 @@
 ---
-title: e. full node tutorial
+title: e. light-client node tutorial
 sidebar_position: 6
 ---
 
 A full node is a node that is not a validator, but can verify & update the network state.
 ## Solution
-A full node is a node that has more than the minimum unbonding length for the network saved to its local state. This will allow ibc clients to be used with the full node.
+A full node is a node that has the entire network state contained to its ledger.
 
 ```sh
 # config pruning

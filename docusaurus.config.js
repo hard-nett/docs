@@ -38,6 +38,7 @@ function defineSection(section, options = {}) {
 const SECTIONS = [
   defineSection('apis'),
   defineSection('cosmwasm'),
+  // defineSection('hash'),
   defineSection('developers'),
   defineSection('guides'),
   defineSection('governance'),

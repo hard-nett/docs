@@ -22,7 +22,7 @@ export default function Homepage() {
         <div className="center homepage-content">
           <div className='margin-bottom--lg'>
             <h2>Terp-Core Docs</h2>
-            <p>Welcome! Terp Network, verifiable way we approach infusing nfts & cryptography within cannabis communities. Here you will find guides & resources to understanding what exact tools we have available for doing so.
+            <p>Terp Network is an ecosystem for creating how we approach infusing nfts & cryptography within cannabis communities. Here you will find guides & resources to understanding some of the current tools we have available for doing so.
             </p>
           </div>
           <Section title="Learn more about Terp Network">
@@ -88,6 +88,14 @@ export default function Homepage() {
               title="API Reference"
               description="Terp-Core RPC and LCD API Reference"
               to="/api/"
+              icon={<APIReferenceIcon />}
+            />
+          </Section>
+          <Section title="📜 CORE HASH - Framework for soveriegn, consensus-driven commerce">
+            <Card
+              title="Core Hash"
+              description="Documentation"
+              to="/hash/"
               icon={<APIReferenceIcon />}
             />
           </Section>

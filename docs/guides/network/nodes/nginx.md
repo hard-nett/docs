@@ -2,10 +2,11 @@
 title: g. configure reverse proxy & DNS
 sidebar_position: 6
 ---
-A reverse proxy is the recommended method to expose an application server to the internet. Full nodes will often have endpoints that bind to `localhost` with a TCP port. This means by default, your application will only be accessible locally on the machine it resides on. While you can specify a different bind point to force access through the internet, these application servers are designed to be served from behind a reverse proxy in production environments. This provides security benefits in isolating the application server from direct internet access, the ability to centralize firewall protection, and a minimized attack plane for common threats such as denial of service attacks.
+A reverse proxy is a method to expose an application server to the internet. Full nodes will often have endpoints that bind to `localhost` with a TCP port.
+
+ This means by default, your application will only be accessible locally on the machine it resides on. While you can specify a different bind point to force access through the internet, these application servers are designed to be served from behind a reverse proxy in production environments. This provides security benefits in isolating the application server from direct internet access, the ability to centralize firewall protection, and a minimized attack plane for common threats such as denial of service attacks.
 
 From a client’s perspective, interacting with a reverse proxy is no different from interacting with the application server directly. It is functionally the same, and the client cannot tell the difference. A client requests a resource and then receives it, without any extra configuration required by the client.
-
 
 To create an endpoint that others may use, we will want to configure our nodes into a setup which optimizes your endpoints UX, reliability & security. For this tutorial, we start from a basic Ubuntu server with a Terp Network Full Node installed.. 
 
@@ -32,7 +33,9 @@ sudo nano /etc/nginx/sites-available/<your-endpoint-dns>
 ```
 
 :::info
-A template for the nginx configuration can be found [here](https://github.com/permissionlessweb/o-line-playbook/blob/main/nginx/sites-available/rpc-api-grpc-peer).
+A template for the nginx configuration can be found [here](https://raw.githubusercontent.com/permissionlessweb/o-line-playbook/refs/heads/main/reverse-proxy/nginx/sites-available/rpc-api-grpc-peer). 
+
+Credits to Reece from Strangelove for sharing the example this is derived from!!
 :::
 
 link `sites-available` to `sites-enabled` 

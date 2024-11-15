@@ -1,5 +1,5 @@
 ---
-title: 1 - crates
+title: Crates
 sidebar_position: 1
 ---
 

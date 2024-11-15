@@ -20,12 +20,12 @@ Make sure you have backed up the key mnemonic before removing any of your keys, 
 
 ## Install
 
-First, go and get cosmovisor (recommended approach):
+To install the latest version of cosmovisor, run the following command:
 
 ```bash
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@latest
 
-To install a previous version, you can specify the version after the @ sign. Note that versions older than 1.4.0 can also target a specific version, at a slightly different location:
+# To install a previous version, you can specify the version after the @ sign. Note that versions older than 1.4.0 can also target a specific version, at a slightly different location:
 go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v1.0.0
 ```
 
@@ -43,21 +43,6 @@ This will return something like:
 
 ```bash
 /home/<your-user>/go/bin/cosmovisor
-```
-
-:::info
-Building from source allows you to target a specific version of Cosmovisor, in case you do not want to run 1.0.0 yet.
-:::
-
-You can also build from source; cosmovisor is in the main `cosmos-sdk` repo on Github, so you can use Git tags to target a specific version. This example uses a tag, `v0.42.7` that refers to the Cosmos SDK, as Cosmovisor-specific tags did not exist before August 2021. The first of these was `cosmovisor/v0.1.0`, and the second is the current release, `cosmovisor/v1.0.0`.
-
-```bash
-git clone https://github.com/cosmos/cosmos-sdk
-cd cosmos-sdk
-git checkout v0.42.7
-make cosmovisor
-cp cosmovisor/cosmovisor $GOPATH/bin/cosmovisor
-cd $HOME
 ```
 
 ## Add environment variables to your shell
@@ -121,10 +106,6 @@ Then use the path returned to copy it to the directory Cosmovisor expects. Let's
 cp $HOME/go/bin/terpd $DAEMON_HOME/cosmovisor/genesis/bin
 ```
 
-```bash
-cp $HOME/go/bin/terpd $DAEMON_HOME/cosmovisor/genesis/bin
-```
-
 ## Cosmovisor init
 
 Post v1 versions of Cosmovisor have a command that will create the directories and copy the `terpd` binary into the proper directory. To create the directories and copy the binary, run this command:
@@ -157,17 +138,17 @@ ExecStart=/home/<your-user>/go/bin/cosmovisor start
 
 ```
 [Unit]
-Description=Terp Daemon (cosmovisor)
+Description=Terp Network  (cosmovisor)
 After=network-online.target
 
 [Service]
 User=<your-user>
-ExecStart=/home/<your-user>/go/bin/cosmovisor run start
+ExecStart=$HOME/go/bin/cosmovisor run start
 Restart=always
 RestartSec=3
 LimitNOFILE=4096
-Environment="DAEMON_NAME=terpd"
-Environment="DAEMON_HOME=/home/<your-user>/.terp"
+Environment="DAEMON_NAME=$DAEMON_NAME"
+Environment="DAEMON_HOME=$DAEMON_HOME"
 Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
 Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
 Environment="DAEMON_LOG_BUFFER_SIZE=512"
@@ -176,20 +157,13 @@ Environment="DAEMON_LOG_BUFFER_SIZE=512"
 WantedBy=multi-user.target
 ```
 
-{% hint style="info" %}
-A description of what the environment variables do can be found [here](https://docs.cosmos.network/master/run-node/cosmovisor.html). Change them depending on your setup.
-{% endhint %}
-
-Note also that we set buffer size explicitly because of a [live bug in Cosmovisor](https://github.com/cosmos/cosmos-sdk/pull/8590) before version `v1.0.0`. If you are using `v1.0.0`, you may omit that line.
-
-In addition, the same issue can be fixed by reducing the log via env variable. If you are unsure, ask on Discord.
-
-## Start Cosmovisor
-
+## Sync With Snapshot
 :::warning
 If syncing from a snapshot, do not start Cosmovisor yet.
 :::
 
+
+## Start Cosmovisor
 Finally, enable the service and start it.
 
 ```bash
@@ -210,3 +184,4 @@ If you need to monitor the service after launch, you can view the logs using:
 ```bash
 journalctl -fu terpd
 ```
+

@@ -20,9 +20,12 @@ Hosting your own servers has many benefits, and can be relatively inexpensive at
 ## Hosting Platforms 
 Service providers that offer virtualized operation system containers.
 
-### digital ocean 
+### Digital Ocean
 
-### aws
+### Hetzner
 
-### akash network 
+### AWS
+
+### Akash Network
+
 

@@ -1,10 +1,12 @@
 
 import {MoroccoBinaryVersion, TestnetBinaryVersion} from '../../../src/client/terpd-version';
 
-# Joining Mainnet
+# Connecting To Mainnet
 **General instructions to join the Terp mainnet after network genesis.** 
 
-If you plan to run a node on main network, it is highly reccomended to treat the test network as a production environment to get into the habit of best practices in terms of node operation security. 
+Connecting to existing node servers on Terp Network is open and permissionless. It is important to keep consious that Terp Network is a public network, and any time you interact with it, the source location (your IP) of the request is known by the nodes network. You can find the guides to creating sentry nodes and creating your own private node layer connected to mitigate this [here](../network/nodes/sentry). 
+
+If you plan to run a node for your personal interest, or in production environments where you rely on access to query or update the network state, at minimum you will need to have the
 ___
 
 ## Terp-Core Installation
@@ -126,12 +128,6 @@ Replace `<key-name>` with a key name of your choosing.
 You will require some Terp tokens to bond to your validator. TO be in the active set you will need to have enough tokens to be in the top 69 validators by delegation weight. 
 
 If you do not have and Terp tokens for your validator, you may request for 1 in the Discord, as the large majority of Terp Tokens are vesting currently. 
-
-### Setup cosmovisor and start the node
-
-Follow these instructions to setup cosmovisor and start the node. 
-
-> Using cosmovisor is completely optional. If you choose not to use cosmovisor, you will need to be sure to attend network upgrades to ensure your validator does not have downtime and get jailed.
 
 ### Syncing the node
 

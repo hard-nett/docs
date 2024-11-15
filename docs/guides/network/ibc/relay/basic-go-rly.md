@@ -16,6 +16,13 @@ Instructions for setting up a relayer via hermes.
 - configure channels, clients, and connections
 - run and create service for persistent operations
 
+
+## Requirements 
+
+- linux environment
+- make & go installed 
+- full node, with access to state containing light-client proof hash. 
+
 ## Step 1: Install Relayer
 
 <Container>
@@ -37,7 +44,7 @@ make install
 # replace <release-version> with desired value
 wget https://github.com/cosmos/relayer/releases/download/<release-version>/Cosmos.Relayer_<release-version>_linux_amd64.tar.gz 
 # decompress file & move to go folder
-tar -xvf tar -xvf Cosmos.Relayer_<release-version>_linux_amd64.tar.gz && mv Cosmos\ Relayer_<release-version>_linux_amd64/rly ~/go/bin/
+tar -xvf Cosmos.Relayer_<release-version>_linux_amd64.tar.gz && mv Cosmos.Relayer_<release-version>_linux_amd64/rly ~/go/bin/
 ```
 </TabItem>
 </Tabs>
@@ -82,17 +89,13 @@ To add keys, this example uses a **mnemonic-file,** which contains just the mnem
 
 ```bash
 MNEMONIC="<your_mnemonic_here>"
-rly keys restore terpnetwork terp-1 $MNEMONIC 
+rly keys restore terpnetwork headstash "$MNEMONIC"
 ```
 
-Now edit the configuration file (under `$HOME/.relayer/config/config.yaml`) changing the key values according to the you had defined above. Example:
-```yaml
-    terpnetwork:
-        type: cosmos
-        value:
-            key: <YOUR-KEY-NAME-HERE>
-            chain-id: morocco-1
-            rpc-addr: https://rpc.terp.network:443
+For each network keys, edit the configuration file (under `$HOME/.relayer/config/config.yaml`) changing the key values according to the you had defined above. Example:
+```sh
+# install yaml -> jq tool: sudo apt install yq  
+yq -i -y  '.chains[].value.key = "headstash"' .relayer/config/config.yaml
 
 ```
 In the last step of wallet configuration you can fund your wallets and check balances:
@@ -103,11 +106,11 @@ rly q balance terpnetwork
 ## Step 4: Configuring paths
 to add a new path between Terp Network and another blockchain:
 ```sh
-rly paths new terpnetwork ibc-1 terpnetwork-ibc-1
+rly paths new <terp-chain-id> <linked-chain-id> custom-alias-to-reference-specific-connection
 ```
 
 ### linking two blockchains
-Linking a two blockchains for the first times requires the creation & acknowledgement of client-ids, channel-ids, and connection-ids from both protocols. You can review the [basic IBC overview here](./basic-ibc-overview).
+Linking two blockchains for the first times requires the creation & acknowledgement of client-ids, channel-ids, and connection-ids from both protocols. You can review [basic IBC specifics here](./basic-ibc-overview).
 
 :::info
 It is reccommended to check for existing clients and connections before creating new ones, in order to promote supported, canonical ibc channels.
@@ -117,10 +120,12 @@ It is reccommended to check for existing clients and connections before creating
 ```sh
  rly transact clients path_name [flags]
 ```
+
 ### B. Create Connections
 ```sh
 rly transact connection path_name [flags]
 ```
+
 ### C. Create Channels
 ```sh
 rly transact channel demo-path --src-port transfer --dst-port transfer --order unordered --version ics20-1
@@ -135,17 +140,17 @@ rly transact channel demo-path --src-port transfer --dst-port transfer --order u
 
 ## Step 6: Setup Continuous Relay Service
 This will allow your relayer to run continuously on your server. 
-Create the following configuration to `/etc/systemd/system/rly.service`
+Update the following configuration with your parameters to `/etc/systemd/system/rly.service`
 ```sh
 sudo tee /etc/systemd/system/rly.service > /dev/null <<EOF  
 [Unit]
 Description=Rly IBC relayer
-ConditionPathExists=/srv/rly/relayer
+ConditionPathExists=/root/go/bin/rly
 After=network.target
 [Service]
 Type=simple
-User=rly
-ExecStart=/srv/rly/go/bin/rly start
+User=root
+ExecStart=/root/go/bin/rly start
 Restart=always
 RestartSec=15
 # start of parameters to improve connections with public RPCs
@@ -168,6 +173,21 @@ systemctl start rly
 
 ## Step 7: Monitering IBC Relaying on Terp Network
 COMING SOON
+
+
+## Configuring Existing IBC Path 
+
+```sh
+# grab the ibc path params
+terpd q ibc connection end connection-<id>
+```
+update the path with existing parameters:
+```sh
+rly paths update terp-juno --dst-client-id 07-tendermint-<id>
+rly paths update terp-juno --src-client-id 07-tendermint-<id>
+rly paths update terp-juno --src-connection-id connection-<id>
+rly paths update terp-juno --dst-connection-id connection-<id>
+```
 
 ___
 > Sources:

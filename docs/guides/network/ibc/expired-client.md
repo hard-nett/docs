@@ -8,7 +8,12 @@ In this guide, we review why and how IBC clients expire, as well as review the p
 
 
 ## Why Do Clients Expire?
+
+### Trusting Period
 Clients expire when `TrustingPeriod` has passed since the last updated client state. This is usually due to lack of use of the ibc channel, or lack of active relayers.
+
+It is recommended that `TrustingPeriod` should be set as 2/3 of the `UnbondingPeriod` of the network.
+
 
 ## How is a Client Updated Normally?
 These command are usually ran by a relayer during the ibc transaction workflow to update the state of a client for a channel:
@@ -47,7 +52,7 @@ You will know if a client is expired if your ibc tx fails, and the error logs co
 <TabItem value="hermes" label="hermes">
 
 ```sh
-hermes query client state --chain chain-id --client 07-tendermint-xyz
+hermes query client state --chain chain-id --client 07-tendermint-123
 
 ```
 
@@ -77,7 +82,7 @@ hermes tx client
 <TabItem value="rly" label="rly">
 
 ```sh
-rly tx clients 
+rly tx clients terpnetwork-secretnetwork --override
 ```
 </TabItem>
 </Tabs>

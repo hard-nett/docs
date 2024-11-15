@@ -19,8 +19,8 @@ Follow the instructions [here](https://go.dev/doc/install) to install Go.
 
 For an Ubuntu, you can probably use:
 ```bash
-wget https://golang.org/dl/go1.21.8.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.21.8.linux-amd64.tar.gz
+wget https://golang.org/dl/go1.23.3.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.23.3.linux-amd64.tar.gz
 ```
 Please install Go v1.19.2 or later.
 

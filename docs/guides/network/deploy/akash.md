@@ -27,12 +27,12 @@ Here, you will see a few options to choose from:
 On Akash, .sdl files are Server Description Language files that define the configuration and requirements for a server instance. To learn more on cull customization of SDL files, [view here](https://akash.network/docs/getting-started/stack-definition-language/)
 
 
-#### Cosmos Omnibus - Terp Network Template
-Cosmos Omnibis is a repo containing docker images and configuration meant to make deploying onto Akash easy and standardized across cosmos. [Here you can find Terp Network's configuration](https://github.com/terpnetwork/cosmos-omnibus/tree/master/terpnetwork).
+#### O-Line - Terp Network Template
+Cosmos Omnibis is a repo containing docker images and configuration meant to make deploying onto Akash easy and standardized across cosmos. [Here you can find Terp Network's configuration](https://github.com/terpnetwork/o-line/tree/master/terpnetwork).
 
 
 :::info 
-the SDL within GitHub currently has a storage > size value of 120Gi. Omnibus uses a compressed snapshot of the blockchain and when expanded 120GB of storage for the deployment will not be enough. At the time of this writing adjusting the storage size to 350GB will suffice and allow some growth. Please adjust the storage appropriately and as shown in the screenshot below.
+the SDL within GitHub currently has a storage > size value of 120Gi. O-line uses a compressed snapshot of the blockchain and when expanded 120GB of storage for the deployment will not be enough. At the time of this writing adjusting the storage size to 350GB will suffice and allow some growth. Please adjust the storage appropriately and as shown in the screenshot below.
 ::: 
 
 * Accept the initial deposit of 5 AKT into the deployment’s escrow account

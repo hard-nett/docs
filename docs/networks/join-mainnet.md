@@ -126,13 +126,6 @@ Replace `<key-name>` with a key name of your choosing.
 You will require some Terp tokens to bond to your validator. TO be in the active set you will need to have enough tokens to be in the top 69 validators by delegation weight. 
 
 If you do not have and Terp tokens for your validator, you may request for 1 in the Discord, as the large majority of Terp Tokens are vesting currently. 
-
-### Setup cosmovisor and start the node
-
-Follow these instructions to setup cosmovisor and start the node. 
-
-> Using cosmovisor is completely optional. If you choose not to use cosmovisor, you will need to be sure to attend network upgrades to ensure your validator does not have downtime and get jailed.
-
 ### Syncing the node
 
 There are methods to sync a node to the network: 
