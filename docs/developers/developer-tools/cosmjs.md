@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Communicate From an App to a Cosmwasm Smart Contract
 
- CosmJS is a TypeScript/JavaScript library. It helps developers integrate frontend user interfaces and backend servers with Cosmos blockchains that implement distributed applications.
+ **CosmJS is the default TypeScript/JavaScript library for interacting with smart contracts and Terp Network.**
 
  In general, UI's help users interpret the blockchain state, compose and sign transactions, and send them - all things that are potentially accomplished by other less convenient methods. A UI is supported by servers or micro-services that also interact with the blockchain.
 

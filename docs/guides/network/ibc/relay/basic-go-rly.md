@@ -42,9 +42,9 @@ make install
 
 ```bash
 # replace <release-version> with desired value
-wget https://github.com/cosmos/relayer/releases/download/<release-version>/Cosmos.Relayer_<release-version>_linux_amd64.tar.gz 
+wget https://github.com/cosmos/relayer/releases/download/v2.5.2/Cosmos.Relayer_2.5.2_linux_amd64.tar.gz 
 # decompress file & move to go folder
-tar -xvf Cosmos.Relayer_<release-version>_linux_amd64.tar.gz && mv Cosmos.Relayer_<release-version>_linux_amd64/rly ~/go/bin/
+tar -xvf Cosmos.Relayer_2.5.2_linux_amd64.tar.gz && mv 'Cosmos Relayer_2.5.2_linux_amd64'/rly /usr/local/go/bin/
 ```
 </TabItem>
 </Tabs>
@@ -53,10 +53,10 @@ tar -xvf Cosmos.Relayer_<release-version>_linux_amd64.tar.gz && mv Cosmos.Relaye
 to verify it was installed correctly:
 ```sh
 rly version
-version: x.x.x
-commit: unknown
-cosmos-sdk: y.y.y
-go: z.z.z
+version: v2.5.2
+commit: dirty
+cosmos-sdk: v0.50.4
+go: go1.21.5 linux/amd64
 ```
 
 *If you get an output like `'rly' not found` you should probably add `/srv/rly/go/bin` to your PATH*

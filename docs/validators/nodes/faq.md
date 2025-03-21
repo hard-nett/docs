@@ -84,7 +84,7 @@ The validator that is selected to propose the next block is called the proposer.
 ## Are validators of the Terp Network required to validate other zones in the Cosmos ecosystem?
 No. Validator of Terp Network may vote to include other networks in the validation, with use of the Shared Security Feature.
 
-## How can a validator safely quit validating on the Cosmos Hub?
+## How can a validator safely quit validating on Terp Network?
 If a validator simply shuts down their node, this would result in the validator and their delegators getting slashed for being offline. The only way to safely exit a validator node running on the Cosmos Hub is by unbonding the validator's self-delegated stake so that it falls below its minimum self-delegation limit. As a result, the validator gets jailed and kicked out of the active set of validators, without getting slashed. They can then proceed to shut down their node without risking their tokens.
 
 It's highly advised to inform your delegators when doing this, as they will still be bonded to your validator after it got jailed. They will need to manually unbond and they might not have been made aware of this via their preferred wallet application.

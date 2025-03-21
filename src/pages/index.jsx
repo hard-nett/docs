@@ -22,7 +22,7 @@ export default function Homepage() {
         <div className="center homepage-content">
           <div className='margin-bottom--lg'>
             <h2>Terp-Core Docs</h2>
-            <p>Terp Network is an ecosystem for creating how we approach infusing nfts & cryptography within cannabis communities. Here you will find guides & resources to understanding some of the current tools we have available for doing so.
+            <p>Terp Network is an ecosystem for extending how we make use of cryptography & self-custody within communities passionate about cannabis. Here you will find guides & resources for just some of the current tools we have available for doing so.
             </p>
           </div>
           <Section title="Learn more about Terp Network">

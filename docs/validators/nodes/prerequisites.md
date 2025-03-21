@@ -12,7 +12,7 @@ To quickly spin up a linux testing environment, Akash Console, or Digital Ocean,
 sudo apt-get update && sudo apt upgrade -y
 
 # install toolchain and ensure accurate time synchronization
-sudo apt-get install make build-essential gcc git jq chrony -y
+sudo apt-get install make build-essential gcc git jq chrony lz4 -y
 ```
 ### Go 
 Follow the instructions [here](https://go.dev/doc/install) to install Go.

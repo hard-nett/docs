@@ -1,0 +1,8 @@
+# Decentralization
+
+## Purpose 
+
+## Implementation
+
+## Measuring
+
