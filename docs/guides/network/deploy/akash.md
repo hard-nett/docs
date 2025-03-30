@@ -28,7 +28,7 @@ On Akash, .sdl files are Server Description Language files that define the confi
 
 
 #### O-Line - Terp Network Template
-Cosmos Omnibis is a repo containing docker images and configuration meant to make deploying onto Akash easy and standardized across cosmos. [Here you can find Terp Network's configuration](https://github.com/terpnetwork/o-line/tree/master/terpnetwork).
+O-Line *A Cosmos Omnibis Fork* is a repo containing docker images and configuration meant to make deploying onto Akash easy and standardized across cosmos. [Here you can find Terp Network's configuration](https://github.com/terpnetwork/o-line/tree/master/terpnetwork).
 
 
 :::info 
