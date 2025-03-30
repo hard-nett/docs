@@ -75,7 +75,7 @@ Decentralization’s pros and cons often depend on context:
 
 ---
 
-#### **Conclusion**  
+#### **Review**  
 Decentralization is a spectrum, not a binary state. Its value hinges on the system’s goals:  
 - **Strengths**: Resilience, transparency, and user autonomy.  
 - **Weaknesses**: Scalability challenges, governance inefficiencies, and unintended consequences.  
