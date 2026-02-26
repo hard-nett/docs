@@ -12,14 +12,16 @@ All integrations will have queries to either:
 - a. an indexer
 - b.direct sources (remote/static url/apis, smart contracts, terp-modules)
   
+we will provide in our docs support for displaying up to date info for:
+
 - ibc channel support: query ibc module to display all channel/client information
 - docker support: query docker /ghcr registries for latest releases of terp images
 
 ### Chain/Indexer Client
 
-We will tune <https://github.com/noahsaso?tab=repositories> to provide support & keep tractfor:
+We will tune <https://github.com/noahsaso/argus> to provide support & keep track of:
 
-- chain registry support: query chain registry for latest versions and client informations:
+- [chain registry support](https://github.com/cosmos/chain-registry): query chain registry for latest versions and client informations:
   - checks daily for changes to terp network params
   - checks weekely for changes to connected ibc chains params
 
@@ -33,4 +35,3 @@ We will tune <https://github.com/noahsaso?tab=repositories> to provide support &
   - title, description, meeting url, working group categories
   - event attributes on meeting
   - reoccuring meetings
-
