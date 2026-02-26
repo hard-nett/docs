@@ -1,0 +1,10 @@
+{
+  "pages": [
+    "terp-core",
+    "terp-and-thiol",
+    "cosmwasm",
+    "ibc",
+    "genesis",
+    "..."
+  ]
+}
