@@ -21,6 +21,8 @@ Among many more, here are some example packages:
 ### Modularity
 The repository is nicely modular and keeps clean dependencies. This ensures software quality and lets users pick exactly what they need and only what they need.
 
-## [Terp-Ts](https://github.com/terpnetwork/terp-ts)
+## Terp-Ts
+
+[Terp-Ts Repository](https://github.com/terpnetwork/terp-ts)
 
 Terp-Ts is the Cosmjs library built specifically for interacting with Terp Network.  Checkout our guide on [how to use Terp-Ts](../../guides/develop/front-end/client-creation) for various functions.

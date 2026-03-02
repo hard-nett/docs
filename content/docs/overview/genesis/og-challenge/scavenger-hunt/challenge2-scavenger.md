@@ -46,7 +46,9 @@ Following this example, please add all contributions you have made during the te
 }
 ```
 
-# 2. Fork the [REPO](https://github.com/terpnetwork/scavenger-hunt)
+# 2. Fork the REPO
+
+[Repository Link](https://github.com/terpnetwork/scavenger-hunt)
 
 learn about forking repositories here: [Link](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 
