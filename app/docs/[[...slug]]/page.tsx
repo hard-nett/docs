@@ -6,11 +6,44 @@ import type { Metadata } from 'next';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
 import { LLMCopyButton, ViewOptions } from '@/components/ai/page-actions';
 import { gitConfig } from '@/lib/layout.shared';
+import { APIPage } from '@/lib/openapi';
 
 export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
   const params = await props.params;
   const page = source.getPage(params.slug);
   if (!page) notFound();
+
+  if ('getAPIPageProps' in page.data && typeof page.data.getAPIPageProps === 'function') {
+    const apiPageProps = page.data.getAPIPageProps();
+    const operations = apiPageProps.operations ?? [];
+    const webhooks = apiPageProps.webhooks ?? [];
+    const toc = 'toc' in page.data ? page.data.toc : undefined;
+    const full = 'full' in page.data ? page.data.full : undefined;
+
+    if (operations.length === 0 && webhooks.length === 0) {
+      return (
+        <DocsPage toc={toc} full={full}>
+          <DocsTitle>{page.data.title}</DocsTitle>
+          <DocsDescription>{page.data.description}</DocsDescription>
+          <DocsBody>
+            <p>No routes are defined in this OpenAPI specification yet.</p>
+          </DocsBody>
+        </DocsPage>
+      );
+    }
+
+    return (
+      <DocsPage toc={toc} full={full}>
+        <DocsBody>
+          <APIPage {...apiPageProps} />
+        </DocsBody>
+      </DocsPage>
+    );
+  }
+
+  if (!('body' in page.data)) {
+    notFound();
+  }
 
   const MDX = page.data.body;
 
