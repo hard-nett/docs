@@ -1,6 +1,5 @@
 ---
 title: production build
-sidebar_position: 6
 ---
 # Building Your Apps Binary 
 
@@ -15,7 +14,6 @@ Its time to build an optimized version of your app, ready for production. Up unt
 
 ---
 title: deploying
-sidebar_position: 7
 ---
 # Deploying Your App To The World
 

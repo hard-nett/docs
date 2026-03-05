@@ -1,6 +1,5 @@
 ---
 title: a. faq - node & validator 
-sidebar_position: 1
 ---
 
 ## General Concepts 

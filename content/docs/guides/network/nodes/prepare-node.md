@@ -1,6 +1,5 @@
 ---
 title: 3. initialize a node
-sidebar_position: 3
 ---
 
 # Initialize a node

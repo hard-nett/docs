@@ -1,6 +1,5 @@
 ---
 title: "3 - Third Challenge"
-sidebar_position: 4
 ---
 ## Terp Founding OG Member Onboarding Challenge: Add yourself to the TerpNET OG DAO
 

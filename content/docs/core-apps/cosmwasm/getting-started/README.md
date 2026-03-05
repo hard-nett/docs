@@ -1,6 +1,5 @@
 ---
 title: Getting started
-sidebar_position: 1
 ---
 
 The getting started section offers a tour of the fundamental aspects of CosmWasm Smart Contracts. Although a basic understanding of Rust would be helpful, the content is intended for learners of all levels, regardless of their experience. The aim is to provide easy-to-follow instructions and give first-time users hands-on experience by walking them through a step-by-step guide that covers the following topics:

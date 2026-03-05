@@ -1,6 +1,5 @@
 ---
 title: 4. managing key's
-sidebar_position: 4
 ---
 
 # Add a private key and account

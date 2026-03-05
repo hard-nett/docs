@@ -1,6 +1,5 @@
 ---
 title: 7. compare solidity with cosmwasm
-sidebar_position: 7
 ---
 
 # Comparison with solidity contracts

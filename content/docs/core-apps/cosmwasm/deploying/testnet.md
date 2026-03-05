@@ -1,6 +1,5 @@
 ---
 title: Testnet 
-sidebar_position: 2
 ---
 
 ## Deploying a contract

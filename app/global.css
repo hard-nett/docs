@@ -12,18 +12,18 @@
 
 /* ── Light mode (visitors without dark pref) ───────────────────── */
 @theme {
-  --color-fd-background: hsl(160, 20%, 97%);
+  --color-fd-background: hsla(160, 20%, 97%, 0.82);
   --color-fd-foreground: hsl(160, 15%, 10%);
-  --color-fd-muted: hsl(160, 12%, 93%);
+  --color-fd-muted: hsla(160, 12%, 93%, 0.88);
   --color-fd-muted-foreground: hsl(160, 8%, 40%);
   --color-fd-popover: hsl(160, 15%, 98%);
   --color-fd-popover-foreground: hsl(160, 12%, 12%);
-  --color-fd-card: hsl(160, 10%, 95%);
+  --color-fd-card: hsla(160, 10%, 95%, 0.88);
   --color-fd-card-foreground: hsl(160, 12%, 8%);
   --color-fd-border: hsla(160, 20%, 72%, 0.45);
   --color-fd-primary: hsl(156, 60%, 38%);
   --color-fd-primary-foreground: hsl(160, 30%, 98%);
-  --color-fd-secondary: hsl(160, 14%, 91%);
+  --color-fd-secondary: hsla(160, 14%, 91%, 0.88);
   --color-fd-secondary-foreground: hsl(160, 12%, 12%);
   --color-fd-accent: hsla(268, 60%, 72%, 0.2);
   --color-fd-accent-foreground: hsl(268, 40%, 30%);
@@ -32,18 +32,18 @@
 
 /* ── Dark mode — the canonical terp aesthetic ──────────────────── */
 .dark {
-  --color-fd-background: hsl(160, 12%, 4%);
+  --color-fd-background: hsla(160, 12%, 4%, 0.82);
   --color-fd-foreground: hsl(80, 100%, 95%);
-  --color-fd-muted: hsl(160, 8%, 10%);
+  --color-fd-muted: hsla(160, 8%, 10%, 0.88);
   --color-fd-muted-foreground: hsla(152, 30%, 68%, 0.8);
   --color-fd-popover: hsl(160, 10%, 7%);
   --color-fd-popover-foreground: hsl(80, 40%, 90%);
-  --color-fd-card: hsl(160, 8%, 6.5%);
+  --color-fd-card: hsla(160, 8%, 6.5%, 0.9);
   --color-fd-card-foreground: hsl(80, 100%, 95%);
   --color-fd-border: hsla(152, 30%, 40%, 0.15);
   --color-fd-primary: hsl(152, 64%, 76%);
   --color-fd-primary-foreground: hsl(160, 30%, 6%);
-  --color-fd-secondary: hsl(160, 8%, 12%);
+  --color-fd-secondary: hsla(160, 8%, 12%, 0.88);
   --color-fd-secondary-foreground: hsl(80, 40%, 90%);
   --color-fd-accent: hsla(268, 50%, 70%, 0.12);
   --color-fd-accent-foreground: hsl(268, 60%, 82%);
@@ -51,16 +51,29 @@
 }
 
 .dark #nd-sidebar {
-  --color-fd-muted: hsl(160, 6%, 8%);
-  --color-fd-secondary: hsl(160, 6%, 10%);
+  --color-fd-muted: hsla(160, 6%, 8%, 0.9);
+  --color-fd-secondary: hsla(160, 6%, 10%, 0.9);
   --color-fd-muted-foreground: hsl(152, 20%, 58%);
 }
 
 /* ── Background glyph with pearlescent blur ────────────────────── */
-body {
-  position: relative;
+/* Solid foundation on html — glyph layer floats above this */
+html {
+  background: hsl(160, 20%, 97%);
 }
 
+html.dark {
+  background: hsl(160, 12%, 4%);
+}
+
+/* Body transparent so glyph bleeds through to content */
+body {
+  position: relative;
+  background: transparent !important;
+}
+
+/* Glyph pseudo-element: sits between html bg and body content
+   (z-index:-1 in root stacking context → above html bg, below body content) */
 body::before {
   content: '';
   position: fixed;
@@ -71,14 +84,13 @@ body::before {
   background-position: center center;
   background-size: min(60vw, 520px);
   filter: blur(40px) saturate(0.35) brightness(0.25);
-  opacity: 0.12;
+  opacity: 0.15;
   pointer-events: none;
 }
 
-.dark body::before,
-body:is(.dark)::before {
+.dark body::before {
   filter: blur(45px) saturate(0.4) brightness(0.3);
-  opacity: 0.08;
+  opacity: 0.1;
 }
 
 /* ── Subtle link styling with purple accent ────────────────────── */

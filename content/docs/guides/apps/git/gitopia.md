@@ -1,6 +1,5 @@
 ---
 title: Gitopia
-sidebar_position: 6
 ---
 
 

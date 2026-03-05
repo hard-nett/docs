@@ -1,6 +1,5 @@
 ---
 title: "1 - First Challenge"
-sidebar_position: 2
 ---
 ## Terp OG Founder Level 1, Your First Challenge (! TERP & PERSY)
 - **Reward:** ! TERP & PERSY

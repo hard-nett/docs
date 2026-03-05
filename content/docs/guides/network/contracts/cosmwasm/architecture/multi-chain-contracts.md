@@ -1,6 +1,5 @@
 ---
 title: 1. what are multi-chain contracts
-sidebar_position: 1
 ---
 
 # What are multi-chain contracts?

@@ -1,6 +1,5 @@
 ---
 title: 5. serialization formats
-sidebar_position: 5
 ---
 
 # Serialization formats

@@ -1,6 +1,5 @@
 ---
 title: Submission Guidelines
-sidebar_position: 3
 ---
 
 # Proposals Framework
@@ -28,7 +27,6 @@ The Terp Community Proposal (TCP) Framework provides guidance for all future TCP
 
 ---
 title: Proposal Lifecycle
-sidebar_position: 3
 ---
 
 # The Terp Network Community Proposal Lifecycle 
@@ -152,7 +150,6 @@ Proposal Phases are denoted as: `[IDEATION]`, `[PRE-PROPOSAL]`, `[PROPOSAL]`, `[
 
 ---
 title: Submission Guidelines
-sidebar_position: 4
 ---
 
 # Proposal Submission for Voting

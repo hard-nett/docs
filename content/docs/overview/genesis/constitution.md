@@ -1,6 +1,5 @@
 ---
 title: The Interim Consititution
-sidebar_position: 2
 ---
 # The Interim Consititution of Terp Network Governance
 
@@ -61,7 +60,6 @@ While some topics will be amended into the Constitution when they are ready, mos
 
 ---
 title: Constitution Status
-sidebar_position: 2
 ---
 # Terp DAO Constitution Status
 ## Proposal & Status 

@@ -1,6 +1,5 @@
 ---
 title: e. light-client node tutorial
-sidebar_position: 6
 ---
 
 A full node is a node that is not a validator, but can verify & update the network state.

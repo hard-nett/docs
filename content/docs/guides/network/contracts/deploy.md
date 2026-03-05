@@ -1,6 +1,5 @@
 ---
 title: a. deploy a contract to a network
-sidebar_position: 1
 ---
 
 # Deploying A CosmWasm Contract

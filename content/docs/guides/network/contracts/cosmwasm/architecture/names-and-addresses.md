@@ -1,6 +1,5 @@
 ---
 title: 3.names and addresses
-sidebar_position: 3
 ---
 
 # Names and addresses

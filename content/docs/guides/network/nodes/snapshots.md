@@ -1,6 +1,5 @@
 ---
 title: automate compressed snapshot creation
-sidebar_position: 2
 ---
 
 

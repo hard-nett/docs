@@ -1,6 +1,5 @@
 ---
 title: Governance
-sidebar_position: 5
 ---
 
 # Terp Network Governance

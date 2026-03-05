@@ -1,6 +1,5 @@
 ---
 title: 2. install a node
-sidebar_position: 2
 ---
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Introduction"
-sidebar_position: 1
 ---
 As a truly decentralized community, Terp needs your support to materialize our vision of empowering the architects and foundation of our culture with greater access, freedom, and efficiency to create products that improve the human experience.
 

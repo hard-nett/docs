@@ -1,6 +1,5 @@
 ---
 title: Privacy Policy 
-sidebar_position: 8
 ---
 
 Last updated: November 14th, 2023

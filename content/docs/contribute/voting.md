@@ -1,6 +1,5 @@
 ---
 title: Governance Voting
-sidebar_position: 2
 ---
 
 # Governance Voting

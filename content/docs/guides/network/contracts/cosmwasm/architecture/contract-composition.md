@@ -1,6 +1,5 @@
 ---
 title: 6. contract composition
-sidebar_position: 6
 ---
 
 # Contract composition

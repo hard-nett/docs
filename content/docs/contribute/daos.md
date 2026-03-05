@@ -52,7 +52,6 @@ SubDaos have five potential states. Each of the five states and the requirements
 
 ---
 title: MainNET DAO's & SubDAO's
-sidebar_position: 2
 ---
 Introduction to Terp Network DAO's
 

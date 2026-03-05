@@ -1,6 +1,5 @@
 ---
 title: 1 - prep template
-sidebar_position: 2
 ---
 # Setting Up Your CosmWasm Development Environment
 

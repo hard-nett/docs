@@ -1,6 +1,5 @@
 ---
 title: expired-client
-sidebar_position: 2
 ---
 
 ## Goal

@@ -1,6 +1,5 @@
 ---
 title: b. sentry node array tutorial 
-sidebar_position: 2
 ---
 
 We must keep in mind that p2p networks are exposed to the risk of denial of service attacks, and an effective way to mitigate this type of attacks is by using sentry nodes.

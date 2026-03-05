@@ -1,6 +1,5 @@
 ---
 title:  Using Akash To Deploy Servers
-sidebar_position: 2
 ---
 
 # What is Akash Network?

@@ -1,6 +1,5 @@
 ---
 title:  c. tmkms - setup key management
-sidebar_position: 3
 ---
 
 [Tmkms](https://github.com/iqlusioninc/tmkms) is a solution to avoiding the risk that surfaces when handling validator private key signatures. 

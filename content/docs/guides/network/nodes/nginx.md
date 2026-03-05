@@ -1,6 +1,5 @@
 ---
 title: g. configure reverse proxy & DNS
-sidebar_position: 6
 ---
 A reverse proxy is a method to expose an application server to the internet. Full nodes will often have endpoints that bind to `localhost` with a TCP port.
 

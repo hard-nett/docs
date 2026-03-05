@@ -1,6 +1,5 @@
 ---
 title: front end UI
-sidebar_position: 1
 ---
 **This guide will show you how to setup a minimal template for creating an application.** We will be using **[Cosmology](https://cosmology.tech)**, an exellect package library specifically for network using Cosmos-SDK.
 ___

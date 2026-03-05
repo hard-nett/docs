@@ -1,6 +1,5 @@
 ---
 title: 4. querying contracts
-sidebar_position: 4
 ---
 
 # Querying contract state

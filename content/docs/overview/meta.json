@@ -1,9 +1,11 @@
 {
   "pages": [
-    "terp-core",
-    "terp-and-thiol",
-    "cosmwasm",
-    "ibc",
+    "crypto",
+    "software",
+    "hardware",
+    "network",
+    "markets",
+    "tokens",
     "genesis",
     "..."
   ]

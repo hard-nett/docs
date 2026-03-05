@@ -1,6 +1,5 @@
 ---
 title: Mainnet 
-sidebar_position: 2
 ---
 
 # Deploy to Mainnet 

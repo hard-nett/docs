@@ -1,6 +1,5 @@
 ---
 title: a. request testnet tokens
-sidebar_position: 1
 ---
 # Testnet Faucet
 

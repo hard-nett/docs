@@ -1,6 +1,5 @@
 ---
 title: indexing - filter for specific historic data
-sidebar_position: 2
 ---
 
 # Subquery

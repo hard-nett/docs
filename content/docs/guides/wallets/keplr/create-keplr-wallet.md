@@ -1,6 +1,5 @@
 ---
 title: create keplr wallet
-sidebar_position: 2
 ---
 
 

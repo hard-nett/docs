@@ -2,9 +2,9 @@
   "pages": [
     "index",
     "overview",
+    "concepts",
     "resources",
     "connect",
-    "api",
     "guides",
     "disclaimers"
   ]

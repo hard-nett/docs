@@ -9,5 +9,7 @@ title="Overview"
 description="Introduction to the Terp Network ecosystem."
 href="/docs/overview/"
 />
-  <Card title="Learn more about Fumadocs" href="https://fumadocs.dev" />
+
+resources 
 </Cards>
+ 

@@ -1,6 +1,5 @@
 ---
 title: 3. IBC channels
-sidebar_position: 3
 ---
 ## IBC Channels for Terp Network
 

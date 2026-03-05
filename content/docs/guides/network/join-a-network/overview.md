@@ -1,6 +1,5 @@
 ---
 title: 1. networks
-sidebar_position: 1
 ---
 ## Network Info
 

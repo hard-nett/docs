@@ -1,6 +1,5 @@
 ---
 title: Disclaimers for Terp Network 
-sidebar_position: 7
 ---
 
 ## Disclaimer

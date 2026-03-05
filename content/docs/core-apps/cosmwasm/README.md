@@ -1,6 +1,5 @@
 ---
 title: Cosmwasm - Smart Contracts 
-sidebar_position: 1
 ---
 
 Just start here :) 

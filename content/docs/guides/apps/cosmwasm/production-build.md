@@ -1,6 +1,5 @@
 ---
 title: 6 - building the binary
-sidebar_position: 6
 ---   
 # Preparing the Wasm bytecode for production
 

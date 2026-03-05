@@ -1,6 +1,5 @@
 ---
 title:  Introduction - Secret Headstash
-sidebar_position: 1
 ---
 # Secret TERP & THIOL Headstash 
 The Secret Headstash Airdrop is an ownership distribution event, decentralizing decision making & ownership of Terp Network.

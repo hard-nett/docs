@@ -1,6 +1,5 @@
 ---
 title:  Automating Your Services 
-sidebar_position: 2
 ---
 
 ## Ansible Scripts 

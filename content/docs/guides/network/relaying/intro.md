@@ -1,6 +1,5 @@
 ---
 title: 1. introduction
-sidebar_position: 1
 ---
 # Relaying
 

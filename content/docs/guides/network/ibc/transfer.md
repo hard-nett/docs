@@ -1,6 +1,5 @@
 ---
 title: transfers
-sidebar_position: 6
 ---
 
 ## Goals 

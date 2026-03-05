@@ -1,6 +1,5 @@
 ---
 title: Meetings
-sidebar_position: 8
 ---
 # Meetings 
 
