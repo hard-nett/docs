@@ -1,5 +1,5 @@
 ---
-title: gas and fees
+title: gas and fees (tx-taxes)
 ---
 
 The **fee** system in Terp Network plays a pivotal role not only in resource management and the incentivization of validators, developers, and delegators, but also in assuring security, protecting against spam, and preserving the healthy operations of the network. A crucial element in fee computation is **gas**, which is a unit that measures the amount of computational effort required to perform specific operations. Each transaction in Terp Network requires a certain amount of gas for execution, the cost of which is usually covered by the account initiating the transaction.

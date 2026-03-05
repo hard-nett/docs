@@ -1,3 +1,0 @@
----
-title: Dao Indexer
----

@@ -2,10 +2,9 @@
 
 ## Integrations
 
-- openapi integration: solidify api/rpc/grpc integration into ui
-  - example: <https://www.fumadocs.dev/docs/openapi>
-  - <https://www.fumadocs.dev/docs/integrations/openapi/api-page>
-  - terp-network openapi yaml: `static/api/openapi.yaml`
+~~- openapi integration: solidify api/rpc/grpc integration into ui: example: <https://www.fumadocs.dev/docs/openapi> <https://www.fumadocs.dev/docs/integrations/openapi/api-page>~~~~terp-network openapi yaml: `static/api/openapi.yaml`~~
+
+- TNDAR: terp net decision architecture records import: dedicated repo of standards adopted with terp network, can be imported into docs website
 
 All integrations will have queries to either:
 
@@ -28,6 +27,8 @@ We will tune <https://github.com/noahsaso/argus> to provide support & keep track
 - terp-account-billboards: query text records of relevant information about deployments (for trustlessness)
   - ts/js generated clients (will be easy to wire in): <https://github.com/permissionlessweb/terp-account-billboards/tree/main/scripts/ts/dist>
 
+- deployed contract page: display information about all deployed contracts: inspo by <https://github.com/burnt-labs/deployed-contract-listings>, but we will populate values from indexer querying from live contract data, more trustless.`~
+
 ## Smart Contracts
 
 - calender smart contract support: implement design for on-chain calender contract to display community events
@@ -35,3 +36,7 @@ We will tune <https://github.com/noahsaso/argus> to provide support & keep track
   - title, description, meeting url, working group categories
   - event attributes on meeting
   - reoccuring meetings
+
+
+## Generative MD Table Script
+- generate md table mapping to guides paths (table of contets usage: content/docs/guides/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Develop Terp
+title: Apps
 ---
 
 Building on Terp Network requires a general focus on the following:
