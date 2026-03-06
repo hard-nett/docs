@@ -1,8 +1,8 @@
 {
-  "title": "API",
+  "title": "APIs",
   "pages": [
     
- "openapi", "rpc", "ibcgo", "lcd", "data"
+ "openapi", "rpc", "grpc", "api", "websocket", "ibcgo", "lcd", "data", "interact"
   
   ]
 }

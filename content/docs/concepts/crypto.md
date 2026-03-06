@@ -1,7 +1,11 @@
 ---
-title: Introduction to Cryptography Concepts
-description: Cryptography is the backbone of modern security, enabling trust in digital systems. Below are foundational concepts every learner should understand, as they specifically relate to Terp Network
+title: Crypto
+description: Cryptography is the backbone of modern security, enabling trust in digital systems. Below are foundational concepts every learner should understand, from 5000KM away, as they specifically relate to Terp Network
 ---
+
+## Hash Functions 
+## Where Terp Uses Cryptography
+## Post Quantum Readiness
 
 ## **Key-Pairs**  
 

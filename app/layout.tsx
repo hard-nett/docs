@@ -1,4 +1,5 @@
 import { RootProvider } from 'fumadocs-ui/provider/next';
+import { QueryProvider } from '@/lib/queries/provider';
 import './global.css';
 import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
@@ -34,7 +35,9 @@ export default function Layout({ children }: LayoutProps<'/'>) {
     <html lang="en" className={inter.className} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
         <div aria-hidden="true" className="glyph-bg" />
-        <RootProvider>{children}</RootProvider>
+        <QueryProvider>
+          <RootProvider>{children}</RootProvider>
+        </QueryProvider>
       </body>
     </html>
   );

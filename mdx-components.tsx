@@ -3,6 +3,7 @@ import type { MDXComponents } from 'mdx/types';
 import type { ComponentProps, ReactNode } from 'react';
 import { Card as FumaCard } from 'fumadocs-ui/components/card';
 import * as TabsComponents from 'fumadocs-ui/components/tabs';
+import { ConnectCalendar } from '@/components/calendar';
 
 type CardProps = ComponentProps<typeof FumaCard> & {
   svgFile?: string;
@@ -19,6 +20,7 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     ...defaultMdxComponents,
     ...TabsComponents,
     Card,
+    ConnectCalendar,
     ...components,
   };
 }

@@ -1,11 +1,6 @@
 ---
-title: Grpc APIs
+title: GRPC
 ---
-
----
-title: Interacting with gRPC
----
-
  
 import {
   ChainIcon,
