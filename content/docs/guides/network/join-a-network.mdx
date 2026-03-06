@@ -1,0 +1,366 @@
+---
+title: join a network
+---
+
+
+# Connecting To Mainnet
+**General instructions to join the Terp mainnet after network genesis.** 
+
+Connecting to existing node servers on Terp Network is open and permissionless. It is important to keep consious that Terp Network is a public network, and any time you interact with it, the source location (your IP) of the request is known by the nodes network. You can find the guides to creating sentry nodes and creating your own private node layer connected to mitigate this [here](../network/nodes/sentry). 
+
+If you plan to run a node for your personal interest, or in production environments where you rely on access to query or update the network state, at minimum you will need to have the
+___
+
+## Terp-Core Installation
+
+Make sure you have [installed the Terp Core Binary (Terpd)](../overview/getting-started).
+
+## Mainnet binary version 
+
+Terp Network will go through upgrades as it matures. 
+
+The first mainnet is `morocco-1`.
+
+
+Releases after genesis can be found in the [mainnet repo](https://github.com/terpnetwork/terp-core/releases/).
+
+> To find the current version of the binary, go to the [mainnet repo](https://github.com/terpnetwork/terp-core/releases/) find the most recent upgrade
+
+> If you plan to use a snapshot or state sync to sync your node, you will need the latest binary.
+
+## Recommended Minimum Hardware
+The minimum reccomended hardware requirements for running a validator for the Terp Mainnet are:
+- 4 Cores (modern CPU's)
+- 16GB RAM 
+- 500 GB of storage (SSD or NVME)
+
+> These specifications are the minimum recommended. As Terp Network is a smart contract platform, it can at times be very demanding on hardware. Low spec validators WILL get stuck on difficult to process blocks.
+> If you are running less than 16GB RAM, we recommend adding a swap on NVME storage to help process large and complex blocks.
+
+> Note that the mainnet will accumulate data as the blockchain continues. This means that you will need to expand your storage as the blockchain dadtabase gets larger with time. 
+
+
+## Configuration of Shell Variables
+
+For this guide, we will be using shell variables. This will enable the use of the client commands verbatim. It is important to remember that shell commands are only valid for the current shell session, and if the shell session is closed, the shell variables will need to be re-defined.
+
+If you want variables to persist for multiple sessions, then set them explicitly in your shell .profile, as you did for the Go environment variables.
+
+To clear a variable binding, use unset $VARIABLE_NAME. Shell variables should be named with ALL CAPS.
+
+### Choose the required mainnet chain-id
+```
+CHAIN_ID=morocco-1
+```
+
+### Set your moniker name
+
+Choose your `<moniker-name>`, this can be any name of your choosing and will identify your validator in the explorer. Set the `MONIKER_NAME`:
+
+```bash
+MONIKER_NAME=<moniker-name>
+
+#Example
+MONIKER_NAME="Validatron 9000"
+```
+## Setting up the Node
+These instructions will direct you on how to initialize your node, synchronize to the network and upgrade your node to a validator.
+
+### Initialize the chain
+
+```
+terpd init "$MONIKER_NAME" --chain-id $CHAIN_ID
+```
+This will generate the following files in `~/.terp/config/
+- `genesis.json`
+- `node_key.json`
+- `priv_validator_key.json`
+
+### Downloading the genesis file
+Download the "Morocco" genesis file. The following instructions download the genesis file
+```
+# Download genesis.json file
+rm ~/.terp/config/genesis.json
+curl -s https://raw.githubusercontent.com/terpnetwork/networks/main/mainnet/morocco-1/genesis.json> $HOME/.terp/config/genesis.json
+```
+
+This will replace the genesis file created using terpd init command with the mainnet `genesis.json`
+
+### Set seeds
+We can set the `seeds` by retrieving the list of seeds from the chain registry 
+
+> If you are unsure about this, you can ask in discord for the current peers and explicitly set them in `~/.terp/config/config.toml` instead.
+
+### Set minimum gas prices 
+For RPC nodes and Validator nodes we recommend setting the following minimum-gas-prices. This setting will help protect against contract spam and potential wasm contract attack vectors.
+
+In `$HOME/.terp/config/app.toml`, set minimum gas prices:
+```
+
+```
+
+### Create (or restore) a local key participate
+
+Either create a new key pair, or restore an existing wallet for your validator:
+```bash
+# Create new keypair 
+terpd keys add <key-name>
+
+# OR 
+
+# Restore existing terp wallet with mnemonic seed phrase. 
+# You will be prompted to enter mnemonic seed. 
+terpd keys add <key-name> --recover
+
+# OR 
+
+# Store a local reference to a connected ledger device
+terpd keys add <key-name> --recover --ledger
+
+# Query the keystore for your public address
+terpd keys show <key-name> -a
+```
+
+Replace `<key-name>` with a key name of your choosing.
+
+> After creating a new key, the key information and seed phrase will be shown. It is essential to write this seed phrase down and keep it in a safe place. The seed phrase is the only way to restore your keys. 
+
+### Get some Terp tokens
+You will require some Terp tokens to bond to your validator. TO be in the active set you will need to have enough tokens to be in the top 69 validators by delegation weight. 
+
+If you do not have and Terp tokens for your validator, you may request for 1 in the Discord, as the large majority of Terp Tokens are vesting currently. 
+
+### Syncing the node
+
+There are methods to sync a node to the network: 
+1. From genesis and follwoing the Mainnet Updgrades path
+2. Sync from Snapshot 
+3. Sync with state-sync
+
+### From genesis
+After starting the terpd daemon, the chain will begin to sync to the network. The time to sync to the network will vary depending on your setup and the current size of the blockchain, but could take a very long time. To query the status of your node:
+```
+# Query via the RPC (default port: 26657)
+curl http://localhost:26657/status | jq .result.sync_info.catching_up
+```
+If this command returns true then your node is still catching up. If it returns false then your node has caught up to the network current block and you are safe to proceed to upgrade to a validator node.
+
+#### Binary upgrades
+During the syncing process you will need to install binary upgrades at the correct height. Please refer to Mainnet Upgrades for further information.
+
+### Upgrade to a validator 
+> Do not attempt to upgrade your node to a validator until the node is fully in sync as per the previous step.
+
+To upgrade the node to a validator, you will need to submit a create-validator transaction:
+```
+terp tx staking create-validator \
+  --amount 1000000uterp \
+  --commission-max-change-rate "0.1" \
+  --commission-max-rate "0.20" \
+  --commission-rate "0.1" \
+  --min-self-delegation "1" \
+  --details "validators write bios too" \
+  --pubkey=$(terpd tendermint show-validator) \
+  --moniker "$MONIKER_NAME" \
+  --chain-id $CHAIN_ID \
+  --gas auto\
+  --fees 30000uthiol\
+  --gas-adjustment 1.5
+  --from <key-name>
+  ```
+
+  The above transaction is just an example. There are many more flags that can be set to customise your validator, such as your validator website, or keybase.io id, etc. To see a full list:
+  ```
+  terpd tx staking create-validator --help
+  ```
+
+### Backup critical files
+There are certain files that you need to backup to be able to restore your validator if, for some reason, it damaged or lost in some way. Please make a secure backup of the following files located in ~/.terp/config/:
+- `priv_validator_key.json`
+- `node_key.json`
+
+It is recommended that you encrypt the backup of these files.
+
+---
+title: 1. networks
+---
+## Network Info
+
+### API Docs
+
+Please visit the [API reference](/api) to interact with these endpoints. 
+
+
+<Tabs>
+<Tab value="testnet-90u" label="testnet: 90u-4">
+
+### Chain ID
+```
+90u-4
+```
+### RPC
+```
+https://testnet-rpc.terp.network:443
+```
+### Block Explorers
+```
+ITRocket - https://testnet.itrocket.net/terp/staking
+```
+### Genesis
+```
+https://raw.githubusercontent.com/terpnetwork/networks/main/testnet/90u-4/genesis.json
+```
+### P2P Seed
+```
+e3f7a6a37f9b1bc7648603360b24312493c031f1@testnet-peer.terp.network:26656
+```
+
+</Tab>
+<Tab value="mainnet-morocco" label="mainnet: morocco-1">
+
+### Chain ID
+```
+morocco-1
+```
+### RPC
+```
+https://rpc.cosmos.directory/terpnetwork:443
+```
+### API
+```
+https://rest.cosmos.directory/terpnetwork:443
+```
+### GRPC
+```
+https://grpc.terp.nodestake.top:443
+```
+### Block Explorers
+[Ping.pub](https://ping.pub/terp)\
+[Nodestake.top](https://explorer.nodestake.top)\
+[Zenchain Labs](https://terp.zenscan.io/)
+
+### Genesis
+```
+https://raw.githubusercontent.com/terpnetwork/networks/main/mainnet/morocco-1/genesis.json
+```
+### P2P Seed
+```
+## COMING SOON
+```
+</Tab>
+<Tab value="testnet-120u" label="experimental: 120u-1">
+
+### Chain ID
+```
+120u-1
+```
+### RPC
+```
+## COMING SOON
+```
+### GRPC
+```
+## COMING SOON
+```
+### GRPC
+```
+## COMING SOON
+```
+### GRPC-Web
+```
+## COMING SOON
+```
+### LCD
+```
+## COMING SOON
+```
+### Block Explorers
+```
+## COMING SOON
+```
+### Genesis
+```
+## COMING SOON
+```
+### P2P Seed
+```
+## COMING SOON
+```
+</Tab></Tabs>
+
+
+## Syncing Options
+
+- [**Synchronize with state-sync:**](./sync-with-state-sync) quickly sync to the current blockchain state without processing the entire blockchain history. With state-sync, the node downloads a snapshot of the current state from a trusted source and then begins validating new blocks. State-sync is faster than syncing from genesis, but it relies on trusting the source of the snapshot. This method is generally considered secure if you can trust the source, but it might be less secure than syncing from genesis.
+- [**Synchronize from snapshot:**](./sync-from-snapshot) from a snapshot is similar to state-sync but involves manually downloading a snapshot of the blockchain state and importing it into the node. This method is also faster than syncing from genesis, but it comes with the same trust issues as state-sync. It is essential to verify the integrity and authenticity of the snapshot before using it.
+
+---
+title: sync from snapshot
+---
+A **snapshot** is a compressed archive of the state of a blockchain node at a specific block height. Syncing a node with a snapshot speeds up the process of catching up with the network, as the node starts from the snapshot's block height instead of from the genesis block.
+
+
+Snapshot Providers are 3rd-party, non-audited sources. It is generally not good practive to sync snapshots or configure your local node to a public endpoints, without VPN or sentry array setup. 
+
+
+### Snapshot Providers
+
+___
+
+**Nodejumper.io** https://app.nodejumper.io/terpnetwork/sync
+___
+*are you a provider? open an issue in the github to get your resources added!*
+
+---
+title: sync from state-sync
+---
+
+
+
+Statesync Providers are 3rd-party, non-audited sources. It is generally not good practive to run statesync or configure your local node to a public endpoints, without VPN or sentry array setup. 
+
+
+**state-sync** is a feature that allows nodes to quickly sync their state by fetching a snapshot of the application state at a specific block height. 
+
+This greatly reduces the time required for node to sync with the network, compared to the default method of replaying all blocks from the genesis block. The syncing happens through a snapshot-enabled RPC and from a trusted block height.
+
+*An advantage of state-sync is that the database is very small in comparison to a fully synced node, therefore using state-sync to resync your node to the network can help keep running costs lower by minimizing storage usage.*
+
+## Guide: Connect via statesync 
+
+### Stop Node & Resest
+```sh
+sudo systemctl stop terpd
+terpd tendermint unsafe-reset-all --home ~/.terp/ --keep-addr-book
+```
+
+### Configure StateSync 
+```sh
+SNAP_RPC="<STATESYNC_ENDPOINT>"
+LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
+BLOCK_HEIGHT=$((LATEST_HEIGHT - 1000)); \
+TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
+echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
+
+sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
+s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
+s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
+s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" ~/.v/config/config.toml
+more ~/.terp/config/config.toml | grep 'rpc_servers'
+more ~/.terp/config/config.toml | grep 'trust_height'
+more ~/.terp/config/config.toml | grep 'trust_hash'
+```
+
+### Download Wasm
+```sh
+rm -rf ~/.terp/wasm
+
+curl -o - -L https:/<YOUR_WASM_SNAPSHOT_ENDPOINT>/wasm.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.terp
+```
+
+### Restart Node
+
+```sh
+sudo systemctl restart terpd
+journalctl -u terpd -f
+```

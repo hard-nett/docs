@@ -4,8 +4,6 @@
 
 ~~- openapi integration: solidify api/rpc/grpc integration into ui: example: <https://www.fumadocs.dev/docs/openapi> <https://www.fumadocs.dev/docs/integrations/openapi/api-page>~~~~terp-network openapi yaml: `static/api/openapi.yaml`~~
 
-- TNDAR: terp net decision architecture records import: dedicated repo of standards adopted with terp network, can be imported into docs website
-
 All integrations will have queries to either:
 
 - a. an indexer
@@ -37,6 +35,27 @@ We will tune <https://github.com/noahsaso/argus> to provide support & keep track
   - event attributes on meeting
   - reoccuring meetings
 
+## Calendar
+
+- default display of calender with daily events summary
+  - smart contract query for raw schedule of week, default to indexer query
+  - filters for calander display filtered by specific working grop, default to display all events for all working groups
+  - modal for when connected wallet is a dao member with ability to schedule event for specific working group calander
+
+Requires:
+
+- tanstack query manifold integration
+- specification and client for calander contract
+- indexer and chain fallback design support for docs
 
 ## Generative MD Table Script
+
 - generate md table mapping to guides paths (table of contets usage: content/docs/guides/index.md)
+
+## TADR's
+
+- TNDAR: terp net decision architecture records import: dedicated repo of standards adopted with terp network, can be imported into docs website
+  - tadr formatting
+  - docuemntation addition + design for contributing
+  - testing baseline spec
+  -
