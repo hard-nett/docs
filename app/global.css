@@ -168,6 +168,32 @@ a[data-active='true'],
   color: #cfffcf;
 }
 
+/* ── Calendar widget — match fumadocs theme ──────────────────── */
+.calendar-widget {
+  --background: var(--color-fd-secondary);
+  --foreground: var(--color-fd-foreground);
+  --accent: var(--color-fd-accent);
+  --accent-foreground: var(--color-fd-accent-foreground);
+  --primary: var(--color-fd-primary);
+  --primary-foreground: var(--color-fd-primary-foreground);
+  --muted-foreground: var(--color-fd-muted-foreground);
+}
+
+/* ── Calendar event dots ─────────────────────────────────────── */
+.calendar-has-events button::after {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: hsl(265, 50%, 45%);
+  margin: 2px auto 0;
+}
+
+.dark .calendar-has-events button::after {
+  background: #bd93f9;
+}
+
 /* ── Inline code — purple tint ────────────────────────────────── */
 :not(pre) > code {
   background: hsla(265, 20%, 50%, 0.08);

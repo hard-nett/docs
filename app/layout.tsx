@@ -1,5 +1,6 @@
 import { RootProvider } from 'fumadocs-ui/provider/next';
 import { QueryProvider } from '@/lib/queries/provider';
+import { WalletProvider } from '@/lib/wallet/provider';
 import './global.css';
 import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
@@ -36,7 +37,9 @@ export default function Layout({ children }: LayoutProps<'/'>) {
       <body className="flex flex-col min-h-screen">
         <div aria-hidden="true" className="glyph-bg" />
         <QueryProvider>
-          <RootProvider>{children}</RootProvider>
+          <WalletProvider>
+            <RootProvider>{children}</RootProvider>
+          </WalletProvider>
         </QueryProvider>
       </body>
     </html>

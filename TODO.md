@@ -36,7 +36,7 @@ We will tune <https://github.com/noahsaso/argus> to provide support & keep track
   - reoccuring meetings
 
 ## Calendar
-
+`
 - default display of calender with daily events summary
   - smart contract query for raw schedule of week, default to indexer query
   - filters for calander display filtered by specific working grop, default to display all events for all working groups
