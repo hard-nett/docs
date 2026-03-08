@@ -1,4 +1,8 @@
 ---
+title: Querying
+---
+
+---
 title: 4. querying contracts
 ---
 

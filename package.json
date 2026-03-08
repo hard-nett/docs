@@ -8,7 +8,9 @@
     "start": "next start",
     "types:check": "fumadocs-mdx && next typegen && tsc --noEmit",
     "postinstall": "fumadocs-mdx",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate-hooks": "tsx scripts/generate-hooks.ts",
+    "generate-hooks:check": "tsx scripts/generate-hooks.ts --check"
   },
   "dependencies": {
     "@goblinhunt/cosmes": "0.0.71-ghunt.21",

@@ -1,7 +1,10 @@
 'use client';
 
 import { useQuery } from '@tanstack/react-query';
-// Phase 2: import { queryCalendar } from '@/lib/queries/fetchers';
+// Phase 2: replace with generated hooks from '@/lib/hooks/generated/use-dao-calendar'
+// Phase 2: import { useCalendarAddress } from '@/lib/hooks/use-calendar-address';
+// Usage: const { data: calendarAddr } = useCalendarAddress();
+//        const { data: events } = useListEvents(calendarAddr, { filter });
 
 // ── Types aligned with cw-calendar contract ──────────────────────
 

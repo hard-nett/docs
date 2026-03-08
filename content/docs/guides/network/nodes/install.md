@@ -1,4 +1,8 @@
 ---
+title: Install
+---
+
+---
 title: 2. install a node
 ---
 ---

@@ -1,4 +1,8 @@
 ---
+title: Prerequisites
+---
+
+---
 title: 1. prerequisites
 ---
 This guide explains what the requirements are to install and run an Terp Network full node. We assume that you are on a linux distrubtion with atleast 100GB of storage, 1 CPU, and 16GB of RAM.

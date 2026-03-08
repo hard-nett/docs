@@ -1,4 +1,8 @@
 ---
+title: Prepare Node
+---
+
+---
 title: 3. initialize a node
 ---
 

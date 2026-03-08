@@ -1,3 +1,5 @@
 ---
 title: Networks
 ---
+
+Networks are the groups of hardware running software that communicates with each other, agreeing on a singular, shared state

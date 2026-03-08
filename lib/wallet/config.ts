@@ -12,8 +12,15 @@ export const CHAIN_CONFIG = {
 
 /** Contract addresses — empty until deployed. */
 export const CONTRACTS = {
-  calendar: '', // cw-calendar contract address
+  terp721Account: 'terp142kvnl56hs7jacmwysswlhp4f4eyt7ljclcy9ak7v3cgg3ldhzzs6ye4vu',
+  calendar: '', // resolved at runtime via billboard text records
 } as const;
+
+/**
+ * Billboard account name whose text records hold DAO/subdao addresses.
+ * The "subdao" text record points to the DAO that instantiated the calendar.
+ */
+export const BILLBOARD_ACCOUNT = 'terp' as const;
 
 export const COSMES_CHAIN_INFO = [
   {

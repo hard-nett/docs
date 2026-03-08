@@ -1,4 +1,8 @@
 ---
+title: Faq
+---
+
+---
 title: a. faq - node & validator 
 ---
 

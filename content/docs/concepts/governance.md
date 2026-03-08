@@ -5,9 +5,9 @@ title: Governance
 # Terp Network Governance
 
 
-## Truly Decentralized, Community Governed Network 
+## Governance
 
-Like other Cosmos-based chains, Terp Network utilizes `on-chain governance` for all protocol level executions of proposals via the `gov` module included in the CosmosSDK. This gives the community [full control of the network](./parameters), including complex parameter changes, distribution changes, treasury pool spending, and even upgrades on the network. Anyone who holds or stakes TERP can participate in these votes, regardless of the voter's validator choices. Immense power is given to the community to govern and dictate the future of the chain. 
+Governance is the process of utililzing the nature of finality to verify a group of participants has agreed on an action within a specific set of rules for determining when an action is agreed upon or not.
 
-## Limitations & Shortcomings
-While the governance module in Cosmos SDK is sufficient for on-chain governance, there are limitations and shortcomings of the module that make it difficult to conduct off-chain governance - a crucial component for a DAO to be able to operate efficiently. These limitations are being faced head on. Innovations and tools for local cannabis communities opens up a new world of tools for collaboration in a noisy, technological world. 
+
+This exists in many forms on terp network, such as the direct governance module, which allows stakers of TERP to use governance for performing actions as the global chain, as well as managing all of its parameters and agreed upon official software versions used. 

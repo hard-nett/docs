@@ -2,6 +2,11 @@
 
 We are thankful for you helping build the Terp Network docs. This guide covers the project layout, how to add things, and what we expect from contributions.
 
+
+## Requirements 
+
+Be respectful. With our documentation, comes the relance on a stable, veriiable basis. If we are inaccurate or unorganized, we are not being respectful of our users time. 
+
 ## Expectations
 
 - Run `pnpm dev` and check your changes render before opening a PR.

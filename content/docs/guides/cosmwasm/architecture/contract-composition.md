@@ -1,4 +1,8 @@
 ---
+title: Contract Composition
+---
+
+---
 title: 6. contract composition
 ---
 

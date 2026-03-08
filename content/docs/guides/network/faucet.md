@@ -1,4 +1,8 @@
 ---
+title: Faucet
+---
+
+---
 title: a. request testnet tokens
 ---
 # Testnet Faucet

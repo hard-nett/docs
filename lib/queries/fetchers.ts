@@ -50,14 +50,17 @@ export async function queryContractSmart<T>(
   return json.data as T;
 }
 
-/** Indexer-first, contract-fallback for calendar queries. */
+/**
+ * Indexer-first, contract-fallback for calendar queries.
+ * Contract address is resolved at runtime via resolve-calendar.ts.
+ */
 export async function queryCalendar<T>(
+  contractAddress: string,
   queryMsg: Record<string, unknown>,
   indexerPath?: string,
 ): Promise<T> {
-  // Phase 2: try indexer first
-  // if (indexerPath) {
-  //   try { return await queryREST<T>(indexerPath); } catch { /* fall through */ }
-  // }
-  return queryContractSmart<T>(CONTRACTS.calendar, queryMsg);
+  if (indexerPath) {
+    try { return await queryREST<T>(indexerPath); } catch { /* fall through */ }
+  }
+  return queryContractSmart<T>(contractAddress, queryMsg);
 }

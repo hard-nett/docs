@@ -1,6 +1,12 @@
 ---
-title: 3.names and addresses
+title: Names And Addresses
 ---
+
+---
+title: Names And Addresses
+---
+
+
 
 # Names and addresses
 Blockchains use addresses to identify external actors through a hash of a public key. On-chain addresses are represented using a concise, immutable binary format, typically 20 or 32 bytes long, often derived from a hashing function. However, there are various human-readable representations of these binary addresses that are displayed to clients.
