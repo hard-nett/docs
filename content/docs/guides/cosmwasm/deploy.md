@@ -8,7 +8,7 @@ The following is detailed guide that shows the basics of manually deploying a co
 
 # Deploy contract
 
-In the [Compile Contract](../../cosmwasm/getting-started/compile-a-contract) page, we generated a wasm binary executable. You can upload the code to the blockchain, and once the process is complete, you can download the bytecode for verification purposes.
+In the [Compile Contract](/guides/cosmwasm/getting-started/3.compile-a-contract) page, we generated a wasm binary executable. You can upload the code to the blockchain, and once the process is complete, you can download the bytecode for verification purposes.
 
 ### Deploy using terpd
 

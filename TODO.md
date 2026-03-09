@@ -1,12 +1,18 @@
 # TODO
 
+## Docs
+
+- connect to terp network
+- public resources links
+- validator & full node guides (key saftey, metrics & notifications,)
+- upgrades
+
 ## Integrations
 
 ~~- openapi integration~~
 
 - tanstack query design
-  - ts/js generated clients
-  - ts-codegen -> tanstack query client template
+  ~~- ts-codegen -> tanstack query client template: scripts/generate-hooks.ts~~
   - tune <https://github.com/noahsaso/argus> for:
     - ibc channel support: query ibc module to display all channel/client information
     - docker support: query docker /ghcr registries for latest releases of terp images

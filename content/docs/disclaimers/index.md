@@ -6,7 +6,7 @@ title: Disclaimers for Terp Network
 
 The public Terms of Service for Terp Network can be found on IPFS, located here:
 
-[`cid://bafybeib7zoboghoyrxpyczgp5ejhd4nqmvdshrskugmep6u4ig2qh7k3ba`](cid://bafybeib7zoboghoyrxpyczgp5ejhd4nqmvdshrskugmep6u4ig2qh7k3ba)
+The public Terms of Service for Terp Network can be found on IPFS.
 
 ## Terp Network Security Policy
 

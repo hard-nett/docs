@@ -7,7 +7,7 @@ In this section, we will download the code for a sample contract and compile it 
 
 ## Prerequisites
 
-Please refer to the [Setting up environment](/cosmwasm/getting-started/set-up-environment) guide to install the required dependencies before proceeding.
+Please refer to the [Setting up environment](/guides/cosmwasm/getting-started/2.set-up-environment) guide to install the required dependencies before proceeding.
 
 ## Download contract
 Begin by downloading the [cw-contracts](https://github.com/InterWasm/cw-contracts) repository. You will be compiling the nameservice contract.
@@ -57,7 +57,7 @@ title: 1. setting up environment
 
 You can choose to either set up a local testnet or connect to an existing network. For easy testing, the Terp Network 90u testnet is available for deploying and running your contracts.
 
-To set up a local testnet, see [Running a Local Testnet](/networks/localterp). For details on the available Terp Network networks, see the [Networks](../../validators/join-a-network/overview) page.
+To set up a local testnet, see [Running a Local Testnet](/guides/network/local-network). For details on the available Terp Network networks, see the [Networks](../../validators/join-a-network/overview) page.
 
 The `90u-4` testnet utilizes the `thiolx` native tokens, which is required for paying transaction fees. To obtain these free testnet tokens, see the [Requesting Testnet Tokens](/guides/network/faucet) page.
 

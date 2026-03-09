@@ -2,6 +2,7 @@
 title: Submission Guidelines
 ---
 
+---
 # Proposals Framework
 
 ## Terp Community Proposals (TCPs)
@@ -25,10 +26,6 @@ The Terp Community Proposal (TCP) Framework provides guidance for all future TCP
 *Defines the responsibilities and enforcement powers reserved to the Governance Council of Terp DAO*
 
 
----
-title: Proposal Lifecycle
----
-
 # The Terp Network Community Proposal Lifecycle 
 
 ## Phase 1: Discussion & Ideation
@@ -43,7 +40,7 @@ The purpose of this phase is to vet ideas with the active Terp community members
 Phase 2 is where the idea is formalized into an TCP that includes all of the criteria specified in the TCP Template. It must be a clear and complete description of the proposed enhancement. All TCPs must have the following core components, with additional/varying sections for certain proposal types (refer to the templates page):
 
 ___
-**Title:** - Short and sweet, with the [correct tags](/governance/proposals/definitions#proposal-phase--identification-tags) prefixed.
+**Title:** - Short and sweet, with the correct tags prefixed.
 
 
 **Summary** - A brief, high-level summary of what changes are being suggested. Summary should be a single sentence, or a bulleted list.
@@ -56,7 +53,7 @@ ___
 
 **Proposal Type Specific Content**
 
-Make sure to double check your proposal type to see what [additional information or details are required](/governance/proposals/templates). **Especially for funding proposals!**
+Make sure to double check your proposal type to see what [additional information or details are required](/connect/community/proposals#templates). **Especially for funding proposals!**
 ___
 
 
@@ -73,7 +70,7 @@ Proposals should only move to Phase 3 once the author has considered all communi
 
 ## Phase 4: On-Chain Voting
 
-If the signaling polls in Phase 3 show an overall positive sentiment and no major issues are brought up, the proposal may be submitted on-chain for the formal voting. Submission guidelines [are listed here](/governance/proposals/submission).
+If the signaling polls in Phase 3 show an overall positive sentiment and no major issues are brought up, the proposal may be submitted on-chain for the formal voting. Submission guidelines are listed here in [connect/community/proposals](/connect/community/proposals).
 
 **Forum Tag (Depending on Outcome):** `[VOTING]`, `[PASSED]`, `[REJECTED]`, `[VETO]`
 
@@ -86,10 +83,6 @@ If the signaling polls in Phase 3 show an overall positive sentiment and no majo
 
 ## Assistance & Review
 All proposers are welcome to approach the Governance subDAO for assistance in any part of the Proposal Lifecycle. In addition, proposers may request a formal review of the proposal before going on chain.
-
----
-title: Core Definitions and Concepts
----
 
 
 ## **Proposal Types**
@@ -116,7 +109,7 @@ Proposals that only require to be posted as a `TextProposal` on the Cosmos SDK -
 
 ### **SubDAO**
 
-subDAOs are teams with a recurring budget with no termination date (i.e., Community Outreach, Marketing & Creative Services, etc). More information on SubDAO can be found on the [SubDAO page.](/governance/subdao/index),
+subDAOs are teams with a recurring budget with no termination date (i.e., Community Outreach, Marketing & Creative Services, etc). More information on SubDAO can be found on the [SubDAO page.](/connect/community/daos),
 
 SubDAos are the sub-units of how Terp DAO advances its purpose. A subDAO is a group of people actively working on tasks that align with Terp Networks' Constitutional Values and community run initiatives. As such, ratifying workstreams sets boundaries on what is and isn't in scope for Terp DAO's governance.
 
@@ -124,7 +117,7 @@ Anyone may start a subDAO and gather momentum behind it by posting on Commonweal
 
 Proposals that requests any type of funding from the `CommunityPool` or the DAO's treasury to form an in-house workstream (team, squad, sub-DAO, guild) or project with the direct purpose of benefiting the Terp ecosystem.
 
-- Have a clear objective that aligns with Terp Networks' values and objectives as listed in the [Constitution](/constitution).
+- Have a clear objective that aligns with Terp Networks' values and objectives as listed in the [Constitution](/connect/community/proposals).
 - Distinguish itself from or explicitly state its improvements on existing workstreams.
 - Propose clear budgets and timelines for producing outcomes and all in line with the budget proposal flow.
 
@@ -145,7 +138,7 @@ Special Initiatives and Projects are DAO-funded projects with a set budget and "
 
 **You do not need to know the proposal phase and identification naming conventions! A Governance Council member will assist -- the content below is for reference.**
 
-Proposal Phases are denoted as: `[IDEATION]`, `[PRE-PROPOSAL]`, `[PROPOSAL]`, `[VOTING]` for the 4-phases, and `[PASSED]`, `[REJECTED]`, `[DEFERRED]` for proposals in the other stages. Refer to the [Proposal Lifecycle](/governance/proposals/lifecycle) page for more information on proposal lifecycle phases.
+Proposal Phases are denoted as: `[IDEATION]`, `[PRE-PROPOSAL]`, `[PROPOSAL]`, `[VOTING]` for the 4-phases, and `[PASSED]`, `[REJECTED]`, `[DEFERRED]` for proposals in the other stages. Refer to the [Proposal Lifecycle](/connect/community/proposals) page for more information on proposal lifecycle phases.
 
 
 ---
@@ -196,7 +189,7 @@ The Terp Network Governance Framework allows for various different types of prop
 
 All proposals must include the following **Proposal Components**.
 ___
-**Title** - Short and sweet, with the [correct tags](/governance/proposals/definitions#proposal-phase--identification-tags) prefixed.
+**Title** - Short and sweet, with the [correct tags](/connect/community/proposals) prefixed.
 **Author(s)** - List of authors and contributors involved in the writing of the proposal.
 **Summary** - A brief, high-level summary of what changes are being suggested. Summary should be a single sentence, or a bulleted list.
 **Abstract** - Abstract is a multi-sentence (short paragraph) technical summary. This should be a very terse and human-readable version of the motivation and specification sections. Someone should be able to read only the abstract to get the gist of what this specification does.
@@ -225,6 +218,6 @@ List all the achievements you have managed to accomplish so far, and the obstacl
 
 ## C.SubDAOs & Special Initiatives
 
-Anyone may start a subdao and gather momentum behind it by posting on Commonwealth. For more information on Subdao proposals, refer to [this section](/governance/proposals/definitions#subdao--special-initiatives).
+Anyone may start a subdao and gather momentum behind it by posting on Commonwealth. For more information on Subdao proposals, refer to [this section](/connect/community/daos).
 
 ## D. Protocol (ParamChange) Proposals

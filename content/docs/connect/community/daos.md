@@ -86,4 +86,4 @@ SubDaos have five potential states. Each of the five states and the requirements
 
 | 🔌  | SubDao  | Mission   | Budget  | Established  |
 |---|---|---|---|---|
-| ⚪  | [Validation Subdao](/governance/workstreams/current#validation-subdao)  | Protect, improve, and serve the Terp network and community with neutrality on general & emerency consensus on network node operations. | TBD | TBD  |
+| ⚪  | [Validation Subdao](/connect/community/daos#validation-subdao)  | Protect, improve, and serve the Terp network and community with neutrality on general & emerency consensus on network node operations. | TBD | TBD  |

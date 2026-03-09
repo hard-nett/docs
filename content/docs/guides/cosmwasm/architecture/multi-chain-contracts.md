@@ -16,7 +16,7 @@ All code is designed to be agnostic to the details of the underlying chain, so b
 
 CosmWasm contracts leverage the Inter-Blockchain Communication protocol (IBC), making it possible to handle authentication and data transport between blockchains. Because IBC  provides a permissionless way for relaying data packets between blockchains, CosmWasm allows you to write code on one chain that can execute a transaction on another chain.
 
-In order to achieve this, CosmWasm fully adopts the [actor model](./2.actor-model-intro.md), ensuring that the code is designed with IBC usage in mind. As a result, in CosmWasm, messages follow a "**fire-and-forget**" approach, eliminating the need to await promises and reducing concerns about race conditions and reentrancy attacks. By incorporating IBC primitives into CosmWasm's libraries, you can unlock the full potential of inter-chain messaging and execution.
+In order to achieve this, CosmWasm fully adopts the [actor model](./multi-chain-contracts), ensuring that the code is designed with IBC usage in mind. As a result, in CosmWasm, messages follow a "**fire-and-forget**" approach, eliminating the need to await promises and reducing concerns about race conditions and reentrancy attacks. By incorporating IBC primitives into CosmWasm's libraries, you can unlock the full potential of inter-chain messaging and execution.
 
 ## Easy to integrate
 

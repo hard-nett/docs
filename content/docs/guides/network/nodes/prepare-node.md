@@ -31,8 +31,8 @@ Your node is now initialized in it's default configuration! From here, you can d
 
 - [set up your nodes keys](./keys.md)
 - configure a node to be various endpoints, such as:
-  - [sentry node](../../guides/nodes/sentry)
-  - [archive node](../../guides/nodes/archive)
+  - [sentry node](/connect/join)
+  - [archive node](/connect/join)
   - [seed-node](../../guides/nodes/seed)
   - [full-node](../../guides/nodes/full-node)
 
