@@ -4,8 +4,6 @@ title: Comparison With Ethereum
 
 ---
 
-title: 7. compare solidity with cosmwasm
----
 
 # Comparison with solidity contracts
 

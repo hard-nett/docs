@@ -3,14 +3,14 @@ title: Exploring Decentralization
  
 ---
  
-### **What is Decentralization?**  
+## **What is Decentralization?**  
 
 Decentralization is the distribution of point of liveliness, access, authority, control, or decision-making, across a network, potentially reducing reliance on centralized entities.
 It is an element of a group of participants using their hardware for running Terp Network software, but more broadly it is a concept that has inspired systems like blockchain, open-source software, and peer-to-peer networks where the concentration of energy veriable to be participating in the good health of the network becomes possible.
 
 ---
 
-#### **Immediate Benefits**  
+### **Immediate Benefits**  
 
 Decentralization immediately offer several advantages worth considering:  
 
@@ -23,7 +23,7 @@ Decentralization immediately offer several advantages worth considering:
 
 ---
 
-#### **Exploring Implementation Approaches**  
+### **Exploring Implementation Approaches**  
 
 Decentralization can be explored through various dimensions:  
 
@@ -41,7 +41,7 @@ Decentralization can be explored through various dimensions:
 
 ---
 
-#### **Thinking About Measurement**  
+### **Thinking About Measurement**  
 
 How might we assess decentralization? Some questions to consider:  
 
@@ -57,7 +57,7 @@ How might we assess decentralization? Some questions to consider:
 
 ---
 
-#### **Considering Trade-offs**  
+### **Considering Trade-offs**  
 
 Decentralization often presents interesting tensions worth exploring:  
 

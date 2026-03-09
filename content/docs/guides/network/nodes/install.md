@@ -1,12 +1,7 @@
 ---
 title: Install
 ---
-
----
-title: 2. install a node
----
----
-
+ 
 This guide provides instructions on how various methods to install and run a full node on the Terp Network blockchain.
 
 ## Option 1: Build from source
@@ -23,7 +18,6 @@ git checkout <verison-tag>
 
 The `<version-tag>` for `morocco-1` is
 The `<version-tag>` for `90u-4` is
-
 
 ### Ensure that terpd is installed
 
@@ -50,7 +44,6 @@ You can download the latest release of the pre-built binary from the [**releases
 
 For Linux, depending on your architechture:
 
-
 <Tabs>
 <Tab value="amd64" label="amd64">
 
@@ -68,11 +61,9 @@ wget https://github.com/terpnetwork/terp-core/releases/download/v4.2.2/terpd_lin
 </Tab>
 </Tabs>
 
-
 ### Verify the integrity of the binary
 
 You can now verify the download by generating the sha256 hash for the downloaded file:
-
 
 <Tabs>
 <Tab value="amd64" label="amd64">
@@ -93,7 +84,6 @@ sha256sum terpd_linux_arm64
 </Tab>
 </Tabs>
 
-
 ## Use Docker
 
 ### Build or Pull the docker image
@@ -102,9 +92,7 @@ You can pull the docker image from the following repositories:
 
 - **[End to End Repo](https://github.com/terpnetwork/terp-core/pkgs/container/terp-core-e2e)**
 
-
 Make sure to always use the image tag that points to the network you want to connect.
-
 
 You can build a docker image locally by running this command in the root of the terp-core repository:
 
@@ -140,7 +128,6 @@ It's also important to notice that, when running a node in a network, you'll nee
 - **26656**: Tendermint P2P
 - **26657**: Tendermint RPC
 
-
 To simplify using the Docker container, you can set an alias with the home path and the proper image tag, like:
 
 ```
@@ -149,7 +136,6 @@ alias terpd="docker run --rm -it -v ~/.terp:/root/.terp terpnetwork/terp-core:<v
 ```
 
 After setting the alias with the above tip, you can use the other terpd commands without typing the verbose Docker run command. For the sake of comprehensive documentation, the full Docker command is shown. Just remember that by setting the alias you can simply use terpd instead of the Docker command.
-
 
 # Next steps
 

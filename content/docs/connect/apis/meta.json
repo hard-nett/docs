@@ -2,7 +2,6 @@
   "title": "APIs",
   "pages": [
     
- "openapi", "rpc", "grpc", "api", "websocket", "ibcgo", "lcd", "data", "interact"
   
   ]
 }
