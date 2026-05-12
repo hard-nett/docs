@@ -1,6 +1,10 @@
 ---
 title: Install
 ---
+
+---
+title: Install
+---
  
 This guide provides instructions on how various methods to install and run a full node on the Terp Network blockchain.
 

@@ -3,6 +3,10 @@ title: Comparison With Ethereum
 ---
 
 ---
+title: Comparison With Ethereum
+---
+
+---
 
 
 # Comparison with solidity contracts

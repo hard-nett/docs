@@ -73,8 +73,7 @@ export function ViewOptions({
 }) {
   const items = useMemo(() => {
     const pageUrl = typeof window !== 'undefined' ? window.location.href : 'loading';
-    const q = `Read ${pageUrl}, I want to ask questions about it.`;
-
+    const q = `Read ${pageUrl}. Use this documentation page as the primary context for answering questions. Provide concise, accurate, developer-focused responses grounded in the documented content.`;
     return [
       {
         title: 'Open in GitHub',

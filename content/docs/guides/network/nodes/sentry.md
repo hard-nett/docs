@@ -29,7 +29,7 @@ If two sentry nodes are going to be mounted, one of them could be deployed in th
 
 
 ## Step by step guide
-To follow this guide, we will use a node created & connected to 90u-4 testnet network. In case you have not deployed the node yet, [how to install the terp-core binary](/guides/network/join-a-network)
+To follow this guide, we will use a node created & connected to 90u-4 testnet network. In case you have not deployed the node yet, [how to install the terp-core binary](/docs/)
 
 ### Creating the sentry nodes
 Once we have contracted the two sentry node servers and we have the access IPs, we must perform the same installation that we would perform as if it were a validator node on both servers.

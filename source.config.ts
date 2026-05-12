@@ -7,6 +7,7 @@ export const docs = defineDocs({
   dir: 'content/docs',
   docs: {
     schema: pageSchema,
+    async: true, // Async mode for lazy loading external/community MDX (see community-docs.ts)
     postprocess: {
       includeProcessedMarkdown: true,
     },

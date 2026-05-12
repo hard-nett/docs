@@ -13,18 +13,28 @@ export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
   const page = source.getPage(params.slug);
   if (!page) notFound();
 
-  if ('getAPIPageProps' in page.data && typeof page.data.getAPIPageProps === 'function') {
-    const apiPageProps = page.data.getAPIPageProps();
+  // Support async mode for lazy-loaded community/external MDX docs
+  const data = 'load' in page.data && typeof page.data.load === 'function'
+    ? await page.data.load()
+    : page.data;
+
+  if ('getAPIPageProps' in data && typeof data.getAPIPageProps === 'function') {
+    const apiPageProps = data.getAPIPageProps();
     const operations = apiPageProps.operations ?? [];
     const webhooks = apiPageProps.webhooks ?? [];
-    const toc = 'toc' in page.data ? page.data.toc : undefined;
-    const full = 'full' in page.data ? page.data.full : undefined;
+    const toc = 'toc' in data ? data.toc : [];
+    const full = 'full' in data ? data.full : false;
+    // Type guard: check for a property that only exists in the extended type
+    if (!('title' in data)) {
+      notFound(); // or handle fallback
+    }
+
 
     if (operations.length === 0 && webhooks.length === 0) {
       return (
         <DocsPage toc={toc} full={full}>
-          <DocsTitle>{page.data.title}</DocsTitle>
-          <DocsDescription>{page.data.description}</DocsDescription>
+          <DocsTitle>{data.title}</DocsTitle>
+          <DocsDescription>{data.description}</DocsDescription>
           <DocsBody>
             <p>No routes are defined in this OpenAPI specification yet.</p>
           </DocsBody>
@@ -40,15 +50,14 @@ export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
       </DocsPage>
     );
   }
-
-  if (!('body' in page.data)) {
+  const full = 'full' in data ? data.full : false;
+  if (!('body' in data)) {
     notFound();
   }
-
-  const MDX = page.data.body;
+  const MDX = data.body;
 
   return (
-    <DocsPage toc={page.data.toc} full={page.data.full}>
+    <DocsPage toc={data.toc} full={full}>
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription className="mb-0">{page.data.description}</DocsDescription>
       <div className="flex flex-row gap-2 items-center border-b pb-6">

@@ -1,5 +1,5 @@
 ---
-title: "3 - Third Challenge"
+title: "Third Challenge"
 ---
 ## Terp Founding OG Member Onboarding Challenge: Add yourself to the TerpNET OG DAO
 

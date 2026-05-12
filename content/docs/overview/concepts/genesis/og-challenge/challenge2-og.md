@@ -1,5 +1,5 @@
 ---
-title: "2 - Second Challenge"
+title: "Second Challenge"
 ---
 ## Terp Founding OG Member Onboarding Challenge: Step 2
 *** Earn ! Tokens and the Terp OG Founder Level 2 Badge! *** 

@@ -2,6 +2,10 @@
 title: Faucet
 ---
 
+---
+title: Faucet
+---
+
  
 # Testnet Faucet
 

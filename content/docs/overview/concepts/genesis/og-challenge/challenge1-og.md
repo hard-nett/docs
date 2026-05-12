@@ -1,5 +1,5 @@
 ---
-title: "1 - First Challenge"
+title: "First Challenge"
 ---
 ## Terp OG Founder Level 1, Your First Challenge (! TERP & PERSY)
 - **Reward:** ! TERP & PERSY
@@ -10,7 +10,7 @@ title: "1 - First Challenge"
 ## OG Challenge 1 - Proposals
 
 # Instructions 
-## 1. Create Proposal From Template
+## Create Proposal From Template
 **Ensure you have the terp-core cli installed to your local environment & your are connected to the current testnet (90u-1), set up link [here](https://3000-terpnetwork-docs-6w1hz3big1j.ws-us86.gitpod.io/overview/getting-started).**
 ### Step 1: Query Governance Transaction Sub-Commands
 ```
@@ -42,14 +42,14 @@ Global Flags:
 Use "terpd tx gov [command] --help" for more information about a command.
 ```
 
-## 2. Create New Forum Post in Discord
+## Create New Forum Post in Discord
 As we expect discussion to be able to occur naturally prior to a proposal, we want to create this governance requirements by having each participant create a new [blog post here](https://discord.gg/2NsAXhmG). The following is a template you can use:
 ```
 Title - **TerpNET OG Challenge-1:** Add <your-moniker>
 Description - <your-wallet-address> is requesting to be added to the terpNET og DAO 
 ```
 
-## 3. Broadcast proposal 
+## Broadcast proposal 
 Once discussion has been held, broadcast the proposal. It will need to be funded within 3 days of broadcasting to begin the voting period.
 
 We can then generate it:

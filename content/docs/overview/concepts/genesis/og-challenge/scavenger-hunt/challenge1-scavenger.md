@@ -12,11 +12,11 @@ title: First Challenge
 
 REPO: [Link](https://github.com/terpnetwork/scavenger-hunt/tree/main/challenge-1)
 
-## 1. Spin up your validator (optionally sentry node)
+## Spin up your validator (optionally sentry node)
 
 Checkout [getting-started](https://docs.terp.network/overview/getting-started), and the [build docs](https://docs.terp.network/terp-core/build) on basics for this.
 
-## 2. Collect your nodes P2P info
+## Collect your nodes P2P info
 
 The following format is reccomended particpants follow when including their own P2P & participation info:
 
@@ -39,14 +39,14 @@ The following format is reccomended particpants follow when including their own 
 }
 ```
 
-## 3. Fork test-net repo
+## Fork test-net repo
 
 TestNET repo: [Link] (learn about forking repositories here: [Link](https://docs.github.com/en/get-started/quickstart/fork-a-repo)).
 
-## 4. Add your P2P details in your forked repo
+## Add your P2P details in your forked repo
 
 Add your new file containing all of your individual P2P info, named `<your-terpval-address>.json` in the `/challenges/1/P2P/` folder, & commit your changes to the forked repository
 
-## 5. Open new PR to add your P2P details
+## Open new PR to add your P2P details
 
 Once your forked changes are pushed to github, follow these steps to opening a new PR in the source repository [here](https://github.com/terpnetwork/scavenger-hunt)

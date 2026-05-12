@@ -2,6 +2,10 @@
 title: Multi Chain Contracts
 ---
 
+---
+title: Multi Chain Contracts
+---
+
  
 
 # What are multi-chain contracts?

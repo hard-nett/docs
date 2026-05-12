@@ -1,0 +1,140 @@
+---
+title: "ADR-3: Agent, LLM, and Automation Participation Expectations"
+description: Expectations for Terp Network community members and systems when interfacing with LLMs, agents, robots, and automation
+---
+
+# ADR 3: Agent, LLM, and Automation Participation Expectations
+
+## Changelog
+
+- 2026-03-16: Initial stub with section headings
+- 2026-05-12: Expanded to full ADR-1 template format
+
+## Status
+
+PROPOSED
+
+## Dependencies
+
+- **ADR-1**: Standard Template and Design Guidelines — this ADR follows the format defined in ADR-1
+- **ADR-4**: Sovereign Custody & Authentication — agent authentication and key management must follow ADR-4 custody principles
+- **ADR-9**: LM-Augmented Development and Semantic Tooling — defines the tooling pipeline (QMD, Trailmark, TensorZero) that agents use for Terp-aware contributions
+
+## Abstract
+
+This ADR establishes the behavioral expectations for any automated system — LLMs, agents, robots, botnets, or automation pipelines — that participates in the Terp Network ecosystem. It defines four core principles: prioritize trustlessness and permissionlessness, opt into transparency when using automation, value and respect the individual, and participate by the same rules expected of providers. These principles create a social and technical contract that ensures automated participation enhances rather than degrades the network's properties.
+
+## Context and Problem Statement
+
+Terp Network is a trustless, permissionless blockchain. As LLMs and automated agents become more capable of contributing code, documentation, governance votes, and on-chain transactions, the network needs clear expectations about how these systems participate. Without defined boundaries:
+
+- Agents could generate contributions that are technically valid but socially harmful (e.g., spam governance, flood PR reviews)
+- Botnet operators could extract value without contributing back or disclosing their automated nature
+- Individual contributors could be displaced or overwhelmed by automated volume
+- The network's trustlessness property could be undermined if agents operate with privileges that human contributors lack
+
+The problem: how do we define participation norms for automated systems that preserve Terp Network's core properties while enabling the efficiency gains that automation provides?
+
+## Decision Drivers
+
+- Trustlessness: automated participation must not create new trust requirements
+- Permissionlessness: agents must not need special authorization beyond what any contributor requires
+- Transparency: the community should be able to discover when automation is in use
+- Fairness: automated participants should not gain systemic advantage over human contributors
+- Composability: the expectations must work across all Terp Network surfaces (code, governance, documentation, on-chain)
+- Individual dignity: automation must not undermine the value of individual human contribution
+
+## Considered Options / Alternatives
+
+- **No policy (status quo)**: agents participate without any stated expectations. Maximum flexibility, but risks the problems described above.
+- **Mandatory disclosure + verification**: every automated contribution must be cryptographically attested as machine-generated. Strong audit trail but creates permissioning (agents need a disclosure mechanism) and friction.
+- **Principle-based expectations with opt-in transparency (selected)**: define behavioral principles that apply equally to human and automated participants. Transparency is opt-in (encouraged, not enforced), but violations of the principles are grounds for community governance action. Preserves permissionlessness while establishing norms.
+
+## Decision Outcome
+
+We adopt the **principle-based expectations with opt-in transparency** model. Four core principles govern all automated participation:
+
+### 1. Prioritize Trustlessness & Permissionlessness
+
+Any agent or automation participating in Terp Network must preserve the network's trustless and permissionless properties. Specifically:
+
+- Automated contributions must not require privileged access that a human contributor could not obtain
+- Agents must not create implicit trust relationships (e.g., a bot that signs transactions on behalf of others without their key material)
+- Automation must not introduce gatekeeping mechanisms — any contributor should be able to replicate an agent's actions manually
+- Smart contract interactions by agents must use the same entry points and pay the same fees as human-initiated transactions
+
+### 2. Opt-Into Transparency When Making Use of Botnets or Agents/LLMs for Contributing
+
+Contributors using automation are encouraged — but not required — to disclose this fact:
+
+- **Encouraged disclosures**: PR descriptions noting LM assistance (per ADR-9 TensorZero episode references), governance votes indicating automated analysis, documentation commits noting AI-assisted drafting
+- **Opt-in mechanism**: ADR-9's TensorZero episode tracking provides a built-in audit trail for LM-assisted work. Contributors using this pipeline automatically generate transparency metadata
+- **No penalty for non-disclosure**: choosing not to disclose automation use does not violate this principle. The principle is about creating a culture of transparency, not a surveillance requirement
+- **Community norms**: over time, the community should develop expectations around disclosure similar to how open-source communities expect commit signing — encouraged, normalized, but not gatekept
+
+### 3. Value & Respect The Individual
+
+Automation must not undermine the value of individual human contribution:
+
+- Agents must not be used to flood governance, PR reviews, or discussion channels in ways that overwhelm individual voices
+- Automated volume is not a substitute for considered judgment — a thousand bot votes do not outweigh a single well-reasoned human position
+- Individual contributors retain the right to interact with human reviewers and maintainers, even in projects with significant automation
+- Agents must not impersonate individuals — automated contributions should be identifiable as automated if disclosed
+
+### 4. Participate By Same Rules Expected By Providers
+
+Any system providing services to the Terp Network (validators, RPC nodes, relayers, API providers) participates under the same expectations:
+
+- An agent running a validator must follow the same uptime, security, and slashing rules as a human-operated validator
+- An LLM providing code review must apply the same quality standards regardless of whether the author is human or automated
+- A botnet providing RPC access must meet the same reliability and latency requirements as a manually operated node
+- Automation does not create exemption from operational responsibilities — it may change how they are met, but not that they must be met
+
+## Consequences
+
+### Positive
+
+- Clear expectations prevent "grey area" disputes about automated participation
+- Opt-in transparency preserves permissionlessness while building cultural norms toward disclosure
+- Principle-based approach is adaptable to new automation paradigms without requiring ADR amendments
+- ADR-9's TensorZero episode tracking provides a natural transparency mechanism for compliant agents
+
+### Negative
+
+- Opt-in transparency means some automation will remain undisclosed — the community must accept this trade-off
+- Principle-based rules require judgment calls in edge cases (e.g., what counts as "flooding" governance?)
+- No enforcement mechanism beyond community governance — violating these expectations has no automated penalty
+
+### Neutral / Trade-offs
+
+- The four principles are deliberately general — they require interpretation per context (code contribution, governance, on-chain interaction)
+- The boundary between "assisted" and "automated" is fuzzy — a human using LM suggestions is different from a fully autonomous agent, and both are covered by this ADR
+- Community enforcement (governance votes, social norms) is the primary compliance mechanism, not technical controls
+
+### Backwards Compatibility
+
+Fully additive. No existing code, contracts, or on-chain behavior changes. This ADR defines social and behavioral expectations — it does not modify any software. Contributors not using automation are unaffected. Contributors already using ADR-9's TensorZero pipeline are partially compliant (transparency principle).
+
+## Test Cases
+
+- Verify that an agent submitting a PR with TensorZero episode metadata in the description satisfies the transparency principle
+- Verify that a human contributor using LM-assisted suggestions in their editor is not required to disclose (opt-in, not mandatory)
+- Verify that a bot flooding governance proposals with low-quality votes violates the "value the individual" principle regardless of transparency status
+- Verify that a validator operated by an automation system is subject to the same slashing conditions as a human-operated validator
+- Verify that an agent's smart contract interaction using the same entry points and fees as a human transaction satisfies the trustlessness principle
+
+## Further Discussions / Open Questions
+
+- Should the community establish disclosure norms per contribution type (e.g., mandatory for governance, optional for code)?
+- What governance actions are appropriate when an agent violates these principles?
+- Should there be a "verified agent" registration that provides stronger transparency guarantees in exchange for community trust?
+- How do these expectations interact with ADR-10 working group governance — do working groups set their own automation policies?
+- What constitutes "flooding" in the governance context — is it volume, quality, or both?
+
+## References
+
+- ADR-1: Standard Template and Design Guidelines
+- ADR-4: Sovereign Custody & Authentication Specifications
+- ADR-9: LM-Augmented Development and Semantic Tooling
+- ADR-10: Community Working Groups and Resource Coordination
+- Michael Nygard, "Documenting Architecture Decisions" (2011)

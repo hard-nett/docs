@@ -43,7 +43,7 @@ rly tx update-clients <path-name>
 3. Push a proposal on-chain that replaces the expired client-id with an active newly created one
 4. Check if the channel is once again operational
 
-## 1. Check for Expired Clients 
+## Check for Expired Clients 
 You will know if a client is expired if your ibc tx fails, and the error logs communicates that the client is expired. You can also get the status of a client with:
 
 
@@ -67,7 +67,7 @@ rly q clients-expiration hostchain-counterpartychain
 </Tabs>
 
 
-## 2. Create a New Client on Host Chain 
+## Create a New Client on Host Chain 
 
 <Tabs>
 <Tab value="hermes" label="hermes">
@@ -87,7 +87,7 @@ rly tx clients terpnetwork-secretnetwork --override
 </Tabs>
 
 
-## 3. Create Governance Proposal To Update Expired Client
+## Create Governance Proposal To Update Expired Client
 
 to propose to update an expired client:
 ```sh

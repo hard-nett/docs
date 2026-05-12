@@ -1,6 +1,10 @@
 ---
 title: Keys
 ---
+
+---
+title: Keys
+---
  
 # Add a private key and account
 
@@ -94,9 +98,9 @@ In order to safely manage your validator keys, you can look further on how to in
 
 ### TKMS Guide
 
-[Click here for guide](../../guides/nodes/tkms)
+[Click here for guide](/docs/)
 
 ## Next steps
 
-Now you are ready to [join a network](/guides/network/join-a-network).
-Optionally, you can take your time to [configure your node](/connect/apis), so that the node can be customized according to your needs and preferences. Also, note that you can use [Cosmovisor](/connect/join) in order to perform automatic upgrades.
+Now you are ready to [join a network](/docs/).
+Optionally, you can take your time to [configure your node](/connect/apis), so that the node can be customized according to your needs and preferences. Also, note that you can use [Cosmovisor](/docs/) in order to perform automatic upgrades.

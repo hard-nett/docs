@@ -1,6 +1,4 @@
 {
-  "pages": [
-    "apis"
-  
-  ]
+  "pages": ["index", "network", "join", "localterp", "apis"]
 }
+

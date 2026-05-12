@@ -5,22 +5,22 @@ Checkout [this article](https://akash.network/blog/a-founders-guide-to-the-secs-
 
 The process of finding a fair airdrop method is based percentiles and normalization for each projects token holder map statistics included via consensus of various TestNET DAOs and subDAOs. This process involves the following steps:
 
-## 0. Snapshot Holder Distributions
+## Snapshot Holder Distributions
 First, an export of holders from a community that is included is required. Thanks to blockchains, these are 100% verifiable, given the block height of the export.
 
-## 1.  Percentile Distributions
+##  Percentile Distributions
 To determine the distribution of project tokens to holders, each project token holders are mapped into percentile ranges. 
 
-## 2. Points for Percentiles
+## Points for Percentiles
 Each percentile group is then allocated either 1, 2, or 3 points. It is possible to now identify large disparities in the amount of tokens held by each percentile group, which can be used to determine the allocation of points for similar percentile ranges.
 
-## 3. Analyze Deltas in Holder Distributions 
+## Analyze Deltas in Holder Distributions 
 Once each percentile group has been assigned a point value, the total amount of points allocated for each project can be calculated. We now are aware of the total number of holders eligible for each project, and the total points allocated to each project. 
 
-## 4. Calculate TERP & THIOL Per Point  
+## Calculate TERP & THIOL Per Point  
 This information can be used to normalize the amount of tokens (TERP and THIOL) that each project holder is eligible to receive, ensuring that the distribution is relative and fair.
 
-## 5 . On-Chain Consensus
+##  On-Chain Consensus
 Governance is then used to verify general consensus of the distribution & allocation to new community members.
 
 **Conclusion**

@@ -20,7 +20,7 @@ import {
 
 ## Interacting with the gRPC Server
 
-As described on the [Network page](/connect/join). A gRPC endpoint is availble on the public Terp Network nodes so that you can start playing and intreacting with it right away.
+As described on the [Network page](/docs/). A gRPC endpoint is availble on the public Terp Network nodes so that you can start playing and intreacting with it right away.
 
 ## Enabling gRPC on a node
 If you are running your own node. It's also possible to enable them by editing  `~/.terp/config/app.toml`: 
@@ -111,7 +111,7 @@ title: gRPCurl
 
 [grpcurl](https://github.com/fullstorydev/grpcurl) is like `curl` but for gRPC. It is also available as a Go library, but we will use it only as a CLI command for debugging and testing purposes. Follow the instructions in the previous link to install it.
 
-Assuming you already installed terpd with the [installer](/connect/join), you should be able to run the following command to list the Protobuf services available (you can replace `grpc-terp.zenchainlabs.io:9000` by the gRPC server endpoint of another node such as the testnet, another provider or your own node.
+Assuming you already installed terpd with the [installer](/docs/), you should be able to run the following command to list the Protobuf services available (you can replace `grpc-terp.zenchainlabs.io:9000` by the gRPC server endpoint of another node such as the testnet, another provider or your own node.
 
 Listing all the methods from the mainnet
 

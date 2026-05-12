@@ -1,6 +1,10 @@
 ---
 title: Prepare Node
 ---
+
+---
+title: Prepare Node
+---
  
 # Initialize a node
 
@@ -31,9 +35,9 @@ Your node is now initialized in it's default configuration! From here, you can d
 
 - [set up your nodes keys](./keys.md)
 - configure a node to be various endpoints, such as:
-  - [sentry node](/connect/join)
-  - [archive node](/connect/join)
-  - [seed-node](../../guides/nodes/seed)
-  - [full-node](../../guides/nodes/full-node)
+  - [sentry node](/docs/)
+  - [archive node](/docs/)
+  - [seed-node](/docs/)
+  - [full-node](/docs/)
 
 you can now set up the [node keys](./keys.md)

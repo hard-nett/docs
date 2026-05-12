@@ -1,4 +1,10 @@
-export const CHAIN_CONFIG = {
+// ─── Environment-aware chain configuration ──────────────────────
+// When NEXT_PUBLIC_CHAIN_ENV=local, use local devnet endpoints.
+// Contract addresses can be overridden via NEXT_PUBLIC_* env vars.
+
+const isLocal = process.env.NEXT_PUBLIC_CHAIN_ENV === 'local';
+
+const MAINNET_CONFIG = {
   chainId: 'morocco-1',
   chainName: 'Terp Network',
   rpc: 'https://rpc.terp.network',
@@ -10,11 +16,30 @@ export const CHAIN_CONFIG = {
   stakeDenom: 'uterp',
 } as const;
 
-/** Contract addresses — empty until deployed. */
+const LOCAL_CONFIG = {
+  chainId: '120u-1' as const,
+  chainName: 'Local Terp' as const,
+  rpc: 'http://localhost:3000/rpc' as const,
+  rest: 'http://localhost:1317' as const,
+  bech32Prefix: 'terp' as const,
+  denom: 'uthiol' as const,
+  denomDisplay: 'THIOL' as const,
+  denomDecimals: 6 as const,
+  stakeDenom: 'uterp' as const,
+};
+
+export const CHAIN_CONFIG = isLocal ? LOCAL_CONFIG : MAINNET_CONFIG;
+
+/** Contract addresses — env-var overrides for local testing. */
 export const CONTRACTS = {
-  terp721Account: 'terp142kvnl56hs7jacmwysswlhp4f4eyt7ljclcy9ak7v3cgg3ldhzzs6ye4vu',
-  calendar: '', // resolved at runtime via billboard text records
-} as const;
+  terp721Account:
+    process.env.NEXT_PUBLIC_TERP721_ACCOUNT ||
+    'terp142kvnl56hs7jacmwysswlhp4f4eyt7ljclcy9ak7v3cgg3ldhzzs6ye4vu',
+  calendar:
+    process.env.NEXT_PUBLIC_CALENDAR || '', // resolved at runtime via billboard text records
+  infuser:
+    process.env.NEXT_PUBLIC_INFUSER || '', // resolved at runtime via billboard text records
+};
 
 /**
  * Billboard account name whose text records hold DAO/subdao addresses.

@@ -57,7 +57,7 @@ title: 1. setting up environment
 
 You can choose to either set up a local testnet or connect to an existing network. For easy testing, the Terp Network 90u testnet is available for deploying and running your contracts.
 
-To set up a local testnet, see [Running a Local Testnet](/guides/network/local-network). For details on the available Terp Network networks, see the [Networks](../../validators/join-a-network/overview) page.
+To set up a local testnet, see [Running a Local Testnet](/docs/). For details on the available Terp Network networks, see the [Networks](/docs/) page.
 
 The `90u-4` testnet utilizes the `thiolx` native tokens, which is required for paying transaction fees. To obtain these free testnet tokens, see the [Requesting Testnet Tokens](/guides/network/faucet) page.
 
@@ -66,10 +66,10 @@ The `90u-4` testnet utilizes the `thiolx` native tokens, which is required for p
 We have put together an Installation guide to help you set up all the necessary software tooling for developing CosmWasm smart contracts on the Terp Network.
 
 You can access the Terp networks through the following methods:
-- Install `terpd` and interact with the network via the CLI. For an overview of terpd, see [Terpd CLI](../../overview/terp-cli/).
+- Install `terpd` and interact with the network via the CLI. For an overview of terpd, see [Terpd CLI](/docs/).
 
 # Set up your IDE
-A reliable IDE is essential for developing smart contracts using Rust. [Visual Studio Code (VSCode)](https://code.visualstudio.com/) is a highly popular IDE for software development. For more information on setting up VSCode for CosmWasm development, see the [Basic Workspace Environment](/developers/getting-started/ide-setup) guide.
+A reliable IDE is essential for developing smart contracts using Rust. [Visual Studio Code (VSCode)](https://code.visualstudio.com/) is a highly popular IDE for software development. For more information on setting up VSCode for CosmWasm development, see the [Basic Workspace Environment](/docs/) guide.
 
 # Set up wallets
 To execute transactions using terpd, you need to set up an Terp account. The Project Setup guide will walk you through creating an account.

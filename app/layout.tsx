@@ -1,7 +1,7 @@
 import { RootProvider } from 'fumadocs-ui/provider/next';
 import { QueryProvider } from '@/lib/queries/provider';
 import { WalletProvider } from '@/lib/wallet/provider';
-import './global.css';
+import '@/public/global.css';
 import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
 

@@ -146,17 +146,17 @@ WORKDIR /app
 # Upgrade pip
 RUN python -m pip install --no-cache-dir --upgrade pip wheel setuptools
 
-# 1. tinygrad from source
+# tinygrad from source
 RUN git clone --depth 1 https://github.com/tinygrad/tinygrad.git && \
     cd tinygrad && \
     python -m pip install -e .
 
-# 2. OpenFormer (tinygrad-native SFT trainer — perfect for Qwen)
+# OpenFormer (tinygrad-native SFT trainer — perfect for Qwen)
 RUN git clone --depth 1 https://github.com/kreasof-ai/OpenFormer.git && \
     cd OpenFormer && \
     python -m pip install -e .[train] || python -m pip install -e .
 
-# 3. Fine-tuning & data prep stack
+# Fine-tuning & data prep stack
 RUN python -m pip install --no-cache-dir \
     transformers \
     datasets \
