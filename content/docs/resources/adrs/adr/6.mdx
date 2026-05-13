@@ -40,9 +40,9 @@ The specific forces:
 
 ## Decision Drivers
 
-- Gas efficiency: on-chain ZK verification must be affordable for authentication use cases (target: <200k gas per verification)
+- Gas efficiency: on-chain ZK verification must be affordable for authentication use cases (target: under 200k gas per verification)
 - Security: proof verification must be sound — a forged proof must never pass on-chain verification
-- Developer ergonomics: circuit authors must be able to define halo2 circuits, generate proving/verifying keys, and upload both in a single transaction
+- Developer ergonomics: circuit authors must be able to define halo2 circuits, generate proving and verifying keys, and upload both in a single transaction
 - Cache performance: frequently-used verifying keys must be memory-resident without unbounded memory growth
 - Backward compatibility: the ZK fork must coexist with the standard CosmWasm dependency graph (mode switching)
 - Composability: contracts must be able to derive public instances from on-chain state (block heights, light client headers, application data)
@@ -89,7 +89,7 @@ We adopt the **forked CosmWasm VM with host function** approach. The zk-wasm mod
 - Promotes hot verifying keys from disk into memory
 - Uses LRU eviction for unpinned keys
 - Maintains a `pinned_vk_cache` HashMap for permanently resident keys (operator-configurable)
-- Each `LoadedVerifyingKey` holds deserialized `Params<vesta::Affine>` and `VerifyingKey<vesta::Affine>` — the vesta/pallas curve pair
+- Each `LoadedVerifyingKey` holds deserialized `Params&lt;vesta::Affine&gt;` and `VerifyingKey&lt;vesta::Affine&gt;` — the vesta/pallas curve pair
 
 **Phase 5: VERIFY** (runtime)
 - Contract calls `deps.api.verify_halo2_proof(proof_bytes, public_inputs)`
@@ -203,7 +203,7 @@ Migration plan: v6 upgrade handler adds the `vk_checksum` field to the store sch
 - Integration: upload a contract with `MsgStoreCodeWithCircuit`, verify both `wasm_checksum` and `vk_checksum` are stored in `CodeInfo`
 - Integration: call `deps.api.verify_halo2_proof()` from a test contract with a valid proof and matching VK — verify it returns `true`
 - Integration: call `deps.api.verify_halo2_proof()` with an invalid proof — verify it returns `false`
-- Gas benchmark: verify that single-instance public input hashing achieves <200k gas for verification
+- Gas benchmark: verify that single-instance public input hashing achieves under 200k gas for verification
 - Cache: verify that a pinned VK remains in `pinned_vk_cache` after LRU eviction of unpinned keys
 - Cache: verify that `vks/` and `modules/` directories are populated independently at node startup
 - Mode switching: verify that `just deps-zk-local` compiles zk-wasmvm with ZK host functions, and that standard mode compiles without them

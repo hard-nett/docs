@@ -2,8 +2,6 @@
 title: Generators
 ---
 
-
-
 - cli to docs
 - docs to tools 
 - proto- to ts/rust/go/py
@@ -12,3 +10,5 @@ title: Generators
 - wasmvm-build <-> go module
 - schema-ts/js
 - cargo proto
+
+

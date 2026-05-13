@@ -12,31 +12,26 @@ const config = {
         source: '/docs/:path*.mdx',
         destination: '/llms.mdx/docs/:path*',
       },
-      // Redirect broken doc links to appropriate category routes
+      // Redirect legacy pre-migration paths (no /docs/ prefix) to their new location
       {
         source: '/guides/:path*',
-        destination: '/docs/guides/',
+        destination: '/docs/guides/:path*',
       },
       {
         source: '/validators/:path*',
-        destination: '/docs/guides/',
+        destination: '/docs/guides/:path*',
       },
       {
         source: '/developers/:path*',
-        destination: '/docs/guides/',
+        destination: '/docs/guides/:path*',
       },
       {
         source: '/connect/:path*',
-        destination: '/docs/connect/',
+        destination: '/docs/connect/:path*',
       },
       {
         source: '/overview/:path*',
-        destination: '/docs/overview/',
-      },
-      // Catch-all for any other broken paths under /docs/
-      {
-        source: '/docs/:path*',
-        destination: '/docs/',
+        destination: '/docs/overview/:path*',
       },
     ];
   },

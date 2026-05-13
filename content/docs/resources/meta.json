@@ -1,4 +1,4 @@
 {
   "title": "Resources",
-  "pages": ["index", "public", "libraries", "faq"]
+  "pages": ["adrs","index", "public", "libraries", "faq"]
 }

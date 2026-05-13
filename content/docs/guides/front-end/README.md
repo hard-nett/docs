@@ -1,13 +1,16 @@
 ---
 title: front end UI
 ---
-**This guide will show you how to setup a minimal template for creating an application.** We will be using **[Cosmology](https://cosmology.tech)**, an exellect package library specifically for network using Cosmos-SDK.
+**This guide will show you how to setup a minimal template for creating an application.**
+
 ___
 # Introduction
 
 Distributed applications (dApps) are software applications that run on distributed networks. Blockchains provide persistent data, or the state, as well as persistent processes and logic. A user interface is important in most cases, and server interactions are important in many cases.
 
 There are many ways to build a dapp that can connect & communicate with Terp Network.
+
+## The Static File Tech
 
 ## The Server \ Client Tech
 
