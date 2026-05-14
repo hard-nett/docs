@@ -1,12 +1,27 @@
 ---
 title: API Libraries
 ---
+import { GithubInfo } from 'fumadocs-ui/components/github-info';
 
-<Cards> 
-<Card title="Rust" description="" href="/docs/" />
-<Card title="Go Libraries" description="" href="/docs/" />
-<Card title="Python Libraries" description="" href="/docs/" />
-<Card title="JS/TS Libraries" description="" href="/docs/" />
-<Card title="Bash Templates" description="" href="/docs/" />
-<Card title="Cli Tooling API's" description="" href="/docs/" />
-</Cards>
+
+<Tabs items={['JS/TS', 'Rust', 'Go', 'Python', 'Proto']}>
+  <Tab value="JS/TS">
+  <GithubInfo owner="terpnetwork" repo="terp-ts"/>
+  <GithubInfo owner="hyperweb-io" repo="ts-codegen"/>
+  </Tab>
+  <Tab value="Rust">
+  <GithubInfo owner="permissionlessweb" repo="terp-rs"/>
+  <GithubInfo owner="abstractsdk" repo="cw-orchestrator"/>
+  <GithubInfo owner="Lay3rLabs" repo="climb"/>
+  </Tab>
+  <Tab value="Python">
+  <GithubInfo owner="permissionlessweb" repo="terp-rs"/>
+  </Tab>
+  <Tab value="Go">
+  <GithubInfo owner="terpnetwork" repo="terp-core"/>
+  </Tab>
+  <Tab value="Proto">
+  <GithubInfo owner="terpnetwork" repo="terp-core"/>
+  </Tab>
+</Tabs>
+

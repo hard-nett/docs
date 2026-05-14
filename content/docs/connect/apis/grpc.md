@@ -23,7 +23,7 @@ import {
 As described on the [Network page](/docs/). A gRPC endpoint is availble on the public Terp Network nodes so that you can start playing and intreacting with it right away.
 
 ## Enabling gRPC on a node
-If you are running your own node. It's also possible to enable them by editing  `~/.terp/config/app.toml`: 
+If you are running your own node. It's also possible to enable them by editing  `~/.terpd/config/app.toml`: 
 
 * `grpc.enable = true|false` field defines if the gRPC server should be enabled. Defaults to `true`.
 * `grpc.address = {string}` field defines the address (really, the port, since the host should be kept at `0.0.0.0`) the server should bind to. Defaults to `0.0.0.0:9090`.

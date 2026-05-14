@@ -80,7 +80,7 @@ The **test** backend is a password-less variation of the file backend. It stores
 
 We have been talking about your node address, which is your account address and it's used for holding funds and signing transactions. This is also referred to as **Operator Address**, and you can obtain it by launching `terpd keys add <your-key-name>`. This address starts with `"terp1.."`.
 
-It is important to notice that there is also another type of address, derived from your validator's consensus public key. This is called **Validator Consensus Address**, and it is used in the staking and consensus process to identify your validator.This address starts with `"terpvaloper.."`", and you can obtain it by launching terpdtendermint show-address.
+It is important to notice that there is also another type of address, derived from your validator's consensus public key. This is called **Validator Consensus Address**, and it is used in the staking and consensus process to identify your validator.This address starts with `"terpvaloper.."`, and you can obtain it by launching `terpd tendermint show-address`.
 
 # TKMS (Optional)
 
@@ -98,9 +98,9 @@ In order to safely manage your validator keys, you can look further on how to in
 
 ### TKMS Guide
 
-[Click here for guide](/docs/)
+[Click here for guide](/guides/network/nodes/tmkms)
 
 ## Next steps
 
-Now you are ready to [join a network](/docs/).
-Optionally, you can take your time to [configure your node](/connect/apis), so that the node can be customized according to your needs and preferences. Also, note that you can use [Cosmovisor](/docs/) in order to perform automatic upgrades.
+Now you are ready to [join a network](/guides/network/nodes/install).
+Optionally, you can take your time to [configure your node](/guides/network/nodes/configure), so that the node can be customized according to your needs and preferences. Also, note that you can use [Cosmovisor](/guides/network/nodes/cosmovisor) in order to perform automatic upgrades.

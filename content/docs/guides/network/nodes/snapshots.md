@@ -11,7 +11,7 @@ title: automate compressed snapshot creation
 
 ### Prerequisites:
 
-The script assumes that the Akash service is installed and running on the system
+The script assumes that the Terp service is installed and running on the system
 The script requires jq, tar, and systemctl commands to be available on the system
 The script uses a specific log file and snapshot directory, which can be modified as needed
 
@@ -24,7 +24,7 @@ Create the file `create_snapshot.sh` with:
 CHAIN_ID="morocco-1"
 SNAP_PATH="$HOME/terp/snapshots"
 LOG_PATH="$HOME/terp/terp_log.txt"
-DATA_PATH="$HOME/.terp/data/"
+DATA_PATH="$HOME/.terpd/data/"
 SERVICE_NAME="terpd.service"
 RPC_ADDRESS="http://localhost:26657"
 SNAP_NAME=$(echo "${CHAIN_ID}_$(date '+%Y-%m-%d').tar")

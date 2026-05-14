@@ -1,6 +1,11 @@
 {
   "title": "Guides",
   "pages": [
-    "network"
+    "authentication",
+    "cosmwasm",
+    "devops",
+    "network",
+    "onramps",
+    "trustlessness"
   ]
 }

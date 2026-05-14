@@ -1,7 +1,6 @@
 {
-  "title": "Adrs",
-   "pages": [
-    "index",
-    "adrs"
+  "title": "ADRs",
+  "pages": [
+    "adr"
   ]
 }

@@ -6,7 +6,7 @@
     "community",
     "resources",
     "core-apps",
-    "connect",
+    "connect/index.mdx",
     "contribute",
     "guides",
     "disclaimers"

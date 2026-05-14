@@ -63,14 +63,14 @@ terpd init "terpd-up - Sentry B" --chain-id 90u-4
 Once the previous step is done, the .terp folder will already exist, so we can download the genesis.json file:
 
 ```
-curl https://raw.githubusercontent.com/terpnetwork/networks/main/testnet/90u-4/genesis.json > ~/.terp/config/genesis.json
+curl https://raw.githubusercontent.com/terpnetwork/networks/main/testnet/90u-4/genesis.json > ~/.terpd/config/genesis.json
 ```
 
 ### Configure service
 Finally, we will configure the terp service:
 
 ```
-sudo nano /etc/systemd/system/system/terpd.service
+sudo nano /etc/systemd/system/terpd.service
 ```
 
 ```
@@ -97,7 +97,7 @@ The sentry nodes (both), must have peers to be synchronized at all times, we wil
 #### Persistent Peers: 
 ```
 peers=$(curl -s https://ss.terp.nodestake.top/peers.txt)
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.terp/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.terpd/config/config.toml
 ```
 Note: the peers were obtained from Nodestake validator team.
 
@@ -145,7 +145,7 @@ pex = false
 If the validator has already been exposed to the network, we can delete the address book so that it only "knows" the sentry nodes; if it is a validator that has never been started, this step is not necessary. Once inside the config folder and with the node stopped, perform the following command:
 
 ```
-rm -rf $HOME/.terp/config/addrbook.json 
+rm -rf $HOME/.terpd/config/addrbook.json 
 ```
 
 #### Start Validator Node

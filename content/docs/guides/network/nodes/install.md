@@ -52,14 +52,14 @@ For Linux, depending on your architechture:
 <Tab value="amd64" label="amd64">
 
 ```bash
-wget https://github.com/terpnetwork/terp-core/releases/download/v4.2.2/terpd_linux_amd64
+wget https://github.com/terpnetwork/terp-core/releases/download/v5.1.0/terpd_linux_amd64
 ```
 
 </Tab>
 <Tab value="arm64" label="arm64">
 
 ```bash
-wget https://github.com/terpnetwork/terp-core/releases/download/v4.2.2/terpd_linux_arm64
+wget https://github.com/terpnetwork/terp-core/releases/download/v5.1.0/terpd_linux_arm64
 ```
 
 </Tab>

@@ -5,9 +5,9 @@ title: d. archive node tutorial
 Archive nodes save the raw historical state of the blockchain for full nodes to reference. These require a large amount of storage.
 
 ## Solution
-To setup an archive node, you will need to customize your nodes pruning settings. To do this, we can run the following command to update the setting located in `~/.terp/config/app.toml`:
+To setup an archive node, you will need to customize your nodes pruning settings. To do this, we can run the following command to update the setting located in `~/.terpd/config/app.toml`:
 ```sh
-sed -i -e "s/^pruning *=.*/pruning = \"nothing\"/" $HOME/.terp/config/app.toml
+sed -i -e "s/^pruning *=.*/pruning = \"nothing\"/" $HOME/.terpd/config/app.toml
 ```
 
 now your node will keep the entire state saved, without pruning. 
@@ -28,5 +28,5 @@ To sync from block height 1, you will need to ensure the node uses the proper ve
 ## Archive Peers
 ```sh
 PEERS="d6827d32e38faa3a7ea3b7d1128a16bc873fa6b1@207.244.254.232:26656"
-sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.terp/config/config.toml
+sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.terpd/config/config.toml
 ```
