@@ -15,9 +15,18 @@ export default function Layout({ children }: LayoutProps<'/'>) {
       on: 'nav',
       children: (
         <NavbarMenu>
-          <NavbarMenuTrigger>Documentation</NavbarMenuTrigger>
+          <NavbarMenuTrigger>DAO</NavbarMenuTrigger>
           <NavbarMenuContent>
-            <NavbarMenuLink href="/docs">Hello World</NavbarMenuLink>
+            <NavbarMenuLink href="/docs/connect">Event Calendar</NavbarMenuLink>
+          </NavbarMenuContent>
+          <NavbarMenuTrigger>Network</NavbarMenuTrigger>
+          <NavbarMenuContent>
+            <NavbarMenuLink href="/docs/guides/network/connect">Connect</NavbarMenuLink>
+            <NavbarMenuLink href="/docs/guides/network/connect">Tokens</NavbarMenuLink>
+          </NavbarMenuContent>
+          <NavbarMenuTrigger>Ecosystem</NavbarMenuTrigger>
+          <NavbarMenuContent>
+            <NavbarMenuLink href="/docs/guides/network/connect">Connect</NavbarMenuLink>
           </NavbarMenuContent>
         </NavbarMenu>
       ),
