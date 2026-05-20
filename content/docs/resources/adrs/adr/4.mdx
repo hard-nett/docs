@@ -12,13 +12,13 @@ description: Sovereign custody principles, smart account authentication, key rot
 
 ## Status
 
-PROPOSED
+DRAFT
 
 ## Dependencies
 
 - **ADR-1**: Standard Template and Design Guidelines — this ADR follows the format defined in ADR-1
 - **ADR-3**: Agent, LLM, and Automation Participation Expectations — agent authentication and key management must satisfy ADR-3's trustlessness and permissionlessness principles
-- **ADR-6**: zk-wasm Custom Wasm Module for Authentication — future zero-knowledge authentication layer that extends the authentication gradient defined here
+- **ADR-6**: zk-cosmwasmvm Custom Wasm Module for Authentication — future zero-knowledge authentication layer that extends the authentication gradient defined here
 
 **Downstream dependents**: ADR-3 (agent participation expectations reference ADR-4 custody principles), ADR-5 (HashMerchant sudo pattern mirrors CosmWasm authenticator sudo calls)
 
@@ -53,7 +53,7 @@ The x/smart-account module addresses problems 1-4 by replacing the single-key mo
 - **Status quo (single-key Cosmos SDK auth)**: every account has one key. Simple, but no key rotation, no recovery, no gradients, and custodial drift is unchecked.
 - **ERC-4337-style account abstraction (Ethereum model)**: bundlers + paymasters + smart contract accounts. Powerful but designed for EVM; does not map cleanly to Cosmos SDK's AnteHandler architecture or CosmWasm's sudo model.
 - **x/smart-account with CosmWasm authenticators (selected)**: replace the AnteHandler's signature verification with a pluggable authenticator system. The x/smart-account module routes authentication through CosmWasm contracts via sudo calls. Authenticators compose via AllOf/AnyOf patterns. Key rotation is add-then-remove. Recovery is multi-sig or social-recovery contracts. Authentication gradients are expressed through per-operation authenticator selection.
-- **zk-wasm native authentication only**: use zero-knowledge proofs for all authentication (as proposed in ADR-6). Maximum privacy but insufficient as a standalone mechanism — users need simple signature-based auth for everyday operations, with zk-wasm as an optional upgrade path.
+- **zk-cosmwasmvm native authentication only**: use zero-knowledge proofs for all authentication (as proposed in ADR-6). Maximum privacy but insufficient as a standalone mechanism — users need simple signature-based auth for everyday operations, with zk-cosmwasmvm as an optional upgrade path.
 
 ## Decision Outcome
 
@@ -332,7 +332,7 @@ Replay attack protection is enforced when the contract-side configuration requir
 - Recovery authenticators are standard CosmWasm contracts, meaning they are upgradeable but also subject to contract bugs
 - The circuit breaker (`is_smart_account_active`) falls back to standard auth, which means smart-account-specific features (gradients, spend limits) are unavailable during deactivation
 - BLS aggregation enables efficient multi-sig but requires BLS12-381 precompile support in the execution environment
-- ADR-6's zk-wasm authentication will extend the gradient model, not replace it — the composable authenticator architecture accommodates future authenticator types
+- ADR-6's zk-cosmwasmvm authentication will extend the gradient model, not replace it — the composable authenticator architecture accommodates future authenticator types
 
 ### Backwards Compatibility
 
@@ -378,7 +378,7 @@ The x/smart-account module is designed for backwards compatibility with existing
 - Should social recovery contracts be standardized (a la ERC-7579) or left as application-specific implementations?
 - What guardian quorum thresholds are recommended for different account value tiers?
 - Should governance operations require a mandatory higher-gradient authenticator, or should this be left to user configuration?
-- How does ADR-6's zk-wasm authentication integrate with the `TerpAccountTrait` sudo flow — does it become a new authenticator type or a new authentication layer?
+- How does ADR-6's zk-cosmwasmvm authentication integrate with the `TerpAccountTrait` sudo flow — does it become a new authenticator type or a new authentication layer?
 - Should the circuit breaker controllers be required to go through governance to re-enable smart account auth after deactivation, or should they have unilateral control?
 
 ## References
@@ -386,7 +386,7 @@ The x/smart-account module is designed for backwards compatibility with existing
 - ADR-1: Standard Template and Design Guidelines
 - ADR-3: Agent, LLM, and Automation Participation Expectations
 - ADR-5: HashMerchant — Verifiable Merkle Reflection Market (sudo pattern reference)
-- ADR-6: zk-wasm Custom Wasm Module for Authentication
+- ADR-6: zk-cosmwasmvm Custom Wasm Module for Authentication
 - `terp-auth` crate: `/packages/terp-auth/src/lib.rs` — TerpAccountTrait definition
 - `terp-auth` types: `/packages/terp-auth/src/types.rs` — AuthSudoMsg, AuthenticationRequest, AccountAuthenticator
 - `terp-auth` composite: `/packages/terp-auth/src/authenticator/composite.rs` — CompositeId, CosmwasmAuthenticatorData, AllOf/AnyOf patterns

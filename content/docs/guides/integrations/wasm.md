@@ -9,7 +9,7 @@ desscription: learn how to build a web-app that uses a wasm file to manage heads
 - merkltree-server:
 - headstash tree initalization scripts
 - wasm-bindgen + html website support
-- local-terp (zk-wasm flavored) + cw-headstash
+- local-terp (zk-cosmwasmvm flavored) + cw-headstash
 
 ## Steps
 

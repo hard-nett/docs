@@ -12,15 +12,22 @@ description: Curated index of external ADRs, BIPs, EIPs, ZIPs, and protocol prop
 
 ## Status
 
-Accepted
+DRAFT
 
 ## Dependencies
 
-- **ADR-1**: Standard Template and Design Guidelines — this ADR follows the format defined in ADR-1
+- **ADR-1**: Standard Template and Design Guidelines 
 - **ADR-4**: Sovereign Custody & Authentication — references Ethereum account abstraction proposals
 - **ADR-5**: HashMerchant — references ICS-23 and IBC specifications
 - **ADR-6**: ZK-WASM — references Zcash ZIPs and zero-knowledge proof standards
 - **ADR-9**: LM-Augmented Development — references Cosmos SDK ADR process
+
+Dependencies
+ADR-1: Standard Template and Design Guidelines
+ADR-6: ZK-WASM Custom Module for Authentication
+ADR-7: External Architectural Decision Record References
+Halo2: Circuit construction and proof generation
+ZIP-225: Block commitment structure informing verification patterns
 
 ## Abstract
 
@@ -49,19 +56,12 @@ We maintain a curated index organized by ecosystem. Each entry includes the refe
 
 ### Cosmos Ecosystem
 
-| Reference | Title | Relevance to Terp |
-|---|---|---|
-| Cosmos SDK ADR-001 | Module scaffolding and CLI generation | Terp-core module structure follows Cosmos SDK conventions |
-| Cosmos SDK ADR-039 | Collections iterators | Used in terp-core store patterns |
-| Cosmos SDK ADR-041 | Store migrations | Upgrade handler design for terp-core |
-| Cosmos SDK ADR-058 | Avoid JSON in prototype definitions | API design patterns for CosmWasm contracts |
-| Cosmos SDK ADR-063 | State listen notify | Event emission patterns in x/smart-account |
-| Cosmos SDK ADR-066 | Virtual keys in store | Smart account key isolation patterns |
-| IBC-go ADR-008 | ICS-23 commitment proofs | HashMerchant (ADR-5) reuses ICS-23 for Merkle verification |
-| CometBFT ADR-013 | Vote extensions | HashMerchant validator attestation mechanism |
-| CometBFT ADR-107 | ABCI++ specification | x/smart-account AnteHandler integration |
+- https://docs.cosmos.network/sdk/v0.53/build/architecture
+- https://github.com/cosmos/ibc/tree/main/spec
 
 ### Ethereum Ecosystem
+
+- https://eips.ethereum.org/
 
 | Reference | Title | Relevance to Terp |
 |---|---|---|
@@ -72,13 +72,23 @@ We maintain a curated index organized by ecosystem. Each entry includes the refe
 
 ### Bitcoin Ecosystem
 
+- https://github.com/bitcoin/bips
+
 | Reference | Title | Relevance to Terp |
 |---|---|---|
 | BIP-32 | Hierarchical Deterministic Wallets | Key derivation for Terp account key rotation |
 | BIP-39 | Mnemonic code for generating deterministic keys | Wallet recovery seed standard |
 | BIP-340 | Schnorr Signatures for Secp256k1 | Signature scheme option for Terp authenticators |
 
+#### Nostr
+- https://github.com/nostr-protocol/nips
+
+#### Cashu 
+- https://github.com/cashubtc/nuts
+
+
 ### Zcash Ecosystem
+- https://zips.z.cash/
 
 | Reference | Title | Relevance to Terp |
 |---|---|---|
@@ -94,6 +104,12 @@ We maintain a curated index organized by ecosystem. Each entry includes the refe
 | Halo2 (Zcash/Pasta curves) | Recursive proof composition without trusted setup | ZK-WASM module (ADR-6) uses halo2 circuits for authentication proofs |
 | PLONKish arithmetization | Polynomial commitment scheme | Circuit design for norick WASM demo and future zkVM |
 | ICS-23 (non-ZK) | Vector commitment proofs | Baseline commitment scheme that ZK-WASM extends |
+
+
+#### Penumbra protocol
+- https://protocol.penumbra.zone/main/
+
+
 
 ### Web and Platform
 
@@ -151,3 +167,4 @@ Fully additive. No existing code or on-chain behavior changes. This is a referen
 - EIPs: https://eips.ethereum.org
 - BIPs: https://github.com/bitcoin/bips
 - ZIPs: https://zips.z.cash
+
