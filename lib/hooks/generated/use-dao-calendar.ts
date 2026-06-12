@@ -7,6 +7,7 @@ import { useQuery } from '@tanstack/react-query';
 import { queryContractSmart, queryREST } from '@/lib/queries/fetchers';
 import type {
   Addr,
+  AgendaResponse,
   DumpStateResponse,
   EventFilter,
   EventGaugeResponse,
@@ -17,6 +18,7 @@ import type {
   GroupsManagingEventResponse,
   HooksResponse,
   InfoResponse,
+  Timestamp,
   Uint64,
 } from '@/lib/types/DaoCalendar.types';
 
@@ -33,7 +35,7 @@ async function indexerWithFallback<T>(
   return queryContractSmart<T>(contractAddress, queryMsg);
 }
 
-export function useEvent(contractAddress: string | undefined, params: { eventId: number }) {
+export function useEvent(contractAddress: string | undefined, params: { eventId: number }, options?: { staleTime?: number }) {
   return useQuery({
     queryKey: [KEY, contractAddress, 'event', params.eventId],
     queryFn: () => indexerWithFallback<EventResponseForEmpty>(
@@ -41,10 +43,11 @@ export function useEvent(contractAddress: string | undefined, params: { eventId:
       { event: { event_id: params.eventId } },
     ),
     enabled: !!contractAddress && params.eventId !== undefined,
+    ...options,
   });
 }
 
-export function useListEvents(contractAddress: string | undefined, params: { filter?: EventFilter; limit?: number; startAfter?: number }) {
+export function useListEvents(contractAddress: string | undefined, params: { filter?: EventFilter; limit?: number; startAfter?: number }, options?: { staleTime?: number }) {
   return useQuery({
     queryKey: [KEY, contractAddress, 'list_events', params.filter, params.limit, params.startAfter],
     queryFn: () => indexerWithFallback<EventListResponseForEmpty>(
@@ -53,10 +56,11 @@ export function useListEvents(contractAddress: string | undefined, params: { fil
       '/indexer/dao-calendar/list_events',
     ),
     enabled: !!contractAddress,
+    ...options,
   });
 }
 
-export function useReverseEvents(contractAddress: string | undefined, params: { filter?: EventFilter; limit?: number; startBefore?: number }) {
+export function useReverseEvents(contractAddress: string | undefined, params: { filter?: EventFilter; limit?: number; startBefore?: number }, options?: { staleTime?: number }) {
   return useQuery({
     queryKey: [KEY, contractAddress, 'reverse_events', params.filter, params.limit, params.startBefore],
     queryFn: () => indexerWithFallback<EventListResponseForEmpty>(
@@ -64,10 +68,11 @@ export function useReverseEvents(contractAddress: string | undefined, params: { 
       { reverse_events: { filter: params.filter, limit: params.limit, start_before: params.startBefore } },
     ),
     enabled: !!contractAddress,
+    ...options,
   });
 }
 
-export function useListGroups(contractAddress: string | undefined) {
+export function useListGroups(contractAddress: string | undefined, options?: { staleTime?: number }) {
   return useQuery({
     queryKey: [KEY, contractAddress, 'list_groups'],
     queryFn: () => indexerWithFallback<GroupListResponse>(
@@ -76,10 +81,11 @@ export function useListGroups(contractAddress: string | undefined) {
       '/indexer/dao-calendar/list_groups',
     ),
     enabled: !!contractAddress,
+    ...options,
   });
 }
 
-export function useGroup(contractAddress: string | undefined, params: { groupId: string }) {
+export function useGroup(contractAddress: string | undefined, params: { groupId: string }, options?: { staleTime?: number }) {
   return useQuery({
     queryKey: [KEY, contractAddress, 'group', params.groupId],
     queryFn: () => indexerWithFallback<GroupResponse>(
@@ -87,10 +93,11 @@ export function useGroup(contractAddress: string | undefined, params: { groupId:
       { group: { group_id: params.groupId } },
     ),
     enabled: !!contractAddress && params.groupId !== undefined,
+    ...options,
   });
 }
 
-export function useGroupsManagingEvent(contractAddress: string | undefined, params: { eventId: number }) {
+export function useGroupsManagingEvent(contractAddress: string | undefined, params: { eventId: number }, options?: { staleTime?: number }) {
   return useQuery({
     queryKey: [KEY, contractAddress, 'groups_managing_event', params.eventId],
     queryFn: () => indexerWithFallback<GroupsManagingEventResponse>(
@@ -98,10 +105,11 @@ export function useGroupsManagingEvent(contractAddress: string | undefined, para
       { groups_managing_event: { event_id: params.eventId } },
     ),
     enabled: !!contractAddress && params.eventId !== undefined,
+    ...options,
   });
 }
 
-export function useEventGauges(contractAddress: string | undefined, params: { eventId: number }) {
+export function useEventGauges(contractAddress: string | undefined, params: { eventId: number }, options?: { staleTime?: number }) {
   return useQuery({
     queryKey: [KEY, contractAddress, 'event_gauges', params.eventId],
     queryFn: () => indexerWithFallback<EventGaugeResponse>(
@@ -109,10 +117,11 @@ export function useEventGauges(contractAddress: string | undefined, params: { ev
       { event_gauges: { event_id: params.eventId } },
     ),
     enabled: !!contractAddress && params.eventId !== undefined,
+    ...options,
   });
 }
 
-export function useEventCount(contractAddress: string | undefined) {
+export function useEventCount(contractAddress: string | undefined, options?: { staleTime?: number }) {
   return useQuery({
     queryKey: [KEY, contractAddress, 'event_count'],
     queryFn: () => indexerWithFallback<Uint64>(
@@ -120,10 +129,11 @@ export function useEventCount(contractAddress: string | undefined) {
       { event_count: {} },
     ),
     enabled: !!contractAddress,
+    ...options,
   });
 }
 
-export function useEventHooks(contractAddress: string | undefined) {
+export function useEventHooks(contractAddress: string | undefined, options?: { staleTime?: number }) {
   return useQuery({
     queryKey: [KEY, contractAddress, 'event_hooks'],
     queryFn: () => indexerWithFallback<HooksResponse>(
@@ -131,10 +141,11 @@ export function useEventHooks(contractAddress: string | undefined) {
       { event_hooks: {} },
     ),
     enabled: !!contractAddress,
+    ...options,
   });
 }
 
-export function useDumpState(contractAddress: string | undefined) {
+export function useDumpState(contractAddress: string | undefined, options?: { staleTime?: number }) {
   return useQuery({
     queryKey: [KEY, contractAddress, 'dump_state'],
     queryFn: () => indexerWithFallback<DumpStateResponse>(
@@ -142,10 +153,11 @@ export function useDumpState(contractAddress: string | undefined) {
       { dump_state: {} },
     ),
     enabled: !!contractAddress,
+    ...options,
   });
 }
 
-export function useDao(contractAddress: string | undefined) {
+export function useDao(contractAddress: string | undefined, options?: { staleTime?: number }) {
   return useQuery({
     queryKey: [KEY, contractAddress, 'dao'],
     queryFn: () => indexerWithFallback<Addr>(
@@ -153,10 +165,11 @@ export function useDao(contractAddress: string | undefined) {
       { dao: {} },
     ),
     enabled: !!contractAddress,
+    ...options,
   });
 }
 
-export function useInfo(contractAddress: string | undefined) {
+export function useInfo(contractAddress: string | undefined, options?: { staleTime?: number }) {
   return useQuery({
     queryKey: [KEY, contractAddress, 'info'],
     queryFn: () => indexerWithFallback<InfoResponse>(
@@ -164,10 +177,11 @@ export function useInfo(contractAddress: string | undefined) {
       { info: {} },
     ),
     enabled: !!contractAddress,
+    ...options,
   });
 }
 
-export function useNextProposalId(contractAddress: string | undefined) {
+export function useNextProposalId(contractAddress: string | undefined, options?: { staleTime?: number }) {
   return useQuery({
     queryKey: [KEY, contractAddress, 'next_proposal_id'],
     queryFn: () => indexerWithFallback<Uint64>(
@@ -175,5 +189,18 @@ export function useNextProposalId(contractAddress: string | undefined) {
       { next_proposal_id: {} },
     ),
     enabled: !!contractAddress,
+    ...options,
+  });
+}
+
+export function useAgenda(contractAddress: string | undefined, params: { from?: Timestamp; limit?: number }, options?: { staleTime?: number }) {
+  return useQuery({
+    queryKey: [KEY, contractAddress, 'agenda', params.from, params.limit],
+    queryFn: () => indexerWithFallback<AgendaResponse>(
+      contractAddress!,
+      { agenda: { from: params.from, limit: params.limit } },
+    ),
+    enabled: !!contractAddress,
+    ...options,
   });
 }

@@ -24,6 +24,8 @@ export type ExecuteMsg = {
     managing_groups: string[];
     services?: EventServiceInit[] | null;
     start_time: Timestamp;
+    timezone?: string | null;
+    recurrence?: RecurrenceRule | null;
     title: string;
   };
 } | {
@@ -35,6 +37,7 @@ export type ExecuteMsg = {
     managing_groups?: string[] | null;
     services?: EventServiceInit[] | null;
     start_time?: Timestamp | null;
+    timezone?: string | null;
     title?: string | null;
   };
 } | {
@@ -240,6 +243,21 @@ export type GovMsg = {
 export type VoteOption = "yes" | "no" | "abstain" | "no_with_veto";
 export type Decimal = string;
 export interface Empty {}
+export type RecurrenceFrequency = "daily" | "weekly" | "monthly" | "yearly";
+export type DayOfWeek = "monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday" | "sunday";
+export type RecurrenceEnd = {
+  never: {};
+} | {
+  after_count: number;
+} | {
+  at_date: Timestamp;
+};
+export interface RecurrenceRule {
+  frequency: RecurrenceFrequency;
+  interval: number;
+  days_of_week?: DayOfWeek[] | null;
+  end_condition: RecurrenceEnd;
+}
 export interface EventServiceInit {
   description?: string | null;
   msgs: CosmosMsgForEmpty[];
@@ -316,6 +334,11 @@ export type QueryMsg = {
   info: {};
 } | {
   next_proposal_id: {};
+} | {
+  agenda: {
+    from?: Timestamp | null;
+    limit?: number | null;
+  };
 };
 export type EventFilter = {
   by_groups: {
@@ -350,6 +373,10 @@ export interface Group {
   dao: Addr;
   id: string;
   suppliers: EventSupplier[];
+  name: string;
+  description?: string | null;
+  color?: string | null;
+  members?: string[] | null;
 }
 export interface EventSupplier {
   contract: Addr;
@@ -370,6 +397,7 @@ export interface EventForEmpty {
   managing_groups: string[];
   start_time: Timestamp;
   status: EventStatus;
+  timezone?: string | null;
   title: string;
 }
 export interface EventService {
@@ -407,6 +435,10 @@ export interface InfoResponse {
 }
 export interface EventListResponseForEmpty {
   events: EventResponseForEmpty[];
+}
+export interface AgendaResponse {
+  events: EventResponseForEmpty[];
+  count: number;
 }
 export interface GroupListResponse {
   groups: Group[];

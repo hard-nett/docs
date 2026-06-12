@@ -16,5 +16,4 @@
 - upgrades
 - visualize charts of workflow of cosmos-sdk, absci, ibc workflow, multis-sig tx's, zk-circuit proof generationg and verification, samrt contract curation and development, hashing functionalgorithms and their hardness, discreet logarithm problems, post quantum secuirty, sidecar integrations into real life businsesss, albility for blinding commitments + selecitv disclousre
 
-## Integrations
-
+## Define ecosystem details

@@ -26,6 +26,10 @@ export function EventManagement() {
   const [endTime, setEndTime] = useState('');
   const [location, setLocation] = useState('');
   const [groupId, setGroupId] = useState('');
+  const [timezone, setTimezone] = useState('');
+  const [recurs, setRecurs] = useState(false);
+  const [frequency, setFrequency] = useState<'weekly' | 'monthly'>('weekly');
+  const [intervalCount, setIntervalCount] = useState(1);
 
   if (isLoading) return null;
   if (!managedGroups?.length) return null;
@@ -128,6 +132,18 @@ export function EventManagement() {
           />
         </div>
         <div className="space-y-1.5">
+          <Label htmlFor="event-tz" className="text-xs text-fd-muted-foreground">
+            Timezone
+          </Label>
+          <Input
+            id="event-tz"
+            value={timezone}
+            onChange={(e) => setTimezone(e.target.value)}
+            placeholder="e.g. America/New_York"
+            className="border-fd-border bg-fd-background/60 text-fd-foreground placeholder:text-fd-muted-foreground/50"
+          />
+        </div>
+        <div className="space-y-1.5">
           <Label className="text-xs text-fd-muted-foreground">Group</Label>
           <Select value={groupId} onValueChange={setGroupId}>
             <SelectTrigger className="border-fd-border bg-fd-background/60 text-fd-foreground">
@@ -148,6 +164,41 @@ export function EventManagement() {
             </SelectContent>
           </Select>
         </div>
+        <div className="flex items-center gap-2">
+          <input
+            id="event-recurs"
+            type="checkbox"
+            checked={recurs}
+            onChange={(e) => setRecurs(e.target.checked)}
+            className="size-3.5 rounded border-fd-border"
+          />
+          <Label htmlFor="event-recurs" className="text-xs text-fd-muted-foreground">
+            Repeats
+          </Label>
+        </div>
+        {recurs && (
+          <div className="flex items-center gap-2">
+            <Select value={frequency} onValueChange={(v: 'weekly' | 'monthly') => setFrequency(v)}>
+              <SelectTrigger className="h-8 w-28 border-fd-border bg-fd-background/60 text-xs text-fd-foreground">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent className="border-fd-border bg-fd-popover">
+                <SelectItem value="weekly" className="text-xs">Weekly</SelectItem>
+                <SelectItem value="monthly" className="text-xs">Monthly</SelectItem>
+              </SelectContent>
+            </Select>
+            <span className="text-xs text-fd-muted-foreground">every</span>
+            <Input
+              type="number"
+              min={1}
+              max={30}
+              value={intervalCount}
+              onChange={(e) => setIntervalCount(Number(e.target.value))}
+              className="h-8 w-16 border-fd-border bg-fd-background/60 text-xs text-fd-foreground"
+            />
+            <span className="text-xs text-fd-muted-foreground">{frequency === 'weekly' ? 'weeks' : 'months'}</span>
+          </div>
+        )}
         <Button
           className="w-full bg-fd-primary text-fd-primary-foreground hover:bg-fd-primary/90"
           disabled={

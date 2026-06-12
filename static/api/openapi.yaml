@@ -2,6 +2,8 @@ info:
   title: Terp Network API
   version: v4
   description: REST API for Terp Network blockchain
+  servers:
+    - url: https://api.terp.network
 paths:
   /cosmos/nft/v1beta1/balance/{owner}/{class_id}:
     get:

@@ -10,6 +10,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { useCalendarGroups } from '@/lib/hooks/use-calendar';
 import { useWallet } from '@/lib/wallet/use-wallet';
+import { GroupSelectSkeleton } from './calendar-skeleton';
 
 interface CalendarHeaderProps {
   selectedGroup: string;

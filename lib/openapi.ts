@@ -3,11 +3,11 @@ import { createAPIPage } from 'fumadocs-openapi/ui';
 import { multiple, type Source } from 'fumadocs-core/source';
 
 const OPENAPI_INPUT = {
-  OPENAPI: './static/api/openapi.yaml',
-  RPC: './static/api/RPC.yaml',
-  LCD: './static/api/LCD.yaml',
-  DATA: './static/api/DATA.yaml',
-  IBCGO: './static/api/IBCGO.yaml',
+  OPENAPI: 'static/api/openapi.yaml',
+  RPC: 'static/api/RPC.yaml',
+  LCD: 'static/api/LCD.yaml',
+  DATA: 'static/api/DATA.yaml',
+  IBCGO: 'static/api/IBCGO.yaml',
 } as const;
 
 export type OpenAPIDocumentId = keyof typeof OPENAPI_INPUT;
@@ -24,7 +24,7 @@ export const OPENAPI_SPECS = [
   title: string;
 }>;
 
-const openapiServer = createOpenAPI({
+export const openapiServer = createOpenAPI({
   input: () => OPENAPI_INPUT,
 });
 
@@ -62,7 +62,7 @@ export async function getOpenAPIDocsSource(): Promise<Source> {
 
     sources[`openapi-${spec.slug}-index`] = await openapiSource(server, {
       per: 'file',
-      baseDir: 'api',
+      // baseDir: 'api',
       name: () => `${spec.slug}/index`,
     });
 

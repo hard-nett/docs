@@ -14,40 +14,12 @@ export interface CommunityProject {
 }
 
 export const communityDocConfig = {
-  projects: [
-    {
-      name: 'o-line',
-      githubUrl: 'https://raw.githubusercontent.com/permissionlessweb/o-line/main/README.md',
-      targetPath: 'community/o-line',
-      title: 'O-Line',
-      description: 'O-Line deployment and testing tooling documentation',
-    },
-    {
-      name: 'cw-infuser',
-      githubUrl: 'https://raw.githubusercontent.com/permissionlessweb/cw-infuser/main/README.md',
-      targetPath: 'community/cw-infuser',
-      title: 'CW Infuser',
-      description: 'Infuser contract, test suite, and integration docs',
-    },
-    {
-      name: 'akash-deploy-rs',
-      githubUrl: 'https://raw.githubusercontent.com/permissionlessweb/cw-infuser/main/README.md',
-      targetPath: 'community/cw-infuser',
-      title: 'CW Infuser',
-      description: 'Infuser contract, test suite, and integration docs',
-    },
-    {
-      name: 'terp-rs',
-      githubUrl: 'https://raw.githubusercontent.com/terpnetwork/terp-rs/main/README.md',
-      targetPath: 'community/terp-rs',
-      title: 'Terp-RS',
-      description: 'Rust libraries and IBC client documentation',
-    },
-  ] as const,
+  projects: [] as const,
 } as const;
 
 export function getCommunityProject(name: string): CommunityProject | undefined {
-  return communityDocConfig.projects.find((p) => p.name === name);
+  // return communityDocConfig.projects.find((p) => p.name === name); 
+  return undefined
 }
 
 export function getAllCommunityProjects(): readonly CommunityProject[] {
@@ -59,13 +31,13 @@ export function getAllCommunityProjects(): readonly CommunityProject[] {
  * Integrates with lib/source.ts without duplicating Fumadocs logic.
  */
 export function createCommunitySource() {
-  return communityDocConfig.projects.reduce((acc, project) => {
-    acc[project.name] = {
-      baseUrl: `/docs/${project.targetPath}`,
-      source: [], 
-    };
-    return acc;
-  }, {} as Record<string, any>);
+  // return communityDocConfig.projects.reduce((acc, project) => {
+  //   acc[project.name] = {
+  //     baseUrl: `/docs/${project.targetPath}`,
+  //     source: [],
+  //   };
+  //   return acc;
+  // }, {} as Record<string, any>);
 }
 
 export async function syncCommunityDocs() {

@@ -1,4 +1,7 @@
 import { HomeLayout } from 'fumadocs-ui/layouts/home';
+import { source } from '@/lib/source';
+import { DocsLayout } from 'fumadocs-ui/layouts/flux';
+
 import { baseOptions } from '@/lib/layout.shared';
 import {
   NavbarMenu,
@@ -8,18 +11,24 @@ import {
 } from 'fumadocs-ui/layouts/home/navbar';
 
 export default function Layout({ children }: LayoutProps<'/'>) {
-  return <HomeLayout {...baseOptions()} links={[
+  return <DocsLayout {...baseOptions()} tree={source.getPageTree()} links={[
     {
       type: 'custom',
       // only displayed on navbar, not mobile menu
       on: 'nav',
       children: (
         <NavbarMenu>
-          <NavbarMenuTrigger>DAO</NavbarMenuTrigger>
-          <NavbarMenuContent>
-            <NavbarMenuLink href="/docs/connect">Event Calendar</NavbarMenuLink>
-          </NavbarMenuContent>
-          <NavbarMenuTrigger>Network</NavbarMenuTrigger>
+          {/* <NavbarMenuTrigger>Learn
+            <NavbarMenuContent>
+              <NavbarMenuLink href="/docs/overview">Introduction & Getting Started</NavbarMenuLink>
+            </NavbarMenuContent>
+          </NavbarMenuTrigger>
+          <NavbarMenuTrigger>Use
+            <NavbarMenuContent>
+              <NavbarMenuLink href="/docs/resources">Re</NavbarMenuLink>
+            </NavbarMenuContent>
+          </NavbarMenuTrigger> */}
+          {/* <NavbarMenuTrigger>Network</NavbarMenuTrigger>
           <NavbarMenuContent>
             <NavbarMenuLink href="/docs/guides/network/connect">Connect</NavbarMenuLink>
             <NavbarMenuLink href="/docs/guides/network/connect">Tokens</NavbarMenuLink>
@@ -27,10 +36,10 @@ export default function Layout({ children }: LayoutProps<'/'>) {
           <NavbarMenuTrigger>Ecosystem</NavbarMenuTrigger>
           <NavbarMenuContent>
             <NavbarMenuLink href="/docs/guides/network/connect">Connect</NavbarMenuLink>
-          </NavbarMenuContent>
+          </NavbarMenuContent> */}
         </NavbarMenu>
       ),
     },
     // other items
-  ]}>{children}</HomeLayout>;
+  ]}>{children}</DocsLayout>;
 }

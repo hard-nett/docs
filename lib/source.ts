@@ -3,7 +3,6 @@ import { multiple, type InferPageType, loader } from 'fumadocs-core/source';
 import { lucideIconsPlugin } from 'fumadocs-core/source/lucide-icons';
 import { openapiPlugin } from 'fumadocs-openapi/server';
 import { getOpenAPIDocsSource } from '@/lib/openapi';
-import { communityDocConfig, getAllCommunityProjects } from './community-docs';
 
 const openapiDocsSource = await getOpenAPIDocsSource();
 
@@ -47,31 +46,4 @@ ${page.data.description ?? ''}`;
   return `# ${page.data.title}
 
 ${processed}`;
-}
-
-/**
- * Dedicated functions for community project docs import using config file style.
- * Leverages Fumadocs loader and source API rather than reinventing.
- * Syncs or loads MDX from external project locations into compiled docs.
- */
-export function getCommunityProjects() {
-  return getAllCommunityProjects();
-}
-
-export function getCommunityProjectSource(name: string) {
-  const project = communityDocConfig.projects.find((p) => p.name === name);
-  if (!project) throw new Error(`Unknown community project: ${name}`);
-  return {
-    name: project.name,
-    // sourcePath: project.sourcePath,
-    targetPath: project.targetPath,
-    baseUrl: `/docs/${project.targetPath}`,
-  };
-}
-
-export async function loadCommunityDocs() {
-  // TODO: fs.copySync or git pull for MDX from sourcePath to content/docs/community
-  // Then re-run fumadocs-mdx to include in collections
-  console.log('Loading community docs from config for Fumadocs...');
-  return getAllCommunityProjects().map((p) => getCommunityProjectSource(p.name));
 }

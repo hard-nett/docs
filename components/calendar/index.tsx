@@ -11,6 +11,7 @@ import {
   type EventFilter,
 } from '@/lib/hooks/use-calendar';
 import { useWallet } from '@/lib/wallet/use-wallet';
+import { CalendarWidgetSkeleton } from './calendar-skeleton';
 
 export function ConnectCalendar() {
   const [selectedGroup, setSelectedGroup] = useState('all');
@@ -18,32 +19,45 @@ export function ConnectCalendar() {
   const [displayedMonth, setDisplayedMonth] = useState(new Date());
   const { address } = useWallet();
 
-  // Fetch events for the displayed month (for calendar dot indicators)
-  const monthStart = new Date(
-    displayedMonth.getFullYear(),
-    displayedMonth.getMonth(),
-    1,
-  );
-  const monthEnd = new Date(
-    displayedMonth.getFullYear(),
-    displayedMonth.getMonth() + 1,
-    0,
-    23,
-    59,
-    59,
-  );
+  // Memoize month bounds to prevent filter object recreation on every render.
+  // Without memo, every re-render creates a new filter object reference,
+  // causing React Query to see a changed query key and re-fetch.
+  const monthBounds = useMemo(() => {
+    const start = new Date(
+      displayedMonth.getFullYear(),
+      displayedMonth.getMonth(),
+      1,
+    );
+    const end = new Date(
+      displayedMonth.getFullYear(),
+      displayedMonth.getMonth() + 1,
+      0,
+      23,
+      59,
+      59,
+    );
+    return { start, end };
+  }, [displayedMonth.getFullYear(), displayedMonth.getMonth()]);
 
-  const monthFilter: EventFilter = {
-    by_time_range: {
-      start_after: (BigInt(monthStart.getTime()) * 1_000_000n).toString(),
-      end_before: (BigInt(monthEnd.getTime()) * 1_000_000n).toString(),
-    },
-    ...(selectedGroup !== 'all' && {
-      by_groups: { groups: [selectedGroup] },
-    }),
-  };
+  // Memoize the filter so it only changes when month bounds or group change
+  const monthFilter: EventFilter | undefined = useMemo(() => {
+    const filter: EventFilter = {
+      by_time_range: {
+        start_after: (BigInt(monthBounds.start.getTime()) * 1_000_000n).toString(),
+        end_before: (BigInt(monthBounds.end.getTime()) * 1_000_000n).toString(),
+      },
+    };
+    if (selectedGroup !== 'all') {
+      filter.by_groups = { groups: [selectedGroup] };
+    }
+    return filter;
+  }, [monthBounds, selectedGroup]);
 
-  const { data: monthEvents } = useCalendarEvents(monthFilter);
+  const { data: monthEvents, isLoading } = useCalendarEvents(
+    monthFilter,
+    undefined,
+    50, // Explicit limit — max 50 events per month view
+  );
 
   // Set of dates that have events — used for calendar dot indicators
   const eventDates = useMemo(() => {
@@ -59,28 +73,34 @@ export function ConnectCalendar() {
 
   return (
     <div className="not-prose flex flex-col gap-5 rounded-xl border border-fd-border bg-fd-card/60 p-5 backdrop-blur-sm">
-      <CalendarHeader
-        selectedGroup={selectedGroup}
-        onGroupChange={setSelectedGroup}
-      />
-      <div className="grid gap-5 lg:grid-cols-[auto_1fr]">
-        <Calendar
-          mode="single"
-          selected={selectedDate}
-          onSelect={(d) => d && setSelectedDate(d)}
-          onMonthChange={setDisplayedMonth}
-          modifiers={{ hasEvents: hasEventsModifier }}
-          modifiersClassNames={{ hasEvents: 'calendar-has-events' }}
-          className="calendar-widget rounded-lg border border-fd-border"
-        />
-        <div className="flex flex-col">
-          <EventPanel
-            selectedDate={selectedDate}
+      {isLoading ? (
+        <CalendarWidgetSkeleton />
+      ) : (
+        <>
+          <CalendarHeader
             selectedGroup={selectedGroup}
+            onGroupChange={setSelectedGroup}
           />
-          {address && <EventManagement />}
-        </div>
-      </div>
+          <div className="grid gap-5 lg:grid-cols-[auto_1fr]">
+            <Calendar
+              mode="single"
+              selected={selectedDate}
+              onSelect={(d) => d && setSelectedDate(d)}
+              onMonthChange={setDisplayedMonth}
+              modifiers={{ hasEvents: hasEventsModifier }}
+              modifiersClassNames={{ hasEvents: 'calendar-has-events' }}
+              className="calendar-widget rounded-lg border border-fd-border"
+            />
+            <div className="flex flex-col">
+              <EventPanel
+                selectedDate={selectedDate}
+                selectedGroup={selectedGroup}
+              />
+              {address && <EventManagement />}
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }

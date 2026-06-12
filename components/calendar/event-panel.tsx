@@ -7,6 +7,7 @@ import {
   nanosToTimeString,
   type EventFilter,
 } from '@/lib/hooks/use-calendar';
+import { EventPanelSkeleton } from './calendar-skeleton';
 
 interface EventPanelProps {
   selectedDate: Date;
@@ -29,7 +30,7 @@ export function EventPanel({ selectedDate, selectedGroup }: EventPanelProps) {
     }),
   };
 
-  const { data, isLoading } = useCalendarEvents(filter);
+  const { data, isLoading } = useCalendarEvents(filter, undefined, 20); // Cap day view to 20 events
   const { data: groupsData } = useCalendarGroups();
 
   const groupColorMap = new Map(
@@ -46,7 +47,7 @@ export function EventPanel({ selectedDate, selectedGroup }: EventPanelProps) {
     <div className="flex flex-col gap-3">
       <p className="text-sm font-medium text-fd-muted-foreground">{dateStr}</p>
       {isLoading ? (
-        <p className="text-sm text-fd-muted-foreground">Loading events...</p>
+        <EventPanelSkeleton />
       ) : !data?.events.length ? (
         <p className="text-sm text-fd-muted-foreground">
           No events on this day.
@@ -81,6 +82,11 @@ export function EventPanel({ selectedDate, selectedGroup }: EventPanelProps) {
                         {nanosToTimeString(er.event.start_time)}
                         {' \u2013 '}
                         {nanosToTimeString(er.event.end_time)}
+                        {er.event.timezone && (
+                          <span className="ml-1 font-mono text-[10px] text-fd-muted-foreground/60">
+                            {er.event.timezone}
+                          </span>
+                        )}
                         {er.event.location && (
                           <span className="text-fd-accent-foreground">
                             {' \u00b7 '}

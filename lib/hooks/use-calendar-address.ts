@@ -15,7 +15,7 @@ export function useCalendarAddress(account: string = BILLBOARD_ACCOUNT) {
   return useQuery({
     queryKey: ['calendar-address', account],
     queryFn: () => resolveCalendarAddress(account),
-    staleTime: 5 * 60 * 1000, // 5 min — address changes rarely
+    staleTime: 30 * 60 * 1000, // 30 min — address changes rarely, aligned with sessionStorage cache
     retry: 2,
   });
 }
