@@ -5,11 +5,11 @@
 - ~~openapi integration~~
 - ~~tanstack query design~~
 - [chain registry support]
-- ibc-channel support
+- ~~ibc-channel support~~ (partial: guides/ibc/* including hooks)
 - docker container support
 - wasm & circuit support
-- test network faucet support
-- connect to terp network
+- ~~test network faucet support~~ (guides/network/faucet.md)
+- ~~connect to terp network~~ (overview/quickstart + guides)
 - deployed contract page: display information about all deployed contracts: inspo by <https://github.com/burnt-labs/
 - public resources links
 - validator & full node guides (key saftey, metrics & notifications,)
